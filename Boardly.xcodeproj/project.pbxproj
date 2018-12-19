@@ -45,6 +45,7 @@
 		909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE421CAE79F00166C93 /* LoginViewRobot.swift */; };
 		909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE621CAE7B700166C93 /* LoginPresenterTest.swift */; };
 		909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */; };
+		909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		909A8BE421CAE79F00166C93 /* LoginViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRobot.swift; sourceTree = "<group>"; };
 		909A8BE621CAE7B700166C93 /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
+		909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +262,7 @@
 		909A8B9D21CACEA600166C93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */,
 				909A8B8021CACDAA00166C93 /* Info.plist */,
 				909A8B7B21CACDAA00166C93 /* Assets.xcassets */,
 			);
@@ -348,6 +351,7 @@
 				909A8B6E21CACDA800166C93 /* Frameworks */,
 				909A8B6F21CACDA800166C93 /* Resources */,
 				835C9EB8C82DFEA122EBFCBE /* [CP] Embed Pods Frameworks */,
+				9EE5DAB3E2BF774FE61C6FEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				909A8B7F21CACDAA00166C93 /* LaunchScreen.storyboard in Resources */,
+				909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */,
 				909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */,
 				909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */,
 			);
@@ -473,19 +478,55 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EE5DAB3E2BF774FE61C6FEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CD74FF8E8973436E09987E06 /* [CP] Check Pods Manifest.lock */ = {
