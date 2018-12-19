@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
-		909A8B7721CACDA800166C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7621CACDA800166C93 /* ViewController.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
 		909A8B7F21CACDAA00166C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7D21CACDAA00166C93 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,8 @@
 		909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BA921CAD0CE00166C93 /* BoardlyButton.swift */; };
 		909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BAB21CAD0EE00166C93 /* BaseNavViewController.swift */; };
 		909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BAD21CAD11100166C93 /* HomeViewController.swift */; };
+		909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BAF21CAD21600166C93 /* SignUpViewController.swift */; };
+		909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB121CAD22800166C93 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		909A8B7621CACDA800166C93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		909A8B7B21CACDAA00166C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		909A8B7E21CACDAA00166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		909A8BA921CAD0CE00166C93 /* BoardlyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyButton.swift; sourceTree = "<group>"; };
 		909A8BAB21CAD0EE00166C93 /* BaseNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
 		909A8BAD21CAD11100166C93 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		909A8BAF21CAD21600166C93 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		909A8BB121CAD22800166C93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,6 @@
 				909A8B9921CACE8E00166C93 /* Login */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
 				909A8B9D21CACEA600166C93 /* Resources */,
-				909A8B7621CACDA800166C93 /* ViewController.swift */,
 			);
 			path = Boardly;
 			sourceTree = "<group>";
@@ -155,6 +156,7 @@
 		909A8B9921CACE8E00166C93 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				909A8BB121CAD22800166C93 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 		909A8B9A21CACE9200166C93 /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				909A8BAF21CAD21600166C93 /* SignUpViewController.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -302,15 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
-				909A8B7721CACDA800166C93 /* ViewController.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
+				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
+				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
