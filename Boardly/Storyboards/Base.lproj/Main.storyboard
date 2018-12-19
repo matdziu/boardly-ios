@@ -83,7 +83,7 @@
                                 <rect key="frame" x="16" y="184" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPy-cg-CEF" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="230" width="343" height="30"/>
@@ -138,6 +138,15 @@
                         <viewLayoutGuide key="safeArea" id="T4B-6W-fYr"/>
                     </view>
                     <navigationItem key="navigationItem" id="QVo-wx-MOP"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="dfP-y4-FbA" id="IRy-aI-n9k"/>
+                        <outlet property="emailTextField" destination="QMO-e7-9gT" id="U3o-eZ-QSe"/>
+                        <outlet property="loginButton" destination="lPy-cg-CEF" id="H7i-fY-A3E"/>
+                        <outlet property="passwordLabel" destination="QQb-Xw-jMZ" id="o78-Jl-bkM"/>
+                        <outlet property="passwordTextField" destination="6EW-7E-nJr" id="R9R-DK-gyj"/>
+                        <outlet property="privacyPolicyLabel" destination="a37-Bn-6Yd" id="h9F-ri-ZDb"/>
+                        <outlet property="progressView" destination="10w-wi-2r1" id="fvt-oO-H0o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnC-JS-Uq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +164,7 @@
                                 <rect key="frame" x="16" y="184" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password (must be more than 6 characters)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-5D-YVL">
                                 <rect key="frame" x="16" y="155" width="336" height="21"/>
@@ -209,6 +218,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iD8-2B-qDd"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="4Uj-Nw-cCg" id="7LE-4a-M5P"/>
+                        <outlet property="emailTextField" destination="9WQ-NC-JoZ" id="htW-px-MKx"/>
+                        <outlet property="passwordLabel" destination="qkp-5D-YVL" id="d7I-h4-2Jc"/>
+                        <outlet property="passwordTextField" destination="NmA-wT-Gw8" id="ols-kt-php"/>
+                        <outlet property="progressView" destination="eTh-4T-5KX" id="PVx-Ae-kN3"/>
+                        <outlet property="signUpButton" destination="fIO-Ag-PZ4" id="pQH-Nn-qjU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7M-Wt-CCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

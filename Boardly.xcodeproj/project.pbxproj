@@ -22,6 +22,18 @@
 		909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BAD21CAD11100166C93 /* HomeViewController.swift */; };
 		909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BAF21CAD21600166C93 /* SignUpViewController.swift */; };
 		909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB121CAD22800166C93 /* LoginViewController.swift */; };
+		909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB321CADFD400166C93 /* LoginViewState.swift */; };
+		909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB521CADFED00166C93 /* PartialLoginViewState.swift */; };
+		909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB721CAE00300166C93 /* LoginContract.swift */; };
+		909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BB921CAE02500166C93 /* LoginInteractorImpl.swift */; };
+		909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BBB21CAE03D00166C93 /* LoginServiceImpl.swift */; };
+		909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BBD21CAE05200166C93 /* LoginPresenter.swift */; };
+		909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BBF21CAE0C400166C93 /* SignUpViewState.swift */; };
+		909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BC121CAE0E700166C93 /* PartialSignUpViewState.swift */; };
+		909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BC321CAE0FE00166C93 /* SignUpContract.swift */; };
+		909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BC521CAE11500166C93 /* SignUpServiceImpl.swift */; };
+		909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BC721CAE12C00166C93 /* SignUpInteractorImpl.swift */; };
+		909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BC921CAE14A00166C93 /* SignUpPresenter.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +72,18 @@
 		909A8BAD21CAD11100166C93 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		909A8BAF21CAD21600166C93 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		909A8BB121CAD22800166C93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		909A8BB321CADFD400166C93 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		909A8BB521CADFED00166C93 /* PartialLoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialLoginViewState.swift; sourceTree = "<group>"; };
+		909A8BB721CAE00300166C93 /* LoginContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContract.swift; sourceTree = "<group>"; };
+		909A8BB921CAE02500166C93 /* LoginInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorImpl.swift; sourceTree = "<group>"; };
+		909A8BBB21CAE03D00166C93 /* LoginServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceImpl.swift; sourceTree = "<group>"; };
+		909A8BBD21CAE05200166C93 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		909A8BBF21CAE0C400166C93 /* SignUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewState.swift; sourceTree = "<group>"; };
+		909A8BC121CAE0E700166C93 /* PartialSignUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialSignUpViewState.swift; sourceTree = "<group>"; };
+		909A8BC321CAE0FE00166C93 /* SignUpContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpContract.swift; sourceTree = "<group>"; };
+		909A8BC521CAE11500166C93 /* SignUpServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpServiceImpl.swift; sourceTree = "<group>"; };
+		909A8BC721CAE12C00166C93 /* SignUpInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractorImpl.swift; sourceTree = "<group>"; };
+		909A8BC921CAE14A00166C93 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +193,12 @@
 			isa = PBXGroup;
 			children = (
 				909A8BB121CAD22800166C93 /* LoginViewController.swift */,
+				909A8BB321CADFD400166C93 /* LoginViewState.swift */,
+				909A8BB521CADFED00166C93 /* PartialLoginViewState.swift */,
+				909A8BB721CAE00300166C93 /* LoginContract.swift */,
+				909A8BB921CAE02500166C93 /* LoginInteractorImpl.swift */,
+				909A8BBB21CAE03D00166C93 /* LoginServiceImpl.swift */,
+				909A8BBD21CAE05200166C93 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -177,6 +207,12 @@
 			isa = PBXGroup;
 			children = (
 				909A8BAF21CAD21600166C93 /* SignUpViewController.swift */,
+				909A8BBF21CAE0C400166C93 /* SignUpViewState.swift */,
+				909A8BC121CAE0E700166C93 /* PartialSignUpViewState.swift */,
+				909A8BC321CAE0FE00166C93 /* SignUpContract.swift */,
+				909A8BC521CAE11500166C93 /* SignUpServiceImpl.swift */,
+				909A8BC721CAE12C00166C93 /* SignUpInteractorImpl.swift */,
+				909A8BC921CAE14A00166C93 /* SignUpPresenter.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -429,17 +465,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */,
+				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
+				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
+				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
+				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
+				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
+				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
+				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
+				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
+				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
+				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
+				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
