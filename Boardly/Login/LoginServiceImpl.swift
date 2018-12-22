@@ -27,5 +27,21 @@ class LoginServiceImpl: LoginService {
         }
         return resultSubject
     }
+    
+    func login(credential: AuthCredential) -> Observable<Bool> {
+        let resultSubject = PublishSubject<Bool>()
+        Auth.auth().signInAndRetrieveData(with: credential) { (result, error) in
+            if let error = error {
+                resultSubject.onError(error)
+                return
+            }
+            if result != nil {
+                resultSubject.onNext(true)
+            } else {
+                resultSubject.onError(DefaultAuthError())
+            }
+        }
+        return resultSubject
+    }
 }
 

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 
 class LoginInteractorImpl: LoginInteractor {
     
@@ -19,6 +20,13 @@ class LoginInteractorImpl: LoginInteractor {
     
     func login(email: String, password: String) -> Observable<PartialLoginViewState> {
         return loginService.login(email: email, password: password).map({ _ in return .loginSuccess })
+            .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
+                return self.emitErrorState(error: error)
+            })
+    }
+    
+    func login(credential: AuthCredential) -> Observable<PartialLoginViewState> {
+        return loginService.login(credential: credential).map({ _ in return .loginSuccess })
             .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
                 return self.emitErrorState(error: error)
             })

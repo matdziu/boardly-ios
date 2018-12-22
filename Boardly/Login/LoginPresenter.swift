@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 
 class LoginPresenter {
     
@@ -36,8 +37,13 @@ class LoginPresenter {
                 }
         }
         
+        let googleSignInCredentialObservable = loginView.googleSignInCredentialEmitter()
+            .flatMap { [unowned self] (credential: AuthCredential) -> Observable<PartialLoginViewState> in
+                return self.loginInteractor.login(credential: credential).startWith(.progress)
+        }
+        
         Observable
-            .merge([inputDataObservable])
+            .merge([inputDataObservable, googleSignInCredentialObservable])
             .scan(try! stateSubject.value()) { (viewState: LoginViewState, partialState: PartialLoginViewState) -> LoginViewState in
                 return self.reduce(previousState: viewState, partialState: partialState)
             }

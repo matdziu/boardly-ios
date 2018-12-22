@@ -108,6 +108,9 @@
                                 <rect key="frame" x="16" y="525" width="343" height="30"/>
                                 <color key="backgroundColor" name="AccentRed"/>
                                 <state key="normal" title="Log in using Gmail"/>
+                                <connections>
+                                    <action selector="loginUsingGoogle:" destination="NuS-cx-dpN" eventType="touchUpInside" id="NuH-Yq-EIl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-DA-Xt7" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="479" width="343" height="30"/>
@@ -160,7 +163,6 @@
                         <outlet property="emailLabel" destination="dfP-y4-FbA" id="IRy-aI-n9k"/>
                         <outlet property="emailTextField" destination="QMO-e7-9gT" id="U3o-eZ-QSe"/>
                         <outlet property="facebookLoginButton" destination="3Ba-DA-Xt7" id="jYp-OW-UjR"/>
-                        <outlet property="gmailLoginButton" destination="ubt-pG-5bq" id="LD5-m8-2PQ"/>
                         <outlet property="loginButton" destination="lPy-cg-CEF" id="H7i-fY-A3E"/>
                         <outlet property="passwordLabel" destination="QQb-Xw-jMZ" id="o78-Jl-bkM"/>
                         <outlet property="passwordTextField" destination="6EW-7E-nJr" id="R9R-DK-gyj"/>

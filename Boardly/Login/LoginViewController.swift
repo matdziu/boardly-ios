@@ -9,8 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Firebase
+import GoogleSignIn
 
-class LoginViewController: BaseNavViewController, LoginView {
+class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate {
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextField: BoardlyTextField!
@@ -19,14 +21,15 @@ class LoginViewController: BaseNavViewController, LoginView {
     @IBOutlet weak var loginButton: BoardlyButton!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
-    @IBOutlet weak var gmailLoginButton: BoardlyButton!
     @IBOutlet weak var facebookLoginButton: BoardlyButton!
     
+    var googleSignInCredentialSubject = PublishSubject<AuthCredential>()
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initPrivacyPolicyOnClick()
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,11 +42,19 @@ class LoginViewController: BaseNavViewController, LoginView {
         super.viewWillDisappear(animated)
     }
     
+    @IBAction func loginUsingGoogle(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
     func inputEmitter() -> Observable<InputData> {
         return loginButton
             .rx
             .controlEvent(UIControl.Event.touchUpInside)
             .map({ InputData(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "") })
+    }
+    
+    func googleSignInCredentialEmitter() -> Observable<AuthCredential> {
+        return googleSignInCredentialSubject
     }
     
     func render(loginViewState: LoginViewState) {
@@ -67,7 +78,7 @@ class LoginViewController: BaseNavViewController, LoginView {
         }
     }
     
-    private func showErrorAlert(errorMessage: String) {
+    func showErrorAlert(errorMessage: String) {
         let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
         present(alert, animated: true)
         
