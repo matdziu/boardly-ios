@@ -50,11 +50,28 @@ class LoginViewController: BaseNavViewController, LoginView {
         emailTextField.showError(show: !loginViewState.emailValid)
         passwordTextField.showError(show: !loginViewState.passwordValid)
         showProgress(show: loginViewState.progress)
+        showLoginError(error: loginViewState.error, errorMessage: loginViewState.errorMessage, dismissError: loginViewState.dismissError)
         
         if loginViewState.loginSuccess {
             if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
                 navigationController?.setViewControllers([homeViewController], animated: true)
             }
+        }
+    }
+    
+    private func showLoginError(error: Bool, errorMessage: String, dismissError: Bool) {
+        if error && !dismissError {
+            showErrorAlert(errorMessage: errorMessage)
+        }
+    }
+    
+    private func showErrorAlert(errorMessage: String) {
+        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+        present(alert, animated: true)
+        
+        let duration: Double = 3
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
         }
     }
     

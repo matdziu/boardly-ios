@@ -21,9 +21,13 @@ class MockLoginInteractor: LoginInteractor {
         if mode == .success {
             return Observable.just(.loginSuccess)
         } else {
-            return Observable.just(.errorState)
+            return Observable.just(PartialLoginViewState.errorState(error: MockAuthError() as NSError, dismiss: false))
         }
     }
+}
+
+struct MockAuthError: Error {
+    
 }
 
 enum LoginInteractorMode {

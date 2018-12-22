@@ -18,12 +18,15 @@ class LoginInteractorImpl: LoginInteractor {
     }
     
     func login(email: String, password: String) -> Observable<PartialLoginViewState> {
-        return loginService.login(email: email, password: password).map({ (success: Bool) -> PartialLoginViewState in
-            if success {
-                return .loginSuccess
-            } else {
-                return .errorState
-            }
-        })
+        return loginService.login(email: email, password: password).map({ _ in return .loginSuccess })
+            .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
+                return self.emitErrorState(error: error)
+            })
+    }
+    
+    private func emitErrorState(error: Error) -> Observable<PartialLoginViewState> {
+        let errorState = PartialLoginViewState.errorState(error: error as NSError, dismiss: true)
+        let initialErrorState = PartialLoginViewState.errorState(error: error as NSError, dismiss: false)
+        return Observable.just(errorState).startWith(initialErrorState)
     }
 }

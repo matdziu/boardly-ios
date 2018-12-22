@@ -19,7 +19,12 @@ class MockLoginService: LoginService {
     }
     
     func login(email: String, password: String) -> Observable<Bool> {
-        return Observable.just(mode == .success)
+        if (mode == .success) {
+            return Observable.just(true)
+        }
+        else {
+            return Observable.error(MockAuthError())
+        }
     }
 }
 

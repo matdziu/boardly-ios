@@ -33,7 +33,7 @@ class LoginPresenterTest: QuickSpec {
                     loginViewRobot.assert(expectedViewStates: [
                         LoginViewState(),
                         LoginViewState(progress: true),
-                        LoginViewState(error: true)])
+                        LoginViewState(error: true, errorMessage: "Something went wrong :(")])
                 }
             }
             
