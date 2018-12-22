@@ -25,8 +25,8 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     private var fbAccessToken: FBSDKAccessToken? = nil
     
     private let loginManager = FBSDKLoginManager()
-    let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
-    private let facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
+    var googleSignInCredentialSubject: PublishSubject<AuthCredential>!
+    private var facebookAccessTokenSubject: PublishSubject<FBSDKAccessToken>!
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
     override func viewDidLoad() {
@@ -37,10 +37,16 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initEmitters()
         loginPresenter.bind(loginView: self)
         if fbAccessToken != nil {
             facebookAccessTokenSubject.onNext(fbAccessToken!)
         }
+    }
+    
+    private func initEmitters() {
+        facebookAccessTokenSubject = PublishSubject()
+        googleSignInCredentialSubject = PublishSubject()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
