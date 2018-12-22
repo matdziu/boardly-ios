@@ -69,7 +69,7 @@ class LoginViewController: BaseNavViewController, LoginView {
         let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
         present(alert, animated: true)
         
-        let duration: Double = 3
+        let duration: Double = 2
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
             alert.dismiss(animated: true)
         }

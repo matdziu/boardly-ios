@@ -8,11 +8,24 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 
 class LoginServiceImpl: LoginService {
     
     func login(email: String, password: String) -> Observable<Bool> {
-        return Observable.just(true).delay(RxTimeInterval(3), scheduler: ConcurrentDispatchQueueScheduler(queue: .global()))
+        let resultSubject = PublishSubject<Bool>()
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                resultSubject.onError(error)
+                return
+            }
+            if user != nil {
+                resultSubject.onNext(true)
+            } else {
+                resultSubject.onError(DefaultAuthError())
+            }
+        }
+        return resultSubject
     }
 }
 
