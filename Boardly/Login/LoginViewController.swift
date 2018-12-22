@@ -39,8 +39,13 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         super.viewWillAppear(animated)
         initEmitters()
         loginPresenter.bind(loginView: self)
+        initView()
+    }
+    
+    private func initView() {
         if fbAccessToken != nil {
             facebookAccessTokenSubject.onNext(fbAccessToken!)
+            fbAccessToken = nil
         }
     }
     
