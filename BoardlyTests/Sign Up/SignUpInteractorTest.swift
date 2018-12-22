@@ -33,8 +33,8 @@ class SignUpInteractorTest: QuickSpec {
                     .toArray()
                 
                 expect(output).to(equal([
-                    PartialSignUpViewState.errorState(error: MockAuthError() as NSError, dismiss: false),
-                    PartialSignUpViewState.errorState(error: MockAuthError() as NSError, dismiss: true)]))
+                    PartialSignUpViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false),
+                    PartialSignUpViewState.errorState(error: DefaultAuthError() as NSError, dismiss: true)]))
             }
         }
     }

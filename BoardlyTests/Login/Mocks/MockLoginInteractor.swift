@@ -21,7 +21,7 @@ class MockLoginInteractor: LoginInteractor {
         if mode == .success {
             return Observable.just(.loginSuccess)
         } else {
-            return Observable.just(PartialLoginViewState.errorState(error: MockAuthError() as NSError, dismiss: false))
+            return Observable.just(PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false))
         }
     }
 }

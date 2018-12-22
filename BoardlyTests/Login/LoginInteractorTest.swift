@@ -34,8 +34,8 @@ class LoginInteractorTest: QuickSpec {
                     .toArray()
                 
                 expect(output).to(equal([
-                    PartialLoginViewState.errorState(error: MockAuthError() as NSError, dismiss: false),
-                    PartialLoginViewState.errorState(error: MockAuthError() as NSError, dismiss: true)]))
+                    PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false),
+                    PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: true)]))
             }
         }
     }

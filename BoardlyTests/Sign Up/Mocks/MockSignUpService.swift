@@ -23,7 +23,7 @@ class MockSignUpService: SignUpService {
             return Observable.just(true)
         }
         else {
-            return Observable.error(MockAuthError())
+            return Observable.error(DefaultAuthError())
         }
     }
 }

@@ -21,7 +21,7 @@ class MockSignUpInteractor: SignUpInteractor {
         if mode == .success {
             return Observable.just(.signUpSuccess)
         } else {
-            return Observable.just(PartialSignUpViewState.errorState(error: MockAuthError() as NSError, dismiss: false))
+            return Observable.just(PartialSignUpViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false))
         }
     }
 }
