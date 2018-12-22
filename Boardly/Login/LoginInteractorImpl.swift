@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import FirebaseAuth
+import FBSDKLoginKit
 
 class LoginInteractorImpl: LoginInteractor {
     
@@ -26,6 +27,15 @@ class LoginInteractorImpl: LoginInteractor {
     }
     
     func login(credential: AuthCredential) -> Observable<PartialLoginViewState> {
+        return loginUsingCredential(credential: credential)
+    }
+    
+    func login(token: FBSDKAccessToken) -> Observable<PartialLoginViewState> {
+        let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+        return loginUsingCredential(credential: credential)
+    }
+    
+    private func loginUsingCredential(credential: AuthCredential) -> Observable<PartialLoginViewState> {
         return loginService.login(credential: credential).map({ _ in return .loginSuccess })
             .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
                 return self.emitErrorState(error: error)

@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate {
     
@@ -21,9 +22,10 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBOutlet weak var loginButton: BoardlyButton!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
-    @IBOutlet weak var facebookLoginButton: BoardlyButton!
     
+    private let loginManager = FBSDKLoginManager()
     var googleSignInCredentialSubject = PublishSubject<AuthCredential>()
+    private var facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
     override func viewDidLoad() {
@@ -43,7 +45,21 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     }
     
     @IBAction func loginUsingGoogle(_ sender: Any) {
-        GIDSignIn.sharedInstance()?.signIn()
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func loginUsingFacebook(_ sender: Any) {
+        loginManager.logIn(withReadPermissions: [ "email" ], from: self) { [unowned self] (loginResult, error) in
+            if error != nil {
+                self.showErrorAlert(errorMessage: "Something went wrong :(")
+                return
+            }
+            if loginResult?.token != nil {
+                self.facebookAccessTokenSubject.onNext(loginResult!.token)
+            } else {
+                self.showErrorAlert(errorMessage: "Something went wrong :(")
+            }
+        }
     }
     
     func inputEmitter() -> Observable<InputData> {
@@ -55,6 +71,10 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     
     func googleSignInCredentialEmitter() -> Observable<AuthCredential> {
         return googleSignInCredentialSubject
+    }
+    
+    func facebookAccessTokenEmitter() -> Observable<FBSDKAccessToken> {
+        return facebookAccessTokenSubject
     }
     
     func render(loginViewState: LoginViewState) {

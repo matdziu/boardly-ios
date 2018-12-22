@@ -9,6 +9,7 @@
 @testable import Boardly
 import RxSwift
 import FirebaseAuth
+import FBSDKLoginKit
 
 class MockLoginInteractor: LoginInteractor {
     
@@ -27,6 +28,10 @@ class MockLoginInteractor: LoginInteractor {
     }
     
     func login(credential: AuthCredential) -> Observable<PartialLoginViewState> {
+        return Observable.just(.loginSuccess)
+    }
+    
+    func login(token: FBSDKAccessToken) -> Observable<PartialLoginViewState> {
         return Observable.just(.loginSuccess)
     }
 }

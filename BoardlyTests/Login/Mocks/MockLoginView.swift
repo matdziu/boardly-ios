@@ -9,11 +9,13 @@
 import Foundation
 import RxSwift
 import FirebaseAuth
+import FBSDKLoginKit
 @testable import Boardly
 
 class MockLoginView: LoginView {
     let inputDataSubject = PublishSubject<InputData>()
     let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
+    let facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
     var renderedStates: [LoginViewState] = []
     
     func inputEmitter() -> Observable<InputData> {
@@ -22,6 +24,10 @@ class MockLoginView: LoginView {
     
     func googleSignInCredentialEmitter() -> Observable<AuthCredential> {
         return googleSignInCredentialSubject
+    }
+    
+    func facebookAccessTokenEmitter() -> Observable<FBSDKAccessToken> {
+        return facebookAccessTokenSubject
     }
     
     func render(loginViewState: LoginViewState) {

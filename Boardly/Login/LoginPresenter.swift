@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import FirebaseAuth
+import FBSDKLoginKit
 
 class LoginPresenter {
     
@@ -42,8 +43,13 @@ class LoginPresenter {
                 return self.loginInteractor.login(credential: credential).startWith(.progress)
         }
         
+        let facebookAccessTokenObservable = loginView.facebookAccessTokenEmitter()
+            .flatMap { [unowned self] (token: FBSDKAccessToken) -> Observable<PartialLoginViewState> in
+                return self.loginInteractor.login(token: token).startWith(.progress)
+        }
+        
         Observable
-            .merge([inputDataObservable, googleSignInCredentialObservable])
+            .merge([inputDataObservable, googleSignInCredentialObservable, facebookAccessTokenObservable])
             .scan(try! stateSubject.value()) { (viewState: LoginViewState, partialState: PartialLoginViewState) -> LoginViewState in
                 return self.reduce(previousState: viewState, partialState: partialState)
             }

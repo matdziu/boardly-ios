@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import FirebaseAuth
+import FBSDKCoreKit
 
 protocol LoginView {
     
@@ -17,6 +18,8 @@ protocol LoginView {
     func inputEmitter() -> Observable<InputData>
     
     func googleSignInCredentialEmitter() -> Observable<AuthCredential>
+    
+    func facebookAccessTokenEmitter() -> Observable<FBSDKAccessToken>
 }
 
 protocol LoginInteractor {
@@ -24,6 +27,8 @@ protocol LoginInteractor {
     func login(email: String, password: String) -> Observable<PartialLoginViewState>
     
     func login(credential: AuthCredential) -> Observable<PartialLoginViewState>
+    
+    func login(token: FBSDKAccessToken) -> Observable<PartialLoginViewState>
 }
 
 protocol LoginService {
