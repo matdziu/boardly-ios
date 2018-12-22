@@ -22,6 +22,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBOutlet weak var loginButton: BoardlyButton!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    private var fbAccessToken: FBSDKAccessToken? = nil
     
     private let loginManager = FBSDKLoginManager()
     let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
@@ -37,6 +38,9 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loginPresenter.bind(loginView: self)
+        if fbAccessToken != nil {
+            facebookAccessTokenSubject.onNext(fbAccessToken!)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -54,9 +58,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
                 self.showErrorAlert(errorMessage: "Something went wrong :(")
                 return
             }
-            if loginResult?.token != nil {
-                self.facebookAccessTokenSubject.onNext(loginResult!.token)
-            }
+            self.fbAccessToken = loginResult?.token
         }
     }
     
