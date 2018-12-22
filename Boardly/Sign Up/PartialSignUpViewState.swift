@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 enum PartialSignUpViewState: Equatable {
     case progress
     case localValidation(emailValid: Bool, passwordValid: Bool)
     case signUpSuccess
-    case errorState
+    case errorState(error: NSError, dismiss: Bool)
     
     func reduce(previousState: SignUpViewState) -> SignUpViewState {
         switch self {
@@ -22,8 +23,29 @@ enum PartialSignUpViewState: Equatable {
             return SignUpViewState(emailValid: emailValid, passwordValid: passwordValid)
         case .signUpSuccess:
             return SignUpViewState(progress: true, signUpSuccess: true)
-        case .errorState:
-            return SignUpViewState(error: true)
+        case .errorState(let error, let dismiss):
+            return SignUpViewState(
+                error: true,
+                errorMessage: getErrorMessage(error: error),
+                dismissError: dismiss)
+        }
+    }
+    
+    private func getErrorMessage(error: NSError) -> String {
+        if let errorCode = AuthErrorCode(rawValue: error.code) {
+            switch errorCode {
+            case .invalidEmail:
+                return "This email is incorrect"
+            case .emailAlreadyInUse:
+                return "This email is already used"
+            case .networkError:
+                return "You are not connected to the internet"
+            default:
+                return "Something went wrong :("
+            }
+        }
+        else {
+            return "Something went wrong :("
         }
     }
 }

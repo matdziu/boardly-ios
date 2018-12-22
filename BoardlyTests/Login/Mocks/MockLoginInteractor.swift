@@ -26,10 +26,6 @@ class MockLoginInteractor: LoginInteractor {
     }
 }
 
-struct MockAuthError: Error {
-    
-}
-
 enum LoginInteractorMode {
     case success, error
 }

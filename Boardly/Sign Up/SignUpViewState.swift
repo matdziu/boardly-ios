@@ -14,16 +14,22 @@ struct SignUpViewState: Equatable {
     var passwordValid: Bool = true
     var error: Bool = false
     var signUpSuccess: Bool = false
+    var errorMessage: String = ""
+    var dismissError: Bool = false
     
     init(progress: Bool = false,
          emailValid: Bool = true,
          passwordValid: Bool = true,
          error: Bool = false,
-         signUpSuccess: Bool = false) {
+         signUpSuccess: Bool = false,
+         errorMessage: String = "",
+         dismissError: Bool = false) {
         self.progress = progress
         self.emailValid = emailValid
         self.passwordValid = passwordValid
         self.error = error
         self.signUpSuccess = signUpSuccess
+        self.errorMessage = errorMessage
+        self.dismissError = dismissError
     }
 }

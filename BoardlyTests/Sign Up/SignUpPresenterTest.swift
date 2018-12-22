@@ -32,7 +32,7 @@ class SignUpPresenterTest: QuickSpec {
                     signUpViewRobot.assert(expectedViewStates: [
                         SignUpViewState(),
                         SignUpViewState(progress: true),
-                        SignUpViewState(error: true)])
+                        SignUpViewState(error: true, errorMessage: "Something went wrong :(")])
                 }
             }
             

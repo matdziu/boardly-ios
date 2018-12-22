@@ -45,11 +45,29 @@ class SignUpViewController: BaseNavViewController, SignUpView {
         emailTextField.showError(show: !signUpViewState.emailValid)
         passwordTextField.showError(show: !signUpViewState.passwordValid)
         showProgress(show: signUpViewState.progress)
+        showSignUpError(error: signUpViewState.error, errorMessage:
+            signUpViewState.errorMessage, dismissError: signUpViewState.dismissError)
         
         if signUpViewState.signUpSuccess {
             if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
                 navigationController?.setViewControllers([homeViewController], animated: true)
             }
+        }
+    }
+    
+    private func showSignUpError(error: Bool, errorMessage: String, dismissError: Bool) {
+        if error && !dismissError {
+            showErrorAlert(errorMessage: errorMessage)
+        }
+    }
+    
+    private func showErrorAlert(errorMessage: String) {
+        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+        present(alert, animated: true)
+        
+        let duration: Double = 3
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
         }
     }
     
