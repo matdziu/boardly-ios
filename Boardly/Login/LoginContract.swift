@@ -27,6 +27,7 @@ protocol LoginInteractor {
 }
 
 protocol LoginService {
+    
     func login(email: String, password: String) -> Observable<Bool>
     
     func login(credential: AuthCredential) -> Observable<Bool>

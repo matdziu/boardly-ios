@@ -55,8 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let loginViewController = navigationController.topViewController as! LoginViewController
         
         if error != nil {
-            loginViewController.showErrorAlert(errorMessage: "Something went wrong :(")
-            return
+            if (error! as NSError).code == GOOGLE_SIGN_IN_CANCELLED_CODE {
+                return
+            } else {
+                loginViewController.showErrorAlert(errorMessage: "Something went wrong :(")
+                return
+            }
         }
         
         guard let authentication = user.authentication else { return }

@@ -47,6 +47,7 @@
 		909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */; };
 		909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */; };
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
+		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
 		909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90A07A2621CE315600EE5349 /* DefaultAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthError.swift; sourceTree = "<group>"; };
+		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,6 +198,7 @@
 				909A8BA121CAD07800166C93 /* ColorConstants.swift */,
 				909A8BA321CAD08D00166C93 /* ImageConstants.swift */,
 				909A8BA521CAD0A500166C93 /* ViewControllerConstants.swift */,
+				90A07A2821CE568900EE5349 /* FirebaseConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
+				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
