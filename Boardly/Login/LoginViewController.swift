@@ -24,8 +24,8 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     
     private let loginManager = FBSDKLoginManager()
-    var googleSignInCredentialSubject = PublishSubject<AuthCredential>()
-    private var facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
+    let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
+    private let facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
     override func viewDidLoad() {
@@ -56,8 +56,6 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
             }
             if loginResult?.token != nil {
                 self.facebookAccessTokenSubject.onNext(loginResult!.token)
-            } else {
-                self.showErrorAlert(errorMessage: "Something went wrong :(")
             }
         }
     }

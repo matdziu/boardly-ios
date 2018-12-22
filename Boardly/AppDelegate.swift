@@ -28,7 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: [:]) ||
-            FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+            FBSDKApplicationDelegate.sharedInstance().application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation])
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

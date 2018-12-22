@@ -8,9 +8,9 @@ PODS:
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Fabric (1.9.0)
-  - FBSDKCoreKit (4.39.0):
-    - Bolts (~> 1.9)
-  - FBSDKLoginKit (4.39.0):
+  - FBSDKCoreKit (4.36.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
   - Firebase/Auth (5.15.0):
     - Firebase/CoreOnly
@@ -129,7 +129,8 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
-  - FBSDKLoginKit
+  - FBSDKCoreKit (~> 4.36.0)
+  - FBSDKLoginKit (~> 4.36.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -182,8 +183,8 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  FBSDKCoreKit: 1e3981faefab8c88edfaa9eecd94aab02d99a9bc
-  FBSDKLoginKit: 30ba5039a2c53d65a75103889bc2deebdacd5a1f
+  FBSDKCoreKit: 3b8e6570eedb443f9fc4af196a7bf39f18e3a3d8
+  FBSDKLoginKit: 8bccb6064708ab2f4251a7fc4e3b6d8d00ad91ba
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
   FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
@@ -211,6 +212,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
 
-PODFILE CHECKSUM: e3247b4f665e70e221045e9b30a248d1a4eb3ef7
+PODFILE CHECKSUM: 1b46621d2dd0ded89985e742bfc1b32c75b2a8cf
 
 COCOAPODS: 1.5.3

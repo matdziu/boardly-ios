@@ -12,7 +12,8 @@ target 'Boardly' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'GoogleSignIn'
-  pod 'FBSDKLoginKit'
+  pod 'FBSDKCoreKit',  '~> 4.36.0'
+  pod 'FBSDKLoginKit',  '~> 4.36.0'
   pod 'GeoFire'
 
   target 'BoardlyTests' do
