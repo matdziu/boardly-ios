@@ -112,6 +112,7 @@
 		909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90A07A2621CE315600EE5349 /* DefaultAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthError.swift; sourceTree = "<group>"; };
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +160,7 @@
 		909A8B7321CACDA800166C93 /* Boardly */ = {
 			isa = PBXGroup;
 			children = (
+				90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */,
 				909A8B7421CACDA800166C93 /* AppDelegate.swift */,
 				909A8B9521CACE6A00166C93 /* Common */,
 				909A8B9821CACE8400166C93 /* Base */,
@@ -408,6 +410,11 @@
 				TargetAttributes = {
 					909A8B7021CACDA800166C93 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					909A8B8421CACDAA00166C93 = {
 						CreatedOnToolsVersion = 10.0;
@@ -786,7 +793,9 @@
 			baseConfigurationReference = 9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boardly/Boardly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,7 +813,9 @@
 			baseConfigurationReference = 11463FBCF98EDD6910D16713 /* Pods-Boardly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boardly/Boardly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
