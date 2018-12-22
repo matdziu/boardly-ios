@@ -12,7 +12,6 @@ class BoardlyButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.backgroundColor = UIColor(named: Color.primaryBlue.rawValue)?.cgColor
         clipsToBounds = true
         layer.cornerRadius = frame.size.height / 2.0
         setTitleColor(UIColor.white, for: .normal)

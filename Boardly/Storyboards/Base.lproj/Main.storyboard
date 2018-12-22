@@ -87,7 +87,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPy-cg-CEF" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="230" width="343" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                <state key="normal" title="Log in"/>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a37-Bn-6Yd">
                                 <rect key="frame" x="134.5" y="630" width="106" height="21"/>
@@ -97,10 +98,21 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arC-JA-lXR" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="571" width="343" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                <state key="normal" title="Sign up"/>
                                 <connections>
                                     <segue destination="bfv-kj-wxn" kind="show" id="Obn-PE-N8t"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-pG-5bq" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="16" y="525" width="343" height="30"/>
+                                <color key="backgroundColor" name="AccentRed"/>
+                                <state key="normal" title="Log in using Gmail"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-DA-Xt7" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="16" y="479" width="343" height="30"/>
+                                <color key="backgroundColor" name="FacebookBlue"/>
+                                <state key="normal" title="Log in using Facebook"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="10w-wi-2r1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -113,8 +125,10 @@
                             <constraint firstItem="QQb-Xw-jMZ" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="1dl-ty-Sy6"/>
                             <constraint firstItem="dfP-y4-FbA" firstAttribute="top" secondItem="T4B-6W-fYr" secondAttribute="top" constant="16" id="Bes-fZ-2Se"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="arC-JA-lXR" secondAttribute="trailing" constant="16" id="Fsk-pv-lYF"/>
+                            <constraint firstItem="arC-JA-lXR" firstAttribute="top" secondItem="ubt-pG-5bq" secondAttribute="bottom" constant="16" id="H8c-7Y-ELq"/>
                             <constraint firstItem="10w-wi-2r1" firstAttribute="top" secondItem="T4B-6W-fYr" secondAttribute="top" id="Jg5-vA-Faw"/>
                             <constraint firstItem="a37-Bn-6Yd" firstAttribute="top" secondItem="arC-JA-lXR" secondAttribute="bottom" constant="29" id="NbB-bn-2pe"/>
+                            <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="3Ba-DA-Xt7" secondAttribute="trailing" constant="16" id="QE0-oi-ToY"/>
                             <constraint firstItem="6EW-7E-nJr" firstAttribute="top" secondItem="QQb-Xw-jMZ" secondAttribute="bottom" constant="8" id="QbX-mg-Tu6"/>
                             <constraint firstItem="a37-Bn-6Yd" firstAttribute="centerX" secondItem="T4B-6W-fYr" secondAttribute="centerX" id="RMP-nS-xPY"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QQb-Xw-jMZ" secondAttribute="trailing" symbolic="YES" id="SYr-ER-jZZ"/>
@@ -122,18 +136,22 @@
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="QMO-e7-9gT" secondAttribute="trailing" constant="16" id="XWp-d3-P6q"/>
                             <constraint firstItem="QQb-Xw-jMZ" firstAttribute="top" secondItem="QMO-e7-9gT" secondAttribute="bottom" constant="16" id="Y7h-9w-jvK"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="lPy-cg-CEF" secondAttribute="trailing" constant="16" id="YDA-Q0-SiI"/>
+                            <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="ubt-pG-5bq" secondAttribute="trailing" constant="16" id="YLD-Zw-py8"/>
                             <constraint firstItem="QMO-e7-9gT" firstAttribute="top" secondItem="dfP-y4-FbA" secondAttribute="bottom" constant="8" id="YjA-2P-jgd"/>
                             <constraint firstItem="QMO-e7-9gT" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="aAg-bK-6LA"/>
+                            <constraint firstItem="3Ba-DA-Xt7" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="aoQ-NM-US2"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="bottom" secondItem="a37-Bn-6Yd" secondAttribute="bottom" constant="16" id="b4a-LH-Cek"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dfP-y4-FbA" secondAttribute="trailing" symbolic="YES" id="bK1-o2-dIq"/>
                             <constraint firstItem="arC-JA-lXR" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="gPz-uN-Xhi"/>
                             <constraint firstItem="dfP-y4-FbA" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="hXE-7m-eGp"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="6EW-7E-nJr" secondAttribute="trailing" constant="16" id="jFc-nw-N6o"/>
+                            <constraint firstItem="ubt-pG-5bq" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="jtg-Lr-aX2"/>
                             <constraint firstItem="10w-wi-2r1" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" id="p7V-YJ-XFL"/>
                             <constraint firstItem="lPy-cg-CEF" firstAttribute="top" secondItem="6EW-7E-nJr" secondAttribute="bottom" constant="16" id="rSX-J9-mjG"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="trailing" secondItem="10w-wi-2r1" secondAttribute="trailing" id="ri0-Uk-ml6"/>
                             <constraint firstItem="6EW-7E-nJr" firstAttribute="leading" secondItem="T4B-6W-fYr" secondAttribute="leading" constant="16" id="xYV-EY-sPJ"/>
                             <constraint firstItem="T4B-6W-fYr" firstAttribute="bottom" secondItem="10w-wi-2r1" secondAttribute="bottom" id="xfy-mA-iYr"/>
+                            <constraint firstItem="ubt-pG-5bq" firstAttribute="top" secondItem="3Ba-DA-Xt7" secondAttribute="bottom" constant="16" id="zNf-uk-79z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T4B-6W-fYr"/>
                     </view>
@@ -141,6 +159,8 @@
                     <connections>
                         <outlet property="emailLabel" destination="dfP-y4-FbA" id="IRy-aI-n9k"/>
                         <outlet property="emailTextField" destination="QMO-e7-9gT" id="U3o-eZ-QSe"/>
+                        <outlet property="facebookLoginButton" destination="3Ba-DA-Xt7" id="jYp-OW-UjR"/>
+                        <outlet property="gmailLoginButton" destination="ubt-pG-5bq" id="LD5-m8-2PQ"/>
                         <outlet property="loginButton" destination="lPy-cg-CEF" id="H7i-fY-A3E"/>
                         <outlet property="passwordLabel" destination="QQb-Xw-jMZ" id="o78-Jl-bkM"/>
                         <outlet property="passwordTextField" destination="6EW-7E-nJr" id="R9R-DK-gyj"/>
@@ -186,7 +206,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIO-Ag-PZ4" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="230" width="343" height="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                <state key="normal" title="Sign up"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eTh-4T-5KX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -236,8 +257,14 @@
         <namedColor name="AccentRed">
             <color red="0.95686274509803926" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="FacebookBlue">
+            <color red="0.36078431372549019" green="0.41960784313725491" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Grey">
             <color red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryBlue">
+            <color red="0.29019607843137257" green="0.33333333333333331" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

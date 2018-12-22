@@ -19,6 +19,8 @@ class LoginViewController: BaseNavViewController, LoginView {
     @IBOutlet weak var loginButton: BoardlyButton!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var gmailLoginButton: BoardlyButton!
+    @IBOutlet weak var facebookLoginButton: BoardlyButton!
     
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
