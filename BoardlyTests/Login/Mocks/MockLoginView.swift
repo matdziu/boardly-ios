@@ -8,14 +8,20 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 @testable import Boardly
 
 class MockLoginView: LoginView {
     let inputDataSubject = PublishSubject<InputData>()
+    let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
     var renderedStates: [LoginViewState] = []
     
     func inputEmitter() -> Observable<InputData> {
         return inputDataSubject
+    }
+    
+    func googleSignInCredentialEmitter() -> Observable<AuthCredential> {
+        return googleSignInCredentialSubject
     }
     
     func render(loginViewState: LoginViewState) {

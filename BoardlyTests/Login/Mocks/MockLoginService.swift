@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 @testable import Boardly
 
 class MockLoginService: LoginService {
@@ -25,6 +26,10 @@ class MockLoginService: LoginService {
         else {
             return Observable.error(DefaultAuthError())
         }
+    }
+    
+    func login(credential: AuthCredential) -> Observable<Bool> {
+        return Observable.just(true)
     }
 }
 

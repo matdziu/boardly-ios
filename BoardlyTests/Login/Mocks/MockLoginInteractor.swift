@@ -8,6 +8,7 @@
 
 @testable import Boardly
 import RxSwift
+import FirebaseAuth
 
 class MockLoginInteractor: LoginInteractor {
     
@@ -23,6 +24,10 @@ class MockLoginInteractor: LoginInteractor {
         } else {
             return Observable.just(PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false))
         }
+    }
+    
+    func login(credential: AuthCredential) -> Observable<PartialLoginViewState> {
+        return Observable.just(.loginSuccess)
     }
 }
 
