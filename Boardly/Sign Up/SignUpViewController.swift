@@ -49,8 +49,8 @@ class SignUpViewController: BaseNavViewController, SignUpView {
             signUpViewState.errorMessage, dismissError: signUpViewState.dismissError)
         
         if signUpViewState.signUpSuccess {
-            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
-                navigationController?.setViewControllers([homeViewController], animated: true)
+            if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
+                navigationController?.setViewControllers([editProfileViewController], animated: true)
             }
         }
     }
