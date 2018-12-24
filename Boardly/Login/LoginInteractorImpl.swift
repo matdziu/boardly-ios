@@ -20,7 +20,7 @@ class LoginInteractorImpl: LoginInteractor {
     }
     
     func login(email: String, password: String) -> Observable<PartialLoginViewState> {
-        return loginService.login(email: email, password: password).map({ _ in return .loginSuccess })
+        return loginService.login(email: email, password: password).map({ return PartialLoginViewState.loginSuccess(isProfileFilled: $0) })
             .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
                 return self.emitErrorState(error: error)
             })
@@ -35,8 +35,18 @@ class LoginInteractorImpl: LoginInteractor {
         return loginUsingCredential(credential: credential)
     }
     
+    func isLoggedIn() -> Observable<PartialLoginViewState> {
+        return loginService.isLoggedIn().map({ (loginData) -> PartialLoginViewState in
+            if loginData.isLoggedIn {
+                return PartialLoginViewState.loginSuccess(isProfileFilled: loginData.isProfileFilled)
+            } else {
+                return PartialLoginViewState.notLoggedIn
+            }
+        })
+    }
+    
     private func loginUsingCredential(credential: AuthCredential) -> Observable<PartialLoginViewState> {
-        return loginService.login(credential: credential).map({ _ in return .loginSuccess })
+        return loginService.login(credential: credential).map({ return PartialLoginViewState.loginSuccess(isProfileFilled: $0) })
             .catchError({ [unowned self] (error: Error) -> Observable<PartialLoginViewState> in
                 return self.emitErrorState(error: error)
             })

@@ -48,8 +48,12 @@ class LoginPresenter {
                 return self.loginInteractor.login(token: token).startWith(.progress)
         }
         
+        let initialLoginCheckObservable = loginView.initialLoginCheckEmitter()
+            .filter({ return $0 })
+            .flatMap { [unowned self] _ in return self.loginInteractor.isLoggedIn().startWith(.progress) }
+        
         Observable
-            .merge([inputDataObservable, googleSignInCredentialObservable, facebookAccessTokenObservable])
+            .merge([inputDataObservable, googleSignInCredentialObservable, facebookAccessTokenObservable, initialLoginCheckObservable])
             .scan(try! stateSubject.value()) { (viewState: LoginViewState, partialState: PartialLoginViewState) -> LoginViewState in
                 return self.reduce(previousState: viewState, partialState: partialState)
             }

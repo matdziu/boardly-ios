@@ -20,6 +20,8 @@ protocol LoginView {
     func googleSignInCredentialEmitter() -> Observable<AuthCredential>
     
     func facebookAccessTokenEmitter() -> Observable<FBSDKAccessToken>
+    
+    func initialLoginCheckEmitter() -> Observable<Bool>
 }
 
 protocol LoginInteractor {
@@ -29,6 +31,8 @@ protocol LoginInteractor {
     func login(credential: AuthCredential) -> Observable<PartialLoginViewState>
     
     func login(token: FBSDKAccessToken) -> Observable<PartialLoginViewState>
+    
+    func isLoggedIn() -> Observable<PartialLoginViewState>
 }
 
 protocol LoginService {
@@ -36,4 +40,6 @@ protocol LoginService {
     func login(email: String, password: String) -> Observable<Bool>
     
     func login(credential: AuthCredential) -> Observable<Bool>
+    
+    func isLoggedIn() -> Observable<LoginData>
 }

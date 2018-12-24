@@ -22,11 +22,14 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBOutlet weak var loginButton: BoardlyButton!
     @IBOutlet weak var privacyPolicyLabel: UILabel!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    
     private var fbAccessToken: FBSDKAccessToken? = nil
+    private var initialized = true
     
     private let loginManager = FBSDKLoginManager()
     var googleSignInCredentialSubject: PublishSubject<AuthCredential>!
     private var facebookAccessTokenSubject: PublishSubject<FBSDKAccessToken>!
+    private var initialLoginCheckSubject: PublishSubject<Bool>!
     private let loginPresenter = LoginPresenter(loginInteractor: LoginInteractorImpl(loginService: LoginServiceImpl()))
     
     override func viewDidLoad() {
@@ -39,6 +42,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         super.viewWillAppear(animated)
         initEmitters()
         loginPresenter.bind(loginView: self)
+        initialLoginCheckSubject.onNext(initialized)
         initView()
     }
     
@@ -52,9 +56,11 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     private func initEmitters() {
         facebookAccessTokenSubject = PublishSubject()
         googleSignInCredentialSubject = PublishSubject()
+        initialLoginCheckSubject = PublishSubject()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        initialized = false
         loginPresenter.unbind()
         super.viewWillDisappear(animated)
     }
@@ -88,6 +94,10 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         return facebookAccessTokenSubject
     }
     
+    func initialLoginCheckEmitter() -> Observable<Bool> {
+        return initialLoginCheckSubject
+    }
+    
     func render(loginViewState: LoginViewState) {
         showErrorLabel(show: !loginViewState.emailValid, label: emailLabel)
         showErrorLabel(show: !loginViewState.passwordValid, label: passwordLabel)
@@ -96,9 +106,13 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         showProgress(show: loginViewState.progress)
         showLoginError(error: loginViewState.error, errorMessage: loginViewState.errorMessage, dismissError: loginViewState.dismissError)
         
-        if loginViewState.loginSuccess {
+        if loginViewState.loginSuccess && loginViewState.isProfileFilled {
             if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
                 navigationController?.setViewControllers([homeViewController], animated: true)
+            }
+        } else if loginViewState.loginSuccess && !loginViewState.isProfileFilled {
+            if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
+                navigationController?.setViewControllers([editProfileViewController], animated: true)
             }
         }
     }

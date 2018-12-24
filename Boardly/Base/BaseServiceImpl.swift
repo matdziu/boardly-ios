@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 
 class BaseServiceImpl {
     
@@ -15,5 +16,13 @@ class BaseServiceImpl {
     
     func getUserNodeRef(userId: String) -> DatabaseReference {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)")
+    }
+    
+    func getCurrentUser() -> User? {
+        return Auth.auth().currentUser
+    }
+    
+    func getCurrentUserId() -> String {
+        return getCurrentUser()?.uid ?? ""
     }
 }

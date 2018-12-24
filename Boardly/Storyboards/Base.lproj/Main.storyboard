@@ -26,6 +26,33 @@
             </objects>
             <point key="canvasLocation" x="-543" y="114"/>
         </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="tQg-3w-HyF">
+            <objects>
+                <viewController storyboardIdentifier="editProfileViewController" id="FHP-5w-DGw" customClass="EditProfileViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GbJ-s2-H8e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EDIT PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-6G-0X3">
+                                <rect key="frame" x="134" y="333" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UUG-6G-0X3" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="0AO-y2-icr"/>
+                            <constraint firstItem="UUG-6G-0X3" firstAttribute="centerY" secondItem="6Lb-6T-3Pb" secondAttribute="centerY" id="Mx6-Gw-4Q0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Lb-6T-3Pb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCa-fy-okM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-546"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="fDe-AQ-rl1">
             <objects>

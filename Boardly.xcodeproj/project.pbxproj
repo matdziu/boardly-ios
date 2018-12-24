@@ -49,6 +49,8 @@
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */; };
+		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
+		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +117,8 @@
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceImpl.swift; sourceTree = "<group>"; };
+		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,7 @@
 				909A8B9B21CACE9600166C93 /* Home */,
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
+				90D01CDF21D0FF10000F710D /* Edit Profile */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
 				909A8B9D21CACEA600166C93 /* Resources */,
 			);
@@ -228,6 +233,7 @@
 		909A8B9921CACE8E00166C93 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				90D01CDC21D0F1B2000F710D /* models */,
 				909A8BB121CAD22800166C93 /* LoginViewController.swift */,
 				909A8BB321CADFD400166C93 /* LoginViewState.swift */,
 				909A8BB521CADFED00166C93 /* PartialLoginViewState.swift */,
@@ -336,6 +342,22 @@
 				90A07A2621CE315600EE5349 /* DefaultAuthError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		90D01CDC21D0F1B2000F710D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				90D01CDD21D0F1BD000F710D /* LoginData.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		90D01CDF21D0FF10000F710D /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */,
+			);
+			path = "Edit Profile";
 			sourceTree = "<group>";
 		};
 		F952813C0A10FCBCA8731E6E /* Frameworks */ = {
@@ -607,6 +629,7 @@
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
 				90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */,
+				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
@@ -615,6 +638,7 @@
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
+				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,

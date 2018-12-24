@@ -7,3 +7,4 @@
 //
 
 let HOME_VIEW_CONTROLLER_ID = "homeViewController"
+let EDIT_PROFILE_VIEW_CONTROLLER_ID = "editProfileViewController"

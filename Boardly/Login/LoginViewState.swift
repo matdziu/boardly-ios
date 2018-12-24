@@ -16,6 +16,8 @@ struct LoginViewState: Equatable {
     var loginSuccess: Bool = false
     var errorMessage: String = ""
     var dismissError: Bool = false
+    var notLoggedIn: Bool = false
+    var isProfileFilled: Bool = false
     
     init(progress: Bool = false,
          emailValid: Bool = true,
@@ -23,7 +25,9 @@ struct LoginViewState: Equatable {
          error: Bool = false,
          loginSuccess: Bool = false,
          errorMessage: String = "",
-         dismissError: Bool = false) {
+         dismissError: Bool = false,
+         notLoggedIn: Bool = false,
+         isProfileFilled: Bool = false) {
         self.progress = progress
         self.emailValid = emailValid
         self.passwordValid = passwordValid
@@ -31,6 +35,8 @@ struct LoginViewState: Equatable {
         self.loginSuccess = loginSuccess
         self.errorMessage = errorMessage
         self.dismissError = dismissError
+        self.notLoggedIn = notLoggedIn
+        self.isProfileFilled = isProfileFilled
     }
 }
 

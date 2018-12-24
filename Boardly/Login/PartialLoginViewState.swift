@@ -12,7 +12,8 @@ import FirebaseAuth
 enum PartialLoginViewState: Equatable {
     case progress
     case localValidation(emailValid: Bool, passwordValid: Bool)
-    case loginSuccess
+    case loginSuccess(isProfileFilled: Bool)
+    case notLoggedIn
     case errorState(error: NSError, dismiss: Bool)
     
     func reduce(previousState: LoginViewState) -> LoginViewState {
@@ -21,8 +22,17 @@ enum PartialLoginViewState: Equatable {
             return LoginViewState(progress: true)
         case .localValidation(let emailValid, let passwordValid):
             return LoginViewState(emailValid: emailValid, passwordValid: passwordValid)
-        case .loginSuccess:
-            return LoginViewState(progress: true, loginSuccess: true)
+        case .loginSuccess(let isProfileFilled):
+            return LoginViewState(
+                progress: true,
+                loginSuccess: true,
+                notLoggedIn: false,
+                isProfileFilled: isProfileFilled)
+        case .notLoggedIn:
+            return LoginViewState(
+                progress: false,
+                loginSuccess: false,
+                notLoggedIn: false)
         case .errorState(let error, let dismiss):
             return LoginViewState(
                 error: true,

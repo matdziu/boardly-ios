@@ -26,7 +26,7 @@ class LoginServiceImpl: BaseServiceImpl, LoginService {
                 resultSubject.onError(DefaultAuthError())
             }
         }
-        return resultSubject
+        return resultSubject.flatMap({ [unowned self] _ in return self.checkIfProfileIsFilled(userId: self.getCurrentUserId()) })
     }
     
     func login(credential: AuthCredential) -> Observable<Bool> {
@@ -42,13 +42,24 @@ class LoginServiceImpl: BaseServiceImpl, LoginService {
                 resultSubject.onError(DefaultAuthError())
             }
         }
-        return resultSubject
+        return resultSubject.flatMap({ [unowned self] _ in return self.checkIfProfileIsFilled(userId: self.getCurrentUserId()) })
+    }
+    
+    func isLoggedIn() -> Observable<LoginData> {
+        if (getCurrentUser() != nil) {
+            return checkIfProfileIsFilled(userId: getCurrentUserId())
+                .map({ (isProfilFilled) -> LoginData in
+                    return LoginData(isLoggedIn: true, isProfileFilled: isProfilFilled)
+                })
+        } else {
+            return Observable.just(LoginData(isLoggedIn: false, isProfileFilled: false))
+        }
     }
     
     private func checkIfProfileIsFilled(userId: String) -> Observable<Bool> {
         let resultSubject = PublishSubject<Bool>()
         getUserNodeRef(userId: userId).observeSingleEvent(of: .value) { (snapshot) in
-            resultSubject.onNext(snapshot.value != nil)
+            resultSubject.onNext(snapshot.exists())
         }
         return resultSubject
     }
