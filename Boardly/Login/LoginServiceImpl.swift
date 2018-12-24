@@ -9,8 +9,9 @@
 import Foundation
 import RxSwift
 import FirebaseAuth
+import FirebaseDatabase
 
-class LoginServiceImpl: LoginService {
+class LoginServiceImpl: BaseServiceImpl, LoginService {
     
     func login(email: String, password: String) -> Observable<Bool> {
         let resultSubject = PublishSubject<Bool>()
@@ -43,5 +44,12 @@ class LoginServiceImpl: LoginService {
         }
         return resultSubject
     }
+    
+    private func checkIfProfileIsFilled(userId: String) -> Observable<Bool> {
+        let resultSubject = PublishSubject<Bool>()
+        getUserNodeRef(userId: userId).observeSingleEvent(of: .value) { (snapshot) in
+            resultSubject.onNext(snapshot.value != nil)
+        }
+        return resultSubject
+    }
 }
-
