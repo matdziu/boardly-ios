@@ -14,9 +14,13 @@ import FirebaseAuth
 class MockLoginService: LoginService {
     
     private let mode: LoginServiceMode
+    private let isProfileFilled: Bool
+    private let isLogged: Bool
     
-    init(mode: LoginServiceMode) {
+    init(mode: LoginServiceMode, isProfileFilled: Bool = false, isLogged: Bool = false) {
         self.mode = mode
+        self.isProfileFilled = isProfileFilled
+        self.isLogged = isLogged
     }
     
     func login(email: String, password: String) -> Observable<Bool> {
@@ -30,6 +34,10 @@ class MockLoginService: LoginService {
     
     func login(credential: AuthCredential) -> Observable<Bool> {
         return Observable.just(true)
+    }
+    
+    func isLoggedIn() -> Observable<LoginData> {
+        return Observable.just(LoginData(isLoggedIn: isLogged, isProfileFilled: isProfileFilled))
     }
 }
 

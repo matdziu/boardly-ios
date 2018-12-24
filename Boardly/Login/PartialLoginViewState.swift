@@ -32,7 +32,7 @@ enum PartialLoginViewState: Equatable {
             return LoginViewState(
                 progress: false,
                 loginSuccess: false,
-                notLoggedIn: false)
+                notLoggedIn: true)
         case .errorState(let error, let dismiss):
             return LoginViewState(
                 error: true,

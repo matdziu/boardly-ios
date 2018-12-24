@@ -18,6 +18,10 @@ class LoginViewRobot {
         loginPresenter.bind(loginView: mockLoginView)
     }
     
+    func performLoginCheck() {
+        mockLoginView.initialLoginCheckSubject.onNext(true)
+    }
+    
     func emitInputData(inputData: InputData) {
         mockLoginView.inputDataSubject.onNext(inputData)
     }

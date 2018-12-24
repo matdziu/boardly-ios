@@ -16,6 +16,7 @@ class MockLoginView: LoginView {
     let inputDataSubject = PublishSubject<InputData>()
     let googleSignInCredentialSubject = PublishSubject<AuthCredential>()
     let facebookAccessTokenSubject = PublishSubject<FBSDKAccessToken>()
+    let initialLoginCheckSubject = PublishSubject<Bool>()
     var renderedStates: [LoginViewState] = []
     
     func inputEmitter() -> Observable<InputData> {
@@ -28,6 +29,10 @@ class MockLoginView: LoginView {
     
     func facebookAccessTokenEmitter() -> Observable<FBSDKAccessToken> {
         return facebookAccessTokenSubject
+    }
+    
+    func initialLoginCheckEmitter() -> Observable<Bool> {
+        return initialLoginCheckSubject
     }
     
     func render(loginViewState: LoginViewState) {

@@ -24,7 +24,7 @@ class LoginInteractorTest: QuickSpec {
                     .toBlocking()
                     .toArray()
                 
-                expect(output).to(equal([PartialLoginViewState.loginSuccess]))
+                expect(output).to(equal([PartialLoginViewState.loginSuccess(isProfileFilled: true)]))
             }
             
             it("produces error") {
@@ -36,6 +36,24 @@ class LoginInteractorTest: QuickSpec {
                 expect(output).to(equal([
                     PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: false),
                     PartialLoginViewState.errorState(error: DefaultAuthError() as NSError, dismiss: true)]))
+            }
+            
+            it("detects logged in user with filled profile") {
+                let loginInteractor = LoginInteractorImpl(loginService: MockLoginService(mode: .success, isProfileFilled: true, isLogged: true))
+                let output = try! loginInteractor.isLoggedIn()
+                    .toBlocking()
+                    .toArray()
+                
+                expect(output).to(equal([.loginSuccess(isProfileFilled: true)]))
+            }
+            
+            it("detects that user is not logged in") {
+                let loginInteractor = LoginInteractorImpl(loginService: MockLoginService(mode: .success, isProfileFilled: false, isLogged: false))
+                let output = try! loginInteractor.isLoggedIn()
+                    .toBlocking()
+                    .toArray()
+                
+                expect(output).to(equal([.notLoggedIn]))
             }
         }
     }
