@@ -11,4 +11,16 @@ import UIKit
 
 class EditProfileViewController: BaseNavViewController {
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initProfileImageView()
+    }
+    
+    private func initProfileImageView() {
+        profileImageView.layer.borderColor = UIColor(named: Color.grey.rawValue)?.cgColor
+        profileImageView.layer.borderWidth = 1.0
+        profileImageView.layer.cornerRadius = 3.0
+    }
 }

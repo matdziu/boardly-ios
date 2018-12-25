@@ -34,20 +34,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EDIT PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-6G-0X3">
-                                <rect key="frame" x="134" y="333" width="107" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePictureShape" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-wa-Mnj">
+                                <rect key="frame" x="123.5" y="36" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="4Ri-6A-Kjb"/>
+                                    <constraint firstAttribute="height" constant="128" id="M7V-Ww-UKZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UUG-6G-0X3" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="0AO-y2-icr"/>
-                            <constraint firstItem="UUG-6G-0X3" firstAttribute="centerY" secondItem="6Lb-6T-3Pb" secondAttribute="centerY" id="Mx6-Gw-4Q0"/>
+                            <constraint firstItem="gLn-wa-Mnj" firstAttribute="top" secondItem="6Lb-6T-3Pb" secondAttribute="top" constant="16" id="D1X-5B-LEf"/>
+                            <constraint firstItem="gLn-wa-Mnj" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="yC2-sg-P8y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Lb-6T-3Pb"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="gLn-wa-Mnj" id="Uqx-8g-nor"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCa-fy-okM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,6 +289,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ProfilePictureShape" width="108" height="108"/>
         <namedColor name="AccentRed">
             <color red="0.95686274509803926" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
