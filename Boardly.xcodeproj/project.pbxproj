@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90907F6F21D23F8F0054300C /* EditInputProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F6E21D23F8F0054300C /* EditInputProfileData.swift */; };
+		90907F7121D243EA0054300C /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7021D243EA0054300C /* ProfileData.swift */; };
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90907F6E21D23F8F0054300C /* EditInputProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInputProfileData.swift; sourceTree = "<group>"; };
+		90907F7021D243EA0054300C /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90907F6D21D23F840054300C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				90907F6E21D23F8F0054300C /* EditInputProfileData.swift */,
+				90907F7021D243EA0054300C /* ProfileData.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		909A8B6821CACDA800166C93 = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +368,7 @@
 		90D01CDF21D0FF10000F710D /* Edit Profile */ = {
 			isa = PBXGroup;
 			children = (
+				90907F6D21D23F840054300C /* models */,
 				90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */,
 			);
 			path = "Edit Profile";
@@ -633,6 +647,7 @@
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
+				90907F6F21D23F8F0054300C /* EditInputProfileData.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
@@ -640,6 +655,7 @@
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
+				90907F7121D243EA0054300C /* ProfileData.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
