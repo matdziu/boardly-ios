@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: BaseNavViewController {
     
 }
