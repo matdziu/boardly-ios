@@ -41,10 +41,43 @@
                                     <constraint firstAttribute="height" constant="128" id="M7V-Ww-UKZ"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-fR-1IT">
+                                <rect key="frame" x="88" y="180" width="199" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-s7-hWc">
+                                <rect key="frame" x="16" y="238.5" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovM-Sw-hax" customClass="BoardlyTextField" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="16" y="267.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-W7-aab" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="16" y="313.5" width="343" height="30"/>
+                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                <state key="normal" title="Save changes"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gLn-wa-Mnj" firstAttribute="top" secondItem="6Lb-6T-3Pb" secondAttribute="top" constant="16" id="D1X-5B-LEf"/>
+                            <constraint firstItem="LOT-W7-aab" firstAttribute="top" secondItem="ovM-Sw-hax" secondAttribute="bottom" constant="16" id="MNA-ED-VYq"/>
+                            <constraint firstItem="6Lb-6T-3Pb" firstAttribute="trailing" secondItem="ovM-Sw-hax" secondAttribute="trailing" constant="16" id="REU-o9-2a7"/>
+                            <constraint firstItem="ovM-Sw-hax" firstAttribute="leading" secondItem="6Lb-6T-3Pb" secondAttribute="leading" constant="16" id="WaJ-8l-QAK"/>
+                            <constraint firstItem="hDP-fR-1IT" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="h4h-YW-co5"/>
+                            <constraint firstItem="hDP-fR-1IT" firstAttribute="top" secondItem="gLn-wa-Mnj" secondAttribute="bottom" constant="16" id="kJU-1m-uJt"/>
+                            <constraint firstItem="ovM-Sw-hax" firstAttribute="top" secondItem="O5u-s7-hWc" secondAttribute="bottom" constant="8" id="mON-xK-jjO"/>
+                            <constraint firstItem="6Lb-6T-3Pb" firstAttribute="trailing" secondItem="LOT-W7-aab" secondAttribute="trailing" constant="16" id="nob-0A-8Wp"/>
+                            <constraint firstItem="O5u-s7-hWc" firstAttribute="leading" secondItem="6Lb-6T-3Pb" secondAttribute="leading" constant="16" id="p2H-jh-7c9"/>
+                            <constraint firstItem="LOT-W7-aab" firstAttribute="leading" secondItem="6Lb-6T-3Pb" secondAttribute="leading" constant="16" id="rSG-mK-gPs"/>
+                            <constraint firstItem="O5u-s7-hWc" firstAttribute="top" secondItem="hDP-fR-1IT" secondAttribute="bottom" constant="32" id="xnK-fI-62C"/>
                             <constraint firstItem="gLn-wa-Mnj" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="yC2-sg-P8y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Lb-6T-3Pb"/>
