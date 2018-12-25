@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mateusz Dziubek. All rights reserved.
 //
 
-struct ProfileData {
+struct ProfileData: Equatable {
     var name: String = ""
     var profilePicture: String = ""
     var rating: Double? = nil

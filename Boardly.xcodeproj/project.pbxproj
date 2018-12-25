@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90907F6F21D23F8F0054300C /* EditInputProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F6E21D23F8F0054300C /* EditInputProfileData.swift */; };
+		90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F6E21D23F8F0054300C /* EditProfileInputData.swift */; };
 		90907F7121D243EA0054300C /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7021D243EA0054300C /* ProfileData.swift */; };
+		90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7221D244E50054300C /* EditProfileViewState.swift */; };
+		90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7421D246A60054300C /* PartialEditProfileViewState.swift */; };
+		90907F7721D248C30054300C /* EditProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7621D248C30054300C /* EditProfileContract.swift */; };
+		90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7821D24ADC0054300C /* EditProfilePresenter.swift */; };
+		90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7A21D24AEB0054300C /* EditProfileInteractorImpl.swift */; };
+		90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */; };
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
@@ -72,8 +78,14 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		90907F6E21D23F8F0054300C /* EditInputProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInputProfileData.swift; sourceTree = "<group>"; };
+		90907F6E21D23F8F0054300C /* EditProfileInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInputData.swift; sourceTree = "<group>"; };
 		90907F7021D243EA0054300C /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		90907F7221D244E50054300C /* EditProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewState.swift; sourceTree = "<group>"; };
+		90907F7421D246A60054300C /* PartialEditProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEditProfileViewState.swift; sourceTree = "<group>"; };
+		90907F7621D248C30054300C /* EditProfileContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileContract.swift; sourceTree = "<group>"; };
+		90907F7821D24ADC0054300C /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		90907F7A21D24AEB0054300C /* EditProfileInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorImpl.swift; sourceTree = "<group>"; };
+		90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileServiceImpl.swift; sourceTree = "<group>"; };
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,7 +162,7 @@
 		90907F6D21D23F840054300C /* models */ = {
 			isa = PBXGroup;
 			children = (
-				90907F6E21D23F8F0054300C /* EditInputProfileData.swift */,
+				90907F6E21D23F8F0054300C /* EditProfileInputData.swift */,
 				90907F7021D243EA0054300C /* ProfileData.swift */,
 			);
 			path = models;
@@ -370,6 +382,12 @@
 			children = (
 				90907F6D21D23F840054300C /* models */,
 				90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */,
+				90907F7221D244E50054300C /* EditProfileViewState.swift */,
+				90907F7421D246A60054300C /* PartialEditProfileViewState.swift */,
+				90907F7621D248C30054300C /* EditProfileContract.swift */,
+				90907F7821D24ADC0054300C /* EditProfilePresenter.swift */,
+				90907F7A21D24AEB0054300C /* EditProfileInteractorImpl.swift */,
+				90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */,
 			);
 			path = "Edit Profile";
 			sourceTree = "<group>";
@@ -644,15 +662,20 @@
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
 				90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
+				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
-				90907F6F21D23F8F0054300C /* EditInputProfileData.swift in Sources */,
+				90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */,
+				90907F7721D248C30054300C /* EditProfileContract.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
+				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
+				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
+				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				90907F7121D243EA0054300C /* ProfileData.swift in Sources */,
@@ -661,6 +684,7 @@
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
 				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
+				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
