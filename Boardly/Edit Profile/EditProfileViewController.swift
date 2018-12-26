@@ -61,7 +61,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
             .rx
             .controlEvent(UIControlEvents.touchUpInside)
             .map({ [unowned self] in return EditProfileInputData(
-                name: self.nameInputField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
+                name: self.nameInputField.text ?? "",
                 profilePicturePath: self.selectedProfilePicturePath) })
     }
     

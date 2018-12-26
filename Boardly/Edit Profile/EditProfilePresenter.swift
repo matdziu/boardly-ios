@@ -27,7 +27,8 @@ class EditProfilePresenter {
         
         let inputDataObservable = editProfileView.inputDataEmitter()
             .flatMap { [unowned self] (inputData) -> Observable<PartialEditProfileViewState> in
-                if !inputData.name.isEmpty {
+                let trimmedName = inputData.name.trimmingCharacters(in: .whitespacesAndNewlines)
+                if !trimmedName.isEmpty {
                     return self.editProfileInteractor.saveProfileChanges(inputData: inputData).startWith(.progress)
                 } else {
                     return Observable.just(PartialEditProfileViewState.nameFieldEmpty)
