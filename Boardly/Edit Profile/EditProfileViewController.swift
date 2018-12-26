@@ -19,19 +19,21 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     
     private var initialize = true
     private var selectedProfilePicturePath: URL? = nil
+    private let editProfilePresenter = EditProfilePresenter(
+        editProfileInteractor: EditProfileInteractorImpl(editProfileService: EditProfileServiceImpl()))
     
     private var fetchProfileDataSubject: PublishSubject<Bool>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initProfileImageView()
-        initEmitters()
-        
-        fetchProfileDataSubject.onNext(initialize)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initEmitters()
+        editProfilePresenter.bind(editProfileView: self)
+        fetchProfileDataSubject.onNext(initialize)
     }
     
     private func initEmitters() {
@@ -40,6 +42,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     
     override func viewWillDisappear(_ animated: Bool) {
         initialize = false
+        editProfilePresenter.unbind()
         super.viewWillDisappear(animated)
     }
     
