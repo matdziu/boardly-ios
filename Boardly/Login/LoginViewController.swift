@@ -24,7 +24,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     
     private var fbAccessToken: FBSDKAccessToken? = nil
-    private var initialized = true
+    private var initialize = true
     
     private let loginManager = FBSDKLoginManager()
     var googleSignInCredentialSubject: PublishSubject<AuthCredential>!
@@ -42,7 +42,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         super.viewWillAppear(animated)
         initEmitters()
         loginPresenter.bind(loginView: self)
-        initialLoginCheckSubject.onNext(initialized)
+        initialLoginCheckSubject.onNext(initialize)
         initView()
     }
     
@@ -60,7 +60,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        initialized = false
+        initialize = false
         loginPresenter.unbind()
         super.viewWillDisappear(animated)
     }

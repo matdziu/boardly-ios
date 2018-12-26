@@ -83,7 +83,9 @@
                         <viewLayoutGuide key="safeArea" id="6Lb-6T-3Pb"/>
                     </view>
                     <connections>
+                        <outlet property="nameInputField" destination="ovM-Sw-hax" id="gcH-Ae-058"/>
                         <outlet property="profileImageView" destination="gLn-wa-Mnj" id="Uqx-8g-nor"/>
+                        <outlet property="saveChangesButton" destination="LOT-W7-aab" id="N7A-FO-H2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCa-fy-okM" userLabel="First Responder" sceneMemberID="firstResponder"/>
