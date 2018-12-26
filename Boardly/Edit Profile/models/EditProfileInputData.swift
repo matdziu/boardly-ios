@@ -9,5 +9,5 @@ import Foundation
 
 struct EditProfileInputData {
     var name: String
-    var profilePictureUrl: URL?
+    var profilePicturePath: URL?
 }
