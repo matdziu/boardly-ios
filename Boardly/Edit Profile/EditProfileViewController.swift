@@ -22,6 +22,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     
     private var initialize = true
     private var selectedProfilePicturePath: URL? = nil
+    private var defaultRatingText = "You current rating: "
     private let editProfilePresenter = EditProfilePresenter(
         editProfileInteractor: EditProfileInteractorImpl(editProfileService: EditProfileServiceImpl()))
     
@@ -62,7 +63,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
         if editProfileViewState.render {
             let profileData = editProfileViewState.profileData
             nameInputField.text = profileData.name
-            ratingLabel.text = ratingLabel.text ?? "" + ratingString(rating: profileData.rating)
+            ratingLabel.text = defaultRatingText + ratingString(rating: profileData.rating)
         }
         
         if editProfileViewState.successfulUpdate {
@@ -83,7 +84,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     
     private func ratingString(rating: Double?) -> String {
         if rating != nil {
-            return String(format: "%.2d", rating!)
+            return String(format: "%.2f", rating!)
         } else {
             return "-"
         }

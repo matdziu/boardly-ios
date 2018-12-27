@@ -15,11 +15,11 @@ class EditProfileServiceImpl: BaseServiceImpl, EditProfileService {
         let resultSubject = PublishSubject<ProfileData>()
         
         getUserNodeRef(userId: getCurrentUserId()).observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? [String : String] ?? [:]
-            let name = value[NAME_CHILD] ?? ""
-            let profilePicture = value[PROFILE_PICTURE_CHILD] ?? ""
-            let rating = value[RATING_CHILD] ?? ""
-            resultSubject.onNext(ProfileData(name: name, profilePicture: profilePicture, rating: Double(rating)))
+            let value = snapshot.value as? [String : Any] ?? [:]
+            let name = value[NAME_CHILD] as? String ?? ""
+            let profilePicture = value[PROFILE_PICTURE_CHILD] as? String ?? ""
+            let rating = value[RATING_CHILD] as? Double
+            resultSubject.onNext(ProfileData(name: name, profilePicture: profilePicture, rating: rating))
         }
         
         return resultSubject
