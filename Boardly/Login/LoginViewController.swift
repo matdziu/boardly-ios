@@ -107,8 +107,8 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         showLoginError(error: loginViewState.error, errorMessage: loginViewState.errorMessage, dismissError: loginViewState.dismissError)
         
         if loginViewState.loginSuccess && loginViewState.isProfileFilled {
-            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
-                navigationController?.setViewControllers([homeViewController], animated: true)
+            if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
+                navigationController?.setViewControllers([editProfileViewController], animated: true)
             }
         } else if loginViewState.loginSuccess && !loginViewState.isProfileFilled {
             if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
