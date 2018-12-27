@@ -64,12 +64,21 @@
                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                 <state key="normal" title="Save changes"/>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="z49-48-BY0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" name="AccentRed"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="z49-48-BY0" firstAttribute="leading" secondItem="6Lb-6T-3Pb" secondAttribute="leading" id="3qu-Sv-1oh"/>
+                            <constraint firstItem="z49-48-BY0" firstAttribute="top" secondItem="6Lb-6T-3Pb" secondAttribute="top" id="3z2-Lj-lhW"/>
                             <constraint firstItem="gLn-wa-Mnj" firstAttribute="top" secondItem="6Lb-6T-3Pb" secondAttribute="top" constant="16" id="D1X-5B-LEf"/>
                             <constraint firstItem="LOT-W7-aab" firstAttribute="top" secondItem="ovM-Sw-hax" secondAttribute="bottom" constant="16" id="MNA-ED-VYq"/>
+                            <constraint firstItem="6Lb-6T-3Pb" firstAttribute="trailing" secondItem="z49-48-BY0" secondAttribute="trailing" id="Ptd-bd-57n"/>
                             <constraint firstItem="6Lb-6T-3Pb" firstAttribute="trailing" secondItem="ovM-Sw-hax" secondAttribute="trailing" constant="16" id="REU-o9-2a7"/>
+                            <constraint firstItem="6Lb-6T-3Pb" firstAttribute="bottom" secondItem="z49-48-BY0" secondAttribute="bottom" id="TfL-6l-Zvh"/>
                             <constraint firstItem="ovM-Sw-hax" firstAttribute="leading" secondItem="6Lb-6T-3Pb" secondAttribute="leading" constant="16" id="WaJ-8l-QAK"/>
                             <constraint firstItem="hDP-fR-1IT" firstAttribute="centerX" secondItem="6Lb-6T-3Pb" secondAttribute="centerX" id="h4h-YW-co5"/>
                             <constraint firstItem="hDP-fR-1IT" firstAttribute="top" secondItem="gLn-wa-Mnj" secondAttribute="bottom" constant="16" id="kJU-1m-uJt"/>
@@ -84,7 +93,10 @@
                     </view>
                     <connections>
                         <outlet property="nameInputField" destination="ovM-Sw-hax" id="gcH-Ae-058"/>
+                        <outlet property="nameLabel" destination="O5u-s7-hWc" id="ZrN-6P-1XF"/>
                         <outlet property="profileImageView" destination="gLn-wa-Mnj" id="Uqx-8g-nor"/>
+                        <outlet property="progressView" destination="z49-48-BY0" id="5Wj-zB-bqH"/>
+                        <outlet property="ratingLabel" destination="hDP-fR-1IT" id="b7t-JI-Kd8"/>
                         <outlet property="saveChangesButton" destination="LOT-W7-aab" id="N7A-FO-H2o"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,9 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameInputField: BoardlyTextField!
     @IBOutlet weak var saveChangesButton: BoardlyButton!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     private var initialize = true
     private var selectedProfilePicturePath: URL? = nil
@@ -53,7 +56,45 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     }
     
     func render(editProfileViewState: EditProfileViewState) {
+        showProgress(show: editProfileViewState.progress)
+        showNameFieldError(show: editProfileViewState.nameFieldEmpty)
         
+        if editProfileViewState.render {
+            let profileData = editProfileViewState.profileData
+            nameInputField.text = profileData.name
+            ratingLabel.text = ratingLabel.text ?? "" + ratingString(rating: profileData.rating)
+        }
+        
+        if editProfileViewState.successfulUpdate {
+            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
+                navigationController?.setViewControllers([homeViewController], animated: true)
+            }
+        }
+    }
+    
+    private func showNameFieldError(show: Bool) {
+        nameInputField.showError(show: show)
+        if show {
+            nameLabel.textColor = UIColor(named: Color.errorRed.rawValue)
+        } else {
+            nameLabel.textColor = UIColor(named: Color.grey.rawValue)
+        }
+    }
+    
+    private func ratingString(rating: Double?) -> String {
+        if rating != nil {
+            return String(format: "%.2d", rating!)
+        } else {
+            return "-"
+        }
+    }
+    
+    private func showProgress(show: Bool) {
+        if show {
+            progressView.startAnimating()
+        } else {
+            progressView.stopAnimating()
+        }
     }
     
     func inputDataEmitter() -> Observable<EditProfileInputData> {
