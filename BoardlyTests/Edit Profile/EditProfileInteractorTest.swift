@@ -24,7 +24,7 @@ class EditProfileInteractorTest: QuickSpec {
                     .toBlocking()
                     .toArray()
                 
-                let testProfileData = ProfileData(name: "Matt", profilePicture: "picture/url", rating: 5.0)
+                let testProfileData = ProfileData(name: "Matt", profilePictureUrl: "picture/url", rating: 5.0)
                 expect(output).to(equal([
                     PartialEditProfileViewState.profileDataFetched(profileData: testProfileData, render: true),
                     PartialEditProfileViewState.profileDataFetched(profileData: testProfileData, render: false)]))

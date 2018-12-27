@@ -67,6 +67,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView, UIImage
         if editProfileViewState.render {
             let profileData = editProfileViewState.profileData
             nameInputField.text = profileData.name
+            profileImageView.downloaded(from: profileData.profilePictureUrl)
             ratingLabel.text = defaultRatingText + ratingString(rating: profileData.rating)
         }
         

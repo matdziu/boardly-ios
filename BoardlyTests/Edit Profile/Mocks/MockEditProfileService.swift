@@ -13,7 +13,7 @@ import RxSwift
 class MockEditProfileService: EditProfileService {
     
     func getProfileData() -> Observable<ProfileData> {
-        return Observable.just(ProfileData(name: "Matt", profilePicture: "picture/url", rating: 5.0))
+        return Observable.just(ProfileData(name: "Matt", profilePictureUrl: "picture/url", rating: 5.0))
     }
     
     func saveProfileChanges(inputData: EditProfileInputData) -> Observable<Bool> {

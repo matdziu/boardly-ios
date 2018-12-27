@@ -18,9 +18,9 @@ class EditProfileServiceImpl: BaseServiceImpl, EditProfileService {
         getUserNodeRef(userId: getCurrentUserId()).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? [String : Any] ?? [:]
             let name = value[NAME_CHILD] as? String ?? ""
-            let profilePicture = value[PROFILE_PICTURE_CHILD] as? String ?? ""
+            let profilePictureUrl = value[PROFILE_PICTURE_CHILD] as? String ?? ""
             let rating = value[RATING_CHILD] as? Double
-            resultSubject.onNext(ProfileData(name: name, profilePicture: profilePicture, rating: rating))
+            resultSubject.onNext(ProfileData(name: name, profilePictureUrl: profilePictureUrl, rating: rating))
         }
         
         return resultSubject

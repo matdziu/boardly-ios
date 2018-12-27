@@ -18,7 +18,7 @@ class EditProfilePresenterTest: QuickSpec {
         
         var editProfilePresenter: EditProfilePresenter!
         var editProfileViewRobot: EditProfileViewRobot!
-        let testProfileData = ProfileData(name: "Matt", profilePicture: "picture/url", rating: 5.0)
+        let testProfileData = ProfileData(name: "Matt", profilePictureUrl: "picture/url", rating: 5.0)
         
         beforeEach {
             editProfilePresenter = EditProfilePresenter(editProfileInteractor: MockEditProfileInteractor())

@@ -8,6 +8,6 @@
 
 struct ProfileData: Equatable {
     var name: String = ""
-    var profilePicture: String = ""
+    var profilePictureUrl: String = ""
     var rating: Double? = nil
 }

@@ -13,7 +13,7 @@ import RxSwift
 class MockEditProfileInteractor: EditProfileInteractor {
     
     func fetchProfileData() -> Observable<PartialEditProfileViewState> {
-        let testProfileData = ProfileData(name: "Matt", profilePicture: "picture/url", rating: 5.0)
+        let testProfileData = ProfileData(name: "Matt", profilePictureUrl: "picture/url", rating: 5.0)
         return Observable.just(PartialEditProfileViewState.profileDataFetched(
             profileData: testProfileData, render: false)).startWith(
                 PartialEditProfileViewState.profileDataFetched(
