@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class EditProfileViewController: BaseNavViewController, EditProfileView {
+class EditProfileViewController: BaseNavViewController, EditProfileView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameInputField: BoardlyTextField!
@@ -21,16 +21,18 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     @IBOutlet weak var nameLabel: UILabel!
     
     private var initialize = true
-    private var selectedProfilePicturePath: URL? = nil
+    private var selectedProfilePicture: UIImage? = nil
     private var defaultRatingText = "You current rating: "
     private let editProfilePresenter = EditProfilePresenter(
         editProfileInteractor: EditProfileInteractorImpl(editProfileService: EditProfileServiceImpl()))
+    private let imagePicker = UIImagePickerController()
     
     private var fetchProfileDataSubject: PublishSubject<Bool>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initProfileImageView()
+        imagePicker.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,8 +54,10 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
     
     private func initProfileImageView() {
         profileImageView.layer.borderColor = UIColor(named: Color.grey.rawValue)?.cgColor
-        profileImageView.layer.borderWidth = 1.0
+        profileImageView.layer.borderWidth = 0.5
         profileImageView.layer.cornerRadius = 3.0
+        let tap = UITapGestureRecognizer(target: self, action: #selector(selectImage))
+        profileImageView.addGestureRecognizer(tap)
     }
     
     func render(editProfileViewState: EditProfileViewState) {
@@ -104,10 +108,23 @@ class EditProfileViewController: BaseNavViewController, EditProfileView {
             .controlEvent(UIControlEvents.touchUpInside)
             .map({ [unowned self] in return EditProfileInputData(
                 name: self.nameInputField?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
-                profilePicturePath: self.selectedProfilePicturePath) })
+                profilePicture: self.selectedProfilePicture) })
     }
     
     func fetchProfileDataTriggerEmitter() -> Observable<Bool> {
         return fetchProfileDataSubject
+    }
+    
+    @objc private func selectImage() {
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            selectedProfilePicture = pickedImage
+            profileImageView.image = pickedImage
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }

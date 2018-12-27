@@ -6,8 +6,9 @@
 //  Copyright © 2018 Mateusz Dziubek. All rights reserved.
 //
 import Foundation
+import UIKit
 
 struct EditProfileInputData {
     var name: String
-    var profilePicturePath: URL?
+    var profilePicture: UIImage?
 }

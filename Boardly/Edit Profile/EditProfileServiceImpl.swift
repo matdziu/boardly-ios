@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseStorage
 
 class EditProfileServiceImpl: BaseServiceImpl, EditProfileService {
     
@@ -26,8 +27,8 @@ class EditProfileServiceImpl: BaseServiceImpl, EditProfileService {
     }
     
     func saveProfileChanges(inputData: EditProfileInputData) -> Observable<Bool> {
-        if let picUrl = inputData.profilePicturePath {
-            return uploadProfilePicture(profilePicturePath: picUrl)
+        if let picture = inputData.profilePicture {
+            return uploadProfilePicture(profilePicture: picture)
                 .flatMap { [unowned self ] _ in return self.getProfilePictureUrl() }
                 .flatMap { [unowned self ] pictureStorageUrl in return self.saveProfilePictureUrl(url: pictureStorageUrl) }
                 .flatMap { [unowned self ] _ in return self.saveUserName(name: inputData.name) }
@@ -36,11 +37,15 @@ class EditProfileServiceImpl: BaseServiceImpl, EditProfileService {
         }
     }
     
-    private func uploadProfilePicture(profilePicturePath: URL) -> Observable<Bool> {
+    private func uploadProfilePicture(profilePicture: UIImage) -> Observable<Bool> {
         let resultSubject = PublishSubject<Bool>()
         
-        getStorageProfilePictureRef(userId: getCurrentUserId()).putFile(from: profilePicturePath, metadata: nil) { (_, _) in
-            resultSubject.onNext(true)
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        if let jpegImage = profilePicture.jpegData(compressionQuality: 0.8) {
+            getStorageProfilePictureRef(userId: getCurrentUserId()).putData(jpegImage, metadata: metadata) { (_, _) in
+                resultSubject.onNext(true)
+            }
         }
         
         return resultSubject

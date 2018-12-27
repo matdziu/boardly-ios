@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePictureShape" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-wa-Mnj">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePictureShape" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-wa-Mnj">
                                 <rect key="frame" x="123.5" y="36" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="4Ri-6A-Kjb"/>

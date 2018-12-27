@@ -31,7 +31,7 @@ class EditProfileInteractorTest: QuickSpec {
             }
             
             it("successfully saves profile data") {
-                let output = try! editProfileInteractor.saveProfileChanges(inputData: EditProfileInputData(name: "", profilePicturePath: nil))
+                let output = try! editProfileInteractor.saveProfileChanges(inputData: EditProfileInputData(name: "", profilePicture: nil))
                     .toBlocking()
                     .toArray()
                 

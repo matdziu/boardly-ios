@@ -37,14 +37,14 @@ class EditProfilePresenterTest: QuickSpec {
             }
             
             it("shows name field error when user input name is empty") {
-                editProfileViewRobot.emitInputData(inputData: EditProfileInputData(name: " ", profilePicturePath: nil))
+                editProfileViewRobot.emitInputData(inputData: EditProfileInputData(name: " ", profilePicture: nil))
                 editProfileViewRobot.assert(expectedViewStates: [
                     EditProfileViewState(),
                     EditProfileViewState(nameFieldEmpty: true, render: false)])
             }
             
             it("shows success when user input name is correct") {
-                editProfileViewRobot.emitInputData(inputData: EditProfileInputData(name: " Matt ", profilePicturePath: nil))
+                editProfileViewRobot.emitInputData(inputData: EditProfileInputData(name: " Matt ", profilePicture: nil))
                 editProfileViewRobot.assert(expectedViewStates: [
                     EditProfileViewState(),
                     EditProfileViewState(progress: true),
