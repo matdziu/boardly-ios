@@ -10,11 +10,13 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
+    var online: Bool = false
     
     override init() {
         FirebaseApp.configure()
@@ -24,7 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        initInternetConnectionListener()
         return true
+    }
+    
+    private func initInternetConnectionListener() {
+        let connectedRef = Database.database().reference(withPath: ".info/connected")
+        connectedRef.observe(.value, with: { [weak self] snapshot in
+            if snapshot.value as? Bool ?? false {
+                self?.online = true
+            } else {
+                self?.online = false
+            }
+        })
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -68,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if (error! as NSError).code == GOOGLE_SIGN_IN_CANCELLED_CODE {
                 return
             } else {
-                loginViewController.showErrorAlert(errorMessage: "Something went wrong :(")
+                showErrorAlert(errorMessage: "Something went wrong :(", controller: loginViewController)
                 return
             }
         }

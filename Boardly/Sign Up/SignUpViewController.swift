@@ -49,25 +49,16 @@ class SignUpViewController: BaseNavViewController, SignUpView {
             signUpViewState.errorMessage, dismissError: signUpViewState.dismissError)
         
         if signUpViewState.signUpSuccess {
-            if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
-                navigationController?.setViewControllers([editProfileViewController], animated: true)
-            }
+            guard let homeViewController = storyboard?.instantiateViewController(withIdentifier: MAIN_TAB_VIEW_CONTROLLER_ID) as? MainTabViewController else { return }
+            guard let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController else { return }
+            editProfileViewController.navigationItem.hidesBackButton = true
+            navigationController?.setViewControllers([homeViewController, editProfileViewController], animated: true)
         }
     }
     
     private func showSignUpError(error: Bool, errorMessage: String, dismissError: Bool) {
         if error && !dismissError {
-            showErrorAlert(errorMessage: errorMessage)
-        }
-    }
-    
-    private func showErrorAlert(errorMessage: String) {
-        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
-        present(alert, animated: true)
-        
-        let duration: Double = 2
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
-            alert.dismiss(animated: true)
+            showErrorAlert(errorMessage: errorMessage, controller: self)
         }
     }
     

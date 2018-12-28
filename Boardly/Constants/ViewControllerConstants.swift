@@ -6,5 +6,6 @@
 //  Copyright © 2018 Mateusz Dziubek. All rights reserved.
 //
 
-let HOME_VIEW_CONTROLLER_ID = "homeViewController"
 let EDIT_PROFILE_VIEW_CONTROLLER_ID = "editProfileViewController"
+let MAIN_TAB_VIEW_CONTROLLER_ID = "mainTabViewController"
+let LOGIN_VIEW_CONTROLLER_ID = "loginViewController"

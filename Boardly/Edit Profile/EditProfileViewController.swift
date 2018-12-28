@@ -72,7 +72,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView, UIImage
         }
         
         if editProfileViewState.successfulUpdate {
-            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
+            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: MAIN_TAB_VIEW_CONTROLLER_ID) as? MainTabViewController {
                 navigationController?.setViewControllers([homeViewController], animated: true)
             }
         }

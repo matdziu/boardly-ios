@@ -14,6 +14,11 @@
 		908D91F721D3CB6300C12ECD /* MockEditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F621D3CB6300C12ECD /* MockEditProfileInteractor.swift */; };
 		908D91F921D3CB7700C12ECD /* MockEditProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F821D3CB7700C12ECD /* MockEditProfileService.swift */; };
 		908D91FC21D504E500C12ECD /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91FB21D504E500C12ECD /* UIImageViewExtensions.swift */; };
+		908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920121D615CD00C12ECD /* MainTabViewController.swift */; };
+		908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920521D6388300C12ECD /* MoreTableViewController.swift */; };
+		908D920921D63BFF00C12ECD /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920821D63BFF00C12ECD /* FilterViewController.swift */; };
+		908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920A21D640D000C12ECD /* LogOutViewController.swift */; };
+		908D920F21D6493800C12ECD /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920E21D6493800C12ECD /* ViewControllerUtils.swift */; };
 		90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F6E21D23F8F0054300C /* EditProfileInputData.swift */; };
 		90907F7121D243EA0054300C /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7021D243EA0054300C /* ProfileData.swift */; };
 		90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7221D244E50054300C /* EditProfileViewState.swift */; };
@@ -92,6 +97,11 @@
 		908D91F621D3CB6300C12ECD /* MockEditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEditProfileInteractor.swift; sourceTree = "<group>"; };
 		908D91F821D3CB7700C12ECD /* MockEditProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEditProfileService.swift; sourceTree = "<group>"; };
 		908D91FB21D504E500C12ECD /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		908D920121D615CD00C12ECD /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		908D920521D6388300C12ECD /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		908D920821D63BFF00C12ECD /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		908D920A21D640D000C12ECD /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		908D920E21D6493800C12ECD /* ViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		90907F6E21D23F8F0054300C /* EditProfileInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInputData.swift; sourceTree = "<group>"; };
 		90907F7021D243EA0054300C /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		90907F7221D244E50054300C /* EditProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewState.swift; sourceTree = "<group>"; };
@@ -202,6 +212,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		908D920021D615BA00C12ECD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				908D920121D615CD00C12ECD /* MainTabViewController.swift */,
+				908D920521D6388300C12ECD /* MoreTableViewController.swift */,
+				908D920A21D640D000C12ECD /* LogOutViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		908D920721D63BEA00C12ECD /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				908D920821D63BFF00C12ECD /* FilterViewController.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		90907F6D21D23F840054300C /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,11 +265,13 @@
 				90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */,
 				909A8B7421CACDA800166C93 /* AppDelegate.swift */,
 				909A8B9521CACE6A00166C93 /* Common */,
+				908D920021D615BA00C12ECD /* Navigation */,
 				909A8B9821CACE8400166C93 /* Base */,
 				908D91FA21D504BD00C12ECD /* Extensions */,
 				909A8B9621CACE7000166C93 /* Constants */,
 				909A8B9721CACE7D00166C93 /* Custom Views */,
 				909A8B9B21CACE9600166C93 /* Home */,
+				908D920721D63BEA00C12ECD /* Filter */,
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
 				90D01CDF21D0FF10000F710D /* Edit Profile */,
@@ -267,6 +297,7 @@
 			children = (
 				90A07A2521CE314900EE5349 /* Errors */,
 				909A8B9E21CAD04F00166C93 /* Models */,
+				908D920E21D6493800C12ECD /* ViewControllerUtils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -697,6 +728,7 @@
 			files = (
 				909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */,
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
+				908D920F21D6493800C12ECD /* ViewControllerUtils.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
@@ -714,19 +746,23 @@
 				90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */,
 				90907F7721D248C30054300C /* EditProfileContract.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
+				908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
+				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
+				908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */,
 				90907F7121D243EA0054300C /* ProfileData.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
+				908D920921D63BFF00C12ECD /* FilterViewController.swift in Sources */,
 				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,

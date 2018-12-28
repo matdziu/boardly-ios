@@ -72,7 +72,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBAction func loginUsingFacebook(_ sender: Any) {
         loginManager.logIn(withReadPermissions: [ "email" ], from: self) { [unowned self] (loginResult, error) in
             if error != nil {
-                self.showErrorAlert(errorMessage: "Something went wrong :(")
+                showErrorAlert(errorMessage: "Something went wrong :(", controller: self)
                 return
             }
             self.fbAccessToken = loginResult?.token
@@ -106,30 +106,22 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         showProgress(show: loginViewState.progress)
         showLoginError(error: loginViewState.error, errorMessage: loginViewState.errorMessage, dismissError: loginViewState.dismissError)
         
-        if loginViewState.loginSuccess && loginViewState.isProfileFilled {
-            if let homeViewController = storyboard?.instantiateViewController(withIdentifier: HOME_VIEW_CONTROLLER_ID) as? HomeViewController {
+        if loginViewState.loginSuccess {
+            guard let homeViewController = storyboard?.instantiateViewController(withIdentifier: MAIN_TAB_VIEW_CONTROLLER_ID) as? MainTabViewController else { return }
+            guard let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController else { return }
+            editProfileViewController.navigationItem.hidesBackButton = true
+            
+            if loginViewState.isProfileFilled {
                 navigationController?.setViewControllers([homeViewController], animated: true)
-            }
-        } else if loginViewState.loginSuccess && !loginViewState.isProfileFilled {
-            if let editProfileViewController = storyboard?.instantiateViewController(withIdentifier: EDIT_PROFILE_VIEW_CONTROLLER_ID) as? EditProfileViewController {
-                navigationController?.setViewControllers([editProfileViewController], animated: true)
+            } else {
+                navigationController?.setViewControllers([homeViewController, editProfileViewController], animated: true)
             }
         }
     }
     
     private func showLoginError(error: Bool, errorMessage: String, dismissError: Bool) {
         if error && !dismissError {
-            showErrorAlert(errorMessage: errorMessage)
-        }
-    }
-    
-    func showErrorAlert(errorMessage: String) {
-        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
-        present(alert, animated: true)
-        
-        let duration: Double = 2
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
-            alert.dismiss(animated: true)
+            showErrorAlert(errorMessage: errorMessage, controller: self)
         }
     }
     
