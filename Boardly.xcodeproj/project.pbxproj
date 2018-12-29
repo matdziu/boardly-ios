@@ -231,13 +231,13 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
-		90907F6D21D23F840054300C /* models */ = {
+		90907F6D21D23F840054300C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				90907F6E21D23F8F0054300C /* EditProfileInputData.swift */,
 				90907F7021D243EA0054300C /* ProfileData.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		909A8B6821CACDA800166C93 = {
@@ -334,7 +334,7 @@
 		909A8B9921CACE8E00166C93 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				90D01CDC21D0F1B2000F710D /* models */,
+				90D01CDC21D0F1B2000F710D /* Models */,
 				909A8BB121CAD22800166C93 /* LoginViewController.swift */,
 				909A8BB321CADFD400166C93 /* LoginViewState.swift */,
 				909A8BB521CADFED00166C93 /* PartialLoginViewState.swift */,
@@ -445,18 +445,18 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		90D01CDC21D0F1B2000F710D /* models */ = {
+		90D01CDC21D0F1B2000F710D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				90D01CDD21D0F1BD000F710D /* LoginData.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		90D01CDF21D0FF10000F710D /* Edit Profile */ = {
 			isa = PBXGroup;
 			children = (
-				90907F6D21D23F840054300C /* models */,
+				90907F6D21D23F840054300C /* Models */,
 				90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */,
 				90907F7221D244E50054300C /* EditProfileViewState.swift */,
 				90907F7421D246A60054300C /* PartialEditProfileViewState.swift */,
