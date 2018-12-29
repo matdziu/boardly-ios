@@ -18,7 +18,6 @@
 		908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920521D6388300C12ECD /* MoreTableViewController.swift */; };
 		908D920921D63BFF00C12ECD /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920821D63BFF00C12ECD /* FilterViewController.swift */; };
 		908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920A21D640D000C12ECD /* LogOutViewController.swift */; };
-		908D920F21D6493800C12ECD /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D920E21D6493800C12ECD /* ViewControllerUtils.swift */; };
 		90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F6E21D23F8F0054300C /* EditProfileInputData.swift */; };
 		90907F7121D243EA0054300C /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7021D243EA0054300C /* ProfileData.swift */; };
 		90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7221D244E50054300C /* EditProfileViewState.swift */; };
@@ -71,6 +70,7 @@
 		90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */; };
 		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
 		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
+		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -101,7 +101,6 @@
 		908D920521D6388300C12ECD /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		908D920821D63BFF00C12ECD /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		908D920A21D640D000C12ECD /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
-		908D920E21D6493800C12ECD /* ViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		90907F6E21D23F8F0054300C /* EditProfileInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInputData.swift; sourceTree = "<group>"; };
 		90907F7021D243EA0054300C /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		90907F7221D244E50054300C /* EditProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewState.swift; sourceTree = "<group>"; };
@@ -159,6 +158,7 @@
 		90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceImpl.swift; sourceTree = "<group>"; };
 		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				908D91FB21D504E500C12ECD /* UIImageViewExtensions.swift */,
+				90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,7 +298,6 @@
 			children = (
 				90A07A2521CE314900EE5349 /* Errors */,
 				909A8B9E21CAD04F00166C93 /* Models */,
-				908D920E21D6493800C12ECD /* ViewControllerUtils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -728,7 +728,6 @@
 			files = (
 				909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */,
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
-				908D920F21D6493800C12ECD /* ViewControllerUtils.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
@@ -738,6 +737,7 @@
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
 				90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */,
+				90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,

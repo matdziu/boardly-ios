@@ -28,11 +28,11 @@ class LogOutViewController: BaseNavViewController {
                     goToLoginScreen()
                 } catch {
                     navigationController?.popViewController(animated: true)
-                    showErrorAlert(errorMessage: "Something went wrong :(", controller: self)
+                    showErrorAlert(errorMessage: "Something went wrong :(")
                 }
             } else {
                 navigationController?.popViewController(animated: true)
-                showErrorAlert(errorMessage: "You must be connected to the internet", controller: self)
+                showErrorAlert(errorMessage: "You must be connected to the internet")
             }
         }
     }
