@@ -29,4 +29,10 @@ extension UIImageView {
         guard let url = URL(string: link) else { return }
         downloaded(from: url)
     }
+    
+    func roundBorderCorners() {
+        self.layer.borderColor = UIColor(named: Color.grey.rawValue)?.cgColor
+        self.layer.borderWidth = 0.5
+        self.layer.cornerRadius = 3.0
+    }
 }

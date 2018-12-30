@@ -15,7 +15,14 @@ class FilterViewController: BaseNavViewController, FilterView {
     private var gameIdSubject: PublishSubject<String>!
     private var locationProcessingSubject: PublishSubject<Bool>!
     
+    @IBOutlet weak var gameImageView: UIImageView!
+    
     private let filterPresenter = FilterPresenter(filterInteractor: FilterInteractorImpl(gameService: GameServiceImpl()))
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        gameImageView.roundBorderCorners()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

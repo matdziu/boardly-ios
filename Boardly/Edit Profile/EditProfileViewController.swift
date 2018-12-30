@@ -53,9 +53,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView, UIImage
     }
     
     private func initProfileImageView() {
-        profileImageView.layer.borderColor = UIColor(named: Color.grey.rawValue)?.cgColor
-        profileImageView.layer.borderWidth = 0.5
-        profileImageView.layer.cornerRadius = 3.0
+        profileImageView.roundBorderCorners()
         let tap = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         profileImageView.addGestureRecognizer(tap)
     }
