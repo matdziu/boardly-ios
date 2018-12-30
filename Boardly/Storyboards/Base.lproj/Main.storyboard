@@ -157,6 +157,9 @@
                                                 <state key="normal" title="Delete game">
                                                     <color key="titleColor" name="ErrorRed"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="deleteGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="xtj-Rn-zlO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -208,11 +211,17 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="za8-e7-gb1">
                                 <rect key="frame" x="14" y="436.5" width="347" height="31"/>
                                 <color key="tintColor" name="PrimaryBlue"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="xac-PQ-ZHc" eventType="valueChanged" id="kyp-nl-l0u"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHK-7z-l5c" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                 <rect key="frame" x="16" y="621" width="343" height="30"/>
                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                 <state key="normal" title="Apply"/>
+                                <connections>
+                                    <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="tFR-KD-0nr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,7 +245,11 @@
                         <viewLayoutGuide key="safeArea" id="l7W-lM-o80"/>
                     </view>
                     <connections>
+                        <outlet property="distanceSlider" destination="za8-e7-gb1" id="WtF-Ju-sYe"/>
                         <outlet property="gameImageView" destination="Pqn-aA-P7u" id="Izt-Ix-BDO"/>
+                        <outlet property="gameNameLabel" destination="Sp2-4I-s6h" id="FWS-1h-Fbp"/>
+                        <outlet property="maxEventDistanceLabel" destination="bvy-gp-n5A" id="0xJ-Lm-iso"/>
+                        <outlet property="placeNameLabel" destination="FKs-Ww-lhF" id="Rv3-04-cE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjJ-CS-W2T" userLabel="First Responder" sceneMemberID="firstResponder"/>

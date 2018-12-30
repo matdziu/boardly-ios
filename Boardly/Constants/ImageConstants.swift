@@ -8,4 +8,5 @@
 
 enum Image: String {
     case logo = "Logo"
+    case boardGamePlaceholder = "BoardGamePlaceholder"
 }

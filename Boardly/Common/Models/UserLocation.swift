@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserLocation {
+struct UserLocation: Codable {
     var latitude: Double
     var longitude: Double
 }

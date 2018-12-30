@@ -9,3 +9,5 @@
 let EDIT_PROFILE_VIEW_CONTROLLER_ID = "editProfileViewController"
 let MAIN_TAB_VIEW_CONTROLLER_ID = "mainTabViewController"
 let LOGIN_VIEW_CONTROLLER_ID = "loginViewController"
+
+let SAVED_FILTER = "savedFilter"

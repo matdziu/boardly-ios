@@ -25,6 +25,14 @@ extension UIImageView {
             }.resume()
     }
     
+    func cancelAll() {
+        URLSession.shared.getAllTasks { allTasks in
+            for task in allTasks {
+                task.cancel()
+            }
+        }
+    }
+    
     func downloaded(from link: String) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url)

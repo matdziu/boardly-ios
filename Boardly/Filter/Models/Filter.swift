@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Filter {
+struct Filter: Codable {
     var radius: Double = 50.0
     var gameId: String = ""
     var gameName: String = ""
