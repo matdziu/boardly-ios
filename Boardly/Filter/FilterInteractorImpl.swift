@@ -20,7 +20,8 @@ class FilterInteractorImpl : FilterInteractor {
     func fetchGameDetails(gameId: String) -> Observable<PartialFilterViewState> {
         return gameService.gameDetails(id: gameId)
             .map({ detailsResponse -> PartialFilterViewState in
-                return PartialFilterViewState.gameDetailsFetched(game: detailsResponse.game)
+                return .gameDetailsFetched(game: detailsResponse.game)
             })
+            .catchErrorJustReturn(.gameDetailsFetched(game: Game()))
     }
 }

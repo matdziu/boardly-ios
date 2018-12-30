@@ -10,7 +10,6 @@
 import Foundation
 import Quick
 
-
 class EditProfilePresenterTest: QuickSpec {
     
     override func spec() {

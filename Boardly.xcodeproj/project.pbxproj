@@ -19,6 +19,12 @@
 		90857DD721D820B4000A7BFC /* DetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DD621D820B4000A7BFC /* DetailsResponse.swift */; };
 		90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DD821D8220B000A7BFC /* FilterPresenter.swift */; };
 		90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DDA21D8B983000A7BFC /* FilterInteractorImpl.swift */; };
+		90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DDE21D8BA31000A7BFC /* MockFilterView.swift */; };
+		90857DE121D8BA3A000A7BFC /* MockFilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE021D8BA3A000A7BFC /* MockFilterInteractor.swift */; };
+		90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE321D8BA68000A7BFC /* MockGameService.swift */; };
+		90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE521D8BA89000A7BFC /* FilterViewRobot.swift */; };
+		90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE721D8BA93000A7BFC /* FilterPresenterTest.swift */; };
+		90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */; };
 		908D91EF21D3C0AB00C12ECD /* EditProfileViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */; };
 		908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */; };
 		908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */; };
@@ -114,6 +120,12 @@
 		90857DD621D820B4000A7BFC /* DetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsResponse.swift; sourceTree = "<group>"; };
 		90857DD821D8220B000A7BFC /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
 		90857DDA21D8B983000A7BFC /* FilterInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractorImpl.swift; sourceTree = "<group>"; };
+		90857DDE21D8BA31000A7BFC /* MockFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilterView.swift; sourceTree = "<group>"; };
+		90857DE021D8BA3A000A7BFC /* MockFilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilterInteractor.swift; sourceTree = "<group>"; };
+		90857DE321D8BA68000A7BFC /* MockGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGameService.swift; sourceTree = "<group>"; };
+		90857DE521D8BA89000A7BFC /* FilterViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewRobot.swift; sourceTree = "<group>"; };
+		90857DE721D8BA93000A7BFC /* FilterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenterTest.swift; sourceTree = "<group>"; };
+		90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractorTest.swift; sourceTree = "<group>"; };
 		908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewRobot.swift; sourceTree = "<group>"; };
 		908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenterTest.swift; sourceTree = "<group>"; };
 		908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorTest.swift; sourceTree = "<group>"; };
@@ -243,6 +255,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		90857DDC21D8BA1A000A7BFC /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				90857DDD21D8BA22000A7BFC /* Mocks */,
+				90857DE521D8BA89000A7BFC /* FilterViewRobot.swift */,
+				90857DE721D8BA93000A7BFC /* FilterPresenterTest.swift */,
+				90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		90857DDD21D8BA22000A7BFC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90857DDE21D8BA31000A7BFC /* MockFilterView.swift */,
+				90857DE021D8BA3A000A7BFC /* MockFilterInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		90857DE221D8BA5A000A7BFC /* Game Service */ = {
+			isa = PBXGroup;
+			children = (
+				90857DE321D8BA68000A7BFC /* MockGameService.swift */,
+			);
+			path = "Game Service";
+			sourceTree = "<group>";
+		};
 		908D91EC21D3C08900C12ECD /* Edit Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +392,8 @@
 		909A8B8821CACDAA00166C93 /* BoardlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				90857DE221D8BA5A000A7BFC /* Game Service */,
+				90857DDC21D8BA1A000A7BFC /* Filter */,
 				908D91EC21D3C08900C12ECD /* Edit Profile */,
 				909A8BCC21CAE5C700166C93 /* Sign Up */,
 				909A8BCB21CAE5C200166C93 /* Login */,
@@ -857,12 +899,18 @@
 			files = (
 				908D91F521D3CB5400C12ECD /* MockEditProfileView.swift in Sources */,
 				909A8BD421CAE6AF00166C93 /* MockSignUpInteractor.swift in Sources */,
+				90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */,
+				90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */,
 				909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */,
+				90857DE121D8BA3A000A7BFC /* MockFilterInteractor.swift in Sources */,
+				90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */,
 				909A8BE321CAE78300166C93 /* MockLoginService.swift in Sources */,
 				909A8BD821CAE6DB00166C93 /* SignUpViewRobot.swift in Sources */,
+				90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */,
 				908D91F721D3CB6300C12ECD /* MockEditProfileInteractor.swift in Sources */,
 				909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */,
 				909A8BE121CAE76900166C93 /* MockLoginInteractor.swift in Sources */,
+				90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
 				908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */,
