@@ -25,6 +25,7 @@
 		90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE521D8BA89000A7BFC /* FilterViewRobot.swift */; };
 		90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE721D8BA93000A7BFC /* FilterPresenterTest.swift */; };
 		90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */; };
+		90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DEB21D8C659000A7BFC /* GameServiceImpl.swift */; };
 		908D91EF21D3C0AB00C12ECD /* EditProfileViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */; };
 		908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */; };
 		908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */; };
@@ -126,6 +127,7 @@
 		90857DE521D8BA89000A7BFC /* FilterViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewRobot.swift; sourceTree = "<group>"; };
 		90857DE721D8BA93000A7BFC /* FilterPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenterTest.swift; sourceTree = "<group>"; };
 		90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractorTest.swift; sourceTree = "<group>"; };
+		90857DEB21D8C659000A7BFC /* GameServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameServiceImpl.swift; sourceTree = "<group>"; };
 		908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewRobot.swift; sourceTree = "<group>"; };
 		908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenterTest.swift; sourceTree = "<group>"; };
 		908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorTest.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				90857DCB21D81C8C000A7BFC /* Models */,
 				90857DD021D81FE2000A7BFC /* GameService.swift */,
+				90857DEB21D8C659000A7BFC /* GameServiceImpl.swift */,
 			);
 			path = "Game Service";
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
+				90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */,
 				90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */,
 				90857DD521D820A7000A7BFC /* SearchResponse.swift in Sources */,
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
