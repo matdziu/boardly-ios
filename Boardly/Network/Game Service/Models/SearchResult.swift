@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SearchResult {
+struct SearchResult: Equatable {
     var id: Int = 0
     var type: String = ""
     var name: String = ""

@@ -13,7 +13,8 @@ import RxSwift
 class MockGameService: GameService {
     
     private var mode: MockGameServiceMode
-    let testSearchResult = SearchResult(id: 0, type: "RPG", name: "Monopoly", yearPublished: "1995")
+    let testSearchResults = [SearchResult(id: 0, type: "rpg", name: "Monopoly", yearPublished: "1995"),
+                             SearchResult(id: 1, type: "boardgame", name: "Inis", yearPublished: "2001")]
     let testGame = Game(id: 0, name: "Monopoly", image: "url/to/image")
     
     init(mode: MockGameServiceMode) {
@@ -22,7 +23,7 @@ class MockGameService: GameService {
     
     func search(query: String) -> Observable<SearchResponse> {
         if mode == .success {
-            return Observable.just(SearchResponse(searchResult: testSearchResult))
+            return Observable.just(SearchResponse(games: testSearchResults))
         } else {
             return Observable.error(NSError())
         }

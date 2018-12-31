@@ -9,5 +9,5 @@
 import Foundation
 
 struct SearchResponse {
-    var searchResult: SearchResult = SearchResult()
+    var games: [SearchResult] = []
 }

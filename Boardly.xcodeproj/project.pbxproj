@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F221DA51BB0092FE84 /* PickGameViewState.swift */; };
+		903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F421DA53430092FE84 /* PartialPickGameViewState.swift */; };
+		903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F621DA554B0092FE84 /* PickGameContract.swift */; };
+		903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F821DA56120092FE84 /* PickGameInteractorImpl.swift */; };
+		903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788FA21DA5A180092FE84 /* PickGamePresenter.swift */; };
 		90857DC221D81607000A7BFC /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC121D81607000A7BFC /* Filter.swift */; };
 		90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC321D819C2000A7BFC /* UserLocation.swift */; };
 		90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC521D81B0C000A7BFC /* FilterViewState.swift */; };
@@ -109,6 +114,11 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		903788F221DA51BB0092FE84 /* PickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewState.swift; sourceTree = "<group>"; };
+		903788F421DA53430092FE84 /* PartialPickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialPickGameViewState.swift; sourceTree = "<group>"; };
+		903788F621DA554B0092FE84 /* PickGameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameContract.swift; sourceTree = "<group>"; };
+		903788F821DA56120092FE84 /* PickGameInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorImpl.swift; sourceTree = "<group>"; };
+		903788FA21DA5A180092FE84 /* PickGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenter.swift; sourceTree = "<group>"; };
 		90857DC121D81607000A7BFC /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		90857DC321D819C2000A7BFC /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		90857DC521D81B0C000A7BFC /* FilterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewState.swift; sourceTree = "<group>"; };
@@ -221,6 +231,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		903788F121DA51910092FE84 /* Pick Game */ = {
+			isa = PBXGroup;
+			children = (
+				903788F221DA51BB0092FE84 /* PickGameViewState.swift */,
+				903788F421DA53430092FE84 /* PartialPickGameViewState.swift */,
+				903788F621DA554B0092FE84 /* PickGameContract.swift */,
+				903788F821DA56120092FE84 /* PickGameInteractorImpl.swift */,
+				903788FA21DA5A180092FE84 /* PickGamePresenter.swift */,
+			);
+			path = "Pick Game";
+			sourceTree = "<group>";
+		};
 		90857DC021D815FB000A7BFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +407,7 @@
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
 				90D01CDF21D0FF10000F710D /* Edit Profile */,
+				903788F121DA51910092FE84 /* Pick Game */,
 				90857DC921D81C5A000A7BFC /* Network */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
 				909A8B9D21CACEA600166C93 /* Resources */,
@@ -846,6 +869,7 @@
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
+				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
@@ -857,6 +881,7 @@
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
+				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
 				90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */,
@@ -866,6 +891,7 @@
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
 				908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */,
 				90857DD721D820B4000A7BFC /* DetailsResponse.swift in Sources */,
+				903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
@@ -893,7 +919,9 @@
 				90857DCD21D81C96000A7BFC /* Game.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
+				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
+				903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
