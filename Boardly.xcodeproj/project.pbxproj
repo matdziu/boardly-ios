@@ -12,6 +12,11 @@
 		903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F621DA554B0092FE84 /* PickGameContract.swift */; };
 		903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F821DA56120092FE84 /* PickGameInteractorImpl.swift */; };
 		903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788FA21DA5A180092FE84 /* PickGamePresenter.swift */; };
+		903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788FE21DA5F2C0092FE84 /* MockPickGameView.swift */; };
+		9037890121DA5F3A0092FE84 /* MockPickGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890021DA5F3A0092FE84 /* MockPickGameInteractor.swift */; };
+		9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */; };
+		9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */; };
+		9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */; };
 		90857DC221D81607000A7BFC /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC121D81607000A7BFC /* Filter.swift */; };
 		90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC321D819C2000A7BFC /* UserLocation.swift */; };
 		90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DC521D81B0C000A7BFC /* FilterViewState.swift */; };
@@ -119,6 +124,11 @@
 		903788F621DA554B0092FE84 /* PickGameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameContract.swift; sourceTree = "<group>"; };
 		903788F821DA56120092FE84 /* PickGameInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorImpl.swift; sourceTree = "<group>"; };
 		903788FA21DA5A180092FE84 /* PickGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenter.swift; sourceTree = "<group>"; };
+		903788FE21DA5F2C0092FE84 /* MockPickGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPickGameView.swift; sourceTree = "<group>"; };
+		9037890021DA5F3A0092FE84 /* MockPickGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPickGameInteractor.swift; sourceTree = "<group>"; };
+		9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewRobot.swift; sourceTree = "<group>"; };
+		9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenterTest.swift; sourceTree = "<group>"; };
+		9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorTest.swift; sourceTree = "<group>"; };
 		90857DC121D81607000A7BFC /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		90857DC321D819C2000A7BFC /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		90857DC521D81B0C000A7BFC /* FilterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewState.swift; sourceTree = "<group>"; };
@@ -241,6 +251,26 @@
 				903788FA21DA5A180092FE84 /* PickGamePresenter.swift */,
 			);
 			path = "Pick Game";
+			sourceTree = "<group>";
+		};
+		903788FC21DA5F0D0092FE84 /* Pick Game */ = {
+			isa = PBXGroup;
+			children = (
+				903788FD21DA5F1A0092FE84 /* Mocks */,
+				9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */,
+				9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */,
+				9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */,
+			);
+			path = "Pick Game";
+			sourceTree = "<group>";
+		};
+		903788FD21DA5F1A0092FE84 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				903788FE21DA5F2C0092FE84 /* MockPickGameView.swift */,
+				9037890021DA5F3A0092FE84 /* MockPickGameInteractor.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		90857DC021D815FB000A7BFC /* Models */ = {
@@ -418,6 +448,7 @@
 		909A8B8821CACDAA00166C93 /* BoardlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				903788FC21DA5F0D0092FE84 /* Pick Game */,
 				90857DE221D8BA5A000A7BFC /* Game Service */,
 				90857DDC21D8BA1A000A7BFC /* Filter */,
 				908D91EC21D3C08900C12ECD /* Edit Profile */,
@@ -930,9 +961,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				908D91F521D3CB5400C12ECD /* MockEditProfileView.swift in Sources */,
+				9037890121DA5F3A0092FE84 /* MockPickGameInteractor.swift in Sources */,
 				909A8BD421CAE6AF00166C93 /* MockSignUpInteractor.swift in Sources */,
 				90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */,
 				90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */,
+				903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */,
+				9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */,
 				909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */,
 				90857DE121D8BA3A000A7BFC /* MockFilterInteractor.swift in Sources */,
 				90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */,
@@ -942,6 +976,7 @@
 				908D91F721D3CB6300C12ECD /* MockEditProfileInteractor.swift in Sources */,
 				909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */,
 				909A8BE121CAE76900166C93 /* MockLoginInteractor.swift in Sources */,
+				9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */,
 				90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
@@ -949,6 +984,7 @@
 				909A8BD621CAE6C500166C93 /* MockSignUpService.swift in Sources */,
 				909A8BDC21CAE72200166C93 /* SignUpInteractorTest.swift in Sources */,
 				908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */,
+				9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */,
 				909A8BD221CAE69800166C93 /* MockSignUpView.swift in Sources */,
 				908D91F921D3CB7700C12ECD /* MockEditProfileService.swift in Sources */,
 				909A8BDF21CAE74400166C93 /* MockLoginView.swift in Sources */,

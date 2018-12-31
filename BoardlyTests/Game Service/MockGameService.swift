@@ -12,32 +12,20 @@ import RxSwift
 
 class MockGameService: GameService {
     
-    private var mode: MockGameServiceMode
-    let testSearchResults = [SearchResult(id: 0, type: "rpg", name: "Monopoly", yearPublished: "1995"),
-                             SearchResult(id: 1, type: "boardgame", name: "Inis", yearPublished: "2001")]
-    let testGame = Game(id: 0, name: "Monopoly", image: "url/to/image")
+    private var searchFunctionResult = { (query: String) in return Observable<SearchResponse>.empty() }
+    private var gameDetailsFunctionResult = { (id: String) in return Observable<DetailsResponse>.empty() }
     
-    init(mode: MockGameServiceMode) {
-        self.mode = mode
+    init(search: @escaping (_ query: String) -> Observable<SearchResponse> = { _ in return Observable<SearchResponse>.empty() },
+         gameDetails: @escaping (_ id: String) -> Observable<DetailsResponse> = { _ in return Observable<DetailsResponse>.empty() }) {
+        self.searchFunctionResult = search
+        self.gameDetailsFunctionResult = gameDetails
     }
     
     func search(query: String) -> Observable<SearchResponse> {
-        if mode == .success {
-            return Observable.just(SearchResponse(games: testSearchResults))
-        } else {
-            return Observable.error(NSError())
-        }
+        return searchFunctionResult(query)
     }
     
     func gameDetails(id: String) -> Observable<DetailsResponse> {
-        if mode == .success {
-            return Observable.just(DetailsResponse(game: testGame))
-        } else {
-            return Observable.error(NSError())
-        }
+        return gameDetailsFunctionResult(id)
     }
-}
-
-enum MockGameServiceMode {
-    case error, success
 }
