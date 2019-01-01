@@ -41,20 +41,26 @@ class PickGameInteractorTest: QuickSpec {
                     }
                 })
                 
+                var testDisposeBag: DisposeBag? = DisposeBag()
+                
                 let testScheduler = TestScheduler(initialClock: 0)
                 let testObserver = testScheduler.createObserver(PartialPickGameViewState.self)
                 let pickGameInteractor = PickGameInteractorImpl(gameService: mockGameService)
                 pickGameInteractor.fetchSearchResults(query: firstQuery).subscribe(testObserver)
+                .disposed(by: testDisposeBag!)
                 
                 testScheduler.start()
                 expect(testObserver.events.count).to(equal(0))
                 
                 pickGameInteractor.fetchSearchResults(query: secondQuery).subscribe(testObserver)
+                .disposed(by: testDisposeBag!)
                 expect(testObserver.events).to(equal([Recorded.next(0, PartialPickGameViewState.resultsFetched(searchResults: searchResults)), Recorded.completed(0)]))
                 
                 delayedSearchResponseSubject.onNext(SearchResponse(games: delayedSearchResults))
                 expect(testObserver.events).to(equal([Recorded.next(0, PartialPickGameViewState.resultsFetched(searchResults: searchResults)), Recorded.completed(0)]))
+                
                 testScheduler.stop()
+                testDisposeBag = nil
             }
             
             it("results fetching with error") {
