@@ -10,7 +10,7 @@ import Foundation
 
 enum PartialHomeViewState: Equatable {
     case progress
-    case eventListState(eventList: [Event])
+    case eventListState(eventList: [BoardlyEvent])
     case joinRequestSent(render: Bool)
     case locationProcessingState
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Event: Equatable {
+struct BoardlyEvent: Equatable {
     var eventId: String = ""
     var eventName: String = ""
     var gameName: String = ""

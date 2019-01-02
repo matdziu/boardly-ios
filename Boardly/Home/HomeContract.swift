@@ -33,9 +33,9 @@ protocol HomeService {
     
     func fetchAllEvents(userLocation: UserLocation,
                         radius: Double,
-                        gameId: String) -> Observable<[Event]>
+                        gameId: String) -> Observable<[BoardlyEvent]>
     
-    func fetchCreatedEvents() -> Observable<[Event]>
+    func fetchCreatedEvents() -> Observable<[BoardlyEvent]>
     
     func fetchUserEvents() -> Observable<[String]>
     

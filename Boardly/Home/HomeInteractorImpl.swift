@@ -40,7 +40,7 @@ class HomeInteractorImpl: HomeInteractor {
                                 event.gameId3 == gameId)
                             && self.isInsideRadius(userLocation: userLocation!, eventPlaceLatitude: event.placeLatitude, eventPlaceLongitude: event.placeLongitude, radius: radius)
                     })
-                    .map({ event -> Event in
+                    .map({ event -> BoardlyEvent in
                         var output = event
                         output.type = EventType.CREATED
                         return output

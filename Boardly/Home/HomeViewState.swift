@@ -11,12 +11,12 @@ import Foundation
 struct HomeViewState: Equatable {
     var progress: Bool = false
     var locationProcessing: Bool = false
-    var eventList: [Event] = []
+    var eventList: [BoardlyEvent] = []
     var joinRequestSent: Bool = false
     
     init(progress: Bool = false,
          locationProcessing: Bool = false,
-         eventList: [Event] = [],
+         eventList: [BoardlyEvent] = [],
          joinRequestSent: Bool = false) {
         self.progress = progress
         self.locationProcessing = locationProcessing
