@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
+		9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496D21DF8C96006CE583 /* PartialEventViewState.swift */; };
+		9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497021DF8CF5006CE583 /* GamePickType.swift */; };
+		9025497321DF9123006CE583 /* EventInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497221DF9123006CE583 /* EventInputData.swift */; };
+		9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497421DF9243006CE583 /* GamePickEvent.swift */; };
+		9025497721DF92B7006CE583 /* EventContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497621DF92B7006CE583 /* EventContract.swift */; };
+		9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497821DF94CD006CE583 /* EventInteractorImpl.swift */; };
+		9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497A21DF94D5006CE583 /* EventPresenter.swift */; };
 		903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F221DA51BB0092FE84 /* PickGameViewState.swift */; };
 		903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F421DA53430092FE84 /* PartialPickGameViewState.swift */; };
 		903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F621DA554B0092FE84 /* PickGameContract.swift */; };
@@ -136,6 +144,14 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
+		9025496D21DF8C96006CE583 /* PartialEventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEventViewState.swift; sourceTree = "<group>"; };
+		9025497021DF8CF5006CE583 /* GamePickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickType.swift; sourceTree = "<group>"; };
+		9025497221DF9123006CE583 /* EventInputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInputData.swift; sourceTree = "<group>"; };
+		9025497421DF9243006CE583 /* GamePickEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickEvent.swift; sourceTree = "<group>"; };
+		9025497621DF92B7006CE583 /* EventContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventContract.swift; sourceTree = "<group>"; };
+		9025497821DF94CD006CE583 /* EventInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInteractorImpl.swift; sourceTree = "<group>"; };
+		9025497A21DF94D5006CE583 /* EventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresenter.swift; sourceTree = "<group>"; };
 		903788F221DA51BB0092FE84 /* PickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewState.swift; sourceTree = "<group>"; };
 		903788F421DA53430092FE84 /* PartialPickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialPickGameViewState.swift; sourceTree = "<group>"; };
 		903788F621DA554B0092FE84 /* PickGameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameContract.swift; sourceTree = "<group>"; };
@@ -275,6 +291,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9025496A21DF8885006CE583 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				9025496F21DF8CE5006CE583 /* Models */,
+				9025496B21DF889F006CE583 /* EventViewState.swift */,
+				9025496D21DF8C96006CE583 /* PartialEventViewState.swift */,
+				9025497621DF92B7006CE583 /* EventContract.swift */,
+				9025497821DF94CD006CE583 /* EventInteractorImpl.swift */,
+				9025497A21DF94D5006CE583 /* EventPresenter.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		9025496F21DF8CE5006CE583 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9025497021DF8CF5006CE583 /* GamePickType.swift */,
+				9025497221DF9123006CE583 /* EventInputData.swift */,
+				9025497421DF9243006CE583 /* GamePickEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		903788F121DA51910092FE84 /* Pick Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +548,7 @@
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
 				90D01CDF21D0FF10000F710D /* Edit Profile */,
+				9025496A21DF8885006CE583 /* Event */,
 				903788F121DA51910092FE84 /* Pick Game */,
 				90857DC921D81C5A000A7BFC /* Network */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
@@ -1001,7 +1041,9 @@
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
+				9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */,
 				90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */,
+				9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */,
 				9084A23321DD29B40087B5C3 /* JoinEventData.swift in Sources */,
 				90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */,
 				90907F7721D248C30054300C /* EditProfileContract.swift in Sources */,
@@ -1013,8 +1055,10 @@
 				903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
+				9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
+				9025497321DF9123006CE583 /* EventInputData.swift in Sources */,
 				90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */,
 				90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */,
 				90857DD521D820A7000A7BFC /* SearchResponse.swift in Sources */,
@@ -1027,6 +1071,8 @@
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
+				9025497721DF92B7006CE583 /* EventContract.swift in Sources */,
+				9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */,
 				9084A23B21DD3CE00087B5C3 /* DateExtensions.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
@@ -1042,9 +1088,11 @@
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
 				90857DCD21D81C96000A7BFC /* Game.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
+				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
 				9084A23121DD29770087B5C3 /* BaseJoinEventView.swift in Sources */,
 				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,
+				9025496C21DF889F006CE583 /* EventViewState.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 				903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */,
 			);
