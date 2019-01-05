@@ -28,6 +28,42 @@ struct EventInputData {
     var timestamp: UInt64 = 0
     var adminId: String = ""
     
+    init(eventId: String = "",
+         eventName: String = "",
+         description: String = "",
+         gameName: String = "",
+         gameId: String = "",
+         gameName2: String = "",
+         gameId2: String = "",
+         gameName3: String = "",
+         gameId3: String = "",
+         gameImageUrl: String = "",
+         gameImageUrl2: String = "",
+         gameImageUrl3: String = "",
+         placeName: String = "",
+         placeLatitude: Double = 0.0,
+         placeLongitude: Double = 0.0,
+         timestamp: UInt64 = 0,
+         adminId: String = "") {
+        self.eventId = eventId
+        self.eventName = eventName
+        self.description = description
+        self.gameName = gameName
+        self.gameId = gameId
+        self.gameName2 = gameName2
+        self.gameId2 = gameId2
+        self.gameName3 = gameName3
+        self.gameId3 = gameId3
+        self.gameImageUrl = gameImageUrl
+        self.gameImageUrl2 = gameImageUrl2
+        self.gameImageUrl3 = gameImageUrl3
+        self.placeName = placeName
+        self.placeLatitude = placeLatitude
+        self.placeLongitude = placeLongitude
+        self.timestamp = timestamp
+        self.adminId = adminId
+    }
+    
     func toDict() -> [String: Any] {
         return ["eventName" : eventName,
                 "description" : description,
@@ -43,7 +79,6 @@ struct EventInputData {
                 "placeName" : placeName,
                 "placeLatitude" : placeLatitude,
                 "placeLongitude" : placeLongitude,
-                "levelId" : levelId,
                 "timestamp" : timestamp,
                 "adminId" : adminId]
     }
