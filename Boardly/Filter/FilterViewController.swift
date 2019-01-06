@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import GooglePlaces
 
 class FilterViewController: BaseNavViewController, FilterView {
     
@@ -75,6 +76,12 @@ class FilterViewController: BaseNavViewController, FilterView {
         mainTabViewController.selectedIndex = 0
     }
     
+    @IBAction func pickPlaceButtonClicked(_ sender: Any) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initEmitters()
@@ -115,5 +122,35 @@ class FilterViewController: BaseNavViewController, FilterView {
                 currentFilter = savedFilter
             }
         }
+    }
+}
+
+extension FilterViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        let userLocation = UserLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+        let locationName = place.formattedAddress ?? place.name
+        currentFilter.userLocation = userLocation
+        currentFilter.locationName = locationName
+        currentFilter.isCurrentLocation = false
+        placeNameLabel.text = locationName
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        dismiss(animated: true, completion: nil)
+        showErrorAlert(errorMessage: "Something went wrong :(")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

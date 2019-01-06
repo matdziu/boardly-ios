@@ -20,4 +20,12 @@ extension UIViewController {
             alert.dismiss(animated: true)
         }
     }
+    
+    func showErrorAlertWithOkButton(errorMessage: String) {
+        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true)
+        }))
+        self.present(alert, animated: true)
+    }
 }

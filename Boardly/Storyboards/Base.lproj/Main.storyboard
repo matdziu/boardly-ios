@@ -183,6 +183,9 @@
                                                 <state key="normal" title="Pick a place">
                                                     <color key="titleColor" name="PrimaryBlue"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pickPlaceButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="jm9-Do-4zP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ncl-8A-F8D">
                                                 <rect key="frame" x="0.0" y="99.5" width="140" height="30"/>

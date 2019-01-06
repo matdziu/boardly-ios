@@ -11,12 +11,14 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import FirebaseDatabase
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
     var online: Bool = false
+    private let placesAPIKey = "AIzaSyAMKVkV8p9aYbRz2AXtQ8f7VlwkapiXT9Q"
     
     override init() {
         FirebaseApp.configure()
@@ -27,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         initInternetConnectionListener()
+        GMSPlacesClient.provideAPIKey(placesAPIKey)
         return true
     }
     
