@@ -23,13 +23,17 @@ class FilterViewController: BaseNavViewController, FilterView {
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var distanceSlider: UISlider!
+    @IBOutlet weak var useCurrentLocationButton: UIButton!
     
     private let filterPresenter = FilterPresenter(filterInteractor: FilterInteractorImpl(gameService: GameServiceImpl()))
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
+    private let locationManager = CLLocationManager()
+    private var fromLocationPermission = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         getFilterFromDefaults()
         gameImageView.roundBorderCorners()
         initDistanceFilter(radius: currentFilter.radius)
@@ -82,6 +86,24 @@ class FilterViewController: BaseNavViewController, FilterView {
         present(autocompleteController, animated: true, completion: nil)
     }
     
+    @IBAction func useCurrentLocationButtonClicked(_ sender: Any) {
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
+            fromLocationPermission = true
+            locationManager.requestWhenInUseAuthorization()
+            break
+            
+        case .restricted, .denied:
+            showErrorAlertWithOkButton(errorMessage: "Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby.")
+            break
+            
+        case .authorizedWhenInUse, .authorizedAlways:
+            locationManager.requestLocation()
+            locationProcessingSubject.onNext(true)
+            break
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initEmitters()
@@ -107,7 +129,12 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     func render(filterViewState: FilterViewState) {
-        
+        if filterViewState.locationProcessing {
+            placeNameLabel.text = "Setting your location..."
+            useCurrentLocationButton.isUserInteractionEnabled = false
+        } else {
+            useCurrentLocationButton.isUserInteractionEnabled = true
+        }
     }
     
     private func saveFilterToDefaults() {
@@ -152,5 +179,31 @@ extension FilterViewController: GMSAutocompleteViewControllerDelegate {
     
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
+extension FilterViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let rawLocation = locations.last else { return }
+        let userLocation = UserLocation(latitude: rawLocation.coordinate.latitude, longitude: rawLocation.coordinate.longitude)
+        currentFilter.userLocation = userLocation
+        currentFilter.locationName = "Current location"
+        currentFilter.isCurrentLocation = true
+        placeNameLabel.text = "Current location"
+        locationProcessingSubject.onNext(false)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == .authorizedWhenInUse || status == .authorizedAlways) && fromLocationPermission {
+            locationManager.requestLocation()
+            locationProcessingSubject.onNext(true)
+        } else if status == .denied {
+            fromLocationPermission = false
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        showErrorAlert(errorMessage: "Something went wrong :(")
     }
 }

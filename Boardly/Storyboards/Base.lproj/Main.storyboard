@@ -166,7 +166,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-q0-1Sa">
                                         <rect key="frame" x="165" y="0.0" width="140" height="129.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="bJE-9Q-WNg"/>
@@ -200,6 +200,9 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="useCurrentLocationButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="EFc-rv-1q5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -253,6 +256,7 @@
                         <outlet property="gameNameLabel" destination="Sp2-4I-s6h" id="FWS-1h-Fbp"/>
                         <outlet property="maxEventDistanceLabel" destination="bvy-gp-n5A" id="0xJ-Lm-iso"/>
                         <outlet property="placeNameLabel" destination="FKs-Ww-lhF" id="Rv3-04-cE5"/>
+                        <outlet property="useCurrentLocationButton" destination="ncl-8A-F8D" id="ftP-oD-PYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjJ-CS-W2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
