@@ -131,6 +131,7 @@
 		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
 		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
 		90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A321E5C6A10000C5EF /* BGGConstants.swift */; };
+		90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A521E5C7A00000C5EF /* StringExtensions.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
@@ -280,6 +281,7 @@
 		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		90D223A321E5C6A10000C5EF /* BGGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGConstants.swift; sourceTree = "<group>"; };
+		90D223A521E5C7A00000C5EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 				908D91FB21D504E500C12ECD /* ImageViewExtensions.swift */,
 				90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */,
 				9084A23A21DD3CE00087B5C3 /* DateExtensions.swift */,
+				90D223A521E5C7A00000C5EF /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1107,6 +1110,7 @@
 				90857DD521D820A7000A7BFC /* SearchResponse.swift in Sources */,
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
+				90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
