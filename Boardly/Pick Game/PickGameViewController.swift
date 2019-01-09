@@ -55,13 +55,13 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     }
     
     func queryEmitter() -> Observable<String> {
-        return querySubject
+        return querySubject.debounce(0.3, scheduler: MainScheduler.instance).distinctUntilChanged()
     }
 }
 
 extension PickGameViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        querySubject.onNext(searchController.searchBar.text ?? "")
     }
 }
