@@ -9,7 +9,7 @@
 import Foundation
 
 struct SearchResult: Equatable {
-    var id: Int = 0
+    var id: String = "0"
     var type: String = ""
     var name: String = ""
     var yearPublished: String = ""

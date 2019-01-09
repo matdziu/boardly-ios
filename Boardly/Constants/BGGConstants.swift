@@ -13,3 +13,12 @@ let RPG_DETAILS_URL = "\(BGG_URL)/family&type=rpg"
 
 let RPG_TYPE = "rpg"
 let BOARD_GAME_TYPE = "boardgame"
+
+let ITEMS_ELEMENT = "items"
+let ITEM_ELEMENT = "item"
+let YEAR_PUBLISHED_ELEMENT = "yearpublished"
+let NAME_ELEMENT = "name"
+
+let ID_ATTRIBUTE = "id"
+let TYPE_ATTRIBUTE = "type"
+let VALUE_ATTRIBUTE = "value"
