@@ -13,8 +13,22 @@ import RxSwift
 class PickGameViewController: BaseNavViewController, PickGameView {
     
     private var querySubject: PublishSubject<String>!
+    private let searchController = UISearchController(searchResultsController: nil)
     
     private let pickGamePresenter = PickGamePresenter(pickGameInteractor: PickGameInteractorImpl(gameService: GameServiceImpl()))
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setSearchController()
+    }
+    
+    private func setSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search for games"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,5 +51,12 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     
     func queryEmitter() -> Observable<String> {
         return querySubject
+    }
+}
+
+extension PickGameViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
     }
 }
