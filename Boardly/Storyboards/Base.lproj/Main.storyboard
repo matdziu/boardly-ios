@@ -148,6 +148,9 @@
                                                 <state key="normal" title="Pick a game">
                                                     <color key="titleColor" name="PrimaryBlue"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="dUZ-SN-Vd5" kind="show" id="ASQ-He-USZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-0z-GH6">
                                                 <rect key="frame" x="0.0" y="99.5" width="140" height="30"/>
@@ -290,6 +293,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nei-Dl-26S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2187" y="-1167"/>
+        </scene>
+        <!--Pick Game View Controller-->
+        <scene sceneID="Zjg-2m-Lxc">
+            <objects>
+                <viewController id="dUZ-SN-Vd5" customClass="PickGameViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgj-yj-74B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="s4r-Nr-3Ci"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhS-hS-N1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2615" y="-2548"/>
         </scene>
         <!--More-->
         <scene sceneID="u9b-1l-Ch6">
