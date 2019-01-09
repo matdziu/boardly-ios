@@ -17,7 +17,7 @@ class PickGamePresenterTest: QuickSpec {
     override func spec() {
         super.spec()
         
-        let testSearchResults = [SearchResult(id: 0, type: "rpg", name: "Inis", yearPublished: "1995")]
+        let testSearchResults = [SearchResult(id: "0", type: "rpg", name: "Inis", yearPublished: "1995")]
         let testError = NSError(domain: "testDomain", code: 0, userInfo: [NSLocalizedDescriptionKey: "Something went wrong"])
         
         describe("PickGamePresenter") {

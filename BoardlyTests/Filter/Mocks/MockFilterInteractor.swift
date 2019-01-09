@@ -12,7 +12,7 @@ import RxSwift
 
 class MockFilterInterator : FilterInteractor {
     
-    let testGame = Game(id: 0, name: "Monopoly", image: "url/to/image")
+    let testGame = Game(id: "0", name: "Monopoly", image: "url/to/image")
     
     func fetchGameDetails(gameId: String) -> Observable<PartialFilterViewState> {
         return Observable.just(.gameDetailsFetched(game: testGame))

@@ -17,7 +17,7 @@ class EventInteractorTest: QuickSpec {
     override func spec() {
         super.spec()
         
-        let testGame = Game(id: 1, name: "Monopoly", image: "path/to/image")
+        let testGame = Game(id: "1", name: "Monopoly", image: "path/to/image")
         let detailsResponse = DetailsResponse(game: testGame)
         
         describe("EventInteractor") {

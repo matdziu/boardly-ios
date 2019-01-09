@@ -16,7 +16,7 @@ class EventPresenterTest: QuickSpec {
     override func spec() {
         super.spec()
         
-        let testGame = Game(id: 1, name: "Monopoly", image: "path/to/image")
+        let testGame = Game(id: "1", name: "Monopoly", image: "path/to/image")
         var eventViewRobot: EventViewRobot!
         
         beforeEach {

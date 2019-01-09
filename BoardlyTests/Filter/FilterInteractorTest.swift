@@ -20,7 +20,7 @@ class FilterInteractorTest: QuickSpec {
         describe("FilterInteractor") {
             
             it("successfuly fetched game details") {
-                let testGame = Game(id: 0, name: "testGame", image: "path/to/picture")
+                let testGame = Game(id: "0", name: "testGame", image: "path/to/picture")
                 let mockGameService = MockGameService(gameDetails: { _ in return Observable.just(DetailsResponse(game: testGame)) })
                 let filterInteractor = FilterInteractorImpl(gameService: mockGameService)
                 let output = try! filterInteractor.fetchGameDetails(gameId: "testGameId")

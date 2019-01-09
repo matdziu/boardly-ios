@@ -24,8 +24,8 @@ class PickGameInteractorTest: QuickSpec {
                 let firstQuery = "first query"
                 let secondQuery = "second query"
                 
-                let searchResults = [SearchResult(id: 0, type: "boardgame", name: "Monopoly", yearPublished: "1995")]
-                let delayedSearchResults = [SearchResult(id: 1, type: "rpg", name: "Inis", yearPublished: "2005")]
+                let searchResults = [SearchResult(id: "0", type: "boardgame", name: "Monopoly", yearPublished: "1995")]
+                let delayedSearchResults = [SearchResult(id: "1", type: "rpg", name: "Inis", yearPublished: "2005")]
                 
                 let delayedSearchResponseSubject = PublishSubject<SearchResponse>()
                 let searchResultsObservable = Observable.just(SearchResponse(games: searchResults))
