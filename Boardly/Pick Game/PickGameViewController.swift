@@ -25,9 +25,14 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     private func setSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for games"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        searchController.searchBar.barStyle = UIBarStyle.black
+        searchController.searchBar.tintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "Search for games", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        searchController.searchBar.setImage(UIImage(named: Image.searchIcon.rawValue), for: UISearchBar.Icon.search, state: .normal)
+        searchController.searchBar.setImage(UIImage(named: Image.clearIcon.rawValue), for: UISearchBar.Icon.clear, state: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
