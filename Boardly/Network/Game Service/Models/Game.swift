@@ -9,7 +9,7 @@
 import Foundation
 
 struct Game: Equatable {
-    var id: Int = -1
+    var id: String = "-1"
     var name: String = ""
     var image: String = ""
 }

@@ -43,6 +43,33 @@ class GameServiceImpl: GameService {
     }
     
     func gameDetails(id: String) -> Observable<DetailsResponse> {
-        return Observable.just(DetailsResponse())
+        let resultSubject = PublishSubject<DetailsResponse>()
+        var detailsUrl = BOARD_GAME_DETAILS_URL
+        var gameId = id
+        if id.isOfType(type: RPG_TYPE) {
+            detailsUrl = RPG_DETAILS_URL
+            gameId = id.clearFromType(type: RPG_TYPE)
+        }
+        let parameters: Parameters = ["id" : gameId]
+        Alamofire.request(detailsUrl, parameters: parameters)
+            .validate()
+            .response { response in
+                guard let data = response.data else {
+                    resultSubject.onNext(DetailsResponse())
+                    return
+                }
+                let xml = SWXMLHash.parse(data)
+                let itemElem = xml[ITEMS_ELEMENT][ITEM_ELEMENT]
+                let itemElement = itemElem.element
+                let nameElement = itemElem[NAME_ELEMENT][0].element
+                let imageElement = itemElem[IMAGE_ELEMENT].element
+                
+                let id = itemElement?.attribute(by: ID_ATTRIBUTE)?.text ?? ""
+                let name = nameElement?.attribute(by: VALUE_ATTRIBUTE)?.text ?? ""
+                let image = imageElement?.text ?? ""
+                
+                resultSubject.onNext(DetailsResponse(game: Game(id: id, name: name, image: image)))
+        }
+        return resultSubject
     }
 }
