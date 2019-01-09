@@ -16,6 +16,8 @@ target 'Boardly' do
   pod 'FBSDKLoginKit',  '~> 4.36.0'
   pod 'GeoFire'
   pod 'GooglePlaces'
+  pod 'Alamofire', '~> 4.8.0'
+  pod 'SWXMLHash', '~> 4.7.0'
 
   target 'BoardlyTests' do
     inherit! :search_paths
