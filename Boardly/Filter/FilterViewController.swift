@@ -17,6 +17,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     private var locationProcessingSubject: PublishSubject<Bool>!
     private let distanceLabelDefaultText = "Maximum event distance:"
     private var currentFilter = Filter()
+    private var fetchDetails = true
     
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var maxEventDistanceLabel: UILabel!
@@ -108,6 +109,10 @@ class FilterViewController: BaseNavViewController, FilterView {
         super.viewWillAppear(animated)
         initEmitters()
         filterPresenter.bind(filterView: self)
+        if fetchDetails {
+            fetchDetails = false
+            gameIdSubject.onNext(currentFilter.gameId)
+        }
     }
     
     private func initEmitters() {
@@ -129,12 +134,24 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     func render(filterViewState: FilterViewState) {
+        gameImageView.downloaded(from: filterViewState.gameImageUrl)
         if filterViewState.locationProcessing {
             placeNameLabel.text = "Setting your location..."
             useCurrentLocationButton.isUserInteractionEnabled = false
         } else {
             useCurrentLocationButton.isUserInteractionEnabled = true
         }
+    }
+    
+    func handlePickGameResult(pickedGame: SearchResult) {
+        gameNameLabel.text = pickedGame.name
+        currentFilter.gameName = pickedGame.name
+        if pickedGame.type == RPG_TYPE {
+            currentFilter.gameId = "\(pickedGame.id)\(RPG_TYPE)"
+        } else {
+            currentFilter.gameId = pickedGame.id
+        }
+        fetchDetails = true
     }
     
     private func saveFilterToDefaults() {

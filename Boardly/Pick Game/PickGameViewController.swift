@@ -111,4 +111,11 @@ extension PickGameViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let filterViewController = self.navigationController?.viewControllers[1] as? FilterViewController else { return }
+        let pickedGame = searchResults[indexPath.row]
+        filterViewController.handlePickGameResult(pickedGame: pickedGame)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
