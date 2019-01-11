@@ -66,13 +66,15 @@ extension PickGameViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let gameCell = collectionView.dequeueReusableCell(withReuseIdentifier: GAME_CELL_ID, for: indexPath)
-        gameCell.backgroundColor = .black
-        return gameCell
+        let searchResultCell = collectionView.dequeueReusableCell(withReuseIdentifier: GAME_CELL_ID, for: indexPath) as! SearchResultCell
+        let searchResult = searchResults[indexPath.row]
+        searchResultCell.gameNameLabel.text = searchResult.name
+        searchResultCell.yearPublishedLabel.text = searchResult.yearPublished
+        return searchResultCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 84)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
