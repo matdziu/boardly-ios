@@ -17,7 +17,11 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     
     private var querySubject: PublishSubject<String>!
     private let searchController = UISearchController(searchResultsController: nil)
-    private var searchResults: [SearchResult] = [SearchResult(), SearchResult()]
+    private var searchResults: [SearchResult] = [] {
+        didSet {
+            searchCollectionView.reloadData()
+        }
+    }
     
     private let pickGamePresenter = PickGamePresenter(pickGameInteractor: PickGameInteractorImpl(gameService: GameServiceImpl()))
     
@@ -44,7 +48,7 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     }
     
     func render(pickGameViewState: PickGameViewState) {
-        
+        searchResults = pickGameViewState.searchResults
     }
     
     func queryEmitter() -> Observable<String> {
