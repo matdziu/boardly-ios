@@ -12,27 +12,20 @@ import RxSwift
 
 class PickGameViewController: BaseNavViewController, PickGameView {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchCollectionView: UICollectionView!
+    
     private var querySubject: PublishSubject<String>!
     private let searchController = UISearchController(searchResultsController: nil)
+    private var searchResults: [SearchResult] = [SearchResult(), SearchResult()]
     
     private let pickGamePresenter = PickGamePresenter(pickGameInteractor: PickGameInteractorImpl(gameService: GameServiceImpl()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setSearchController()
-    }
-    
-    private func setSearchController() {
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
-        searchController.searchBar.barStyle = UIBarStyle.black
-        searchController.searchBar.tintColor = .white
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "Search for games", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        searchController.searchBar.setImage(UIImage(named: Image.searchIcon.rawValue), for: UISearchBar.Icon.search, state: .normal)
-        searchController.searchBar.setImage(UIImage(named: Image.clearIcon.rawValue), for: UISearchBar.Icon.clear, state: .normal)
+        searchBar.delegate = self
+        searchCollectionView.dataSource = self
+        searchCollectionView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,9 +52,30 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     }
 }
 
-extension PickGameViewController: UISearchResultsUpdating {
+extension PickGameViewController: UISearchBarDelegate {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        querySubject.onNext(searchController.searchBar.text ?? "")
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        querySubject.onNext(searchText)
+    }
+}
+
+extension PickGameViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let gameCell = collectionView.dequeueReusableCell(withReuseIdentifier: GAME_CELL_ID, for: indexPath)
+        gameCell.backgroundColor = .black
+        return gameCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
