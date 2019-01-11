@@ -14,6 +14,7 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchCollectionView: UICollectionView!
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
     
     private var querySubject: PublishSubject<String>!
     private let searchController = UISearchController(searchResultsController: nil)
@@ -48,7 +49,18 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     }
     
     func render(pickGameViewState: PickGameViewState) {
+        showProgressView(show: pickGameViewState.progress)
         searchResults = pickGameViewState.searchResults
+    }
+    
+    private func showProgressView(show: Bool) {
+        if show {
+            searchCollectionView.isHidden = true
+            progressView.startAnimating()
+        } else {
+            searchCollectionView.isHidden = false
+            progressView.stopAnimating()
+        }
     }
     
     func queryEmitter() -> Observable<String> {
