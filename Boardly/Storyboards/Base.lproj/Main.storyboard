@@ -312,6 +312,18 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="37"/>
                                 <color key="color" name="AccentRed"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAi-Fo-cEC">
+                                <rect key="frame" x="0.0" y="108" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gq-ki-rr5">
+                                <rect key="frame" x="0.0" y="108" width="375" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pPf-wz-Xdk">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -377,6 +389,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="s4r-Nr-3Ci" firstAttribute="trailing" secondItem="pPf-wz-Xdk" secondAttribute="trailing" id="0M0-KQ-a1U"/>
+                            <constraint firstItem="RAi-Fo-cEC" firstAttribute="leading" secondItem="s4r-Nr-3Ci" secondAttribute="leading" id="Cl6-ug-8oV"/>
                             <constraint firstItem="Elr-am-jQi" firstAttribute="top" secondItem="s4r-Nr-3Ci" secondAttribute="top" id="F2w-wm-S5b"/>
                             <constraint firstItem="Elr-am-jQi" firstAttribute="trailing" secondItem="s4r-Nr-3Ci" secondAttribute="trailing" id="L0d-06-NbA"/>
                             <constraint firstItem="Elr-am-jQi" firstAttribute="leading" secondItem="s4r-Nr-3Ci" secondAttribute="leading" id="S91-vG-U4V"/>
@@ -384,12 +397,19 @@
                             <constraint firstItem="s4r-Nr-3Ci" firstAttribute="trailing" secondItem="Puh-2F-ZKr" secondAttribute="trailing" id="TQT-qD-9C6"/>
                             <constraint firstItem="Puh-2F-ZKr" firstAttribute="leading" secondItem="s4r-Nr-3Ci" secondAttribute="leading" id="ZW4-ok-iw1"/>
                             <constraint firstItem="s4r-Nr-3Ci" firstAttribute="bottom" secondItem="pPf-wz-Xdk" secondAttribute="bottom" id="ZtP-ux-2BK"/>
+                            <constraint firstItem="s4r-Nr-3Ci" firstAttribute="trailing" secondItem="4Gq-ki-rr5" secondAttribute="trailing" id="ZxK-Zj-Mul"/>
+                            <constraint firstItem="RAi-Fo-cEC" firstAttribute="top" secondItem="Elr-am-jQi" secondAttribute="bottom" constant="32" id="b8f-mq-5N2"/>
+                            <constraint firstItem="4Gq-ki-rr5" firstAttribute="leading" secondItem="s4r-Nr-3Ci" secondAttribute="leading" id="idM-sv-0SS"/>
                             <constraint firstItem="pPf-wz-Xdk" firstAttribute="leading" secondItem="s4r-Nr-3Ci" secondAttribute="leading" id="jHT-Th-TdW"/>
+                            <constraint firstItem="s4r-Nr-3Ci" firstAttribute="trailing" secondItem="RAi-Fo-cEC" secondAttribute="trailing" id="kB7-2O-WlY"/>
+                            <constraint firstItem="4Gq-ki-rr5" firstAttribute="top" secondItem="Elr-am-jQi" secondAttribute="bottom" constant="32" id="kYM-la-08l"/>
                             <constraint firstItem="pPf-wz-Xdk" firstAttribute="top" secondItem="Elr-am-jQi" secondAttribute="bottom" id="tVW-mp-uNk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s4r-Nr-3Ci"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="4Gq-ki-rr5" id="cA4-a2-gXC"/>
+                        <outlet property="noResultsLabel" destination="RAi-Fo-cEC" id="wlj-R5-MRh"/>
                         <outlet property="progressView" destination="Puh-2F-ZKr" id="5je-wI-meW"/>
                         <outlet property="searchBar" destination="Elr-am-jQi" id="URd-eY-IWs"/>
                         <outlet property="searchCollectionView" destination="pPf-wz-Xdk" id="1YZ-hq-ctp"/>

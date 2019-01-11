@@ -15,6 +15,8 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     private var querySubject: PublishSubject<String>!
     private let searchController = UISearchController(searchResultsController: nil)
@@ -50,17 +52,30 @@ class PickGameViewController: BaseNavViewController, PickGameView {
     
     func render(pickGameViewState: PickGameViewState) {
         showProgressView(show: pickGameViewState.progress)
+        showNoResultsPrompt(show: pickGameViewState.searchResults.isEmpty && !pickGameViewState.progress && pickGameViewState.error == nil)
+        showContent(show: !pickGameViewState.searchResults.isEmpty && !pickGameViewState.progress && pickGameViewState.error == nil)
+        showErrorPrompt(show: pickGameViewState.error != nil)
         searchResults = pickGameViewState.searchResults
     }
     
     private func showProgressView(show: Bool) {
         if show {
-            searchCollectionView.isHidden = true
             progressView.startAnimating()
         } else {
-            searchCollectionView.isHidden = false
             progressView.stopAnimating()
         }
+    }
+    
+    private func showNoResultsPrompt(show: Bool) {
+        noResultsLabel.isHidden = !show
+    }
+    
+    private func showErrorPrompt(show: Bool) {
+        errorLabel.isHidden = !show
+    }
+    
+    private func showContent(show: Bool) {
+        searchCollectionView.isHidden = !show
     }
     
     func queryEmitter() -> Observable<String> {
