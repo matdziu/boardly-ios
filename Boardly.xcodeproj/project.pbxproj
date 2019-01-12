@@ -129,6 +129,8 @@
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
+		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
+		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
 		90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */; };
 		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
 		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
@@ -282,6 +284,8 @@
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
+		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
 		90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceImpl.swift; sourceTree = "<group>"; };
 		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 				9025497621DF92B7006CE583 /* EventContract.swift */,
 				9025497821DF94CD006CE583 /* EventInteractorImpl.swift */,
 				9025497A21DF94D5006CE583 /* EventPresenter.swift */,
+				90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */,
+				90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -1105,6 +1111,7 @@
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
 				908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */,
+				90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */,
 				9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */,
 				90857DD721D820B4000A7BFC /* DetailsResponse.swift in Sources */,
 				903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */,
@@ -1121,6 +1128,7 @@
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
+				90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */,
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,

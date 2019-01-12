@@ -548,7 +548,7 @@
         <!--Add-->
         <scene sceneID="6qT-rt-Xdt">
             <objects>
-                <viewController id="2N6-y2-WVz" sceneMemberID="viewController">
+                <viewController id="2N6-y2-WVz" customClass="EventViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CE0-uj-RNA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
