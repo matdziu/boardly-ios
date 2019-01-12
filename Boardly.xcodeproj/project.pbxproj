@@ -128,6 +128,7 @@
 		909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */; };
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
+		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */; };
 		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
 		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
@@ -280,6 +281,7 @@
 		90A07A2621CE315600EE5349 /* DefaultAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthError.swift; sourceTree = "<group>"; };
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
+		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceImpl.swift; sourceTree = "<group>"; };
 		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 				90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */,
 				9084A23A21DD3CE00087B5C3 /* DateExtensions.swift */,
 				90D223A521E5C7A00000C5EF /* StringExtensions.swift */,
+				90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */,
 				9084A23B21DD3CE00087B5C3 /* DateExtensions.swift in Sources */,
 				90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */,
+				90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */,

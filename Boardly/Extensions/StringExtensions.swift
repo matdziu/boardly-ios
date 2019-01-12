@@ -17,4 +17,11 @@ extension String {
     func clearFromType(type: String) -> String {
         return replacingOccurrences(of: type, with: "")
     }
+    
+    func safelyLimitedTo(length n: Int) -> String {
+        if (self.count <= n) {
+            return self
+        }
+        return String(Array(self).prefix(upTo: n))
+    }
 }
