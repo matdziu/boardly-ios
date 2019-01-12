@@ -24,3 +24,6 @@ let RATING_HASHES = "ratingHashes"
 let TIMESTAMP_CHILD = "timestamp"
 let NOTIFICATION_TOKEN_CHILD = "notificationToken"
 let RATING_CHILD = "rating"
+let EVENT_ID_CHILD = "eventId"
+
+let DELETE_EVENT_FUNCTION = "deleteEvent"

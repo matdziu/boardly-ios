@@ -9,6 +9,7 @@ target 'Boardly' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'Firebase/Functions'
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'GoogleSignIn'
