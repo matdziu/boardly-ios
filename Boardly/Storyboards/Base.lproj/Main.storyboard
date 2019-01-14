@@ -807,6 +807,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="AddIcon" id="6jS-fn-uLi"/>
                     <size key="freeformSize" width="375" height="760"/>
+                    <connections>
+                        <outlet property="gameLabel1" destination="YbO-1l-6z2" id="ahp-2e-sik"/>
+                        <outlet property="gameLabel2" destination="uwn-2L-uiV" id="Rk8-2u-pKL"/>
+                        <outlet property="gameLabel3" destination="NE4-6h-a2F" id="fq3-iH-bWi"/>
+                        <outlet property="placeLabel" destination="NNU-yz-dKW" id="l1W-vO-74v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c35-FH-6qX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

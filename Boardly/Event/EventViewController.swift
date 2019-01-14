@@ -14,6 +14,11 @@ import GooglePlaces
 class EventViewController: UIViewController, EventView {
     
     private let eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
+    private var inputData = EventInputData()
+    @IBOutlet weak var gameLabel1: UILabel!
+    @IBOutlet weak var gameLabel2: UILabel!
+    @IBOutlet weak var gameLabel3: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -64,7 +69,13 @@ class EventViewController: UIViewController, EventView {
 extension EventViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        
+        let latitude = place.coordinate.latitude
+        let longitude = place.coordinate.longitude
+        let locationName = place.formattedAddress ?? place.name
+        inputData.placeLatitude = latitude
+        inputData.placeLongitude = longitude
+        inputData.placeName = locationName
+        placeLabel.text = locationName
         dismiss(animated: true, completion: nil)
     }
     
