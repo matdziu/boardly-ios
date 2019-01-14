@@ -11,6 +11,11 @@ import UIKit
 import RxSwift
 import GooglePlaces
 
+enum Mode {
+    case add
+    case edit(event: BoardlyEvent)
+}
+
 class EventViewController: UIViewController, EventView {
     
     private let eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
@@ -25,6 +30,11 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var datePicker: BoardlyDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
     private let dateFormatter = DateFormatter()
+    @IBOutlet weak var saveChangesButton: BoardlyButton!
+    @IBOutlet weak var addEventButton: BoardlyButton!
+    @IBOutlet weak var deleteEventButton: UIButton!
+    
+    var mode: Mode? = nil
     
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
@@ -37,6 +47,29 @@ class EventViewController: UIViewController, EventView {
             self.inputData.timestamp = $0.toMillis()
             self.dateLabel.text = self.dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval($0.toMillis() / 1000)))
         }
+    }
+    
+    private func prepareMode() {
+        switch mode! {
+        case .add:
+            saveChangesButton.isHidden = true
+            deleteEventButton.isHidden = true
+            addEventButton.isHidden = false
+        case .edit(let event):
+            saveChangesButton.isHidden = false
+            deleteEventButton.isHidden = false
+            addEventButton.isHidden = true
+            renderEventData(event: event)
+            updateInputData(event: event)
+        }
+    }
+    
+    private func renderEventData(event: BoardlyEvent) {
+        
+    }
+    
+    private func updateInputData(event: BoardlyEvent) {
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

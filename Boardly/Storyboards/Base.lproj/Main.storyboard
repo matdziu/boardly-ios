@@ -747,6 +747,21 @@
                                                     <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="mwm-1N-59L"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-CJ-Hvv" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="650" width="343" height="30"/>
+                                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                                <state key="normal" title="Save changes"/>
+                                                <connections>
+                                                    <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="d9o-fv-fsD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-Uc-X76">
+                                                <rect key="frame" x="16" y="712" width="343" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="DELETE EVENT">
+                                                    <color key="titleColor" name="ErrorRed"/>
+                                                </state>
+                                            </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-du-GgL" customClass="BoardlyDatePicker" customModule="Boardly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                                                 <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -755,16 +770,22 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="g0c-RW-cxe" firstAttribute="top" secondItem="cg3-vc-Euj" secondAttribute="bottom" constant="32" id="0gb-QR-BGl"/>
+                                            <constraint firstItem="FMK-Uc-X76" firstAttribute="top" secondItem="HLp-CJ-Hvv" secondAttribute="bottom" constant="32" id="4SX-kL-rLp"/>
+                                            <constraint firstItem="HLp-CJ-Hvv" firstAttribute="top" secondItem="g0c-RW-cxe" secondAttribute="bottom" constant="64" id="4WA-2c-qcj"/>
                                             <constraint firstItem="8BS-ko-710" firstAttribute="top" secondItem="Hlm-BN-9dA" secondAttribute="bottom" constant="32" id="5dc-HQ-xfF"/>
                                             <constraint firstAttribute="trailing" secondItem="g0c-RW-cxe" secondAttribute="trailing" constant="32" id="7LH-L8-9Sp"/>
                                             <constraint firstAttribute="trailing" secondItem="Hlm-BN-9dA" secondAttribute="trailing" constant="32" id="AuE-df-iNH"/>
+                                            <constraint firstAttribute="trailing" secondItem="HLp-CJ-Hvv" secondAttribute="trailing" constant="16" id="Cjz-9W-fWQ"/>
                                             <constraint firstItem="Hlm-BN-9dA" firstAttribute="top" secondItem="AMp-4i-ohv" secondAttribute="bottom" constant="32" id="Cpd-b1-XEr"/>
                                             <constraint firstAttribute="bottom" secondItem="cq1-du-GgL" secondAttribute="bottom" id="DqC-Lc-40r"/>
                                             <constraint firstAttribute="trailing" secondItem="RS1-Bl-aJT" secondAttribute="trailing" constant="16" id="FAk-Gt-uQQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="FMK-Uc-X76" secondAttribute="bottom" constant="18" id="G00-V1-fba"/>
                                             <constraint firstItem="AMp-4i-ohv" firstAttribute="top" secondItem="9Yh-gJ-WOV" secondAttribute="bottom" constant="32" id="G4z-oW-tQQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="FMK-Uc-X76" secondAttribute="trailing" constant="16" id="GBL-dZ-o1k"/>
                                             <constraint firstItem="Hlm-BN-9dA" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="32" id="JHC-6s-ph5"/>
                                             <constraint firstItem="AMp-4i-ohv" firstAttribute="centerX" secondItem="8eR-JE-iyH" secondAttribute="centerX" id="JKb-Nj-n6K"/>
                                             <constraint firstItem="pGS-kT-OE6" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="KVp-pR-3dr"/>
+                                            <constraint firstItem="FMK-Uc-X76" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="M0w-kP-5dC"/>
                                             <constraint firstItem="7Xc-eJ-8EG" firstAttribute="top" secondItem="8BS-ko-710" secondAttribute="bottom" constant="32" id="MXn-D5-O1L"/>
                                             <constraint firstAttribute="trailing" secondItem="cq1-du-GgL" secondAttribute="trailing" id="Qth-Xz-T0q"/>
                                             <constraint firstAttribute="trailing" secondItem="8BS-ko-710" secondAttribute="trailing" constant="32" id="Szk-bY-DGl"/>
@@ -784,6 +805,7 @@
                                             <constraint firstAttribute="height" constant="760" id="m8J-cj-wAk"/>
                                             <constraint firstItem="cg3-vc-Euj" firstAttribute="top" secondItem="7Xc-eJ-8EG" secondAttribute="bottom" constant="32" id="oSS-87-M52"/>
                                             <constraint firstItem="s2Z-Fk-MrB" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="pVr-p4-gli"/>
+                                            <constraint firstItem="HLp-CJ-Hvv" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="qce-b7-AbZ"/>
                                             <constraint firstItem="s2Z-Fk-MrB" firstAttribute="top" secondItem="pGS-kT-OE6" secondAttribute="bottom" constant="16" id="sRp-P3-0cc"/>
                                             <constraint firstItem="cq1-du-GgL" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" id="tDa-mS-3lo"/>
                                             <constraint firstItem="cq1-du-GgL" firstAttribute="top" secondItem="8eR-JE-iyH" secondAttribute="top" id="xJZ-p2-QMw"/>
@@ -819,8 +841,10 @@
                     <tabBarItem key="tabBarItem" title="Add" image="AddIcon" id="6jS-fn-uLi"/>
                     <size key="freeformSize" width="375" height="760"/>
                     <connections>
+                        <outlet property="addEventButton" destination="fng-dT-XPe" id="2oO-aH-CZL"/>
                         <outlet property="dateLabel" destination="scp-A3-kp0" id="6Q1-Xl-z64"/>
                         <outlet property="datePicker" destination="cq1-du-GgL" id="qdo-4H-pLE"/>
+                        <outlet property="deleteEventButton" destination="FMK-Uc-X76" id="V22-sp-BTd"/>
                         <outlet property="game1ImageView" destination="D20-nq-GZk" id="8sn-56-CZF"/>
                         <outlet property="game2ImageView" destination="HvW-Am-rT4" id="zaV-56-9Ed"/>
                         <outlet property="game3ImageView" destination="Orh-hT-ZBf" id="hwc-bi-tmi"/>
@@ -828,6 +852,7 @@
                         <outlet property="gameLabel2" destination="uwn-2L-uiV" id="Rk8-2u-pKL"/>
                         <outlet property="gameLabel3" destination="NE4-6h-a2F" id="fq3-iH-bWi"/>
                         <outlet property="placeLabel" destination="NNU-yz-dKW" id="l1W-vO-74v"/>
+                        <outlet property="saveChangesButton" destination="HLp-CJ-Hvv" id="IuY-I8-dRe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c35-FH-6qX" userLabel="First Responder" sceneMemberID="firstResponder"/>
