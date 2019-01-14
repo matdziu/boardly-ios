@@ -26,6 +26,10 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var dateLabel: UILabel!
     private let dateFormatter = DateFormatter()
     
+    private var gamePickEventSubject: PublishSubject<GamePickEvent>!
+    private var placePickEventSubject: PublishSubject<Bool>!
+    private var deleteEventSubject: PublishSubject<String>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateFormat = "EEE, d MMM yyyy, HH:mm"
@@ -42,7 +46,9 @@ class EventViewController: UIViewController, EventView {
     }
     
     private func initEmitters() {
-        
+        gamePickEventSubject = PublishSubject()
+        placePickEventSubject = PublishSubject()
+        deleteEventSubject = PublishSubject()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -107,15 +113,15 @@ class EventViewController: UIViewController, EventView {
     }
     
     func deleteEventEmitter() -> Observable<String> {
-        return Observable.empty()
+        return deleteEventSubject
     }
     
     func gamePickEventEmitter() -> Observable<GamePickEvent> {
-        return Observable.empty()
+        return gamePickEventSubject
     }
     
     func placePickEventEmitter() -> Observable<Bool> {
-        return Observable.empty()
+        return placePickEventSubject
     }
     
     func render(eventViewState: EventViewState) {
