@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */; };
+		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
 		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
 		9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496D21DF8C96006CE583 /* PartialEventViewState.swift */; };
 		9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497021DF8CF5006CE583 /* GamePickType.swift */; };
@@ -157,6 +159,8 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyDatePicker.swift; sourceTree = "<group>"; };
+		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
 		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
 		9025496D21DF8C96006CE583 /* PartialEventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEventViewState.swift; sourceTree = "<group>"; };
 		9025497021DF8CF5006CE583 /* GamePickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickType.swift; sourceTree = "<group>"; };
@@ -317,6 +321,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90186E8D21ED0E8100D8DFA9 /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */,
+				90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */,
+			);
+			path = "Date Picker";
+			sourceTree = "<group>";
+		};
 		9025496A21DF8885006CE583 /* Event */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +664,7 @@
 		909A8B9721CACE7D00166C93 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				90186E8D21ED0E8100D8DFA9 /* Date Picker */,
 				909A8BA721CAD0BB00166C93 /* BoardlyTextField.swift */,
 				909A8BA921CAD0CE00166C93 /* BoardlyButton.swift */,
 			);
@@ -929,6 +943,7 @@
 				909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */,
 				909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */,
 				909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */,
+				90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1178,7 @@
 				9025496C21DF889F006CE583 /* EventViewState.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 				903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */,
+				90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

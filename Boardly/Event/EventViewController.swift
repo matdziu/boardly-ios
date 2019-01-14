@@ -22,6 +22,7 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var game1ImageView: UIImageView!
     @IBOutlet weak var game2ImageView: UIImageView!
     @IBOutlet weak var game3ImageView: UIImageView!
+    @IBOutlet weak var datePicker: BoardlyDatePicker!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -83,7 +84,7 @@ class EventViewController: UIViewController, EventView {
     }
     
     @IBAction func pickDateButtonClicked(_ sender: Any) {
-        
+        datePicker.show(show: true)
     }
     
     func addEventEmitter() -> Observable<EventInputData> {
