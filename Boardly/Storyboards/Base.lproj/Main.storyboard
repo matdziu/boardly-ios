@@ -733,6 +733,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="pickDateButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="2EX-Lv-Z8g"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -808,6 +811,9 @@
                     <tabBarItem key="tabBarItem" title="Add" image="AddIcon" id="6jS-fn-uLi"/>
                     <size key="freeformSize" width="375" height="760"/>
                     <connections>
+                        <outlet property="game1ImageView" destination="D20-nq-GZk" id="8sn-56-CZF"/>
+                        <outlet property="game2ImageView" destination="HvW-Am-rT4" id="zaV-56-9Ed"/>
+                        <outlet property="game3ImageView" destination="Orh-hT-ZBf" id="hwc-bi-tmi"/>
                         <outlet property="gameLabel1" destination="YbO-1l-6z2" id="ahp-2e-sik"/>
                         <outlet property="gameLabel2" destination="uwn-2L-uiV" id="Rk8-2u-pKL"/>
                         <outlet property="gameLabel3" destination="NE4-6h-a2F" id="fq3-iH-bWi"/>

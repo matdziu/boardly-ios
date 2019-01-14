@@ -19,6 +19,9 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var gameLabel2: UILabel!
     @IBOutlet weak var gameLabel3: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var game1ImageView: UIImageView!
+    @IBOutlet weak var game2ImageView: UIImageView!
+    @IBOutlet weak var game3ImageView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,6 +80,10 @@ class EventViewController: UIViewController, EventView {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         present(autocompleteController, animated: true, completion: nil)
+    }
+    
+    @IBAction func pickDateButtonClicked(_ sender: Any) {
+        
     }
     
     func addEventEmitter() -> Observable<EventInputData> {
