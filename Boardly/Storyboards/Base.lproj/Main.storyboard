@@ -604,6 +604,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="60m-5G-MSL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -626,6 +629,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="pickPlaceButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="W4P-ea-b1G"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -643,6 +649,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="tintColor" name="PrimaryBlue"/>
                                                         <state key="normal" title="Pick a game"/>
+                                                        <connections>
+                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="Lhl-T4-hTH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -665,6 +674,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="3o9-8X-g7c"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1152,4 +1164,7 @@
             <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3o9-8X-g7c"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import GooglePlaces
 
 class EventViewController: UIViewController, EventView {
     
@@ -27,6 +28,12 @@ class EventViewController: UIViewController, EventView {
     override func viewWillDisappear(_ animated: Bool) {
         eventPresenter.unbind()
         super.viewWillDisappear(animated)
+    }
+    
+    @IBAction func pickPlaceButtonClicked(_ sender: Any) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
     }
     
     func addEventEmitter() -> Observable<EventInputData> {
@@ -51,5 +58,30 @@ class EventViewController: UIViewController, EventView {
     
     func render(eventViewState: EventViewState) {
         
+    }
+}
+
+extension EventViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        dismiss(animated: true, completion: nil)
+        showErrorAlert(errorMessage: "Something went wrong :(")
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
