@@ -13,6 +13,7 @@ class BoardlyDatePicker: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    var doneAction: (Date) -> Void = {_ in }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +42,7 @@ class BoardlyDatePicker: UIView {
     }
     
     @IBAction func doneButtonClicked(_ sender: Any) {
+        doneAction(datePicker.date)
         show(show: false)
     }
 }

@@ -23,6 +23,17 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var game2ImageView: UIImageView!
     @IBOutlet weak var game3ImageView: UIImageView!
     @IBOutlet weak var datePicker: BoardlyDatePicker!
+    @IBOutlet weak var dateLabel: UILabel!
+    private let dateFormatter = DateFormatter()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dateFormatter.dateFormat = "EEE, d MMM yyyy, HH:mm"
+        datePicker.doneAction = { [unowned self] in
+            self.inputData.timestamp = $0.toMillis()
+            self.dateLabel.text = self.dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval($0.toMillis() / 1000)))
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

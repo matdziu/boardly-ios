@@ -819,6 +819,7 @@
                     <tabBarItem key="tabBarItem" title="Add" image="AddIcon" id="6jS-fn-uLi"/>
                     <size key="freeformSize" width="375" height="760"/>
                     <connections>
+                        <outlet property="dateLabel" destination="scp-A3-kp0" id="6Q1-Xl-z64"/>
                         <outlet property="datePicker" destination="cq1-du-GgL" id="qdo-4H-pLE"/>
                         <outlet property="game1ImageView" destination="D20-nq-GZk" id="8sn-56-CZF"/>
                         <outlet property="game2ImageView" destination="HvW-Am-rT4" id="zaV-56-9Ed"/>

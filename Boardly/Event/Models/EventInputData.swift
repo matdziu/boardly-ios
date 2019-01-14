@@ -25,7 +25,7 @@ struct EventInputData {
     var placeLatitude: Double = 0.0
     var placeLongitude: Double = 0.0
     var levelId: String = ""
-    var timestamp: UInt64 = 0
+    var timestamp: Int64 = 0
     var adminId: String = ""
     
     init(eventId: String = "",
@@ -43,7 +43,7 @@ struct EventInputData {
          placeName: String = "",
          placeLatitude: Double = 0.0,
          placeLongitude: Double = 0.0,
-         timestamp: UInt64 = 0,
+         timestamp: Int64 = 0,
          adminId: String = "") {
         self.eventId = eventId
         self.eventName = eventName
