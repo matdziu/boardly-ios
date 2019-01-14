@@ -35,6 +35,44 @@ class EventViewController: UIViewController, EventView {
         super.viewWillDisappear(animated)
     }
     
+    @IBAction func pickGame1ButtonClicked(_ sender: Any) {
+        let pickGameViewController = getPickGameViewController()
+        pickGameViewController.finishAction = {
+            self.gameLabel1.text = $0.name
+            self.inputData.gameId = self.formatId(id: $0.id, type: $0.type)
+            self.inputData.gameName = $0.name
+        }
+        self.navigationController?.pushViewController(pickGameViewController, animated: true)
+    }
+    
+    @IBAction func pickGame2ButtonClicked(_ sender: Any) {
+        let pickGameViewController = getPickGameViewController()
+        pickGameViewController.finishAction = {
+            self.gameLabel2.text = $0.name
+            self.inputData.gameId2 = self.formatId(id: $0.id, type: $0.type)
+            self.inputData.gameName2 = $0.name
+        }
+        self.navigationController?.pushViewController(pickGameViewController, animated: true)
+    }
+    
+    @IBAction func pickGame3ButtonClicked(_ sender: Any) {
+        let pickGameViewController = getPickGameViewController()
+        pickGameViewController.finishAction = {
+            self.gameLabel3.text = $0.name
+            self.inputData.gameId3 = self.formatId(id: $0.id, type: $0.type)
+            self.inputData.gameName3 = $0.name
+        }
+        self.navigationController?.pushViewController(pickGameViewController, animated: true)
+    }
+    
+    private func formatId(id: String, type: String) -> String {
+        if (type == RPG_TYPE) {
+            return "\(id)\(RPG_TYPE)"
+        } else {
+            return id
+        }
+    }
+    
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
@@ -94,5 +132,9 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
     
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+    private func getPickGameViewController() -> PickGameViewController {
+        return storyboard?.instantiateViewController(withIdentifier: PICK_GAME_VIEW_CONTROLLER_ID) as! PickGameViewController
     }
 }

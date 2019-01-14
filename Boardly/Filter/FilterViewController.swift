@@ -65,6 +65,12 @@ class FilterViewController: BaseNavViewController, FilterView {
         currentFilter.radius = Double(value)
     }
     
+    @IBAction func pickGameButtonClicked(_ sender: Any) {
+        guard let pickGameViewController = storyboard?.instantiateViewController(withIdentifier: PICK_GAME_VIEW_CONTROLLER_ID) as? PickGameViewController else { return }
+        pickGameViewController.finishAction = { self.handlePickGameResult(pickedGame: $0) }
+        self.navigationController?.pushViewController(pickGameViewController, animated: true)
+    }
+    
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
         gameImageView.cancelAll()
         gameNameLabel.text = "No game picked"

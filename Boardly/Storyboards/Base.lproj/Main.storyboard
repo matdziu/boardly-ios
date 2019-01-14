@@ -150,7 +150,7 @@
                                                     <color key="titleColor" name="PrimaryBlue"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="dUZ-SN-Vd5" kind="show" id="ASQ-He-USZ"/>
+                                                    <action selector="pickGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="Pk7-dr-EXv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyL-0z-GH6">
@@ -298,7 +298,7 @@
         <!--Pick Game View Controller-->
         <scene sceneID="Zjg-2m-Lxc">
             <objects>
-                <viewController id="dUZ-SN-Vd5" customClass="PickGameViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pickGameViewController" id="dUZ-SN-Vd5" customClass="PickGameViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgj-yj-74B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,7 +605,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="60m-5G-MSL"/>
+                                                            <action selector="pickGame3ButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="iG8-ge-Igc"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -650,7 +650,7 @@
                                                         <color key="tintColor" name="PrimaryBlue"/>
                                                         <state key="normal" title="Pick a game"/>
                                                         <connections>
-                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="Lhl-T4-hTH"/>
+                                                            <action selector="pickGame1ButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="nB9-dw-2lW"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -675,7 +675,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="dUZ-SN-Vd5" kind="show" id="3o9-8X-g7c"/>
+                                                            <action selector="pickGame2ButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="aGY-sV-Q0x"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1170,7 +1170,4 @@
             <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="3o9-8X-g7c"/>
-    </inferredMetricsTieBreakers>
 </document>

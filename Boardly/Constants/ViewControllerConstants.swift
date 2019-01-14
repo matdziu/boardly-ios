@@ -9,7 +9,7 @@
 let EDIT_PROFILE_VIEW_CONTROLLER_ID = "editProfileViewController"
 let MAIN_TAB_VIEW_CONTROLLER_ID = "mainTabViewController"
 let LOGIN_VIEW_CONTROLLER_ID = "loginViewController"
-let FILTER_VIEW_CONTROLLER_ID = "filterViewController"
+let PICK_GAME_VIEW_CONTROLLER_ID = "pickGameViewController"
 
 let SAVED_FILTER = "savedFilter"
 

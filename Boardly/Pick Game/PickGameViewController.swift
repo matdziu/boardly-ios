@@ -26,6 +26,8 @@ class PickGameViewController: BaseNavViewController, PickGameView {
         }
     }
     
+    var finishAction: (SearchResult) -> Void = { _ in }
+    
     private let pickGamePresenter = PickGamePresenter(pickGameInteractor: PickGameInteractorImpl(gameService: GameServiceImpl()))
     
     override func viewDidLoad() {
@@ -113,9 +115,7 @@ extension PickGameViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let filterViewController = self.navigationController?.viewControllers[1] as? FilterViewController else { return }
-        let pickedGame = searchResults[indexPath.row]
-        filterViewController.handlePickGameResult(pickedGame: pickedGame)
+        finishAction(searchResults[indexPath.row])
         self.navigationController?.popViewController(animated: true)
     }
 }
