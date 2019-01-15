@@ -739,7 +739,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fng-dT-XPe" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fng-dT-XPe" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="650" width="343" height="30"/>
                                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                                 <state key="normal" title="Add event"/>
@@ -747,7 +747,7 @@
                                                     <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="mwm-1N-59L"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-CJ-Hvv" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-CJ-Hvv" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="650" width="343" height="30"/>
                                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                                 <state key="normal" title="Save changes"/>
@@ -755,7 +755,7 @@
                                                     <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="d9o-fv-fsD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-Uc-X76">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-Uc-X76">
                                                 <rect key="frame" x="16" y="712" width="343" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="DELETE EVENT">
@@ -845,6 +845,8 @@
                         <outlet property="dateLabel" destination="scp-A3-kp0" id="6Q1-Xl-z64"/>
                         <outlet property="datePicker" destination="cq1-du-GgL" id="qdo-4H-pLE"/>
                         <outlet property="deleteEventButton" destination="FMK-Uc-X76" id="V22-sp-BTd"/>
+                        <outlet property="descriptionTextField" destination="9Yh-gJ-WOV" id="1DC-RQ-3Zf"/>
+                        <outlet property="eventNameTextField" destination="pGS-kT-OE6" id="xK1-FM-y0U"/>
                         <outlet property="game1ImageView" destination="D20-nq-GZk" id="8sn-56-CZF"/>
                         <outlet property="game2ImageView" destination="HvW-Am-rT4" id="zaV-56-9Ed"/>
                         <outlet property="game3ImageView" destination="Orh-hT-ZBf" id="hwc-bi-tmi"/>

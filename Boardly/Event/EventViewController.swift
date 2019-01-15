@@ -29,12 +29,11 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var game3ImageView: UIImageView!
     @IBOutlet weak var datePicker: BoardlyDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
-    private let dateFormatter = DateFormatter()
     @IBOutlet weak var saveChangesButton: BoardlyButton!
     @IBOutlet weak var addEventButton: BoardlyButton!
     @IBOutlet weak var deleteEventButton: UIButton!
-    
-    var mode: Mode? = nil
+    @IBOutlet weak var eventNameTextField: BoardlyTextField!
+    @IBOutlet weak var descriptionTextField: BoardlyTextField!
     
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
@@ -42,15 +41,14 @@ class EventViewController: UIViewController, EventView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateFormatter.dateFormat = "EEE, d MMM yyyy, HH:mm"
         datePicker.doneAction = { [unowned self] in
             self.inputData.timestamp = $0.toMillis()
-            self.dateLabel.text = self.dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval($0.toMillis() / 1000)))
+            self.dateLabel.text = $0.formatForDisplay()
         }
     }
     
-    private func prepareMode() {
-        switch mode! {
+    func prepare(mode: Mode) {
+        switch mode {
         case .add:
             saveChangesButton.isHidden = true
             deleteEventButton.isHidden = true
@@ -65,11 +63,43 @@ class EventViewController: UIViewController, EventView {
     }
     
     private func renderEventData(event: BoardlyEvent) {
-        
+        eventNameTextField.text = event.eventName
+        descriptionTextField.text = event.description
+        placeLabel.text = event.placeName
+        if event.timestamp > 0 {
+            dateLabel.text = Date(timeIntervalSince1970: TimeInterval(event.timestamp / 1000)).formatForDisplay()
+        }
+        loadGameSection(gameImageView: game1ImageView, gameImageUrl: event.gameImageUrl, gameNameLabel: gameLabel1, gameName: event.gameName)
+        loadGameSection(gameImageView: game2ImageView, gameImageUrl: event.gameImageUrl2, gameNameLabel: gameLabel2, gameName: event.gameName2)
+        loadGameSection(gameImageView: game3ImageView, gameImageUrl: event.gameImageUrl3, gameNameLabel: gameLabel3, gameName: event.gameName3)
+    }
+    
+    private func loadGameSection(gameImageView: UIImageView, gameImageUrl: String,
+                                 gameNameLabel: UILabel, gameName: String) {
+        gameImageView.downloaded(from: gameImageUrl)
+        if !gameName.isEmpty {
+            gameNameLabel.text = gameName
+        } else {
+            gameNameLabel.text = "No game picked"
+        }
     }
     
     private func updateInputData(event: BoardlyEvent) {
-        
+        inputData.eventId = event.eventId
+        inputData.gameName = event.gameName
+        inputData.gameId = event.gameId
+        inputData.gameName2 = event.gameName2
+        inputData.gameId2 = event.gameId2
+        inputData.gameName3 = event.gameName3
+        inputData.gameId3 = event.gameId3
+        inputData.gameImageUrl = event.gameImageUrl
+        inputData.gameImageUrl2 = event.gameImageUrl2
+        inputData.gameImageUrl3 = event.gameImageUrl3
+        inputData.placeName = event.placeName
+        inputData.placeLatitude = event.placeLatitude
+        inputData.placeLongitude = event.placeLongitude
+        inputData.timestamp = event.timestamp
+        inputData.adminId = event.adminId
     }
     
     override func viewWillAppear(_ animated: Bool) {
