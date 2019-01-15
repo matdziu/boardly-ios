@@ -31,6 +31,7 @@ class BoardlyDatePicker: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         datePicker.backgroundColor = UIColor.white
+        datePicker.minimumDate = Date()
     }
     
     func show(show: Bool) {
