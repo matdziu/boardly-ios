@@ -22,8 +22,13 @@ class EventPresenter {
     
     func bind(eventView: EventView) {
         let gamePickEventObservable = eventView.gamePickEventEmitter()
-            .flatMap { gamePickEvent in
-                return self.eventInteractor.fetchGameDetails(gamePickEvent: gamePickEvent).startWith(.gamePickedState)
+            .flatMap { gamePickEvent -> Observable<PartialEventViewState> in
+                let gameDetailsObservable = self.eventInteractor.fetchGameDetails(gamePickEvent: gamePickEvent)
+                if gamePickEvent.type == .first {
+                    return gameDetailsObservable.startWith(.gamePickedState)
+                } else {
+                    return gameDetailsObservable
+                }
         }
         
         let placePickEventObservable = eventView.placePickEventEmitter()

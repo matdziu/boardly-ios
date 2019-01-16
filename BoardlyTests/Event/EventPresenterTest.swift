@@ -46,7 +46,6 @@ class EventPresenterTest: QuickSpec {
                 eventViewRobot.pickGame(gamePickEvent: GamePickEvent(gameId: "1", type: .second))
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
-                    EventViewState(selectedGameValid: true),
                     EventViewState(selectedGame2: testGame)])
             }
             
@@ -58,7 +57,6 @@ class EventPresenterTest: QuickSpec {
                 eventViewRobot.pickGame(gamePickEvent: GamePickEvent(gameId: "1", type: .third))
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
-                    EventViewState(selectedGameValid: true),
                     EventViewState(selectedGame3: testGame)])
             }
             
