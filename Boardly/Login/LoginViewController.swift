@@ -72,7 +72,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     @IBAction func loginUsingFacebook(_ sender: Any) {
         loginManager.logIn(withReadPermissions: [ "email" ], from: self) { [unowned self] (loginResult, error) in
             if error != nil {
-                self.showErrorAlert(errorMessage: "Something went wrong :(")
+                self.showAlert(message: "Something went wrong :(")
                 return
             }
             self.fbAccessToken = loginResult?.token
@@ -121,7 +121,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
     
     private func showLoginError(error: Bool, errorMessage: String, dismissError: Bool) {
         if error && !dismissError {
-            showErrorAlert(errorMessage: errorMessage)
+            showAlert(message: errorMessage)
         }
     }
     

@@ -11,8 +11,8 @@ import UIKit
 
 extension UIViewController {
     
-    func showErrorAlert(errorMessage: String) {
-        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         self.present(alert, animated: true)
         
         let duration: Double = 2
@@ -21,8 +21,8 @@ extension UIViewController {
         }
     }
     
-    func showErrorAlertWithOkButton(errorMessage: String) {
-        let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
+    func showAlertWithOkButton(message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true)
         }))

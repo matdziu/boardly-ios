@@ -101,7 +101,7 @@ class FilterViewController: BaseNavViewController, FilterView {
             break
             
         case .restricted, .denied:
-            showErrorAlertWithOkButton(errorMessage: "Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby.")
+            showAlertWithOkButton(message: "Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby.")
             break
             
         case .authorizedWhenInUse, .authorizedAlways:
@@ -189,7 +189,7 @@ extension FilterViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         dismiss(animated: true, completion: nil)
-        showErrorAlert(errorMessage: "Something went wrong :(")
+        showAlert(message: "Something went wrong :(")
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
@@ -227,6 +227,6 @@ extension FilterViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        showErrorAlert(errorMessage: "Something went wrong :(")
+        showAlert(message: "Something went wrong :(")
     }
 }

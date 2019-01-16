@@ -243,7 +243,7 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         dismiss(animated: true, completion: nil)
-        showErrorAlert(errorMessage: "Something went wrong :(")
+        showAlert(message: "Something went wrong :(")
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {

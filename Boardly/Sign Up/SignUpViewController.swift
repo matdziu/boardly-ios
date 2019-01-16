@@ -58,7 +58,7 @@ class SignUpViewController: BaseNavViewController, SignUpView {
     
     private func showSignUpError(error: Bool, errorMessage: String, dismissError: Bool) {
         if error && !dismissError {
-            showErrorAlert(errorMessage: errorMessage)
+            showAlert(message: errorMessage)
         }
     }
     
