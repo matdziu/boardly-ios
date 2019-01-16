@@ -59,9 +59,11 @@ class EventViewController: UIViewController, EventView {
         eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
         eventNameTextField.text = ""
         descriptionTextField.text = ""
-        game1ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-        game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-        game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        DispatchQueue.main.async {
+            self.game1ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+            self.game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+            self.game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        }
         gameLabel1.text = "No game picked"
         gameLabel2.text = "No game picked"
         gameLabel3.text = "No game picked"
