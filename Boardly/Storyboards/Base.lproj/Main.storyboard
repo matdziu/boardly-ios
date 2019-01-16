@@ -953,17 +953,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tB-2d-uR9">
-                                <rect key="frame" x="155.5" y="308.5" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gCc-Qy-zkt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Zh-bj-Eqc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="30u-TH-urc">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6tB-2d-uR9" firstAttribute="centerY" secondItem="5GZ-Su-D7j" secondAttribute="centerY" id="RGz-xu-yeu"/>
-                            <constraint firstItem="6tB-2d-uR9" firstAttribute="centerX" secondItem="5GZ-Su-D7j" secondAttribute="centerX" id="qb7-1j-hH4"/>
+                            <constraint firstItem="gCc-Qy-zkt" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" id="1gt-xx-Swx"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="gCc-Qy-zkt" secondAttribute="trailing" id="k3W-t7-D0N"/>
+                            <constraint firstItem="gCc-Qy-zkt" firstAttribute="top" secondItem="5GZ-Su-D7j" secondAttribute="top" id="vKb-Pd-VSh"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="bottom" secondItem="gCc-Qy-zkt" secondAttribute="bottom" id="zJd-ih-ix9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5GZ-Su-D7j"/>
                     </view>
