@@ -225,7 +225,27 @@ class EventViewController: UIViewController, EventView {
     }
     
     func render(eventViewState: EventViewState) {
-        
+        eventNameTextField.showError(show: !eventViewState.eventNameValid)
+        showProgress(show: eventViewState.progress)
+        showPickedGameError(show: !eventViewState.selectedGameValid)
+        showPickedPlaceError(show: !eventViewState.selectedPlaceValid)
+        loadAndSaveGameImage(game: eventViewState.selectedGame,
+                             boardGameImageView: game1ImageView,
+                             inputDataSetter: { inputData.gameImageUrl = $0 })
+        loadAndSaveGameImage(game: eventViewState.selectedGame2,
+                             boardGameImageView: game2ImageView,
+                             inputDataSetter: { inputData.gameImageUrl2 = $0 })
+        loadAndSaveGameImage(game: eventViewState.selectedGame3,
+                             boardGameImageView: game3ImageView,
+                             inputDataSetter: { inputData.gameImageUrl3 = $0 })
+        if eventViewState.success {
+            showAlert(message: "Everything went well!")
+            self.navigationController?.popViewController(animated: true)
+        }
+        if eventViewState.removed {
+            showAlert(message: "Everything went well!")
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func showProgress(show: Bool) {
@@ -233,6 +253,29 @@ class EventViewController: UIViewController, EventView {
             progressView.startAnimating()
         } else {
             progressView.stopAnimating()
+        }
+    }
+    
+    private func showPickedGameError(show: Bool) {
+        if show {
+            gameLabel1.textColor = UIColor(named: Color.errorRed.rawValue)
+        } else {
+            gameLabel1.textColor = UIColor(named: Color.grey.rawValue)
+        }
+    }
+    
+    private func showPickedPlaceError(show: Bool) {
+        if show {
+            placeLabel.textColor = UIColor(named: Color.errorRed.rawValue)
+        } else {
+            placeLabel.textColor = UIColor(named: Color.grey.rawValue)
+        }
+    }
+    
+    private func loadAndSaveGameImage(game: Game, boardGameImageView: UIImageView, inputDataSetter: (String) -> Void) {
+        if game.id != "-1" {
+            inputDataSetter(game.image)
+            boardGameImageView.downloaded(from: game.image)
         }
     }
 }
@@ -247,6 +290,7 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
         inputData.placeLongitude = longitude
         inputData.placeName = locationName
         placeLabel.text = locationName
+        emitPlacePickEvent = true
         dismiss(animated: true, completion: nil)
     }
     
