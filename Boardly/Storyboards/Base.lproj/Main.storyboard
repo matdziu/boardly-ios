@@ -765,6 +765,16 @@
                                                     <action selector="deleteEventButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="2hM-0w-u7S"/>
                                                 </connections>
                                             </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYJ-Zt-DNn">
+                                                <rect key="frame" x="16" y="712" width="343" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="CLEAR">
+                                                    <color key="titleColor" name="AccentRed"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="6ei-hy-tfp"/>
+                                                </connections>
+                                            </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-du-GgL" customClass="BoardlyDatePicker" customModule="Boardly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>
                                                 <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -784,6 +794,7 @@
                                             <constraint firstAttribute="trailing" secondItem="g0c-RW-cxe" secondAttribute="trailing" constant="32" id="7LH-L8-9Sp"/>
                                             <constraint firstAttribute="bottom" secondItem="OVy-9Z-P3p" secondAttribute="bottom" id="7jK-Z6-gIC"/>
                                             <constraint firstAttribute="trailing" secondItem="Hlm-BN-9dA" secondAttribute="trailing" constant="32" id="AuE-df-iNH"/>
+                                            <constraint firstItem="OYJ-Zt-DNn" firstAttribute="top" secondItem="fng-dT-XPe" secondAttribute="bottom" constant="32" id="CPo-Yv-KKQ"/>
                                             <constraint firstAttribute="trailing" secondItem="HLp-CJ-Hvv" secondAttribute="trailing" constant="16" id="Cjz-9W-fWQ"/>
                                             <constraint firstItem="Hlm-BN-9dA" firstAttribute="top" secondItem="AMp-4i-ohv" secondAttribute="bottom" constant="32" id="Cpd-b1-XEr"/>
                                             <constraint firstAttribute="bottom" secondItem="cq1-du-GgL" secondAttribute="bottom" id="DqC-Lc-40r"/>
@@ -791,6 +802,7 @@
                                             <constraint firstAttribute="bottom" secondItem="FMK-Uc-X76" secondAttribute="bottom" constant="18" id="G00-V1-fba"/>
                                             <constraint firstItem="AMp-4i-ohv" firstAttribute="top" secondItem="9Yh-gJ-WOV" secondAttribute="bottom" constant="32" id="G4z-oW-tQQ"/>
                                             <constraint firstAttribute="trailing" secondItem="FMK-Uc-X76" secondAttribute="trailing" constant="16" id="GBL-dZ-o1k"/>
+                                            <constraint firstItem="OYJ-Zt-DNn" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="GsL-rt-wpR"/>
                                             <constraint firstItem="Hlm-BN-9dA" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="32" id="JHC-6s-ph5"/>
                                             <constraint firstItem="AMp-4i-ohv" firstAttribute="centerX" secondItem="8eR-JE-iyH" secondAttribute="centerX" id="JKb-Nj-n6K"/>
                                             <constraint firstItem="pGS-kT-OE6" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="KVp-pR-3dr"/>
@@ -809,6 +821,7 @@
                                             <constraint firstItem="pGS-kT-OE6" firstAttribute="top" secondItem="RS1-Bl-aJT" secondAttribute="bottom" constant="8" id="fyk-9E-wiP"/>
                                             <constraint firstItem="9Yh-gJ-WOV" firstAttribute="top" secondItem="s2Z-Fk-MrB" secondAttribute="bottom" constant="8" id="gvI-cb-m54"/>
                                             <constraint firstItem="g0c-RW-cxe" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="32" id="hBc-bb-x2v"/>
+                                            <constraint firstAttribute="bottom" secondItem="OYJ-Zt-DNn" secondAttribute="bottom" constant="18" id="hvi-gN-Kzj"/>
                                             <constraint firstItem="8BS-ko-710" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="32" id="iqj-dZ-cmq"/>
                                             <constraint firstItem="cg3-vc-Euj" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="32" id="jhc-wt-Nsm"/>
                                             <constraint firstAttribute="trailing" secondItem="s2Z-Fk-MrB" secondAttribute="trailing" constant="16" id="kiY-52-6VR"/>
@@ -819,6 +832,7 @@
                                             <constraint firstItem="HLp-CJ-Hvv" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" constant="16" id="qce-b7-AbZ"/>
                                             <constraint firstItem="s2Z-Fk-MrB" firstAttribute="top" secondItem="pGS-kT-OE6" secondAttribute="bottom" constant="16" id="sRp-P3-0cc"/>
                                             <constraint firstItem="cq1-du-GgL" firstAttribute="leading" secondItem="8eR-JE-iyH" secondAttribute="leading" id="tDa-mS-3lo"/>
+                                            <constraint firstAttribute="trailing" secondItem="OYJ-Zt-DNn" secondAttribute="trailing" constant="16" id="vC5-vS-xL8"/>
                                             <constraint firstItem="cq1-du-GgL" firstAttribute="top" secondItem="8eR-JE-iyH" secondAttribute="top" id="xJZ-p2-QMw"/>
                                             <constraint firstAttribute="trailing" secondItem="OVy-9Z-P3p" secondAttribute="trailing" id="yQY-yg-CYw"/>
                                             <constraint firstAttribute="trailing" secondItem="pGS-kT-OE6" secondAttribute="trailing" constant="16" id="yUZ-nW-Dcp"/>
@@ -854,6 +868,7 @@
                     <size key="freeformSize" width="375" height="760"/>
                     <connections>
                         <outlet property="addEventButton" destination="fng-dT-XPe" id="2oO-aH-CZL"/>
+                        <outlet property="clearButton" destination="OYJ-Zt-DNn" id="7xj-Cl-VLg"/>
                         <outlet property="dateLabel" destination="scp-A3-kp0" id="6Q1-Xl-z64"/>
                         <outlet property="datePicker" destination="cq1-du-GgL" id="qdo-4H-pLE"/>
                         <outlet property="deleteEventButton" destination="FMK-Uc-X76" id="V22-sp-BTd"/>

@@ -36,6 +36,7 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var eventNameTextField: BoardlyTextField!
     @IBOutlet weak var descriptionTextField: BoardlyTextField!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var clearButton: UIButton!
     
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
@@ -55,6 +56,7 @@ class EventViewController: UIViewController, EventView {
     }
     
     func reloadView() {
+        eventPresenter.unbind()
         inputData = EventInputData()
         eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
         eventNameTextField.text = ""
@@ -77,10 +79,12 @@ class EventViewController: UIViewController, EventView {
             saveChangesButton.isHidden = true
             deleteEventButton.isHidden = true
             addEventButton.isHidden = false
+            clearButton.isHidden = false
         case .edit(let event):
             saveChangesButton.isHidden = false
             deleteEventButton.isHidden = false
             addEventButton.isHidden = true
+            clearButton.isHidden = true
             renderEventData(event: event)
             updateInputData(event: event)
         }
@@ -153,6 +157,11 @@ class EventViewController: UIViewController, EventView {
     override func viewWillDisappear(_ animated: Bool) {
         eventPresenter.unbind()
         super.viewWillDisappear(animated)
+    }
+    
+    @IBAction func clearButtonClicked(_ sender: Any) {
+        reloadView()
+        eventPresenter.bind(eventView: self)
     }
     
     @IBAction func pickGame1ButtonClicked(_ sender: Any) {
