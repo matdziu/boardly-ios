@@ -19,7 +19,7 @@ enum Mode {
 
 class EventViewController: UIViewController, EventView {
     
-    private let eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
+    private var eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
     private var inputData = EventInputData()
     @IBOutlet weak var gameLabel1: UILabel!
     @IBOutlet weak var gameLabel2: UILabel!
@@ -52,6 +52,21 @@ class EventViewController: UIViewController, EventView {
             self.inputData.timestamp = $0.toMillis()
             self.dateLabel.text = $0.formatForDisplay()
         }
+    }
+    
+    func reloadView() {
+        inputData = EventInputData()
+        eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
+        eventNameTextField.text = ""
+        descriptionTextField.text = ""
+        game1ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        gameLabel1.text = "No game picked"
+        gameLabel2.text = "No game picked"
+        gameLabel3.text = "No game picked"
+        placeLabel.text = "No place picked"
+        dateLabel.text = "No date picked"
     }
     
     func prepare(mode: Mode) {
@@ -240,11 +255,11 @@ class EventViewController: UIViewController, EventView {
                              inputDataSetter: { inputData.gameImageUrl3 = $0 })
         if eventViewState.success {
             showAlert(message: "Everything went well!")
-            self.navigationController?.popViewController(animated: true)
+            self.tabBarController?.selectedIndex = 0
+            reloadView()
         }
         if eventViewState.removed {
             showAlert(message: "Everything went well!")
-            self.navigationController?.popViewController(animated: true)
         }
     }
     
