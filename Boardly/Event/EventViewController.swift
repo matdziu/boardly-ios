@@ -35,6 +35,7 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var deleteEventButton: UIButton!
     @IBOutlet weak var eventNameTextField: BoardlyTextField!
     @IBOutlet weak var descriptionTextField: BoardlyTextField!
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
     
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
@@ -225,6 +226,14 @@ class EventViewController: UIViewController, EventView {
     
     func render(eventViewState: EventViewState) {
         
+    }
+    
+    private func showProgress(show: Bool) {
+        if show {
+            progressView.startAnimating()
+        } else {
+            progressView.stopAnimating()
+        }
     }
 }
 
