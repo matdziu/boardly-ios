@@ -761,6 +761,9 @@
                                                 <state key="normal" title="DELETE EVENT">
                                                     <color key="titleColor" name="ErrorRed"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="deleteEventButtonClicked:" destination="2N6-y2-WVz" eventType="touchUpInside" id="2hM-0w-u7S"/>
+                                                </connections>
                                             </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-du-GgL" customClass="BoardlyDatePicker" customModule="Boardly" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="760"/>

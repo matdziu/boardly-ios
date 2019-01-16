@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import GooglePlaces
+import RxCocoa
 
 enum Mode {
     case add
@@ -38,6 +39,11 @@ class EventViewController: UIViewController, EventView {
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
     private var deleteEventSubject: PublishSubject<String>!
+    
+    private var emitGamePickEvent = false
+    private var recentGamePickEvent = GamePickEvent()
+    
+    private var emitPlacePickEvent = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +112,18 @@ class EventViewController: UIViewController, EventView {
         super.viewWillAppear(animated)
         initEmitters()
         eventPresenter.bind(eventView: self)
+        initView()
+    }
+    
+    private func initView() {
+        if (emitGamePickEvent) {
+            gamePickEventSubject.onNext(recentGamePickEvent)
+            emitGamePickEvent = false
+        }
+        if (emitPlacePickEvent) {
+            placePickEventSubject.onNext(true)
+            emitPlacePickEvent = false
+        }
     }
     
     private func initEmitters() {
@@ -125,6 +143,8 @@ class EventViewController: UIViewController, EventView {
             self.gameLabel1.text = $0.name
             self.inputData.gameId = self.formatId(id: $0.id, type: $0.type)
             self.inputData.gameName = $0.name
+            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .first)
+            self.emitGamePickEvent = true
         }
         self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
@@ -135,6 +155,8 @@ class EventViewController: UIViewController, EventView {
             self.gameLabel2.text = $0.name
             self.inputData.gameId2 = self.formatId(id: $0.id, type: $0.type)
             self.inputData.gameName2 = $0.name
+            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .second)
+            self.emitGamePickEvent = true
         }
         self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
@@ -145,8 +167,14 @@ class EventViewController: UIViewController, EventView {
             self.gameLabel3.text = $0.name
             self.inputData.gameId3 = self.formatId(id: $0.id, type: $0.type)
             self.inputData.gameName3 = $0.name
+            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .third)
+            self.emitGamePickEvent = true
         }
         self.navigationController?.pushViewController(pickGameViewController, animated: true)
+    }
+    
+    @IBAction func deleteEventButtonClicked(_ sender: Any) {
+        launchDeleteEventDialog()
     }
     
     private func formatId(id: String, type: String) -> String {
@@ -168,11 +196,19 @@ class EventViewController: UIViewController, EventView {
     }
     
     func addEventEmitter() -> Observable<EventInputData> {
-        return Observable.empty()
+        return addEventButton.rx.tap.map { [unowned self] in
+            self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            return self.inputData
+        }
     }
     
     func editEventEmitter() -> Observable<EventInputData> {
-        return Observable.empty()
+        return saveChangesButton.rx.tap.map { [unowned self] in
+            self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            return self.inputData
+        }
     }
     
     func deleteEventEmitter() -> Observable<String> {
@@ -224,5 +260,17 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
     
     private func getPickGameViewController() -> PickGameViewController {
         return storyboard?.instantiateViewController(withIdentifier: PICK_GAME_VIEW_CONTROLLER_ID) as! PickGameViewController
+    }
+    
+    private func launchDeleteEventDialog() {
+        let alert = UIAlertController(title: "Delete the event", message: "Are you sure you want to delete this event?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action: UIAlertAction!) in
+            self.deleteEventSubject.onNext(self.inputData.eventId)
+            alert.dismiss(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true)
+        }))
+        self.present(alert, animated: true)
     }
 }
