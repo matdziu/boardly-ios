@@ -141,6 +141,7 @@
 		90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A721E5DFE00000C5EF /* PickGameViewController.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
+		90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -299,6 +300,7 @@
 		90D223A721E5DFE00000C5EF /* PickGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
+		90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -723,6 +725,7 @@
 				9084A23421DD2CA80087B5C3 /* HomeInteractorImpl.swift */,
 				9084A23621DD2CB20087B5C3 /* HomePresenter.swift */,
 				90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */,
+				90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1153,6 +1156,7 @@
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
+				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
 				9025497721DF92B7006CE583 /* EventContract.swift in Sources */,

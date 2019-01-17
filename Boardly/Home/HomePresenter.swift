@@ -16,7 +16,7 @@ class HomePresenter {
     private let stateSubject: BehaviorSubject<HomeViewState>
     
     init(homeInteractor: HomeInteractor,
-         initialViewState: HomeViewState) {
+         initialViewState: HomeViewState = HomeViewState()) {
         self.homeInteractor = homeInteractor
         self.stateSubject = BehaviorSubject(value: initialViewState)
     }

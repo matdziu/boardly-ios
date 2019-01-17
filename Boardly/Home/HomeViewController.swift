@@ -8,10 +8,20 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, HomeView {
     
     @IBOutlet weak var eventsCollectionView: UICollectionView!
+    @IBOutlet weak var noEventsFoundLabel: UILabel!
+    @IBOutlet weak var turnOnLocationLabel: UILabel!
+    @IBOutlet weak var settingLocationLabel: UILabel!
+    @IBOutlet weak var lookingForEventsLabel: UILabel!
+    
+    private let homePresenter = HomePresenter(homeInteractor: HomeInteractorImpl(homeService: HomeServiceImpl()))
+    
+    private var filteredFetchTriggerSubject: PublishSubject<FilteredFetchData>!
+    private var locationProcessingSubject: PublishSubject<Bool>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +33,39 @@ class HomeViewController: UIViewController {
         didSet {
             eventsCollectionView.reloadData()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initEmitters()
+        homePresenter.bind(homeView: self)
+    }
+    
+    private func initEmitters() {
+        filteredFetchTriggerSubject = PublishSubject()
+        locationProcessingSubject = PublishSubject()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        homePresenter.unbind()
+        super.viewWillDisappear(animated)
+    }
+    
+    func filteredFetchTriggerEmitter() -> Observable<FilteredFetchData> {
+        return filteredFetchTriggerSubject
+    }
+    
+    func locationProcessingEmitter() -> Observable<Bool> {
+        return locationProcessingSubject
+    }
+    
+    func joinEventEmitter() -> Observable<JoinEventData> {
+        // move to BaseJoinEventViewController
+        return Observable.empty()
+    }
+    
+    func render(homeViewState: HomeViewState) {
+        
     }
 }
 

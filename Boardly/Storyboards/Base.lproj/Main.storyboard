@@ -1132,6 +1132,19 @@
                                             <constraint firstItem="XJF-OJ-qHV" firstAttribute="leading" secondItem="30u-TH-urc" secondAttribute="leading" id="np4-TI-ICw"/>
                                             <constraint firstItem="XJF-OJ-qHV" firstAttribute="top" secondItem="30u-TH-urc" secondAttribute="top" id="yve-Bl-sBd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dateButton" destination="RtR-rn-7NR" id="fMw-VC-yMj"/>
+                                            <outlet property="descriptionButton" destination="ouO-UZ-m57" id="xML-tC-UaJ"/>
+                                            <outlet property="game1ImageView" destination="nWG-qO-jRk" id="c62-fa-IrF"/>
+                                            <outlet property="game1NameLabel" destination="bHE-d2-3Yl" id="hOL-2n-IXX"/>
+                                            <outlet property="game2ImageView" destination="iLN-Y1-l81" id="icD-uP-1dW"/>
+                                            <outlet property="game2NameLabel" destination="VM7-0x-tgh" id="9RX-lM-E6V"/>
+                                            <outlet property="game3ImageView" destination="VZH-hA-gs1" id="Jro-HC-coS"/>
+                                            <outlet property="game3NameLabel" destination="zQ8-zQ-RiV" id="Zae-6d-whN"/>
+                                            <outlet property="joinButton" destination="Ynn-qc-CUn" id="e41-o8-qw7"/>
+                                            <outlet property="nameLabel" destination="6Wv-qc-Dy1" id="3gs-go-7D4"/>
+                                            <outlet property="placeButton" destination="eYT-Ra-9dV" id="aWo-jf-myN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1184,6 +1197,10 @@
                     <tabBarItem key="tabBarItem" title="Events" image="EventsIcon" id="scT-9n-IS1"/>
                     <connections>
                         <outlet property="eventsCollectionView" destination="gCc-Qy-zkt" id="fPC-0W-ZBl"/>
+                        <outlet property="lookingForEventsLabel" destination="ZCp-Q7-9Tj" id="7fB-Hk-fPA"/>
+                        <outlet property="noEventsFoundLabel" destination="9fK-5C-E7c" id="H1b-YS-LCN"/>
+                        <outlet property="settingLocationLabel" destination="Rot-va-6Lz" id="UGH-tz-6rq"/>
+                        <outlet property="turnOnLocationLabel" destination="x7L-35-FOy" id="sVz-UK-fdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dip-Zn-sum" userLabel="First Responder" sceneMemberID="firstResponder"/>
