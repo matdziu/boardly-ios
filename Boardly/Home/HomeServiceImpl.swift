@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class HomeServiceImpl: HomeService {
+class HomeServiceImpl: BaseServiceImpl, HomeService {
     
     func sendClientNotificationToken() {
         

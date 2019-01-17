@@ -11,6 +11,7 @@ import FirebaseDatabase
 import FirebaseAuth
 import FirebaseStorage
 import GeoFire
+import RxSwift
 
 class BaseServiceImpl {
     
@@ -43,5 +44,19 @@ class BaseServiceImpl {
     
     func getUserCreatedEventsNodeRef(userId: String) -> DatabaseReference {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(CREATED_EVENTS_NODE)")
+    }
+    
+    func idsList(idsDatabaseReference: DatabaseReference) -> Observable<[String]> {
+        let resultSubject = PublishSubject<[String]>()
+        
+        idsDatabaseReference.observeSingleEvent(of: .value) { snapshot in
+            var idsList: [String] = []
+            for childSnapshot in snapshot.children {
+                let value = (childSnapshot as? DataSnapshot)?.value as? String ?? ""
+                idsList.append(value)
+            }
+            resultSubject.onNext(idsList)
+        }
+        return resultSubject
     }
 }
