@@ -1135,10 +1135,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No events found. Try changing your filter criteria." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fK-5C-E7c">
+                                <rect key="frame" x="32" y="312" width="311" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on location in settings of your phone and allow Boardly to access it or use filtering to see events nearby." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7L-35-FOy">
+                                <rect key="frame" x="32" y="301.5" width="311" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting your location..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rot-va-6Lz">
+                                <rect key="frame" x="32" y="323" width="311" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for events..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCp-Q7-9Tj">
+                                <rect key="frame" x="32" y="323" width="311" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gCc-Qy-zkt" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" id="1gt-xx-Swx"/>
+                            <constraint firstItem="x7L-35-FOy" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" constant="32" id="3k3-IB-uK9"/>
+                            <constraint firstItem="ZCp-Q7-9Tj" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" constant="32" id="DTM-K3-5P6"/>
+                            <constraint firstItem="9fK-5C-E7c" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" constant="32" id="N3V-PO-Kej"/>
+                            <constraint firstItem="Rot-va-6Lz" firstAttribute="centerY" secondItem="6sj-Ug-zH6" secondAttribute="centerY" id="Nsh-0R-U17"/>
+                            <constraint firstItem="x7L-35-FOy" firstAttribute="centerY" secondItem="6sj-Ug-zH6" secondAttribute="centerY" id="Ra4-H5-HmU"/>
+                            <constraint firstItem="9fK-5C-E7c" firstAttribute="centerY" secondItem="6sj-Ug-zH6" secondAttribute="centerY" id="SF2-cH-Gcs"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="9fK-5C-E7c" secondAttribute="trailing" constant="32" id="Tyt-eb-Ee7"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="Rot-va-6Lz" secondAttribute="trailing" constant="32" id="b5O-zL-euV"/>
+                            <constraint firstItem="ZCp-Q7-9Tj" firstAttribute="centerY" secondItem="6sj-Ug-zH6" secondAttribute="centerY" id="cWT-7E-p63"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="x7L-35-FOy" secondAttribute="trailing" constant="32" id="fbA-Gq-dus"/>
+                            <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="ZCp-Q7-9Tj" secondAttribute="trailing" constant="32" id="hLV-Kj-WyR"/>
+                            <constraint firstItem="Rot-va-6Lz" firstAttribute="leading" secondItem="5GZ-Su-D7j" secondAttribute="leading" constant="32" id="k0H-lZ-EFG"/>
                             <constraint firstItem="5GZ-Su-D7j" firstAttribute="trailing" secondItem="gCc-Qy-zkt" secondAttribute="trailing" id="k3W-t7-D0N"/>
                             <constraint firstItem="gCc-Qy-zkt" firstAttribute="top" secondItem="5GZ-Su-D7j" secondAttribute="top" id="vKb-Pd-VSh"/>
                             <constraint firstItem="5GZ-Su-D7j" firstAttribute="bottom" secondItem="gCc-Qy-zkt" secondAttribute="bottom" id="zJd-ih-ix9"/>
