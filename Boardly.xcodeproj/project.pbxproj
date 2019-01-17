@@ -140,6 +140,7 @@
 		90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A521E5C7A00000C5EF /* StringExtensions.swift */; };
 		90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A721E5DFE00000C5EF /* PickGameViewController.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
+		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -297,6 +298,7 @@
 		90D223A521E5C7A00000C5EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		90D223A721E5DFE00000C5EF /* PickGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -720,6 +722,7 @@
 				9084A22A21DD278A0087B5C3 /* HomeContract.swift */,
 				9084A23421DD2CA80087B5C3 /* HomeInteractorImpl.swift */,
 				9084A23621DD2CB20087B5C3 /* HomePresenter.swift */,
+				90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1132,6 +1135,7 @@
 				903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */,
 				909A8BBE21CAE05200166C93 /* LoginPresenter.swift in Sources */,
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
+				90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */,
 				9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,

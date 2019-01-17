@@ -14,3 +14,4 @@ let PICK_GAME_VIEW_CONTROLLER_ID = "pickGameViewController"
 let SAVED_FILTER = "savedFilter"
 
 let GAME_CELL_ID = "gameCell"
+let EVENT_CELL_ID = "eventCell"
