@@ -29,6 +29,44 @@ struct BoardlyEvent: Equatable {
     var adminId: String = ""
     var type: EventType = EventType.DEFAULT
     
+    init(eventId: String = "",
+         eventName: String = "",
+         gameName: String = "",
+         gameId: String = "",
+         gameName2: String = "",
+         gameId2: String = "",
+         gameName3: String = "",
+         gameId3: String = "",
+         gameImageUrl: String = "",
+         gameImageUrl2: String = "",
+         gameImageUrl3: String = "",
+         placeName: String = "",
+         timestamp: Int64 = 0,
+         description: String = "",
+         placeLatitude: Double = 0.0,
+         placeLongitude: Double = 0.0,
+         adminId: String = "",
+         type: EventType = EventType.DEFAULT) {
+        self.eventId = eventId
+        self.eventName = eventName
+        self.gameName = gameName
+        self.gameId = gameId
+        self.gameName2 = gameName2
+        self.gameId2 = gameId2
+        self.gameName3 = gameName3
+        self.gameId3 = gameId3
+        self.gameImageUrl = gameImageUrl
+        self.gameImageUrl2 = gameImageUrl2
+        self.gameImageUrl3 = gameImageUrl3
+        self.placeName = placeName
+        self.timestamp = timestamp
+        self.description = description
+        self.placeLatitude = placeLatitude
+        self.placeLongitude = placeLongitude
+        self.adminId = adminId
+        self.type = type
+    }
+    
     init(snapshot: DataSnapshot) {
         let value = snapshot.value as? [String : Any] ?? [:]
         self.eventId = snapshot.key
