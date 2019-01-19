@@ -130,6 +130,8 @@
 		909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */; };
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
+		90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690B921F3079F00365E32 /* BoardlyTextView.swift */; };
+		90A690BC21F3088200365E32 /* JoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690BB21F3088200365E32 /* JoinEventViewController.swift */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
 		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
@@ -289,6 +291,8 @@
 		90A07A2621CE315600EE5349 /* DefaultAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthError.swift; sourceTree = "<group>"; };
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
+		90A690B921F3079F00365E32 /* BoardlyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyTextView.swift; sourceTree = "<group>"; };
+		90A690BB21F3088200365E32 /* JoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
@@ -671,6 +675,8 @@
 				90186E8D21ED0E8100D8DFA9 /* Date Picker */,
 				909A8BA721CAD0BB00166C93 /* BoardlyTextField.swift */,
 				909A8BA921CAD0CE00166C93 /* BoardlyButton.swift */,
+				90A690B921F3079F00365E32 /* BoardlyTextView.swift */,
+				90A690BB21F3088200365E32 /* JoinEventViewController.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -1133,6 +1139,7 @@
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
 				908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */,
 				90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */,
+				90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */,
 				9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */,
 				90857DD721D820B4000A7BFC /* DetailsResponse.swift in Sources */,
 				903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */,
@@ -1145,6 +1152,7 @@
 				9025497321DF9123006CE583 /* EventInputData.swift in Sources */,
 				90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */,
 				90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */,
+				90A690BC21F3088200365E32 /* JoinEventViewController.swift in Sources */,
 				90857DD521D820A7000A7BFC /* SearchResponse.swift in Sources */,
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
