@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, HomeView {
     }
     
     func render(homeViewState: HomeViewState) {
-        showJoinEventViewController()
+//        showJoinEventViewController()
     }
     
     private func showJoinEventViewController() {

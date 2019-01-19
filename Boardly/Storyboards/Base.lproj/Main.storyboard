@@ -944,8 +944,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
-                                        <real key="value" value="100"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
+                                        <integer key="value" value="200"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
