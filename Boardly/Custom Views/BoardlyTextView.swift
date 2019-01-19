@@ -8,10 +8,32 @@
 
 import UIKit
 
-class BoardlyTextView: UITextView {
+class BoardlyTextView: UITextView, UITextViewDelegate {
     
     private var borderColor = Color.primaryBlue
     var maxHeight: CGFloat = 100.0
+    
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        delegate = self
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+//        if isScrollEnabled {
+//            let fixedWidth = frame.size.width
+//            let newSize = sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+//            textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+//        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
