@@ -19,6 +19,7 @@ target 'Boardly' do
   pod 'GooglePlaces'
   pod 'Alamofire', '~> 4.8.0'
   pod 'SWXMLHash', '~> 4.7.0'
+  pod 'IQKeyboardManager'
 
   target 'BoardlyTests' do
     inherit! :search_paths

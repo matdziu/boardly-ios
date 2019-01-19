@@ -12,6 +12,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import FirebaseDatabase
 import GooglePlaces
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         initInternetConnectionListener()
         GMSPlacesClient.provideAPIKey(placesAPIKey)
+        IQKeyboardManager.shared().isEnabled = true
         return true
     }
     

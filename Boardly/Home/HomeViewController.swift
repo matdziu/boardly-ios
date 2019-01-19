@@ -65,12 +65,15 @@ class HomeViewController: UIViewController, HomeView {
     }
     
     func render(homeViewState: HomeViewState) {
-//        showJoinEventViewController()
+        
     }
     
     private func showJoinEventViewController() {
         guard let joinEventViewController = storyboard?.instantiateViewController(withIdentifier: JOIN_EVENT_VIEW_CONTROLLER_ID)
             as? JoinEventViewController else { return }
+        joinEventViewController.providesPresentationContextTransitionStyle = true
+        joinEventViewController.definesPresentationContext = true
+        joinEventViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         present(joinEventViewController, animated: true, completion: nil)
     }
 }

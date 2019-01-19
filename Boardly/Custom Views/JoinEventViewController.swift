@@ -11,4 +11,20 @@ import UIKit
 
 class JoinEventViewController: UIViewController {
     
+    @IBOutlet weak var helloTextView: BoardlyTextView!
+    var helloTextHandler: (String) -> Void = { _ in }
+    
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func joinButtonClicked(_ sender: Any) {
+        let helloText = helloTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
+        if helloText.isEmpty {
+            helloTextView.showError(show: true)
+        } else {
+            helloTextView.showError(show: false)
+            helloTextHandler(helloText)
+            dismiss(animated: true, completion: nil)
+        }
+    }
 }

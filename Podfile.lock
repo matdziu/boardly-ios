@@ -116,6 +116,7 @@ PODS:
   - GoogleUtilities/UserDefaults (5.3.6):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
+  - IQKeyboardManager (6.2.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -153,6 +154,7 @@ DEPENDENCIES:
   - GeoFire
   - GooglePlaces
   - GoogleSignIn
+  - IQKeyboardManager
   - Nimble
   - Quick
   - RxBlocking (~> 4.0)
@@ -188,6 +190,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GoogleUtilities
     - GTMSessionFetcher
+    - IQKeyboardManager
     - leveldb-library
     - nanopb
     - Nimble
@@ -226,6 +229,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
@@ -238,6 +242,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: 9a4d4fdd29b08527cd6fa1674c6dcfd3435c955b
+PODFILE CHECKSUM: 491ab580284e65238fb04c78b0d85379f880a5a1
 
 COCOAPODS: 1.5.3

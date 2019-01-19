@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 class BoardlyTextView: UITextView, UITextViewDelegate {
     
@@ -43,6 +44,7 @@ class BoardlyTextView: UITextView, UITextViewDelegate {
         } else {
             isScrollEnabled = false
         }
+        IQKeyboardManager.shared().reloadLayoutIfNeeded()
     }
     
     func showError(show: Bool) {
