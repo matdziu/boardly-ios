@@ -113,6 +113,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let boardlyEventCell = collectionView.dequeueReusableCell(withReuseIdentifier: EVENT_CELL_ID, for: indexPath) as! BoardlyEventCell
         let event = events[indexPath.row]
+        boardlyEventCell.bind(event: event)
         return boardlyEventCell
     }
     

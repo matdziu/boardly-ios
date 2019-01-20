@@ -22,4 +22,12 @@ class BoardlyEventCell: UICollectionViewCell {
     @IBOutlet weak var dateButton: UIButton!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var descriptionButton: UIButton!
+    @IBOutlet weak var timeImageView: UIImageView!
+    @IBOutlet weak var placeImageView: UIImageView!
+    
+    private let renderer = EventUIRenderer()
+    
+    func bind(event: BoardlyEvent) {
+        renderer.displayEventInfo(event: event, eventNameLabel: nameLabel, gameLabel: game1NameLabel, placeButton: placeButton, locationImageView: placeImageView, boardGameImageView: game1ImageView, seeDescriptionButton: descriptionButton, dateButton: dateButton, timeImageView: timeImageView, gameLabel2: game2NameLabel, boardGameImageView2: game2ImageView, gameLabel3: game3NameLabel, boardGameImageView3: game3ImageView)
+    }
 }

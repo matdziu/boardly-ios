@@ -1281,6 +1281,8 @@
                                             <outlet property="joinButton" destination="Ynn-qc-CUn" id="e41-o8-qw7"/>
                                             <outlet property="nameLabel" destination="6Wv-qc-Dy1" id="3gs-go-7D4"/>
                                             <outlet property="placeButton" destination="eYT-Ra-9dV" id="aWo-jf-myN"/>
+                                            <outlet property="placeImageView" destination="U4w-7q-Kxz" id="p1s-Wu-KIw"/>
+                                            <outlet property="timeImageView" destination="nxX-3m-UCk" id="RqY-o9-WiW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
