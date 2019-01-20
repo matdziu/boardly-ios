@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, HomeView {
     @IBOutlet weak var settingLocationLabel: UILabel!
     @IBOutlet weak var lookingForEventsLabel: UILabel!
     @IBOutlet weak var eventsTableView: UITableView!
+    private let locationManager = CLLocationManager()
     
     private let homePresenter = HomePresenter(homeInteractor: HomeInteractorImpl(homeService: HomeServiceImpl()))
     
@@ -25,6 +26,7 @@ class HomeViewController: UIViewController, HomeView {
     private var locationProcessingSubject: PublishSubject<Bool>!
     
     private let decoder = JSONDecoder()
+    private let encoder = JSONEncoder()
     private var selectedFilter = Filter()
     private var initialize = true
     
@@ -36,6 +38,7 @@ class HomeViewController: UIViewController, HomeView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         eventsTableView.dataSource = self
         eventsTableView.delegate = self
         eventsTableView.tableFooterView = UIView()
@@ -47,7 +50,7 @@ class HomeViewController: UIViewController, HomeView {
         initEmitters()
         homePresenter.bind(homeView: self)
         if selectedFilter.isCurrentLocation {
-            
+            locationManager.requestWhenInUseAuthorization()
         } else {
             filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: initialize))
         }
@@ -108,6 +111,12 @@ class HomeViewController: UIViewController, HomeView {
         }
     }
     
+    private func saveFilterToDefaults(filter: Filter) {
+        if let savedFilterData = try? encoder.encode(filter) {
+            UserDefaults.standard.set(savedFilterData, forKey: SAVED_FILTER)
+        }
+    }
+    
     private func isLocationPermissionGranted() -> Bool {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
@@ -141,5 +150,31 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension HomeViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let rawLocation = locations.last else { return }
+        selectedFilter.userLocation = UserLocation(latitude: rawLocation.coordinate.latitude, longitude: rawLocation.coordinate.longitude)
+        selectedFilter.locationName = "Current location"
+        selectedFilter.isCurrentLocation = true
+        saveFilterToDefaults(filter: selectedFilter)
+        filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: initialize))
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            turnOnLocationLabel.isHidden = true
+            locationManager.requestLocation()
+            locationProcessingSubject.onNext(initialize)
+        } else if status == .denied {
+            turnOnLocationLabel.isHidden = false
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        showAlert(message: "Something went wrong :(")
     }
 }
