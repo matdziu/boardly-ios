@@ -43,6 +43,7 @@ class HomeViewController: UIViewController, HomeView {
         super.viewWillAppear(animated)
         initEmitters()
         homePresenter.bind(homeView: self)
+        filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: true))
     }
     
     private func initEmitters() {
