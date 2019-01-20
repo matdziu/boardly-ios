@@ -26,17 +26,17 @@ class HomeViewController: UIViewController, HomeView {
     private let decoder = JSONDecoder()
     private var selectedFilter = Filter()
     
+    private var events: [BoardlyEvent] = [] {
+        didSet {
+            eventsCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         eventsCollectionView.dataSource = self
         eventsCollectionView.delegate = self
         getFilterFromDefaults()
-    }
-    
-    private var events: [BoardlyEvent] = [] {
-        didSet {
-            eventsCollectionView.reloadData()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +69,17 @@ class HomeViewController: UIViewController, HomeView {
     }
     
     func render(homeViewState: HomeViewState) {
+        noEventsFoundLabel.isHidden = true
+        turnOnLocationLabel.isHidden = isLocationPermissionGranted() || homeViewState.progress
+        lookingForEventsLabel.isHidden = !homeViewState.progress
+        settingLocationLabel.isHidden = !homeViewState.locationProcessing
+        events = homeViewState.eventList
         
+        if !homeViewState.progress && !homeViewState.locationProcessing && !homeViewState.eventList.isEmpty {
+            turnOnLocationLabel.isHidden = true
+        } else if homeViewState.eventList.isEmpty && !homeViewState.progress && !homeViewState.locationProcessing && isLocationPermissionGranted() {
+            noEventsFoundLabel.isHidden = false
+        }
     }
     
     private func showJoinEventViewController() {
@@ -87,6 +97,10 @@ class HomeViewController: UIViewController, HomeView {
                 selectedFilter = savedFilter
             }
         }
+    }
+    
+    private func isLocationPermissionGranted() -> Bool {
+        return true
     }
 }
 
