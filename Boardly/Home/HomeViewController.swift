@@ -23,10 +23,14 @@ class HomeViewController: UIViewController, HomeView {
     private var filteredFetchTriggerSubject: PublishSubject<FilteredFetchData>!
     private var locationProcessingSubject: PublishSubject<Bool>!
     
+    private let decoder = JSONDecoder()
+    private var selectedFilter = Filter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         eventsCollectionView.dataSource = self
         eventsCollectionView.delegate = self
+        getFilterFromDefaults()
     }
     
     private var events: [BoardlyEvent] = [] {
@@ -75,6 +79,14 @@ class HomeViewController: UIViewController, HomeView {
         joinEventViewController.definesPresentationContext = true
         joinEventViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         present(joinEventViewController, animated: true, completion: nil)
+    }
+    
+    private func getFilterFromDefaults() {
+        if let savedFilterData = UserDefaults.standard.object(forKey: SAVED_FILTER) as? Data {
+            if let savedFilter = try? decoder.decode(Filter.self, from: savedFilterData) {
+                selectedFilter = savedFilter
+            }
+        }
     }
 }
 
