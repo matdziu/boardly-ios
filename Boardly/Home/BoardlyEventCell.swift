@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BoardlyEventCell: UICollectionViewCell {
+class BoardlyEventCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var game1NameLabel: UILabel!
@@ -28,6 +28,7 @@ class BoardlyEventCell: UICollectionViewCell {
     private let renderer = EventUIRenderer()
     
     func bind(event: BoardlyEvent) {
+        selectionStyle = .none
         renderer.displayEventInfo(event: event, eventNameLabel: nameLabel, gameLabel: game1NameLabel, placeButton: placeButton, locationImageView: placeImageView, boardGameImageView: game1ImageView, seeDescriptionButton: descriptionButton, dateButton: dateButton, timeImageView: timeImageView, gameLabel2: game2NameLabel, boardGameImageView2: game2ImageView, gameLabel3: game3NameLabel, boardGameImageView3: game3ImageView)
     }
 }
