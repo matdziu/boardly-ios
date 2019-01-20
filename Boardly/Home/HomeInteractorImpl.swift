@@ -34,7 +34,7 @@ class HomeInteractorImpl: HomeInteractor {
                 let createdEventsWithType = createdEvents
                     .filter({ event -> Bool in
                         !isOlderThanOneDay(timestamp: event.timestamp)
-                            && (event.gameId.isEmpty ||
+                            && (gameId.isEmpty ||
                                 event.gameId == gameId ||
                                 event.gameId2 == gameId ||
                                 event.gameId3 == gameId)

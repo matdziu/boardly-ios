@@ -38,19 +38,22 @@ class HomeViewController: UIViewController, HomeView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
         eventsTableView.dataSource = self
         eventsTableView.delegate = self
         eventsTableView.tableFooterView = UIView()
-        getFilterFromDefaults()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initEmitters()
+        getFilterFromDefaults()
         homePresenter.bind(homeView: self)
         if selectedFilter.isCurrentLocation {
-            locationManager.requestWhenInUseAuthorization()
+            if initialize {
+                locationManager.delegate = self
+            } else {
+                locationManager.requestLocation()
+            }
         } else {
             filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: initialize))
         }
@@ -169,8 +172,9 @@ extension HomeViewController: CLLocationManagerDelegate {
             turnOnLocationLabel.isHidden = true
             locationManager.requestLocation()
             locationProcessingSubject.onNext(initialize)
-        } else if status == .denied {
+        } else {
             turnOnLocationLabel.isHidden = false
+            locationManager.requestWhenInUseAuthorization()
         }
     }
     
