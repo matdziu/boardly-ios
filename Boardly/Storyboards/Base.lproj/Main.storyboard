@@ -771,10 +771,10 @@
                                                 </constraints>
                                             </stackView>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fng-dT-XPe" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="805" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="805" width="343" height="52"/>
                                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="byO-jU-oaf"/>
+                                                    <constraint firstAttribute="height" constant="52" id="byO-jU-oaf"/>
                                                 </constraints>
                                                 <state key="normal" title="Add event"/>
                                                 <connections>
@@ -782,10 +782,10 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-CJ-Hvv" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="805" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="805" width="343" height="52"/>
                                                 <color key="backgroundColor" name="PrimaryBlue"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Jcm-2O-s50"/>
+                                                    <constraint firstAttribute="height" constant="52" id="Jcm-2O-s50"/>
                                                 </constraints>
                                                 <state key="normal" title="Save changes"/>
                                                 <connections>
@@ -793,7 +793,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-Uc-X76">
-                                                <rect key="frame" x="16" y="867" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="889" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="uj4-s2-WRK"/>
                                                 </constraints>
@@ -806,7 +806,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYJ-Zt-DNn">
-                                                <rect key="frame" x="16" y="867" width="343" height="30"/>
+                                                <rect key="frame" x="16" y="889" width="343" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="XiK-8I-euS"/>
                                                 </constraints>
@@ -910,6 +910,7 @@
                     <connections>
                         <outlet property="addEventButton" destination="fng-dT-XPe" id="2oO-aH-CZL"/>
                         <outlet property="clearButton" destination="OYJ-Zt-DNn" id="7xj-Cl-VLg"/>
+                        <outlet property="contentScrollView" destination="jsE-Ya-QWS" id="uN7-Qy-ode"/>
                         <outlet property="dateLabel" destination="scp-A3-kp0" id="6Q1-Xl-z64"/>
                         <outlet property="datePicker" destination="cq1-du-GgL" id="qdo-4H-pLE"/>
                         <outlet property="deleteEventButton" destination="FMK-Uc-X76" id="V22-sp-BTd"/>

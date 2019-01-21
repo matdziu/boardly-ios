@@ -71,6 +71,7 @@
 		90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */; };
 		90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90857DEB21D8C659000A7BFC /* GameServiceImpl.swift */; };
 		9086CCF121F459CC00EE6857 /* EventUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9086CCF021F459CC00EE6857 /* EventUIRenderer.swift */; };
+		908CA43221F5C16500492B9F /* ScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CA43121F5C16500492B9F /* ScrollViewExtensions.swift */; };
 		908D91EF21D3C0AB00C12ECD /* EditProfileViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */; };
 		908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */; };
 		908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */; };
@@ -228,6 +229,7 @@
 		90857DE921D8BAA0000A7BFC /* FilterInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractorTest.swift; sourceTree = "<group>"; };
 		90857DEB21D8C659000A7BFC /* GameServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameServiceImpl.swift; sourceTree = "<group>"; };
 		9086CCF021F459CC00EE6857 /* EventUIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUIRenderer.swift; sourceTree = "<group>"; };
+		908CA43121F5C16500492B9F /* ScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtensions.swift; sourceTree = "<group>"; };
 		908D91EE21D3C0AB00C12ECD /* EditProfileViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewRobot.swift; sourceTree = "<group>"; };
 		908D91F021D3C0B700C12ECD /* EditProfilePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenterTest.swift; sourceTree = "<group>"; };
 		908D91F221D3C0C100C12ECD /* EditProfileInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorTest.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				9084A23A21DD3CE00087B5C3 /* DateExtensions.swift */,
 				90D223A521E5C7A00000C5EF /* StringExtensions.swift */,
 				90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */,
+				908CA43121F5C16500492B9F /* ScrollViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1110,6 +1113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */,
+				908CA43221F5C16500492B9F /* ScrollViewExtensions.swift in Sources */,
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				90857DCF21D81EC3000A7BFC /* FilterContract.swift in Sources */,

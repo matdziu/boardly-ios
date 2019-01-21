@@ -37,6 +37,7 @@ class EventViewController: UIViewController, EventView {
     @IBOutlet weak var descriptionTextField: BoardlyTextField!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var contentScrollView: UIScrollView!
     
     private var gamePickEventSubject: PublishSubject<GamePickEvent>!
     private var placePickEventSubject: PublishSubject<Bool>!
@@ -71,6 +72,7 @@ class EventViewController: UIViewController, EventView {
         gameLabel3.text = "No game picked"
         placeLabel.text = "No place picked"
         dateLabel.text = "No date picked"
+        contentScrollView.scrollToTop()
     }
     
     func prepare(mode: Mode) {
