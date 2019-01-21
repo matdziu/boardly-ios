@@ -29,6 +29,7 @@ class HomeViewController: UIViewController, HomeView {
     private let encoder = JSONEncoder()
     private var selectedFilter = Filter()
     private var initialize = true
+    var fromFilter = false
     
     private var events: [BoardlyEvent] = [] {
         didSet {
@@ -48,7 +49,10 @@ class HomeViewController: UIViewController, HomeView {
         initEmitters()
         getFilterFromDefaults()
         homePresenter.bind(homeView: self)
-        if selectedFilter.isCurrentLocation {
+        if fromFilter {
+            fromFilter = false
+            filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: true))
+        } else if selectedFilter.isCurrentLocation {
             if initialize {
                 locationManager.delegate = self
             } else {

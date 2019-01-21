@@ -85,6 +85,7 @@ class FilterViewController: BaseNavViewController, FilterView {
         guard let mainTabViewController = self.navigationController?.viewControllers[0] as? MainTabViewController else { return }
         self.navigationController?.popViewController(animated: true)
         mainTabViewController.selectedIndex = 0
+        (mainTabViewController.selectedViewController as? HomeViewController)?.fromFilter = true
     }
     
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
