@@ -1276,8 +1276,9 @@
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn on location in settings of your phone and allow Boardly to access it or use filtering to see events nearby." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7L-35-FOy">
-                                <rect key="frame" x="32" y="301.5" width="311" height="64.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7L-35-FOy">
+                                <rect key="frame" x="32" y="290.5" width="311" height="86"/>
+                                <string key="text">No events found. Turn on location in settings of your phone and allow Boardly to access it or use filtering to see events nearby.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>

@@ -84,6 +84,7 @@ class HomeViewController: UIViewController, HomeView {
     }
     
     func render(homeViewState: HomeViewState) {
+        eventsTableView.isHidden = homeViewState.eventList.isEmpty
         noEventsFoundLabel.isHidden = true
         turnOnLocationLabel.isHidden = isLocationPermissionGranted() || homeViewState.progress
         lookingForEventsLabel.isHidden = !homeViewState.progress
@@ -170,15 +171,18 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             turnOnLocationLabel.isHidden = true
+            eventsTableView.isHidden = false
             locationManager.requestLocation()
             locationProcessingSubject.onNext(initialize)
         } else {
             turnOnLocationLabel.isHidden = false
+            eventsTableView.isHidden = true
             locationManager.requestWhenInUseAuthorization()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        showAlert(message: "Something went wrong :(")
+        turnOnLocationLabel.isHidden = false
+        eventsTableView.isHidden = true
     }
 }
