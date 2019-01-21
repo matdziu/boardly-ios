@@ -172,7 +172,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             turnOnLocationLabel.isHidden = true
             eventsTableView.isHidden = false
-            noEventsFoundLabel.isHidden = false
+            noEventsFoundLabel.isHidden = !events.isEmpty
             if selectedFilter.isCurrentLocation {
                 locationManager.requestLocation()
                 locationProcessingSubject.onNext(initialize)
@@ -180,14 +180,14 @@ extension HomeViewController: CLLocationManagerDelegate {
         } else {
             turnOnLocationLabel.isHidden = false
             noEventsFoundLabel.isHidden = true
-            eventsTableView.isHidden = true
+            eventsTableView.isHidden = !events.isEmpty
             locationManager.requestWhenInUseAuthorization()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         turnOnLocationLabel.isHidden = false
-        noEventsFoundLabel.isHidden = true
+        noEventsFoundLabel.isHidden = !events.isEmpty
         eventsTableView.isHidden = true
     }
 }
