@@ -51,9 +51,16 @@ class EventUIRenderer {
     private func setSeeDescriptionButton(description: String, seeDescriptionButton: UIButton) {
         if (!description.isEmpty) {
             seeDescriptionButton.isHidden = false
+            seeDescriptionButton.userInfo[DESCRIPTION_USER_INFO] = description
+            seeDescriptionButton.addTarget(self, action: #selector(launchDescriptionDialog(_:)), for: .touchUpInside)
         } else {
             seeDescriptionButton.isHidden = true
         }
+    }
+    
+    @objc private func launchDescriptionDialog(_ sender: UIButton) {
+        let description = sender.userInfo[DESCRIPTION_USER_INFO] as? String ?? ""
+        UIApplication.shared.keyWindow?.rootViewController?.showAlertWithOkButton(message: description)
     }
     
     private func setDateTextView(timestamp: Int64, dateButton: UIButton) {
