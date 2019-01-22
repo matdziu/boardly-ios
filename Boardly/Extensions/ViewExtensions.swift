@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-private var userInfos = [UIButton : [String: Any]]()
+private var userInfos = [UIView : [String: Any]]()
 
-extension UIButton {
+extension UIView {
     
     var userInfo: [String : Any] {
         get {

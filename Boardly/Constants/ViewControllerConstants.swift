@@ -16,5 +16,3 @@ let SAVED_FILTER = "savedFilter"
 
 let GAME_CELL_ID = "gameCell"
 let EVENT_CELL_ID = "eventCell"
-
-let DESCRIPTION_USER_INFO = "descriptionUserInfo"

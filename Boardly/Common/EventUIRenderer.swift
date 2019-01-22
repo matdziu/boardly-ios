@@ -11,6 +11,16 @@ import UIKit
 
 class EventUIRenderer {
     
+    private var gameImageView1GestureRecognizer: UITapGestureRecognizer!
+    private var gameImageView2GestureRecognizer: UITapGestureRecognizer!
+    private var gameImageView3GestureRecognizer: UITapGestureRecognizer!
+    
+    init() {
+        gameImageView1GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
+        gameImageView2GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
+        gameImageView3GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
+    }
+    
     func displayEventInfo(event: BoardlyEvent,
                           eventNameLabel: UILabel,
                           gameLabel: UILabel,
@@ -33,6 +43,13 @@ class EventUIRenderer {
         
         setSeeDescriptionButton(description: event.description, seeDescriptionButton: seeDescriptionButton)
         setDateTextView(timestamp: event.timestamp, dateButton: dateButton)
+        
+        boardGameImageView.userInfo[GAME_ID_USER_INFO] = event.gameId
+        boardGameImageView2.userInfo[GAME_ID_USER_INFO] = event.gameId2
+        boardGameImageView3.userInfo[GAME_ID_USER_INFO] = event.gameId3
+        boardGameImageView.addGestureRecognizer(gameImageView1GestureRecognizer)
+        boardGameImageView2.addGestureRecognizer(gameImageView2GestureRecognizer)
+        boardGameImageView3.addGestureRecognizer(gameImageView3GestureRecognizer)
     }
     
     private func displayGameNameAndImage(gameName: String, gameLabel: UILabel,
@@ -61,6 +78,19 @@ class EventUIRenderer {
     @objc private func launchDescriptionDialog(_ sender: UIButton) {
         let description = sender.userInfo[DESCRIPTION_USER_INFO] as? String ?? ""
         UIApplication.shared.keyWindow?.rootViewController?.showAlertWithOkButton(message: description)
+    }
+    
+    @objc private func openBoardGameInfoPage(_ sender: UITapGestureRecognizer) {
+        let gameId = (sender.view?.userInfo[GAME_ID_USER_INFO] as? String) ?? ""
+        var endpoint = ""
+        if gameId.isOfType(type: RPG_TYPE) {
+            endpoint = "rpg/\(gameId.clearFromType(type: RPG_TYPE))"
+        } else {
+            endpoint = "boardgame/\(gameId)"
+        }
+        if let link = URL(string: "https://boardgamegeek.com/\(endpoint)") {
+            UIApplication.shared.open(link)
+        }
     }
     
     private func setDateTextView(timestamp: Int64, dateButton: UIButton) {

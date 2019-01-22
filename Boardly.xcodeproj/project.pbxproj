@@ -143,7 +143,8 @@
 		90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A321E5C6A10000C5EF /* BGGConstants.swift */; };
 		90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A521E5C7A00000C5EF /* StringExtensions.swift */; };
 		90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A721E5DFE00000C5EF /* PickGameViewController.swift */; };
-		90D2F96621F701730046944F /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96521F701730046944F /* ButtonExtensions.swift */; };
+		90D2F96621F701730046944F /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96521F701730046944F /* ViewExtensions.swift */; };
+		90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96721F70BA00046944F /* ViewConstants.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
 		90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */; };
@@ -307,7 +308,8 @@
 		90D223A321E5C6A10000C5EF /* BGGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGConstants.swift; sourceTree = "<group>"; };
 		90D223A521E5C7A00000C5EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		90D223A721E5DFE00000C5EF /* PickGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
-		90D2F96521F701730046944F /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		90D2F96521F701730046944F /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		90D2F96721F70BA00046944F /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
 		90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
@@ -556,7 +558,7 @@
 				90D223A521E5C7A00000C5EF /* StringExtensions.swift */,
 				90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */,
 				908CA43121F5C16500492B9F /* ScrollViewExtensions.swift */,
-				90D2F96521F701730046944F /* ButtonExtensions.swift */,
+				90D2F96521F701730046944F /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -674,6 +676,7 @@
 				909A8BA521CAD0A500166C93 /* ViewControllerConstants.swift */,
 				90A07A2821CE568900EE5349 /* FirebaseConstants.swift */,
 				90D223A321E5C6A10000C5EF /* BGGConstants.swift */,
+				90D2F96721F70BA00046944F /* ViewConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1120,7 +1123,7 @@
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				90857DCF21D81EC3000A7BFC /* FilterContract.swift in Sources */,
-				90D2F96621F701730046944F /* ButtonExtensions.swift in Sources */,
+				90D2F96621F701730046944F /* ViewExtensions.swift in Sources */,
 				9084A22921DD25C40087B5C3 /* PartialHomeViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
@@ -1200,6 +1203,7 @@
 				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
 				90857DCD21D81C96000A7BFC /* Game.swift in Sources */,
+				90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
