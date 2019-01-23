@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class EventUIRenderer {
     
@@ -50,6 +51,32 @@ class EventUIRenderer {
         boardGameImageView.addGestureRecognizer(gameImageView1GestureRecognizer)
         boardGameImageView2.addGestureRecognizer(gameImageView2GestureRecognizer)
         boardGameImageView3.addGestureRecognizer(gameImageView3GestureRecognizer)
+        
+        placeButton.userInfo[LATITUDE_USER_INFO] = event.placeLatitude
+        placeButton.userInfo[LONGITUDE_USER_INFO] = event.placeLongitude
+        placeButton.userInfo[LOCATION_NAME_USER_INFO] = event.placeName
+        placeButton.addTarget(self, action: #selector(openMap(_:)), for: .touchUpInside)
+    }
+    
+    @objc private func openMap(_ sender: UIButton) {
+        let latitude = sender.userInfo[LATITUDE_USER_INFO] as? Double ?? 0.0
+        let longitude = sender.userInfo[LONGITUDE_USER_INFO] as? Double ?? 0.0
+        let placeName = sender.userInfo[LOCATION_NAME_USER_INFO] as? String ?? ""
+        openMapForPlace(latitude: latitude, longitude: longitude, locationName: placeName)
+    }
+    
+    func openMapForPlace(latitude: Double, longitude: Double, locationName: String) {
+        let regionDistance: CLLocationDistance = 5000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = locationName
+        mapItem.openInMaps(launchOptions: options)
     }
     
     private func displayGameNameAndImage(gameName: String, gameLabel: UILabel,
