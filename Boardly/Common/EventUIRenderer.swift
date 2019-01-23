@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import EventKit
 
 class EventUIRenderer {
     
@@ -56,6 +57,16 @@ class EventUIRenderer {
         placeButton.userInfo[LONGITUDE_USER_INFO] = event.placeLongitude
         placeButton.userInfo[LOCATION_NAME_USER_INFO] = event.placeName
         placeButton.addTarget(self, action: #selector(openMap(_:)), for: .touchUpInside)
+        
+        if event.timestamp > 0 {
+            dateButton.userInfo[EVENT_NAME_USER_INFO] = event.eventName
+            dateButton.userInfo[GAME_NAME_USER_INFO] = event.gameName
+            dateButton.userInfo[GAME_NAME_2_USER_INFO] = event.gameName2
+            dateButton.userInfo[GAME_NAME_3_USER_INFO] = event.gameName3
+            dateButton.userInfo[START_TIME_USER_INFO] = event.timestamp
+            dateButton.userInfo[PLACE_NAME_USER_INFO] = event.placeName
+            dateButton.addTarget(self, action: #selector(saveToCalendar(_:)), for: .touchUpInside)
+        }
     }
     
     @objc private func openMap(_ sender: UIButton) {
@@ -63,6 +74,29 @@ class EventUIRenderer {
         let longitude = sender.userInfo[LONGITUDE_USER_INFO] as? Double ?? 0.0
         let placeName = sender.userInfo[LOCATION_NAME_USER_INFO] as? String ?? ""
         openMapForPlace(latitude: latitude, longitude: longitude, locationName: placeName)
+    }
+    
+    @objc private func saveToCalendar(_ sender: UIButton) {
+        let eventName = sender.userInfo[EVENT_NAME_USER_INFO] as? String ?? ""
+        let gameName = sender.userInfo[GAME_NAME_USER_INFO] as? String ?? ""
+        let gameName2 = sender.userInfo[GAME_NAME_2_USER_INFO] as? String ?? ""
+        let gameName3 = sender.userInfo[GAME_NAME_3_USER_INFO] as? String ?? ""
+        let startTime = sender.userInfo[START_TIME_USER_INFO] as? Int64 ?? 0
+        let placeName = sender.userInfo[PLACE_NAME_USER_INFO] as? String ?? ""
+        
+        let title = "Boardly: event \(eventName)"
+        let description = "Together you'll be playing in \(gameName)\(appendWithComma(gameName: gameName2))\(appendWithComma(gameName: gameName3)). The event will take place in \(placeName)."
+        let startDate = Date(timeIntervalSince1970: TimeInterval(startTime / 1000))
+        
+        addEventToCalendar(title: title, description: description, startDate: startDate)
+    }
+    
+    private func appendWithComma(gameName: String) -> String {
+        if (gameName != "") {
+            return ", \(gameName)"
+        } else {
+            return ""
+        }
     }
     
     func openMapForPlace(latitude: Double, longitude: Double, locationName: String) {
@@ -126,5 +160,28 @@ class EventUIRenderer {
         } else {
             dateButton.setTitle("To be added", for: .normal)
         }
+    }
+    
+    private func addEventToCalendar(title: String, description: String, startDate: Date) {
+        let eventStore = EKEventStore()
+        let endDate = Date(timeIntervalSince1970: TimeInterval(startDate.toMillis().advanced(by: HOUR_IN_MILLIS) / 1000))
+        eventStore.requestAccess(to: .event, completion: { (granted, error) in
+            if (granted) && (error == nil) {
+                let event = EKEvent(eventStore: eventStore)
+                event.title = title
+                event.startDate = startDate
+                event.endDate = endDate
+                event.notes = description
+                event.calendar = eventStore.defaultCalendarForNewEvents
+                do {
+                    try eventStore.save(event, span: .thisEvent)
+                } catch {
+                    return
+                }
+                DispatchQueue.main.async {
+                    UIApplication.shared.keyWindow?.rootViewController?.showAlertWithOkButton(message: "Event added to calendar")
+                }
+            }
+        })
     }
 }

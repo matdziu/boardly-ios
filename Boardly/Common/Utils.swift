@@ -9,6 +9,7 @@
 import Foundation
 
 let DAY_IN_MILLIS = 24 * 60 * 60 * 1000
+let HOUR_IN_MILLIS = 1 * 60 * 60 * 1000
 
 func isOlderThanOneDay(timestamp: Int64) -> Bool {
     let now = Date().toMillis()
