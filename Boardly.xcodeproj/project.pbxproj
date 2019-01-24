@@ -24,6 +24,14 @@
 		9025498721DF9D40006CE583 /* EventPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025498621DF9D40006CE583 /* EventPresenterTest.swift */; };
 		9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025498821DF9D4B006CE583 /* EventInteractorTest.swift */; };
 		903366D321FA38CC0059A601 /* BaseJoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D221FA38CC0059A601 /* BaseJoinEventViewController.swift */; };
+		903366D721FA4BDD0059A601 /* NotifySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D621FA4BDD0059A601 /* NotifySettings.swift */; };
+		903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D821FA4BEF0059A601 /* NotifyViewState.swift */; };
+		903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366DA21FA4C040059A601 /* PartialNotifyViewState.swift */; };
+		903366DD21FA4C170059A601 /* NotifyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366DC21FA4C170059A601 /* NotifyPresenter.swift */; };
+		903366DF21FA4C250059A601 /* NotifyInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366DE21FA4C250059A601 /* NotifyInteractorImpl.swift */; };
+		903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366E021FA4C3F0059A601 /* NotifyServiceImpl.swift */; };
+		903366E321FA4C520059A601 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366E221FA4C520059A601 /* NotifyViewController.swift */; };
+		903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366E421FA4C5A0059A601 /* NotifyContract.swift */; };
 		903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F221DA51BB0092FE84 /* PickGameViewState.swift */; };
 		903788F521DA53430092FE84 /* PartialPickGameViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F421DA53430092FE84 /* PartialPickGameViewState.swift */; };
 		903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903788F621DA554B0092FE84 /* PickGameContract.swift */; };
@@ -185,6 +193,14 @@
 		9025498621DF9D40006CE583 /* EventPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresenterTest.swift; sourceTree = "<group>"; };
 		9025498821DF9D4B006CE583 /* EventInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInteractorTest.swift; sourceTree = "<group>"; };
 		903366D221FA38CC0059A601 /* BaseJoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJoinEventViewController.swift; sourceTree = "<group>"; };
+		903366D621FA4BDD0059A601 /* NotifySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifySettings.swift; sourceTree = "<group>"; };
+		903366D821FA4BEF0059A601 /* NotifyViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewState.swift; sourceTree = "<group>"; };
+		903366DA21FA4C040059A601 /* PartialNotifyViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialNotifyViewState.swift; sourceTree = "<group>"; };
+		903366DC21FA4C170059A601 /* NotifyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyPresenter.swift; sourceTree = "<group>"; };
+		903366DE21FA4C250059A601 /* NotifyInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyInteractorImpl.swift; sourceTree = "<group>"; };
+		903366E021FA4C3F0059A601 /* NotifyServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyServiceImpl.swift; sourceTree = "<group>"; };
+		903366E221FA4C520059A601 /* NotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		903366E421FA4C5A0059A601 /* NotifyContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyContract.swift; sourceTree = "<group>"; };
 		903788F221DA51BB0092FE84 /* PickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewState.swift; sourceTree = "<group>"; };
 		903788F421DA53430092FE84 /* PartialPickGameViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialPickGameViewState.swift; sourceTree = "<group>"; };
 		903788F621DA554B0092FE84 /* PickGameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameContract.swift; sourceTree = "<group>"; };
@@ -392,6 +408,29 @@
 				9025498221DF9D2B006CE583 /* MockEventService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		903366D421FA4B2C0059A601 /* Notify */ = {
+			isa = PBXGroup;
+			children = (
+				903366D521FA4BC40059A601 /* Models */,
+				903366D821FA4BEF0059A601 /* NotifyViewState.swift */,
+				903366DA21FA4C040059A601 /* PartialNotifyViewState.swift */,
+				903366DC21FA4C170059A601 /* NotifyPresenter.swift */,
+				903366DE21FA4C250059A601 /* NotifyInteractorImpl.swift */,
+				903366E021FA4C3F0059A601 /* NotifyServiceImpl.swift */,
+				903366E221FA4C520059A601 /* NotifyViewController.swift */,
+				903366E421FA4C5A0059A601 /* NotifyContract.swift */,
+			);
+			path = Notify;
+			sourceTree = "<group>";
+		};
+		903366D521FA4BC40059A601 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				903366D621FA4BDD0059A601 /* NotifySettings.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		903788F121DA51910092FE84 /* Pick Game */ = {
@@ -637,6 +676,7 @@
 				90D01CDF21D0FF10000F710D /* Edit Profile */,
 				9025496A21DF8885006CE583 /* Event */,
 				903788F121DA51910092FE84 /* Pick Game */,
+				903366D421FA4B2C0059A601 /* Notify */,
 				90857DC921D81C5A000A7BFC /* Network */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
 				909A8B9D21CACEA600166C93 /* Resources */,
@@ -1131,8 +1171,11 @@
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
+				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
+				903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
+				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
@@ -1182,6 +1225,7 @@
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
+				903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */,
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
@@ -1192,13 +1236,17 @@
 				9084A23B21DD3CE00087B5C3 /* DateExtensions.swift in Sources */,
 				90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */,
 				90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */,
+				903366E321FA4C520059A601 /* NotifyViewController.swift in Sources */,
+				903366D721FA4BDD0059A601 /* NotifySettings.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */,
+				903366DF21FA4C250059A601 /* NotifyInteractorImpl.swift in Sources */,
 				90907F7121D243EA0054300C /* ProfileData.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
+				903366DD21FA4C170059A601 /* NotifyPresenter.swift in Sources */,
 				9086CCF121F459CC00EE6857 /* EventUIRenderer.swift in Sources */,
 				9084A22B21DD278A0087B5C3 /* HomeContract.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
