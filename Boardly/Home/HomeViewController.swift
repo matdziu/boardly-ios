@@ -11,7 +11,7 @@ import UIKit
 import RxSwift
 import CoreLocation
 
-class HomeViewController: UIViewController, HomeView {
+class HomeViewController: BaseJoinEventViewController, HomeView {
     
     @IBOutlet weak var noEventsFoundLabel: UILabel!
     @IBOutlet weak var turnOnLocationLabel: UILabel!
@@ -82,11 +82,6 @@ class HomeViewController: UIViewController, HomeView {
         return locationProcessingSubject
     }
     
-    func joinEventEmitter() -> Observable<JoinEventData> {
-        // move to BaseJoinEventViewController
-        return Observable.empty()
-    }
-    
     func render(homeViewState: HomeViewState) {
         eventsTableView.isHidden = homeViewState.eventList.isEmpty
         noEventsFoundLabel.isHidden = true
@@ -113,14 +108,14 @@ class HomeViewController: UIViewController, HomeView {
     }
     
     private func emitJoinEventData(joinEventData: JoinEventData) {
-        print(joinEventData.eventId)
-        print(joinEventData.helloText)
+        joinEventSubject.onNext(joinEventData)
     }
     
     private func joinEvent(eventId: String) {
         showJoinEventViewController { helloText in
             let joinEventData = JoinEventData(eventId: eventId, helloText: helloText)
             self.emitJoinEventData(joinEventData: joinEventData)
+            self.showAlert(message: "Join request sent")
         }
     }
     
