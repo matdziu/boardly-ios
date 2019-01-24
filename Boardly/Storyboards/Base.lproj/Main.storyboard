@@ -1161,6 +1161,33 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U6h-vS-bgg">
                                                     <rect key="frame" x="16" y="299.5" width="343" height="32"/>
                                                     <subviews>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9n-Yh-LTi">
+                                                            <rect key="frame" x="-120" y="6" width="120" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="Nc0-91-nAQ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="PrimaryBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCEPTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-VP-NTL">
+                                                            <rect key="frame" x="-120" y="6" width="120" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="vEe-4N-1p5"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="Green"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1n-em-2zE">
+                                                            <rect key="frame" x="-120" y="6" width="120" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="120" id="OmK-9H-NfC"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="Yellow"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cD-NQ-BCc">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
                                                             <constraints>
@@ -1254,6 +1281,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="acceptedLabel" destination="j4M-VP-NTL" id="btY-Fg-8Ju"/>
+                                            <outlet property="createdLabel" destination="n9n-Yh-LTi" id="tWY-pR-P9v"/>
                                             <outlet property="dateButton" destination="pyk-RC-PpE" id="1up-yP-dCJ"/>
                                             <outlet property="descriptionButton" destination="yXg-VV-hZZ" id="5kU-e2-S8C"/>
                                             <outlet property="game1ImageView" destination="Gc7-Wj-oJK" id="mkj-LM-OIJ"/>
@@ -1264,6 +1293,7 @@
                                             <outlet property="game3NameLabel" destination="Mq7-us-qMr" id="AQN-ne-RgK"/>
                                             <outlet property="joinButton" destination="3cD-NQ-BCc" id="3P5-G5-6zb"/>
                                             <outlet property="nameLabel" destination="DUo-Ph-3Ug" id="fyR-UL-hxo"/>
+                                            <outlet property="pendingLabel" destination="U1n-em-2zE" id="fmK-Fq-Dfa"/>
                                             <outlet property="placeButton" destination="frp-Ya-4mo" id="iek-GY-wUy"/>
                                             <outlet property="placeImageView" destination="qDJ-i7-gEa" id="sya-O3-xAg"/>
                                             <outlet property="timeImageView" destination="B8X-eT-pBN" id="J8U-zc-J0V"/>
@@ -1599,6 +1629,9 @@
         </namedColor>
         <namedColor name="TransparentWhite">
             <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="0.91764705882352937" green="0.88627450980392153" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
