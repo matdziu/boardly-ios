@@ -31,51 +31,34 @@ class BoardlyEventCell: UITableViewCell {
     
     private let renderer = EventUIRenderer()
     
-    func bind(event: BoardlyEvent) {
+    private var cellClickAction = {}
+    
+    func bind(event: BoardlyEvent, cellClickAction: @escaping () -> Void = {}) {
+        self.cellClickAction = cellClickAction
         selectionStyle = .none
         renderer.displayEventInfo(event: event, eventNameLabel: nameLabel, gameLabel: game1NameLabel, placeButton: placeButton, locationImageView: placeImageView, boardGameImageView: game1ImageView, seeDescriptionButton: descriptionButton, dateButton: dateButton, timeImageView: timeImageView, gameLabel2: game2NameLabel, boardGameImageView2: game2ImageView, gameLabel3: game3NameLabel, boardGameImageView3: game3ImageView)
-        setTypeLabel(type: event.type)
-        setClickAction(event: event)
+        setType(type: event.type)
+        joinButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        enterEventButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     }
     
-    private func setClickAction(event: BoardlyEvent) {
-        switch event.type {
-        case .CREATED:
-            setCreatedClickAction()
-        case .ACCEPTED:
-            setAcceptedClickAction()
-        case .PENDING:
-            setPendingClickAction()
-        case .DEFAULT:
-            setDefaultClickAction()
-        }
+    @objc private func buttonClicked() {
+        cellClickAction()
     }
     
-    private func setDefaultClickAction() {
-        
-    }
-    
-    private func setCreatedClickAction() {
-        
-    }
-    
-    private func setPendingClickAction() {
-        
-    }
-    
-    private func setAcceptedClickAction() {
-        
-    }
-    
-    private func setTypeLabel(type: EventType) {
+    private func setType(type: EventType) {
         switch type {
         case .CREATED:
+            enterEventButton.isHidden = false
             makeVisibleOnly(selectedView: createdLabel)
         case .ACCEPTED:
+            enterEventButton.isHidden = false
             makeVisibleOnly(selectedView: acceptedLabel)
         case .PENDING:
+            enterEventButton.isHidden = true
             makeVisibleOnly(selectedView: pendingLabel)
         case .DEFAULT:
+            enterEventButton.isHidden = true
             makeVisibleOnly(selectedView: joinButton)
         }
     }

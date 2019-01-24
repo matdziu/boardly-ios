@@ -102,13 +102,30 @@ class HomeViewController: UIViewController, HomeView {
         }
     }
     
-    private func showJoinEventViewController() {
+    private func showJoinEventViewController(completionHandler: @escaping (String) -> Void) {
         guard let joinEventViewController = storyboard?.instantiateViewController(withIdentifier: JOIN_EVENT_VIEW_CONTROLLER_ID)
             as? JoinEventViewController else { return }
         joinEventViewController.providesPresentationContextTransitionStyle = true
         joinEventViewController.definesPresentationContext = true
         joinEventViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        joinEventViewController.completionHandler = completionHandler
         present(joinEventViewController, animated: true, completion: nil)
+    }
+    
+    private func emitJoinEventData(joinEventData: JoinEventData) {
+        print(joinEventData.eventId)
+        print(joinEventData.helloText)
+    }
+    
+    private func joinEvent(eventId: String) {
+        showJoinEventViewController { helloText in
+            let joinEventData = JoinEventData(eventId: eventId, helloText: helloText)
+            self.emitJoinEventData(joinEventData: joinEventData)
+        }
+    }
+    
+    private func enterEvent(event: BoardlyEvent) {
+        print(event.eventName)
     }
     
     private func getFilterFromDefaults() {
@@ -148,7 +165,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let boardlyEventCell = eventsTableView.dequeueReusableCell(withIdentifier: EVENT_CELL_ID, for: indexPath) as! BoardlyEventCell
         let event = events[indexPath.row]
-        boardlyEventCell.bind(event: event)
+        boardlyEventCell.bind(event: event, cellClickAction: { self.cellClickAction(event: event) })
         return boardlyEventCell
     }
     
@@ -161,7 +178,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Implement join behaviour here")
+        let event = events[indexPath.row]
+        cellClickAction(event: event)
+    }
+    
+    private func cellClickAction(event: BoardlyEvent) {
+        switch event.type {
+        case .CREATED, .ACCEPTED:
+            enterEvent(event: event)
+        case .PENDING:
+            return
+        case .DEFAULT:
+            joinEvent(eventId: event.eventId)
+        }
     }
 }
 

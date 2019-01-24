@@ -12,7 +12,7 @@ import UIKit
 class JoinEventViewController: UIViewController {
     
     @IBOutlet weak var helloTextView: BoardlyTextView!
-    var helloTextHandler: (String) -> Void = { _ in }
+    var completionHandler: (String) -> Void = { _ in }
     
     @IBAction func cancelButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -23,7 +23,7 @@ class JoinEventViewController: UIViewController {
             helloTextView.showError(show: true)
         } else {
             helloTextView.showError(show: false)
-            helloTextHandler(helloText)
+            completionHandler(helloText)
             dismiss(animated: true, completion: nil)
         }
     }
