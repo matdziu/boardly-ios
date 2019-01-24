@@ -27,6 +27,7 @@ class BoardlyEventCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var acceptedLabel: UILabel!
     @IBOutlet weak var pendingLabel: UILabel!
+    @IBOutlet weak var enterEventButton: UIButton!
     
     private let renderer = EventUIRenderer()
     
@@ -34,6 +35,36 @@ class BoardlyEventCell: UITableViewCell {
         selectionStyle = .none
         renderer.displayEventInfo(event: event, eventNameLabel: nameLabel, gameLabel: game1NameLabel, placeButton: placeButton, locationImageView: placeImageView, boardGameImageView: game1ImageView, seeDescriptionButton: descriptionButton, dateButton: dateButton, timeImageView: timeImageView, gameLabel2: game2NameLabel, boardGameImageView2: game2ImageView, gameLabel3: game3NameLabel, boardGameImageView3: game3ImageView)
         setTypeLabel(type: event.type)
+        setClickAction(event: event)
+    }
+    
+    private func setClickAction(event: BoardlyEvent) {
+        switch event.type {
+        case .CREATED:
+            setCreatedClickAction()
+        case .ACCEPTED:
+            setAcceptedClickAction()
+        case .PENDING:
+            setPendingClickAction()
+        case .DEFAULT:
+            setDefaultClickAction()
+        }
+    }
+    
+    private func setDefaultClickAction() {
+        
+    }
+    
+    private func setCreatedClickAction() {
+        
+    }
+    
+    private func setPendingClickAction() {
+        
+    }
+    
+    private func setAcceptedClickAction() {
+        
     }
     
     private func setTypeLabel(type: EventType) {
