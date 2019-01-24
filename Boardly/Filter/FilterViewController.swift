@@ -72,7 +72,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
-        gameImageView.cancelAll()
+        gameImageView.cancel()
         gameNameLabel.text = "No game picked"
         currentFilter.gameId = ""
         currentFilter.gameName = ""

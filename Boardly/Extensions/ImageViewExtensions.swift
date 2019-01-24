@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
+private var imageTasks = [UIImageView : URLSessionDataTask]()
+
 extension UIImageView {
     
     func downloaded(from url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
@@ -22,15 +24,13 @@ extension UIImageView {
             DispatchQueue.main.async() {
                 self.image = image
             }
-            }.resume()
+        }
+        imageTasks[self] = task
+        task.resume()
     }
     
-    func cancelAll() {
-        URLSession.shared.getAllTasks { allTasks in
-            for task in allTasks {
-                task.cancel()
-            }
-        }
+    func cancel() {
+        imageTasks[self]?.cancel()
     }
     
     func downloaded(from link: String) {

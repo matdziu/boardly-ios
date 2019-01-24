@@ -33,6 +33,13 @@ class BoardlyEventCell: UITableViewCell {
     
     private var cellClickAction = {}
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        game1ImageView.cancel()
+        game2ImageView.cancel()
+        game3ImageView.cancel()
+    }
+    
     func bind(event: BoardlyEvent, cellClickAction: @escaping () -> Void = {}) {
         self.cellClickAction = cellClickAction
         selectionStyle = .none
