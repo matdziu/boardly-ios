@@ -40,8 +40,8 @@ class NotifyPresenterTest: QuickSpec {
             }
             
             it("successful notify settings fetching") {
-                notifyViewRobot.triggerNotifySettingsFetch(initialized: false)
-                notifyViewRobot.triggerNotifySettingsFetch(initialized: true)
+                notifyViewRobot.triggerNotifySettingsFetch(initialize: false)
+                notifyViewRobot.triggerNotifySettingsFetch(initialize: true)
                 notifyViewRobot.assert(expectedViewStates: [
                     NotifyViewState(),
                     NotifyViewState(progress: true),

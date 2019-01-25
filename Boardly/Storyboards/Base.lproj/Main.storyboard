@@ -1058,7 +1058,7 @@
         <!--Notify-->
         <scene sceneID="XDF-cM-VGD">
             <objects>
-                <viewController id="Hdp-wb-rGj" sceneMemberID="viewController">
+                <viewController id="Hdp-wb-rGj" customClass="NotifyViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIp-lZ-4uf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

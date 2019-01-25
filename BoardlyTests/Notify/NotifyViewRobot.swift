@@ -37,7 +37,7 @@ class NotifyViewRobot {
         mockNotifyView.placePickEventSubject.onNext(true)
     }
     
-    func triggerNotifySettingsFetch(initialized: Bool) {
-        mockNotifyView.notifySettingsFetchSubject.onNext(initialized)
+    func triggerNotifySettingsFetch(initialize: Bool) {
+        mockNotifyView.notifySettingsFetchSubject.onNext(initialize)
     }
 }
