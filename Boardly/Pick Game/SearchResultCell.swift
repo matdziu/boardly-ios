@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SearchResultCell: UICollectionViewCell {
+class SearchResultCell: UITableViewCell {
     
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var yearPublishedLabel: UILabel!
