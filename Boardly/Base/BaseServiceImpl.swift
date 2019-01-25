@@ -54,6 +54,10 @@ class BaseServiceImpl {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(ACCEPTED_EVENTS_NODE)")
     }
     
+    func getUserNotifySettingsRef(userId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(NOTIFY_SETTINGS_NODE)/\(userId)")
+    }
+    
     func getPendingPlayersNode(eventId: String) -> DatabaseReference {
         return database.reference(withPath: "\(PLAYERS_NODE)/\(eventId)/\(PENDING_EVENTS_NODE)")
     }
