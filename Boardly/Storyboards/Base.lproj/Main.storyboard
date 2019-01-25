@@ -120,19 +120,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoardGamePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-aA-P7u">
-                                <rect key="frame" x="137.5" y="71.5" width="100" height="100"/>
+                                <rect key="frame" x="152.5" y="71.5" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="dqe-fA-SZN"/>
-                                    <constraint firstAttribute="width" constant="100" id="wIs-Pr-c96"/>
+                                    <constraint firstAttribute="height" constant="70" id="dqe-fA-SZN"/>
+                                    <constraint firstAttribute="width" constant="70" id="wIs-Pr-c96"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S1H-Sq-son">
-                                <rect key="frame" x="35" y="187.5" width="305" height="111.5"/>
+                                <rect key="frame" x="35" y="157.5" width="305" height="111.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-pK-KN2">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="111.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No game picked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp2-4I-s6h">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No game picked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp2-4I-s6h">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="3oh-jW-7My"/>
@@ -170,7 +170,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-q0-1Sa">
                                         <rect key="frame" x="165" y="0.0" width="140" height="111.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="bJE-9Q-WNg"/>
@@ -213,21 +213,24 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum event distance: 50km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvy-gp-n5A">
-                                <rect key="frame" x="72.5" y="331" width="230.5" height="19.5"/>
+                                <rect key="frame" x="72.5" y="285" width="230.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="za8-e7-gb1">
-                                <rect key="frame" x="14" y="366.5" width="347" height="31"/>
+                                <rect key="frame" x="14" y="320.5" width="347" height="31"/>
                                 <color key="tintColor" name="PrimaryBlue"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="xac-PQ-ZHc" eventType="valueChanged" id="kyp-nl-l0u"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHK-7z-l5c" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
-                                <rect key="frame" x="16" y="621" width="343" height="30"/>
+                                <rect key="frame" x="16" y="606" width="343" height="45"/>
                                 <color key="backgroundColor" name="PrimaryBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2NI-ib-teM"/>
+                                </constraints>
                                 <state key="normal" title="Apply"/>
                                 <connections>
                                     <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="tFR-KD-0nr"/>
@@ -241,7 +244,7 @@
                             <constraint firstItem="XHK-7z-l5c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="za8-e7-gb1" secondAttribute="bottom" constant="16" id="2qq-e3-PnI"/>
                             <constraint firstItem="l7W-lM-o80" firstAttribute="trailing" secondItem="XHK-7z-l5c" secondAttribute="trailing" constant="16" id="44o-C9-Eki"/>
                             <constraint firstItem="l7W-lM-o80" firstAttribute="bottom" secondItem="XHK-7z-l5c" secondAttribute="bottom" constant="16" id="5Gf-fs-fZx"/>
-                            <constraint firstItem="bvy-gp-n5A" firstAttribute="top" secondItem="S1H-Sq-son" secondAttribute="bottom" constant="32" id="8Iu-ze-alv"/>
+                            <constraint firstItem="bvy-gp-n5A" firstAttribute="top" secondItem="S1H-Sq-son" secondAttribute="bottom" constant="16" id="8Iu-ze-alv"/>
                             <constraint firstItem="bvy-gp-n5A" firstAttribute="centerX" secondItem="l7W-lM-o80" secondAttribute="centerX" id="AC8-wY-q7y"/>
                             <constraint firstItem="l7W-lM-o80" firstAttribute="trailing" secondItem="za8-e7-gb1" secondAttribute="trailing" constant="16" id="EXC-7d-AJn"/>
                             <constraint firstItem="za8-e7-gb1" firstAttribute="leading" secondItem="l7W-lM-o80" secondAttribute="leading" constant="16" id="PX4-9e-AAW"/>
@@ -1063,17 +1066,146 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTIFY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24C-YX-LuA">
-                                <rect key="frame" x="158" y="323" width="59.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll notify you whenever new event with criteria below will be added nearby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utc-Q4-18l">
+                                <rect key="frame" x="16" y="36" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-z7-UZQ">
+                                <rect key="frame" x="35" y="176.5" width="305" height="111.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-c4-CQl">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="111.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No game picked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGH-DR-dOA">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="clN-JC-NMn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="Grey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uts-bl-TGn">
+                                                <rect key="frame" x="0.0" y="35.5" width="140" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="wDl-FN-YnH"/>
+                                                </constraints>
+                                                <state key="normal" title="Pick a game">
+                                                    <color key="titleColor" name="PrimaryBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pickGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="MDc-w2-6fd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snN-rY-IhG">
+                                                <rect key="frame" x="0.0" y="81.5" width="140" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="JGd-Bf-Zuy"/>
+                                                </constraints>
+                                                <state key="normal" title="Delete game">
+                                                    <color key="titleColor" name="ErrorRed"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="KA7-7x-f6K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dHL-Qt-BkP">
+                                        <rect key="frame" x="165" y="0.0" width="140" height="111.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-cw-yMI">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="hQX-no-0gI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="Grey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g76-4E-ByK">
+                                                <rect key="frame" x="0.0" y="35.5" width="140" height="76"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="rW5-xg-GOp"/>
+                                                </constraints>
+                                                <state key="normal" title="Pick a place">
+                                                    <color key="titleColor" name="PrimaryBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pickPlaceButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="NKr-bw-7jz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum event distance: 50km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN2-xO-jKP">
+                                <rect key="frame" x="72.5" y="304" width="230.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wj-Cg-7Lc" customClass="BoardlyButton" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="16" y="557" width="343" height="45"/>
+                                <color key="backgroundColor" name="PrimaryBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ed4-4X-F5A"/>
+                                </constraints>
+                                <state key="normal" title="Apply"/>
+                                <connections>
+                                    <action selector="applyButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="qry-Ge-wNi"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kzl-kk-hu4">
+                                <rect key="frame" x="14" y="331.5" width="347" height="31"/>
+                                <color key="tintColor" name="PrimaryBlue"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="xac-PQ-ZHc" eventType="valueChanged" id="ClZ-HL-G5h"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoardGamePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-pY-Hfs">
+                                <rect key="frame" x="152.5" y="90.5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="L1G-bS-NjX"/>
+                                    <constraint firstAttribute="width" constant="70" id="rsq-1K-UjB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kW-p5-sta">
+                                <rect key="frame" x="97.5" y="519" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="72n-e1-Jfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="DELETE NOTIFICATIONS">
+                                    <color key="titleColor" name="ErrorRed"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="4z6-zK-ryX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="24C-YX-LuA" firstAttribute="centerY" secondItem="UIp-lZ-4uf" secondAttribute="centerY" id="K29-cH-PFR"/>
-                            <constraint firstItem="24C-YX-LuA" firstAttribute="centerX" secondItem="UIp-lZ-4uf" secondAttribute="centerX" id="Tg5-Vu-BDr"/>
+                            <constraint firstItem="Utc-Q4-18l" firstAttribute="leading" secondItem="m0Q-j7-KVU" secondAttribute="leading" constant="16" id="0YY-ep-Lyv"/>
+                            <constraint firstItem="GN2-xO-jKP" firstAttribute="centerX" secondItem="m0Q-j7-KVU" secondAttribute="centerX" id="2I3-ck-xya"/>
+                            <constraint firstItem="GN2-xO-jKP" firstAttribute="top" secondItem="ocf-z7-UZQ" secondAttribute="bottom" constant="16" id="3sG-Ct-c5D"/>
+                            <constraint firstItem="ocf-z7-UZQ" firstAttribute="centerX" secondItem="m0Q-j7-KVU" secondAttribute="centerX" id="44F-7Z-7zk"/>
+                            <constraint firstItem="kzl-kk-hu4" firstAttribute="leading" secondItem="m0Q-j7-KVU" secondAttribute="leading" constant="16" id="DYr-1q-uWw"/>
+                            <constraint firstItem="Utc-Q4-18l" firstAttribute="top" secondItem="m0Q-j7-KVU" secondAttribute="top" constant="16" id="ElZ-ei-dvL"/>
+                            <constraint firstItem="ocf-z7-UZQ" firstAttribute="top" secondItem="2kB-pY-Hfs" secondAttribute="bottom" constant="16" id="Emh-BZ-EeH"/>
+                            <constraint firstItem="7Wj-Cg-7Lc" firstAttribute="leading" secondItem="m0Q-j7-KVU" secondAttribute="leading" constant="16" id="Hov-No-T6P"/>
+                            <constraint firstItem="m0Q-j7-KVU" firstAttribute="trailing" secondItem="kzl-kk-hu4" secondAttribute="trailing" constant="16" id="Hsq-Es-CwV"/>
+                            <constraint firstItem="7Wj-Cg-7Lc" firstAttribute="top" secondItem="4kW-p5-sta" secondAttribute="bottom" constant="8" id="Ipd-jo-Ggj"/>
+                            <constraint firstItem="m0Q-j7-KVU" firstAttribute="bottom" secondItem="7Wj-Cg-7Lc" secondAttribute="bottom" constant="16" id="OPE-2s-LBB"/>
+                            <constraint firstItem="4kW-p5-sta" firstAttribute="centerX" secondItem="m0Q-j7-KVU" secondAttribute="centerX" id="Qau-yp-oIg"/>
+                            <constraint firstItem="m0Q-j7-KVU" firstAttribute="trailing" secondItem="Utc-Q4-18l" secondAttribute="trailing" constant="16" id="aZ1-vt-Clw"/>
+                            <constraint firstItem="kzl-kk-hu4" firstAttribute="top" secondItem="GN2-xO-jKP" secondAttribute="bottom" constant="8" id="ffR-b5-IcQ"/>
+                            <constraint firstItem="2kB-pY-Hfs" firstAttribute="top" secondItem="Utc-Q4-18l" secondAttribute="bottom" constant="16" id="gE4-E0-8PQ"/>
+                            <constraint firstItem="4kW-p5-sta" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kzl-kk-hu4" secondAttribute="bottom" constant="16" id="idZ-Ew-3VX"/>
+                            <constraint firstItem="m0Q-j7-KVU" firstAttribute="trailing" secondItem="7Wj-Cg-7Lc" secondAttribute="trailing" constant="16" id="jvY-jb-aIF"/>
+                            <constraint firstItem="2kB-pY-Hfs" firstAttribute="centerX" secondItem="m0Q-j7-KVU" secondAttribute="centerX" id="zOP-AV-NTY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m0Q-j7-KVU"/>
                     </view>
