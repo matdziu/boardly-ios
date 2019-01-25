@@ -1079,6 +1079,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="pickGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="MDc-w2-6fd"/>
+                                                    <action selector="pickGameButtonClicked:" destination="Hdp-wb-rGj" eventType="touchUpInside" id="vFv-aM-IDW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snN-rY-IhG">
@@ -1091,6 +1092,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="deleteGameButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="KA7-7x-f6K"/>
+                                                    <action selector="deleteGameButtonClicked:" destination="Hdp-wb-rGj" eventType="touchUpInside" id="qQZ-hq-PF8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1116,6 +1118,7 @@
                                                     <color key="titleColor" name="PrimaryBlue"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="pickPlaceButtonClicked:" destination="Hdp-wb-rGj" eventType="touchUpInside" id="6A7-0H-Fqq"/>
                                                     <action selector="pickPlaceButtonClicked:" destination="xac-PQ-ZHc" eventType="touchUpInside" id="NKr-bw-7jz"/>
                                                 </connections>
                                             </button>
@@ -1192,6 +1195,12 @@
                         <viewLayoutGuide key="safeArea" id="m0Q-j7-KVU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notify" image="NotifyIcon" id="r4k-dX-FJy"/>
+                    <connections>
+                        <outlet property="eventDistanceLabel" destination="GN2-xO-jKP" id="Wd5-y9-FG2"/>
+                        <outlet property="eventDistanceSlider" destination="kzl-kk-hu4" id="UW8-e7-pZb"/>
+                        <outlet property="gameNameLabel" destination="sGH-DR-dOA" id="i61-oM-ulg"/>
+                        <outlet property="placeNameLabel" destination="fwx-cw-yMI" id="GTB-yB-fA8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJK-0w-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
