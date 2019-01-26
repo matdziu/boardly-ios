@@ -52,8 +52,11 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     private func initView() {
+        if resetSettings {
+            gameIdSubject.onNext(currentSettings.gameId)
+        }
+        
         resetSettings = true
-        gameIdSubject.onNext(currentSettings.gameId)
         
         if initializeSettings {
             notifySettingsFetchSubject.onNext(initializeSettings)
