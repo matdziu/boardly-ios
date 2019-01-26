@@ -23,9 +23,9 @@ class NotifyPresenterTest: QuickSpec {
         beforeEach {
             let mockNotifyInteractor = MockNotifyInteractor(
                 fetchGameDetails: Observable.just(.gameDetailsFetched(game: testGame)),
-                updateNotifySettings:  Observable.just(.success),
+                updateNotifySettings:  Observable.just(.successSaved),
                 fetchNotifySettings:  Observable.just(.notifySettingsFetched(notifySettings: testNotifySettings)),
-                deleteNotifications:  Observable.just(.success))
+                deleteNotifications:  Observable.just(.successDeleted))
             let notifyPresenter = NotifyPresenter(notifyInteractor: mockNotifyInteractor)
             notifyViewRobot = NotifyViewRobot(notifyPresenter: notifyPresenter)
         }
@@ -53,7 +53,7 @@ class NotifyPresenterTest: QuickSpec {
                 notifyViewRobot.assert(expectedViewStates: [
                     NotifyViewState(),
                     NotifyViewState(progress: true),
-                    NotifyViewState(success: true)])
+                    NotifyViewState(successDeleted: true)])
             }
             
             it("place pick event") {
@@ -79,7 +79,7 @@ class NotifyPresenterTest: QuickSpec {
                     notifyViewRobot.assert(expectedViewStates: [
                         NotifyViewState(),
                         NotifyViewState(progress: true),
-                        NotifyViewState(success: true)])
+                        NotifyViewState(successSaved: true)])
                 }
             }
         }

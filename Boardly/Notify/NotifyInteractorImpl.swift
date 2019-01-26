@@ -29,7 +29,7 @@ class NotifyInteractorImpl: NotifyInteractor {
     
     func updateNotifySettings(notifySettings: NotifySettings) -> Observable<PartialNotifyViewState> {
         return notifyService.updateNotifySettings(notifySettings: notifySettings)
-            .map({ _ in return PartialNotifyViewState.success })
+            .map({ _ in return PartialNotifyViewState.successSaved })
     }
     
     func fetchNotifySettings() -> Observable<PartialNotifyViewState> {
@@ -39,6 +39,6 @@ class NotifyInteractorImpl: NotifyInteractor {
     
     func deleteNotifications() -> Observable<PartialNotifyViewState> {
         return notifyService.deleteNotifications()
-            .map({ _ in return PartialNotifyViewState.success })
+            .map({ _ in return PartialNotifyViewState.successDeleted })
     }
 }

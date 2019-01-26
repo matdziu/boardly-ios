@@ -27,7 +27,8 @@ class NotifyViewController: UIViewController, NotifyView {
     @IBOutlet weak var distanceSlider: UISlider!
     
     private let distanceLabelDefaultText = "Maximum event distance:"
-    private var initialize = true
+    private var initializeSettings = true
+    private var resetSettings = true
     
     private var newSettings = NotifySettings()
     private var currentSettings = NotifySettings()
@@ -51,7 +52,13 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     private func initView() {
-        notifySettingsFetchSubject.onNext(initialize)
+        resetSettings = true
+        gameIdSubject.onNext(currentSettings.gameId)
+        
+        if initializeSettings {
+            notifySettingsFetchSubject.onNext(initializeSettings)
+            initializeSettings = false
+        }
         
         if emitPlacePickEvent {
             placePickEventSubject.onNext(true)
@@ -65,9 +72,15 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        initialize = false
+        deinitView()
         notifyPresenter.unbind()
         super.viewWillDisappear(animated)
+    }
+    
+    private func deinitView() {
+        if resetSettings {
+            reloadView()
+        }
     }
     
     func gameIdEmitter() -> Observable<String> {
@@ -89,9 +102,11 @@ class NotifyViewController: UIViewController, NotifyView {
     func placePickEventEmitter() -> Observable<Bool> {
         return placePickEventSubject
     }
+    
     @IBAction func pickGameButtonClicked(_ sender: Any) {
         guard let pickGameViewController = storyboard?.instantiateViewController(withIdentifier: PICK_GAME_VIEW_CONTROLLER_ID) as? PickGameViewController else { return }
         pickGameViewController.finishAction = { self.handlePickGameResult(pickedGame: $0) }
+        resetSettings = false
         self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
     
@@ -111,6 +126,7 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
+        resetSettings = false
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         present(autocompleteController, animated: true, completion: nil)
@@ -118,6 +134,7 @@ class NotifyViewController: UIViewController, NotifyView {
     
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
         boardGameImageView.cancel()
+        showPlaceholderBoardGameImage()
         gameNameLabel.text = "No game picked"
         newSettings.gameId = ""
         newSettings.gameName = ""
@@ -134,25 +151,42 @@ class NotifyViewController: UIViewController, NotifyView {
         boardGameImageView.downloaded(from: notifyViewState.gameImageUrl)
         showProgressBar(show: notifyViewState.progress)
         showPlacePickedError(show: !notifyViewState.selectedPlaceValid)
-        if notifyViewState.success {
-            reloadView()
-            showAlert(message: "Saved successfully!")
-            self.tabBarController?.selectedIndex = 0
+        if notifyViewState.successSaved {
+            currentSettings = newSettings
+            finish()
+        }
+        if notifyViewState.successDeleted {
+            currentSettings = NotifySettings()
+            newSettings = NotifySettings()
+            finish()
         }
         let notifySettings = notifyViewState.notifySettings
         if currentSettings != notifySettings {
             currentSettings = notifySettings
             newSettings = notifySettings
-            initWithNotifySettings(notifySettings: notifySettings)
+            setNotifySettings(notifySettings: notifySettings)
             gameIdSubject.onNext(notifySettings.gameId)
         }
     }
     
+    private func finish() {
+        reloadView()
+        showAlert(message: "Saved successfully!")
+        self.tabBarController?.selectedIndex = 0
+    }
+    
     private func reloadView() {
         notifyPresenter.unbind()
-        notifyPresenter = NotifyPresenter(notifyInteractor: NotifyInteractorImpl(gameService: GameServiceImpl(), notifyService: NotifyServiceImpl()))
+        notifyPresenter = NotifyPresenter(notifyInteractor: NotifyInteractorImpl(gameService: GameServiceImpl(), notifyService: NotifyServiceImpl()), initialViewState: NotifyViewState(notifySettings: currentSettings))
+        setNotifySettings(notifySettings: currentSettings)
         notifyPresenter.bind(notifyView: self)
-        notifySettingsFetchSubject.onNext(true)
+    }
+    
+    private func showPlaceholderBoardGameImage() {
+        boardGameImageView.cancel()
+        DispatchQueue.main.async {
+            self.boardGameImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        }
     }
     
     private func showProgressBar(show: Bool) {
@@ -171,30 +205,27 @@ class NotifyViewController: UIViewController, NotifyView {
         }
     }
     
-    private func initWithNotifySettings(notifySettings: NotifySettings) {
-        initDistanceSetting(radius: Int(notifySettings.radius))
-        initGameSetting(gameName: notifySettings.gameName, gameId: notifySettings.gameId)
-        initLocationSetting(locationName: notifySettings.locationName)
+    private func setNotifySettings(notifySettings: NotifySettings) {
+        setDistanceSetting(radius: Int(notifySettings.radius))
+        setGameSetting(gameName: notifySettings.gameName)
+        setLocationSetting(locationName: notifySettings.locationName)
     }
     
-    private func initDistanceSetting(radius: Int) {
+    private func setDistanceSetting(radius: Int) {
         distanceSlider.value = Float(radius)
         eventDistanceLabel.text = "\(distanceLabelDefaultText) \(radius)km"
     }
     
-    private func initGameSetting(gameName: String, gameId: String) {
-        if !gameName.isEmpty && !gameId.isEmpty {
+    private func setGameSetting(gameName: String) {
+        if !gameName.isEmpty {
             gameNameLabel.text = gameName
-            gameIdSubject.onNext(gameId)
         } else {
             gameNameLabel.text = "No game picked"
-            DispatchQueue.main.async {
-                self.boardGameImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-            }
+            showPlaceholderBoardGameImage()
         }
     }
     
-    private func initLocationSetting(locationName: String) {
+    private func setLocationSetting(locationName: String) {
         if !locationName.isEmpty {
             placeNameLabel.text = locationName
         } else {

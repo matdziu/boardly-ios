@@ -39,7 +39,7 @@ class NotifyInteractorTest: QuickSpec {
                 let output = try! notifyInteractor.updateNotifySettings(notifySettings: NotifySettings())
                     .toBlocking()
                     .toArray()
-                expect(output).to(equal([PartialNotifyViewState.success]))
+                expect(output).to(equal([PartialNotifyViewState.successSaved]))
             }
             
             it("successful notify settings fetch") {
@@ -53,7 +53,7 @@ class NotifyInteractorTest: QuickSpec {
                 let output = try! notifyInteractor.deleteNotifications()
                     .toBlocking()
                     .toArray()
-                expect(output).to(equal([PartialNotifyViewState.success]))
+                expect(output).to(equal([PartialNotifyViewState.successDeleted]))
             }
         }
     }

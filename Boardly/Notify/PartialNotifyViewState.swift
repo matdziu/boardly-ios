@@ -14,7 +14,8 @@ enum PartialNotifyViewState: Equatable {
     case placePicked
     case localValidation(selectedPlaceValid: Bool)
     case progress
-    case success
+    case successSaved
+    case successDeleted
     
     func reduce(previousState: NotifyViewState) -> NotifyViewState {
         switch self {
@@ -39,8 +40,10 @@ enum PartialNotifyViewState: Equatable {
             var newState = previousState
             newState.progress = true
             return newState
-        case .success:
-            return NotifyViewState(success: true)
+        case .successSaved:
+            return NotifyViewState(successSaved: true)
+        case .successDeleted:
+            return NotifyViewState(successDeleted: true)
         }
     }
 }

@@ -14,17 +14,20 @@ struct NotifyViewState: Equatable {
     var notifySettings: NotifySettings = NotifySettings()
     var progress: Bool = false
     var selectedPlaceValid: Bool = true
-    var success: Bool = false
+    var successSaved: Bool = false
+    var successDeleted: Bool = false
     
     init(gameImageUrl: String = "",
          notifySettings: NotifySettings = NotifySettings(),
          progress: Bool = false,
          selectedPlaceValid: Bool = true,
-         success: Bool = false) {
+         successSaved: Bool = false,
+         successDeleted: Bool = false) {
         self.gameImageUrl = gameImageUrl
         self.notifySettings = notifySettings
         self.progress = progress
         self.selectedPlaceValid = selectedPlaceValid
-        self.success = success
+        self.successSaved = successSaved
+        self.successDeleted = successDeleted
     }
 }
