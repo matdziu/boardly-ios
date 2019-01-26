@@ -180,6 +180,7 @@ class NotifyViewController: UIViewController, NotifyView {
     
     private func reloadView() {
         notifyPresenter.unbind()
+        newSettings = currentSettings
         notifyPresenter = NotifyPresenter(notifyInteractor: NotifyInteractorImpl(gameService: GameServiceImpl(), notifyService: NotifyServiceImpl()), initialViewState: NotifyViewState(notifySettings: currentSettings))
         setNotifySettings(notifySettings: currentSettings)
         notifyPresenter.bind(notifyView: self)
