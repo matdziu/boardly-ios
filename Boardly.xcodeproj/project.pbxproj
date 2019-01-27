@@ -163,6 +163,19 @@
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
 		90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */; };
+		90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFD521FE144200D4C684 /* MyEventsContract.swift */; };
+		90FFFFD821FE144E00D4C684 /* MyEventsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFD721FE144E00D4C684 /* MyEventsViewState.swift */; };
+		90FFFFDA21FE145C00D4C684 /* PartialMyEventsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFD921FE145C00D4C684 /* PartialMyEventsViewState.swift */; };
+		90FFFFDC21FE146800D4C684 /* MyEventsInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFDB21FE146800D4C684 /* MyEventsInteractorImpl.swift */; };
+		90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFDD21FE147C00D4C684 /* MyEventsServiceImpl.swift */; };
+		90FFFFE021FE148900D4C684 /* MyEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFDF21FE148900D4C684 /* MyEventsPresenter.swift */; };
+		90FFFFE221FE14ED00D4C684 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFE121FE14ED00D4C684 /* MyEventsViewController.swift */; };
+		90FFFFE621FE25DC00D4C684 /* MyEventsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFE521FE25DC00D4C684 /* MyEventsPresenterTest.swift */; };
+		90FFFFE821FE25E600D4C684 /* MyEventsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFE721FE25E600D4C684 /* MyEventsInteractorTest.swift */; };
+		90FFFFEA21FE25F400D4C684 /* MyEventsViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFE921FE25F400D4C684 /* MyEventsViewRobot.swift */; };
+		90FFFFEC21FE260300D4C684 /* MockMyEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFEB21FE260300D4C684 /* MockMyEventsInteractor.swift */; };
+		90FFFFEE21FE261000D4C684 /* MockMyEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFED21FE261000D4C684 /* MockMyEventsView.swift */; };
+		90FFFFF021FE262200D4C684 /* MockMyEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFEF21FE262200D4C684 /* MockMyEventsService.swift */; };
 		A4E171C6E7AFA22ECFB910F4 /* Pods_Boardly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */; };
 		B780922767D4DE04F782328A /* Pods_BoardlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */; };
 /* End PBXBuildFile section */
@@ -343,6 +356,19 @@
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
 		90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
+		90FFFFD521FE144200D4C684 /* MyEventsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsContract.swift; sourceTree = "<group>"; };
+		90FFFFD721FE144E00D4C684 /* MyEventsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewState.swift; sourceTree = "<group>"; };
+		90FFFFD921FE145C00D4C684 /* PartialMyEventsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialMyEventsViewState.swift; sourceTree = "<group>"; };
+		90FFFFDB21FE146800D4C684 /* MyEventsInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsInteractorImpl.swift; sourceTree = "<group>"; };
+		90FFFFDD21FE147C00D4C684 /* MyEventsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsServiceImpl.swift; sourceTree = "<group>"; };
+		90FFFFDF21FE148900D4C684 /* MyEventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsPresenter.swift; sourceTree = "<group>"; };
+		90FFFFE121FE14ED00D4C684 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		90FFFFE521FE25DC00D4C684 /* MyEventsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsPresenterTest.swift; sourceTree = "<group>"; };
+		90FFFFE721FE25E600D4C684 /* MyEventsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsInteractorTest.swift; sourceTree = "<group>"; };
+		90FFFFE921FE25F400D4C684 /* MyEventsViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewRobot.swift; sourceTree = "<group>"; };
+		90FFFFEB21FE260300D4C684 /* MockMyEventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyEventsInteractor.swift; sourceTree = "<group>"; };
+		90FFFFED21FE261000D4C684 /* MockMyEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyEventsView.swift; sourceTree = "<group>"; };
+		90FFFFEF21FE262200D4C684 /* MockMyEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMyEventsService.swift; sourceTree = "<group>"; };
 		9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boardly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boardly/Pods-Boardly.debug.xcconfig"; sourceTree = "<group>"; };
 		D7DA30925C02B89ABA9DEEB6 /* Pods-BoardlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -703,6 +729,7 @@
 				909A8B9621CACE7000166C93 /* Constants */,
 				909A8B9721CACE7D00166C93 /* Custom Views */,
 				909A8B9B21CACE9600166C93 /* Home */,
+				90FFFFD421FE142C00D4C684 /* My Events */,
 				908D920721D63BEA00C12ECD /* Filter */,
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
@@ -721,6 +748,7 @@
 			isa = PBXGroup;
 			children = (
 				9084A23C21DD50900087B5C3 /* Home */,
+				90FFFFE321FE25BD00D4C684 /* My Events */,
 				903788FC21DA5F0D0092FE84 /* Pick Game */,
 				90857DE221D8BA5A000A7BFC /* Game Service */,
 				903366E621FA62AB0059A601 /* Notify */,
@@ -926,6 +954,41 @@
 				90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */,
 			);
 			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		90FFFFD421FE142C00D4C684 /* My Events */ = {
+			isa = PBXGroup;
+			children = (
+				90FFFFD521FE144200D4C684 /* MyEventsContract.swift */,
+				90FFFFD721FE144E00D4C684 /* MyEventsViewState.swift */,
+				90FFFFD921FE145C00D4C684 /* PartialMyEventsViewState.swift */,
+				90FFFFDB21FE146800D4C684 /* MyEventsInteractorImpl.swift */,
+				90FFFFDD21FE147C00D4C684 /* MyEventsServiceImpl.swift */,
+				90FFFFDF21FE148900D4C684 /* MyEventsPresenter.swift */,
+				90FFFFE121FE14ED00D4C684 /* MyEventsViewController.swift */,
+			);
+			path = "My Events";
+			sourceTree = "<group>";
+		};
+		90FFFFE321FE25BD00D4C684 /* My Events */ = {
+			isa = PBXGroup;
+			children = (
+				90FFFFE421FE25CB00D4C684 /* Mocks */,
+				90FFFFE521FE25DC00D4C684 /* MyEventsPresenterTest.swift */,
+				90FFFFE721FE25E600D4C684 /* MyEventsInteractorTest.swift */,
+				90FFFFE921FE25F400D4C684 /* MyEventsViewRobot.swift */,
+			);
+			path = "My Events";
+			sourceTree = "<group>";
+		};
+		90FFFFE421FE25CB00D4C684 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90FFFFEB21FE260300D4C684 /* MockMyEventsInteractor.swift */,
+				90FFFFED21FE261000D4C684 /* MockMyEventsView.swift */,
+				90FFFFEF21FE262200D4C684 /* MockMyEventsService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		F952813C0A10FCBCA8731E6E /* Frameworks */ = {
@@ -1206,10 +1269,12 @@
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
 				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
+				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
 				903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
 				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
+				90FFFFDC21FE146800D4C684 /* MyEventsInteractorImpl.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
@@ -1245,6 +1310,7 @@
 				9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
+				90FFFFE221FE14ED00D4C684 /* MyEventsViewController.swift in Sources */,
 				9025497321DF9123006CE583 /* EventInputData.swift in Sources */,
 				90857DEC21D8C659000A7BFC /* GameServiceImpl.swift in Sources */,
 				90857DC621D81B0C000A7BFC /* FilterViewState.swift in Sources */,
@@ -1262,6 +1328,7 @@
 				903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */,
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
+				90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */,
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
@@ -1271,6 +1338,7 @@
 				90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */,
 				90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */,
 				903366E321FA4C520059A601 /* NotifyViewController.swift in Sources */,
+				90FFFFE021FE148900D4C684 /* MyEventsPresenter.swift in Sources */,
 				903366D721FA4BDD0059A601 /* NotifySettings.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
@@ -1290,6 +1358,7 @@
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
 				90857DCD21D81C96000A7BFC /* Game.swift in Sources */,
 				90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */,
+				90FFFFDA21FE145C00D4C684 /* PartialMyEventsViewState.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
@@ -1299,6 +1368,7 @@
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 				903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */,
 				90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */,
+				90FFFFD821FE144E00D4C684 /* MyEventsViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,7 +1384,9 @@
 				9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */,
 				90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */,
 				90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */,
+				90FFFFEA21FE25F400D4C684 /* MyEventsViewRobot.swift in Sources */,
 				9084A24921DD51010087B5C3 /* HomeInteractorTest.swift in Sources */,
+				90FFFFE621FE25DC00D4C684 /* MyEventsPresenterTest.swift in Sources */,
 				9025498521DF9D34006CE583 /* EventViewRobot.swift in Sources */,
 				903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */,
 				9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */,
@@ -1325,6 +1397,7 @@
 				9025498721DF9D40006CE583 /* EventPresenterTest.swift in Sources */,
 				909A8BE321CAE78300166C93 /* MockLoginService.swift in Sources */,
 				9084A23F21DD50B70087B5C3 /* MockHomeView.swift in Sources */,
+				90FFFFE821FE25E600D4C684 /* MyEventsInteractorTest.swift in Sources */,
 				909A8BD821CAE6DB00166C93 /* SignUpViewRobot.swift in Sources */,
 				9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */,
 				90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */,
@@ -1334,6 +1407,8 @@
 				909A8BE121CAE76900166C93 /* MockLoginInteractor.swift in Sources */,
 				9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */,
 				90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */,
+				90FFFFF021FE262200D4C684 /* MockMyEventsService.swift in Sources */,
+				90FFFFEC21FE260300D4C684 /* MockMyEventsInteractor.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
 				9084A24321DD50D10087B5C3 /* MockHomeService.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
@@ -1343,6 +1418,7 @@
 				903366F121FA63000059A601 /* MockNotifyInteractor.swift in Sources */,
 				908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */,
 				903366EF21FA62F30059A601 /* MockNotifyView.swift in Sources */,
+				90FFFFEE21FE261000D4C684 /* MockMyEventsView.swift in Sources */,
 				9084A24521DD50E00087B5C3 /* HomeViewRobot.swift in Sources */,
 				9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */,
 				9025498121DF9D20006CE583 /* MockEventInteractor.swift in Sources */,
