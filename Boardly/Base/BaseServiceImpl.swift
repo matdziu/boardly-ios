@@ -54,6 +54,10 @@ class BaseServiceImpl {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(ACCEPTED_EVENTS_NODE)")
     }
     
+    func getUserInterestingEventsNodeRef(userId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(INTERESTING_EVENTS_NODE)")
+    }
+    
     func getUserNotifySettingsRef(userId: String) -> DatabaseReference {
         return database.reference(withPath: "\(NOTIFY_SETTINGS_NODE)/\(userId)")
     }
@@ -72,6 +76,10 @@ class BaseServiceImpl {
     
     func pendingEventIdsList() -> Observable<[String]> {
         return idsList(idsDatabaseReference: getUserPendingEventsNodeRef(userId: getCurrentUserId()))
+    }
+    
+    func interestingEventIdsList() -> Observable<[String]> {
+        return idsList(idsDatabaseReference: getUserInterestingEventsNodeRef(userId: getCurrentUserId()))
     }
     
     func idsList(idsDatabaseReference: DatabaseReference) -> Observable<[String]> {
