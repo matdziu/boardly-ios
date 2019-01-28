@@ -149,6 +149,10 @@
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690B921F3079F00365E32 /* BoardlyTextView.swift */; };
 		90A690BC21F3088200365E32 /* JoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690BB21F3088200365E32 /* JoinEventViewController.swift */; };
+		90B2839621FF9A23005AC84A /* AcceptedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2839521FF9A23005AC84A /* AcceptedViewController.swift */; };
+		90B2839821FF9A2D005AC84A /* CreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2839721FF9A2D005AC84A /* CreatedViewController.swift */; };
+		90B2839A21FF9A36005AC84A /* PendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2839921FF9A36005AC84A /* PendingViewController.swift */; };
+		90B2839C21FF9A3F005AC84A /* InterestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2839B21FF9A3F005AC84A /* InterestingViewController.swift */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
 		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
@@ -342,6 +346,10 @@
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		90A690B921F3079F00365E32 /* BoardlyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyTextView.swift; sourceTree = "<group>"; };
 		90A690BB21F3088200365E32 /* JoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEventViewController.swift; sourceTree = "<group>"; };
+		90B2839521FF9A23005AC84A /* AcceptedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedViewController.swift; sourceTree = "<group>"; };
+		90B2839721FF9A2D005AC84A /* CreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedViewController.swift; sourceTree = "<group>"; };
+		90B2839921FF9A36005AC84A /* PendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingViewController.swift; sourceTree = "<group>"; };
+		90B2839B21FF9A3F005AC84A /* InterestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingViewController.swift; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
@@ -933,6 +941,17 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		90B2839421FF99EE005AC84A /* Segmented Views */ = {
+			isa = PBXGroup;
+			children = (
+				90B2839521FF9A23005AC84A /* AcceptedViewController.swift */,
+				90B2839721FF9A2D005AC84A /* CreatedViewController.swift */,
+				90B2839921FF9A36005AC84A /* PendingViewController.swift */,
+				90B2839B21FF9A3F005AC84A /* InterestingViewController.swift */,
+			);
+			path = "Segmented Views";
+			sourceTree = "<group>";
+		};
 		90D01CDC21D0F1B2000F710D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -959,6 +978,7 @@
 		90FFFFD421FE142C00D4C684 /* My Events */ = {
 			isa = PBXGroup;
 			children = (
+				90B2839421FF99EE005AC84A /* Segmented Views */,
 				90FFFFD521FE144200D4C684 /* MyEventsContract.swift */,
 				90FFFFD721FE144E00D4C684 /* MyEventsViewState.swift */,
 				90FFFFD921FE145C00D4C684 /* PartialMyEventsViewState.swift */,
@@ -1273,6 +1293,7 @@
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
 				903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
+				90B2839621FF9A23005AC84A /* AcceptedViewController.swift in Sources */,
 				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
 				90FFFFDC21FE146800D4C684 /* MyEventsInteractorImpl.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
@@ -1289,6 +1310,7 @@
 				9084A22E21DD28130087B5C3 /* FilteredFetchData.swift in Sources */,
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
+				90B2839821FF9A2D005AC84A /* CreatedViewController.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
 				9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */,
 				90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */,
@@ -1328,6 +1350,7 @@
 				903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */,
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
+				90B2839C21FF9A3F005AC84A /* InterestingViewController.swift in Sources */,
 				90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */,
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
@@ -1352,6 +1375,7 @@
 				9086CCF121F459CC00EE6857 /* EventUIRenderer.swift in Sources */,
 				9084A22B21DD278A0087B5C3 /* HomeContract.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
+				90B2839A21FF9A36005AC84A /* PendingViewController.swift in Sources */,
 				908D920921D63BFF00C12ECD /* FilterViewController.swift in Sources */,
 				90857DC221D81607000A7BFC /* Filter.swift in Sources */,
 				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
