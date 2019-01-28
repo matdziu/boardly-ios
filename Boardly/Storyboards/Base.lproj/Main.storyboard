@@ -919,22 +919,70 @@
         <!--My events-->
         <scene sceneID="JxS-F4-Dza">
             <objects>
-                <viewController id="3hM-BZ-Qdu" sceneMemberID="viewController">
+                <viewController id="3hM-BZ-Qdu" customClass="MyEventsViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RVN-3V-eax">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8li-uB-JuJ">
-                                <rect key="frame" x="140.5" y="308.5" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nIt-Jv-mkk">
+                                <rect key="frame" x="4" y="24" width="367" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0rP-8l-vyf"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="AcceptedIcon"/>
+                                    <segment title="" image="CreatedIcon"/>
+                                    <segment title="" image="PendingIcon"/>
+                                    <segment title="" image="NotifyIcon"/>
+                                </segments>
+                                <color key="tintColor" name="PrimaryBlue"/>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jye-Li-6Hw">
+                                <rect key="frame" x="0.0" y="68" width="375" height="550"/>
+                                <connections>
+                                    <segue destination="dPX-f6-biN" kind="embed" id="wv4-pT-6pf"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ix-aL-BYT">
+                                <rect key="frame" x="0.0" y="68" width="375" height="550"/>
+                                <connections>
+                                    <segue destination="3Mq-Lg-8j5" kind="embed" id="wbA-tS-n7n"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GrD-R9-QiE">
+                                <rect key="frame" x="0.0" y="68" width="375" height="550"/>
+                                <connections>
+                                    <segue destination="TlV-zh-P56" kind="embed" id="8rL-tF-feX"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yr3-ic-Q1G">
+                                <rect key="frame" x="0.0" y="68" width="375" height="550"/>
+                                <connections>
+                                    <segue destination="epI-i6-SFm" kind="embed" id="0yL-Vt-9on"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8li-uB-JuJ" firstAttribute="centerX" secondItem="6En-2d-ebJ" secondAttribute="centerX" id="KfU-Hh-9vm"/>
-                            <constraint firstItem="8li-uB-JuJ" firstAttribute="centerY" secondItem="6En-2d-ebJ" secondAttribute="centerY" id="PC7-dN-nrb"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="Yr3-ic-Q1G" secondAttribute="trailing" id="1he-mc-rLw"/>
+                            <constraint firstItem="Yr3-ic-Q1G" firstAttribute="top" secondItem="nIt-Jv-mkk" secondAttribute="bottom" constant="4" id="4L0-NY-14J"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="bottom" secondItem="Yr3-ic-Q1G" secondAttribute="bottom" id="4wF-3e-2au"/>
+                            <constraint firstItem="Jye-Li-6Hw" firstAttribute="top" secondItem="nIt-Jv-mkk" secondAttribute="bottom" constant="4" id="A5e-ar-oEO"/>
+                            <constraint firstItem="nIt-Jv-mkk" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" constant="4" id="EKS-jl-Y9h"/>
+                            <constraint firstItem="2Ix-aL-BYT" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="Ekl-XV-JTe"/>
+                            <constraint firstItem="GrD-R9-QiE" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="GZD-ZY-Yqo"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="bottom" secondItem="2Ix-aL-BYT" secondAttribute="bottom" id="PCy-Tf-fcw"/>
+                            <constraint firstItem="nIt-Jv-mkk" firstAttribute="top" secondItem="6En-2d-ebJ" secondAttribute="top" constant="4" id="QE8-Qg-ANO"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="nIt-Jv-mkk" secondAttribute="trailing" constant="4" id="R3e-4n-7q1"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="bottom" secondItem="GrD-R9-QiE" secondAttribute="bottom" id="RSm-Iz-m9j"/>
+                            <constraint firstItem="Jye-Li-6Hw" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="V8v-6A-GIw"/>
+                            <constraint firstItem="Yr3-ic-Q1G" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="fG5-Wk-k9Z"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="Jye-Li-6Hw" secondAttribute="trailing" id="gHQ-wr-Crc"/>
+                            <constraint firstItem="GrD-R9-QiE" firstAttribute="top" secondItem="nIt-Jv-mkk" secondAttribute="bottom" constant="4" id="n1N-wb-IPz"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="GrD-R9-QiE" secondAttribute="trailing" id="nHJ-E6-Clb"/>
+                            <constraint firstItem="2Ix-aL-BYT" firstAttribute="top" secondItem="nIt-Jv-mkk" secondAttribute="bottom" constant="4" id="qk8-KZ-hkD"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="2Ix-aL-BYT" secondAttribute="trailing" id="vYA-JH-wFl"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="bottom" secondItem="Jye-Li-6Hw" secondAttribute="bottom" id="zfC-7v-PEq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6En-2d-ebJ"/>
                     </view>
@@ -942,7 +990,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jr5-OT-qJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226" y="-1811"/>
+            <point key="canvasLocation" x="1224.8" y="-1811.2443778110946"/>
         </scene>
         <!--Join Event View Controller-->
         <scene sceneID="XVg-uW-Taa">
@@ -1038,7 +1086,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3y-3M-Obk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2251" y="-1991"/>
+            <point key="canvasLocation" x="3018" y="-1792"/>
         </scene>
         <!--Notify-->
         <scene sceneID="XDF-cM-VGD">
@@ -1748,18 +1796,77 @@
             </objects>
             <point key="canvasLocation" x="-543" y="-765"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fRU-uN-W6V">
+            <objects>
+                <viewController id="dPX-f6-biN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fnW-ts-KPd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1U-lY-DpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="-2510"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LgA-cu-1qV">
+            <objects>
+                <viewController id="3Mq-Lg-8j5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOe-ed-Ab7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyn-0a-QAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="-2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kqg-1X-mwi">
+            <objects>
+                <viewController id="TlV-zh-P56" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yqs-WS-2dC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRI-FM-3TG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="-2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Sm-8w-c2C">
+            <objects>
+                <viewController id="epI-i6-SFm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edy-PP-KcC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4y7-fe-3L0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="-2509"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="AcceptedIcon" width="72" height="72"/>
         <image name="AccountIcon" width="72" height="72"/>
         <image name="AddIcon" width="72" height="72"/>
         <image name="BoardGamePlaceholder" width="77" height="103"/>
         <image name="CheckedEventIcon" width="72" height="72"/>
+        <image name="CreatedIcon" width="72" height="72"/>
         <image name="EventsIcon" width="72" height="72"/>
         <image name="FilterIcon" width="72" height="72"/>
         <image name="FirstPageIcon" width="72" height="72"/>
         <image name="LocationIcon" width="36" height="36"/>
         <image name="MoreIcon" width="72" height="72"/>
         <image name="NotifyIcon" width="72" height="72"/>
+        <image name="PendingIcon" width="72" height="72"/>
         <image name="ProfilePictureShape" width="108" height="108"/>
         <image name="TimeIcon" width="36" height="36"/>
         <namedColor name="AccentRed">
