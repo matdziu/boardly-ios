@@ -1167,6 +1167,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No events found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRN-IW-4nZ">
+                                <rect key="frame" x="32" y="322.5" width="311" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Sdh-yD-mt0">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1181,10 +1187,13 @@
                             <constraint firstItem="nIt-Jv-mkk" firstAttribute="top" secondItem="6En-2d-ebJ" secondAttribute="top" constant="4" id="QE8-Qg-ANO"/>
                             <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="nIt-Jv-mkk" secondAttribute="trailing" constant="4" id="R3e-4n-7q1"/>
                             <constraint firstItem="6En-2d-ebJ" firstAttribute="bottom" secondItem="Sdh-yD-mt0" secondAttribute="bottom" id="RpE-tP-Nso"/>
+                            <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="wRN-IW-4nZ" secondAttribute="trailing" constant="32" id="TIQ-F0-Ihv"/>
                             <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="Sdh-yD-mt0" secondAttribute="trailing" id="TTh-pj-m0Z"/>
                             <constraint firstItem="fJR-jN-JSN" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="X47-y7-Jtm"/>
+                            <constraint firstItem="wRN-IW-4nZ" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" constant="32" id="Y9E-Ru-2S5"/>
                             <constraint firstItem="Sdh-yD-mt0" firstAttribute="top" secondItem="6En-2d-ebJ" secondAttribute="top" id="d1H-Vr-Jg8"/>
                             <constraint firstItem="6En-2d-ebJ" firstAttribute="trailing" secondItem="fJR-jN-JSN" secondAttribute="trailing" id="u8e-Fo-vuj"/>
+                            <constraint firstItem="wRN-IW-4nZ" firstAttribute="centerY" secondItem="RVN-3V-eax" secondAttribute="centerY" id="wxn-te-5am"/>
                             <constraint firstItem="Sdh-yD-mt0" firstAttribute="leading" secondItem="6En-2d-ebJ" secondAttribute="leading" id="yt4-gv-ncb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6En-2d-ebJ"/>
@@ -1192,6 +1201,7 @@
                     <tabBarItem key="tabBarItem" title="My events" image="CheckedEventIcon" id="Tkm-eW-YCN"/>
                     <connections>
                         <outlet property="eventsTableView" destination="fJR-jN-JSN" id="ayy-6C-trm"/>
+                        <outlet property="noEventsLabel" destination="wRN-IW-4nZ" id="k8B-ye-RQL"/>
                         <outlet property="progressView" destination="Sdh-yD-mt0" id="KbK-Gj-X7I"/>
                         <outlet property="segmentedControl" destination="nIt-Jv-mkk" id="tJB-l5-m0I"/>
                     </connections>

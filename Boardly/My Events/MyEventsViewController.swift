@@ -15,6 +15,7 @@ class MyEventsViewController: UIViewController, MyEventsView {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var eventsTableView: UITableView!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var noEventsLabel: UILabel!
     
     private var fetchEventsTriggerSubject = PublishSubject<Bool>()
     private var joinEventSubject = PublishSubject<JoinEventData>()
@@ -73,14 +74,27 @@ class MyEventsViewController: UIViewController, MyEventsView {
         switch sender.selectedSegmentIndex {
         case 0:
             renderedEvents = acceptedEvents
+            toggleNoEventsLabel(eventsListSize: acceptedEvents.count, text: "No accepted events yet")
         case 1:
             renderedEvents = createdEvents
+            toggleNoEventsLabel(eventsListSize: createdEvents.count, text: "No created events yet")
         case 2:
             renderedEvents = pendingEvents
+            toggleNoEventsLabel(eventsListSize: pendingEvents.count, text: "No pending events yet")
         case 3:
             renderedEvents = interestingEvents
+            toggleNoEventsLabel(eventsListSize: interestingEvents.count, text: "No events that interest you yet")
         default:
             renderedEvents = []
+        }
+    }
+    
+    private func toggleNoEventsLabel(eventsListSize: Int, text: String) {
+        if eventsListSize == 0 {
+            noEventsLabel.isHidden = false
+            noEventsLabel.text = text
+        } else {
+            noEventsLabel.isHidden = true
         }
     }
     
