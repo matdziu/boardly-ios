@@ -20,7 +20,7 @@ class MyEventsViewController: UIViewController, MyEventsView {
     private var fetchEventsTriggerSubject = PublishSubject<Bool>()
     private var joinEventSubject = PublishSubject<JoinEventData>()
     private let myEventsPresenter = MyEventsPresenter(myEventsInteractor: MyEventsInteractorImpl(myEventsService: MyEventsServiceImpl()))
-    private var initialize = true
+    private var refreshWhenReturns = true
     
     private var renderedEvents: [BoardlyEvent] = [] {
         didSet {
@@ -48,7 +48,7 @@ class MyEventsViewController: UIViewController, MyEventsView {
         super.viewWillAppear(animated)
         initEmitters()
         myEventsPresenter.bind(myEventsView: self)
-        fetchEventsTriggerSubject.onNext(initialize)
+        fetchEventsTriggerSubject.onNext(refreshWhenReturns)
     }
     
     private func initEmitters() {
@@ -58,7 +58,6 @@ class MyEventsViewController: UIViewController, MyEventsView {
     
     override func viewWillDisappear(_ animated: Bool) {
         myEventsPresenter.unbind()
-        initialize = false
         super.viewWillDisappear(animated)
     }
     
