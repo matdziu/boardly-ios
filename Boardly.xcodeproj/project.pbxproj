@@ -23,6 +23,7 @@
 		9025498521DF9D34006CE583 /* EventViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025498421DF9D34006CE583 /* EventViewRobot.swift */; };
 		9025498721DF9D40006CE583 /* EventPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025498621DF9D40006CE583 /* EventPresenterTest.swift */; };
 		9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025498821DF9D4B006CE583 /* EventInteractorTest.swift */; };
+		902C94D72201AF500098AE0F /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902C94D62201AF500098AE0F /* SequenceExtensions.swift */; };
 		903366D321FA38CC0059A601 /* BaseJoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D221FA38CC0059A601 /* BaseJoinEventViewController.swift */; };
 		903366D721FA4BDD0059A601 /* NotifySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D621FA4BDD0059A601 /* NotifySettings.swift */; };
 		903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903366D821FA4BEF0059A601 /* NotifyViewState.swift */; };
@@ -106,6 +107,20 @@
 		90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7821D24ADC0054300C /* EditProfilePresenter.swift */; };
 		90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7A21D24AEB0054300C /* EditProfileInteractorImpl.swift */; };
 		90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */; };
+		909164A422020A5F002CF718 /* PlayersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164A322020A5F002CF718 /* PlayersViewState.swift */; };
+		909164A622020AC5002CF718 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164A522020AC5002CF718 /* Player.swift */; };
+		909164A822020B48002CF718 /* PartialPlayersViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164A722020B48002CF718 /* PartialPlayersViewState.swift */; };
+		909164AA220210F8002CF718 /* PlayersInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164A9220210F8002CF718 /* PlayersInteractorImpl.swift */; };
+		909164AC22021114002CF718 /* PlayersContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164AB22021114002CF718 /* PlayersContract.swift */; };
+		909164B3220212AD002CF718 /* EventDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164B2220212AD002CF718 /* EventDetailsContract.swift */; };
+		909164B6220212ED002CF718 /* RateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164B5220212ED002CF718 /* RateInput.swift */; };
+		909164B8220218BB002CF718 /* PlayersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164B7220218BB002CF718 /* PlayersPresenter.swift */; };
+		909164BE220226F8002CF718 /* MockPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164BD220226F8002CF718 /* MockPlayersView.swift */; };
+		909164C022022725002CF718 /* MockPlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164BF22022725002CF718 /* MockPlayersService.swift */; };
+		909164C222022731002CF718 /* MockPlayersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C122022731002CF718 /* MockPlayersInteractor.swift */; };
+		909164C422022746002CF718 /* PlayersPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C322022746002CF718 /* PlayersPresenterTest.swift */; };
+		909164C622022751002CF718 /* PlayersInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C522022751002CF718 /* PlayersInteractorTest.swift */; };
+		909164C822022767002CF718 /* PlayersViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C722022767002CF718 /* PlayersViewRobot.swift */; };
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
@@ -155,11 +170,24 @@
 		90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */; };
 		90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CDD21D0F1BD000F710D /* LoginData.swift */; };
 		90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */; };
+		90D057E72201E040005BA7CD /* ChatPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057E62201E040005BA7CD /* ChatPresenterTest.swift */; };
+		90D057E92201E04D005BA7CD /* ChatInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057E82201E04D005BA7CD /* ChatInteractorTest.swift */; };
+		90D057EB2201E055005BA7CD /* ChatViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057EA2201E055005BA7CD /* ChatViewRobot.swift */; };
+		90D057ED2201E067005BA7CD /* MockChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057EC2201E067005BA7CD /* MockChatView.swift */; };
+		90D057EF2201E070005BA7CD /* MockChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057EE2201E070005BA7CD /* MockChatService.swift */; };
+		90D057F12201E0EA005BA7CD /* MockChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D057F02201E0EA005BA7CD /* MockChatInteractor.swift */; };
 		90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A321E5C6A10000C5EF /* BGGConstants.swift */; };
 		90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A521E5C7A00000C5EF /* StringExtensions.swift */; };
 		90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A721E5DFE00000C5EF /* PickGameViewController.swift */; };
 		90D2F96621F701730046944F /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96521F701730046944F /* ViewExtensions.swift */; };
 		90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96721F70BA00046944F /* ViewConstants.swift */; };
+		90E002FB22018A4100F48E75 /* ChatViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E002FA22018A4100F48E75 /* ChatViewState.swift */; };
+		90E002FE22018A8500F48E75 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E002FD22018A8500F48E75 /* Message.swift */; };
+		90E0030022018B7300F48E75 /* PartialChatViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E002FF22018B7300F48E75 /* PartialChatViewState.swift */; };
+		90E0030222018C6100F48E75 /* ChatContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0030122018C6100F48E75 /* ChatContract.swift */; };
+		90E0030422018DE500F48E75 /* RawMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0030322018DE500F48E75 /* RawMessage.swift */; };
+		90E00306220190FC00F48E75 /* ChatInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */; };
+		90E0030A22019A5B00F48E75 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0030922019A5B00F48E75 /* ChatPresenter.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
 		90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */; };
@@ -211,6 +239,7 @@
 		9025498421DF9D34006CE583 /* EventViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewRobot.swift; sourceTree = "<group>"; };
 		9025498621DF9D40006CE583 /* EventPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPresenterTest.swift; sourceTree = "<group>"; };
 		9025498821DF9D4B006CE583 /* EventInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInteractorTest.swift; sourceTree = "<group>"; };
+		902C94D62201AF500098AE0F /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		903366D221FA38CC0059A601 /* BaseJoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseJoinEventViewController.swift; sourceTree = "<group>"; };
 		903366D621FA4BDD0059A601 /* NotifySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifySettings.swift; sourceTree = "<group>"; };
 		903366D821FA4BEF0059A601 /* NotifyViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewState.swift; sourceTree = "<group>"; };
@@ -294,6 +323,20 @@
 		90907F7821D24ADC0054300C /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
 		90907F7A21D24AEB0054300C /* EditProfileInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorImpl.swift; sourceTree = "<group>"; };
 		90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileServiceImpl.swift; sourceTree = "<group>"; };
+		909164A322020A5F002CF718 /* PlayersViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewState.swift; sourceTree = "<group>"; };
+		909164A522020AC5002CF718 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		909164A722020B48002CF718 /* PartialPlayersViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialPlayersViewState.swift; sourceTree = "<group>"; };
+		909164A9220210F8002CF718 /* PlayersInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorImpl.swift; sourceTree = "<group>"; };
+		909164AB22021114002CF718 /* PlayersContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersContract.swift; sourceTree = "<group>"; };
+		909164B2220212AD002CF718 /* EventDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsContract.swift; sourceTree = "<group>"; };
+		909164B5220212ED002CF718 /* RateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInput.swift; sourceTree = "<group>"; };
+		909164B7220218BB002CF718 /* PlayersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPresenter.swift; sourceTree = "<group>"; };
+		909164BD220226F8002CF718 /* MockPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlayersView.swift; sourceTree = "<group>"; };
+		909164BF22022725002CF718 /* MockPlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlayersService.swift; sourceTree = "<group>"; };
+		909164C122022731002CF718 /* MockPlayersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlayersInteractor.swift; sourceTree = "<group>"; };
+		909164C322022746002CF718 /* PlayersPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPresenterTest.swift; sourceTree = "<group>"; };
+		909164C522022751002CF718 /* PlayersInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorTest.swift; sourceTree = "<group>"; };
+		909164C722022767002CF718 /* PlayersViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewRobot.swift; sourceTree = "<group>"; };
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -348,11 +391,24 @@
 		90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceImpl.swift; sourceTree = "<group>"; };
 		90D01CDD21D0F1BD000F710D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		90D01CE021D0FF2B000F710D /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		90D057E62201E040005BA7CD /* ChatPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenterTest.swift; sourceTree = "<group>"; };
+		90D057E82201E04D005BA7CD /* ChatInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractorTest.swift; sourceTree = "<group>"; };
+		90D057EA2201E055005BA7CD /* ChatViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewRobot.swift; sourceTree = "<group>"; };
+		90D057EC2201E067005BA7CD /* MockChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatView.swift; sourceTree = "<group>"; };
+		90D057EE2201E070005BA7CD /* MockChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatService.swift; sourceTree = "<group>"; };
+		90D057F02201E0EA005BA7CD /* MockChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatInteractor.swift; sourceTree = "<group>"; };
 		90D223A321E5C6A10000C5EF /* BGGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGConstants.swift; sourceTree = "<group>"; };
 		90D223A521E5C7A00000C5EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		90D223A721E5DFE00000C5EF /* PickGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
 		90D2F96521F701730046944F /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		90D2F96721F70BA00046944F /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		90E002FA22018A4100F48E75 /* ChatViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewState.swift; sourceTree = "<group>"; };
+		90E002FD22018A8500F48E75 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		90E002FF22018B7300F48E75 /* PartialChatViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialChatViewState.swift; sourceTree = "<group>"; };
+		90E0030122018C6100F48E75 /* ChatContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContract.swift; sourceTree = "<group>"; };
+		90E0030322018DE500F48E75 /* RawMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawMessage.swift; sourceTree = "<group>"; };
+		90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractorImpl.swift; sourceTree = "<group>"; };
+		90E0030922019A5B00F48E75 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
 		90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
@@ -660,6 +716,7 @@
 				90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */,
 				908CA43121F5C16500492B9F /* ScrollViewExtensions.swift */,
 				90D2F96521F701730046944F /* ViewExtensions.swift */,
+				902C94D62201AF500098AE0F /* SequenceExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -697,6 +754,44 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		909164AD22021275002CF718 /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				909164B4220212E5002CF718 /* Models */,
+				909164B2220212AD002CF718 /* EventDetailsContract.swift */,
+			);
+			path = "Event Details";
+			sourceTree = "<group>";
+		};
+		909164B4220212E5002CF718 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				909164B5220212ED002CF718 /* RateInput.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		909164BB220226CA002CF718 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				909164BC220226D4002CF718 /* Mocks */,
+				909164C322022746002CF718 /* PlayersPresenterTest.swift */,
+				909164C522022751002CF718 /* PlayersInteractorTest.swift */,
+				909164C722022767002CF718 /* PlayersViewRobot.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		909164BC220226D4002CF718 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				909164BD220226F8002CF718 /* MockPlayersView.swift */,
+				909164BF22022725002CF718 /* MockPlayersService.swift */,
+				909164C122022731002CF718 /* MockPlayersInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		909A8B6821CACDA800166C93 = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +825,7 @@
 				909A8B9721CACE7D00166C93 /* Custom Views */,
 				909A8B9B21CACE9600166C93 /* Home */,
 				90FFFFD421FE142C00D4C684 /* My Events */,
+				90E002F6220188D500F48E75 /* Event Details */,
 				908D920721D63BEA00C12ECD /* Filter */,
 				909A8B9A21CACE9200166C93 /* Sign Up */,
 				909A8B9921CACE8E00166C93 /* Login */,
@@ -747,6 +843,7 @@
 		909A8B8821CACDAA00166C93 /* BoardlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				90D057E32201DFCC005BA7CD /* Event Details */,
 				9084A23C21DD50900087B5C3 /* Home */,
 				90FFFFE321FE25BD00D4C684 /* My Events */,
 				903788FC21DA5F0D0092FE84 /* Pick Game */,
@@ -802,6 +899,7 @@
 		909A8B9821CACE8400166C93 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				909164AD22021275002CF718 /* Event Details */,
 				9084A22F21DD29660087B5C3 /* Join Event */,
 				909A8BAB21CAD0EE00166C93 /* BaseNavViewController.swift */,
 				90D01CDA21D0E847000F710D /* BaseServiceImpl.swift */,
@@ -879,6 +977,7 @@
 				90857DC321D819C2000A7BFC /* UserLocation.swift */,
 				9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */,
 				9084A23221DD29B40087B5C3 /* JoinEventData.swift */,
+				909164A522020AC5002CF718 /* Player.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -962,6 +1061,87 @@
 				90907F7C21D24AF70054300C /* EditProfileServiceImpl.swift */,
 			);
 			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		90D057E32201DFCC005BA7CD /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				909164BB220226CA002CF718 /* Players */,
+				90D057E42201DFD7005BA7CD /* Chat */,
+			);
+			path = "Event Details";
+			sourceTree = "<group>";
+		};
+		90D057E42201DFD7005BA7CD /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				90D057E52201DFEB005BA7CD /* Mocks */,
+				90D057E62201E040005BA7CD /* ChatPresenterTest.swift */,
+				90D057E82201E04D005BA7CD /* ChatInteractorTest.swift */,
+				90D057EA2201E055005BA7CD /* ChatViewRobot.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		90D057E52201DFEB005BA7CD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90D057EC2201E067005BA7CD /* MockChatView.swift */,
+				90D057EE2201E070005BA7CD /* MockChatService.swift */,
+				90D057F02201E0EA005BA7CD /* MockChatInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		90E002F6220188D500F48E75 /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				90E002F92201890100F48E75 /* Players */,
+				90E002F8220188FD00F48E75 /* Chat */,
+				90E002F7220188F800F48E75 /* Admin */,
+			);
+			path = "Event Details";
+			sourceTree = "<group>";
+		};
+		90E002F7220188F800F48E75 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		90E002F8220188FD00F48E75 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				90E002FC22018A7B00F48E75 /* Models */,
+				90E002FA22018A4100F48E75 /* ChatViewState.swift */,
+				90E002FF22018B7300F48E75 /* PartialChatViewState.swift */,
+				90E0030122018C6100F48E75 /* ChatContract.swift */,
+				90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */,
+				90E0030922019A5B00F48E75 /* ChatPresenter.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		90E002F92201890100F48E75 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				909164A322020A5F002CF718 /* PlayersViewState.swift */,
+				909164A722020B48002CF718 /* PartialPlayersViewState.swift */,
+				909164A9220210F8002CF718 /* PlayersInteractorImpl.swift */,
+				909164AB22021114002CF718 /* PlayersContract.swift */,
+				909164B7220218BB002CF718 /* PlayersPresenter.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		90E002FC22018A7B00F48E75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90E002FD22018A8500F48E75 /* Message.swift */,
+				90E0030322018DE500F48E75 /* RawMessage.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		90FFFFD421FE142C00D4C684 /* My Events */ = {
@@ -1268,6 +1448,7 @@
 			files = (
 				909A8BC821CAE12C00166C93 /* SignUpInteractorImpl.swift in Sources */,
 				908CA43221F5C16500492B9F /* ScrollViewExtensions.swift in Sources */,
+				90E002FE22018A8500F48E75 /* Message.swift in Sources */,
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				90857DCF21D81EC3000A7BFC /* FilterContract.swift in Sources */,
@@ -1275,6 +1456,7 @@
 				9084A22921DD25C40087B5C3 /* PartialHomeViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
+				909164AC22021114002CF718 /* PlayersContract.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
 				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
 				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
@@ -1287,8 +1469,10 @@
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,
 				9084A23521DD2CA80087B5C3 /* HomeInteractorImpl.swift in Sources */,
+				909164B8220218BB002CF718 /* PlayersPresenter.swift in Sources */,
 				90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */,
 				90857DD321D8201F000A7BFC /* SearchResult.swift in Sources */,
+				909164B6220212ED002CF718 /* RateInput.swift in Sources */,
 				90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
@@ -1298,11 +1482,13 @@
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
+				909164A622020AC5002CF718 /* Player.swift in Sources */,
 				9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */,
 				90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */,
 				9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */,
 				9084A23321DD29B40087B5C3 /* JoinEventData.swift in Sources */,
 				90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */,
+				90E0030422018DE500F48E75 /* RawMessage.swift in Sources */,
 				90907F7721D248C30054300C /* EditProfileContract.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
@@ -1317,6 +1503,7 @@
 				90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */,
 				9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
+				90E00306220190FC00F48E75 /* ChatInteractorImpl.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
 				90FFFFE221FE14ED00D4C684 /* MyEventsViewController.swift in Sources */,
 				9025497321DF9123006CE583 /* EventInputData.swift in Sources */,
@@ -1340,7 +1527,9 @@
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
+				90E002FB22018A4100F48E75 /* ChatViewState.swift in Sources */,
 				9025497721DF92B7006CE583 /* EventContract.swift in Sources */,
+				902C94D72201AF500098AE0F /* SequenceExtensions.swift in Sources */,
 				9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */,
 				9084A23B21DD3CE00087B5C3 /* DateExtensions.swift in Sources */,
 				90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */,
@@ -1351,24 +1540,31 @@
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */,
+				909164AA220210F8002CF718 /* PlayersInteractorImpl.swift in Sources */,
 				903366DF21FA4C250059A601 /* NotifyInteractorImpl.swift in Sources */,
 				90907F7121D243EA0054300C /* ProfileData.swift in Sources */,
+				909164A822020B48002CF718 /* PartialPlayersViewState.swift in Sources */,
 				909A8BAA21CAD0CE00166C93 /* BoardlyButton.swift in Sources */,
 				90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */,
+				909164B3220212AD002CF718 /* EventDetailsContract.swift in Sources */,
 				909A8BBC21CAE03D00166C93 /* LoginServiceImpl.swift in Sources */,
+				90E0030A22019A5B00F48E75 /* ChatPresenter.swift in Sources */,
 				903366DD21FA4C170059A601 /* NotifyPresenter.swift in Sources */,
 				9086CCF121F459CC00EE6857 /* EventUIRenderer.swift in Sources */,
 				9084A22B21DD278A0087B5C3 /* HomeContract.swift in Sources */,
 				909A8BB221CAD22800166C93 /* LoginViewController.swift in Sources */,
 				908D920921D63BFF00C12ECD /* FilterViewController.swift in Sources */,
+				909164A422020A5F002CF718 /* PlayersViewState.swift in Sources */,
 				90857DC221D81607000A7BFC /* Filter.swift in Sources */,
 				90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */,
 				90D01CDB21D0E847000F710D /* BaseServiceImpl.swift in Sources */,
 				90857DCD21D81C96000A7BFC /* Game.swift in Sources */,
 				90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */,
+				90E0030022018B7300F48E75 /* PartialChatViewState.swift in Sources */,
 				90FFFFDA21FE145C00D4C684 /* PartialMyEventsViewState.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
+				90E0030222018C6100F48E75 /* ChatContract.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
 				9084A23121DD29770087B5C3 /* BaseJoinEventView.swift in Sources */,
 				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,
@@ -1387,6 +1583,9 @@
 				908D91F521D3CB5400C12ECD /* MockEditProfileView.swift in Sources */,
 				903366EB21FA62DB0059A601 /* NotifyPresenterTest.swift in Sources */,
 				9037890121DA5F3A0092FE84 /* MockPickGameInteractor.swift in Sources */,
+				909164C022022725002CF718 /* MockPlayersService.swift in Sources */,
+				909164C422022746002CF718 /* PlayersPresenterTest.swift in Sources */,
+				909164C822022767002CF718 /* PlayersViewRobot.swift in Sources */,
 				903366E921FA62CF0059A601 /* NotifyViewRobot.swift in Sources */,
 				909A8BD421CAE6AF00166C93 /* MockSignUpInteractor.swift in Sources */,
 				9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */,
@@ -1399,6 +1598,7 @@
 				903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */,
 				9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */,
 				9084A24721DD50F70087B5C3 /* HomePresenterTest.swift in Sources */,
+				909164C622022751002CF718 /* PlayersInteractorTest.swift in Sources */,
 				909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */,
 				90857DE121D8BA3A000A7BFC /* MockFilterInteractor.swift in Sources */,
 				90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */,
@@ -1406,6 +1606,7 @@
 				909A8BE321CAE78300166C93 /* MockLoginService.swift in Sources */,
 				9084A23F21DD50B70087B5C3 /* MockHomeView.swift in Sources */,
 				90FFFFE821FE25E600D4C684 /* MyEventsInteractorTest.swift in Sources */,
+				90D057F12201E0EA005BA7CD /* MockChatInteractor.swift in Sources */,
 				909A8BD821CAE6DB00166C93 /* SignUpViewRobot.swift in Sources */,
 				9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */,
 				90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */,
@@ -1416,17 +1617,24 @@
 				9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */,
 				90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */,
 				90FFFFF021FE262200D4C684 /* MockMyEventsService.swift in Sources */,
+				90D057E92201E04D005BA7CD /* ChatInteractorTest.swift in Sources */,
+				909164C222022731002CF718 /* MockPlayersInteractor.swift in Sources */,
 				90FFFFEC21FE260300D4C684 /* MockMyEventsInteractor.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
 				9084A24321DD50D10087B5C3 /* MockHomeService.swift in Sources */,
+				909164BE220226F8002CF718 /* MockPlayersView.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
+				90D057E72201E040005BA7CD /* ChatPresenterTest.swift in Sources */,
 				908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */,
+				90D057EF2201E070005BA7CD /* MockChatService.swift in Sources */,
+				90D057EB2201E055005BA7CD /* ChatViewRobot.swift in Sources */,
 				909A8BD621CAE6C500166C93 /* MockSignUpService.swift in Sources */,
 				909A8BDC21CAE72200166C93 /* SignUpInteractorTest.swift in Sources */,
 				903366F121FA63000059A601 /* MockNotifyInteractor.swift in Sources */,
 				908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */,
 				903366EF21FA62F30059A601 /* MockNotifyView.swift in Sources */,
 				90FFFFEE21FE261000D4C684 /* MockMyEventsView.swift in Sources */,
+				90D057ED2201E067005BA7CD /* MockChatView.swift in Sources */,
 				9084A24521DD50E00087B5C3 /* HomeViewRobot.swift in Sources */,
 				9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */,
 				9025498121DF9D20006CE583 /* MockEventInteractor.swift in Sources */,

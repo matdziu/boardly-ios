@@ -15,3 +15,15 @@ func isOlderThanOneDay(timestamp: Int64) -> Bool {
     let now = Date().toMillis()
     return (now - timestamp) > DAY_IN_MILLIS && timestamp != 0
 }
+
+func mapToRatedAllWhere(_ predicate: (Player) -> Bool, in playersList: [Player]) -> [Player] {
+    return playersList.map {
+        if predicate($0) {
+            var newPlayer = $0
+            newPlayer.ratedOrSelf = true
+            return newPlayer
+        } else {
+            return $0
+        }
+    }
+}
