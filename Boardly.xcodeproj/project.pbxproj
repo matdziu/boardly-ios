@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9009770222033DF800979752 /* MockAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770122033DF800979752 /* MockAdminView.swift */; };
+		9009770422033E0000979752 /* MockAdminService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770322033E0000979752 /* MockAdminService.swift */; };
+		9009770622033E0800979752 /* MockAdminInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770522033E0800979752 /* MockAdminInteractor.swift */; };
+		9009770822033E5300979752 /* AdminPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770722033E5300979752 /* AdminPresenterTest.swift */; };
+		9009770A22033E5D00979752 /* AdminInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770922033E5D00979752 /* AdminInteractorTest.swift */; };
+		9009770C22033E6600979752 /* AdminViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770B22033E6600979752 /* AdminViewRobot.swift */; };
 		90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */; };
 		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
 		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
@@ -49,6 +55,11 @@
 		9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */; };
 		9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */; };
 		9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */; };
+		9078A3022202CE40008FCF92 /* AdminViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3012202CE40008FCF92 /* AdminViewState.swift */; };
+		9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3032202CF24008FCF92 /* PartialAdminViewState.swift */; };
+		9078A3062202D0F1008FCF92 /* AdminContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3052202D0F1008FCF92 /* AdminContract.swift */; };
+		9078A3082202D227008FCF92 /* AdminInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */; };
+		9078A30A2202D4C7008FCF92 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3092202D4C7008FCF92 /* AdminPresenter.swift */; };
 		9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */; };
 		9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22421DD22600087B5C3 /* HomeViewState.swift */; };
 		9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */; };
@@ -223,6 +234,12 @@
 		174973B4561D8E52863E9120 /* Pods_BoardlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoardlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA71A45AC5D1A4C7F7A241C /* Pods-BoardlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8CBDFBFC742F9D7E618CBF /* Pods_Boardly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boardly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9009770122033DF800979752 /* MockAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdminView.swift; sourceTree = "<group>"; };
+		9009770322033E0000979752 /* MockAdminService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdminService.swift; sourceTree = "<group>"; };
+		9009770522033E0800979752 /* MockAdminInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdminInteractor.swift; sourceTree = "<group>"; };
+		9009770722033E5300979752 /* AdminPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenterTest.swift; sourceTree = "<group>"; };
+		9009770922033E5D00979752 /* AdminInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractorTest.swift; sourceTree = "<group>"; };
+		9009770B22033E6600979752 /* AdminViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewRobot.swift; sourceTree = "<group>"; };
 		90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyDatePicker.swift; sourceTree = "<group>"; };
 		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
 		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
@@ -265,6 +282,11 @@
 		9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenterTest.swift; sourceTree = "<group>"; };
 		9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorTest.swift; sourceTree = "<group>"; };
 		9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		9078A3012202CE40008FCF92 /* AdminViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewState.swift; sourceTree = "<group>"; };
+		9078A3032202CF24008FCF92 /* PartialAdminViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialAdminViewState.swift; sourceTree = "<group>"; };
+		9078A3052202D0F1008FCF92 /* AdminContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminContract.swift; sourceTree = "<group>"; };
+		9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractorImpl.swift; sourceTree = "<group>"; };
+		9078A3092202D4C7008FCF92 /* AdminPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
 		9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotifyService.swift; sourceTree = "<group>"; };
 		9084A22421DD22600087B5C3 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEvent.swift; sourceTree = "<group>"; };
@@ -449,6 +471,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		900976FF22033DA300979752 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				9009770022033DE700979752 /* Mocks */,
+				9009770722033E5300979752 /* AdminPresenterTest.swift */,
+				9009770922033E5D00979752 /* AdminInteractorTest.swift */,
+				9009770B22033E6600979752 /* AdminViewRobot.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		9009770022033DE700979752 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9009770122033DF800979752 /* MockAdminView.swift */,
+				9009770322033E0000979752 /* MockAdminService.swift */,
+				9009770522033E0800979752 /* MockAdminInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		90186E8D21ED0E8100D8DFA9 /* Date Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1109,7 @@
 		90D057E32201DFCC005BA7CD /* Event Details */ = {
 			isa = PBXGroup;
 			children = (
+				900976FF22033DA300979752 /* Admin */,
 				909164BB220226CA002CF718 /* Players */,
 				90D057E42201DFD7005BA7CD /* Chat */,
 			);
@@ -1106,6 +1150,11 @@
 		90E002F7220188F800F48E75 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				9078A3012202CE40008FCF92 /* AdminViewState.swift */,
+				9078A3032202CF24008FCF92 /* PartialAdminViewState.swift */,
+				9078A3052202D0F1008FCF92 /* AdminContract.swift */,
+				9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */,
+				9078A3092202D4C7008FCF92 /* AdminPresenter.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -1477,6 +1526,7 @@
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
+				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				9084A22E21DD28130087B5C3 /* FilteredFetchData.swift in Sources */,
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
@@ -1514,6 +1564,7 @@
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */,
+				9078A3082202D227008FCF92 /* AdminInteractorImpl.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
 				903366D321FA38CC0059A601 /* BaseJoinEventViewController.swift in Sources */,
 				90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */,
@@ -1524,10 +1575,12 @@
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */,
+				9078A30A2202D4C7008FCF92 /* AdminPresenter.swift in Sources */,
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
 				90E002FB22018A4100F48E75 /* ChatViewState.swift in Sources */,
+				9078A3062202D0F1008FCF92 /* AdminContract.swift in Sources */,
 				9025497721DF92B7006CE583 /* EventContract.swift in Sources */,
 				902C94D72201AF500098AE0F /* SequenceExtensions.swift in Sources */,
 				9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */,
@@ -1562,6 +1615,7 @@
 				90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */,
 				90E0030022018B7300F48E75 /* PartialChatViewState.swift in Sources */,
 				90FFFFDA21FE145C00D4C684 /* PartialMyEventsViewState.swift in Sources */,
+				9078A3022202CE40008FCF92 /* AdminViewState.swift in Sources */,
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
 				90E0030222018C6100F48E75 /* ChatContract.swift in Sources */,
@@ -1580,14 +1634,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9009770822033E5300979752 /* AdminPresenterTest.swift in Sources */,
 				908D91F521D3CB5400C12ECD /* MockEditProfileView.swift in Sources */,
 				903366EB21FA62DB0059A601 /* NotifyPresenterTest.swift in Sources */,
 				9037890121DA5F3A0092FE84 /* MockPickGameInteractor.swift in Sources */,
 				909164C022022725002CF718 /* MockPlayersService.swift in Sources */,
 				909164C422022746002CF718 /* PlayersPresenterTest.swift in Sources */,
+				9009770A22033E5D00979752 /* AdminInteractorTest.swift in Sources */,
 				909164C822022767002CF718 /* PlayersViewRobot.swift in Sources */,
 				903366E921FA62CF0059A601 /* NotifyViewRobot.swift in Sources */,
 				909A8BD421CAE6AF00166C93 /* MockSignUpInteractor.swift in Sources */,
+				9009770222033DF800979752 /* MockAdminView.swift in Sources */,
 				9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */,
 				90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */,
 				90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */,
@@ -1609,6 +1666,7 @@
 				90D057F12201E0EA005BA7CD /* MockChatInteractor.swift in Sources */,
 				909A8BD821CAE6DB00166C93 /* SignUpViewRobot.swift in Sources */,
 				9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */,
+				9009770622033E0800979752 /* MockAdminInteractor.swift in Sources */,
 				90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */,
 				9025498321DF9D2B006CE583 /* MockEventService.swift in Sources */,
 				908D91F721D3CB6300C12ECD /* MockEditProfileInteractor.swift in Sources */,
@@ -1635,6 +1693,7 @@
 				903366EF21FA62F30059A601 /* MockNotifyView.swift in Sources */,
 				90FFFFEE21FE261000D4C684 /* MockMyEventsView.swift in Sources */,
 				90D057ED2201E067005BA7CD /* MockChatView.swift in Sources */,
+				9009770C22033E6600979752 /* AdminViewRobot.swift in Sources */,
 				9084A24521DD50E00087B5C3 /* HomeViewRobot.swift in Sources */,
 				9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */,
 				9025498121DF9D20006CE583 /* MockEventInteractor.swift in Sources */,
@@ -1643,6 +1702,7 @@
 				908D91F921D3CB7700C12ECD /* MockEditProfileService.swift in Sources */,
 				9084A24121DD50C60087B5C3 /* MockHomeInteractor.swift in Sources */,
 				9025497F21DF9D15006CE583 /* MockEventView.swift in Sources */,
+				9009770422033E0000979752 /* MockAdminService.swift in Sources */,
 				909A8BDF21CAE74400166C93 /* MockLoginView.swift in Sources */,
 				908D91EF21D3C0AB00C12ECD /* EditProfileViewRobot.swift in Sources */,
 			);
