@@ -57,6 +57,9 @@
 		9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */; };
 		9067C73422049DAD00DC2675 /* PlayersServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */; };
 		9067C73622049F2500DC2675 /* ChatServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73522049F2500DC2675 /* ChatServiceImpl.swift */; };
+		9067C7382204A98800DC2675 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C7372204A98800DC2675 /* PlayersViewController.swift */; };
+		9067C73A2204A9CB00DC2675 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C7392204A9CB00DC2675 /* ChatViewController.swift */; };
+		9067C73C2204A9DF00DC2675 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73B2204A9DF00DC2675 /* AdminViewController.swift */; };
 		9078A3022202CE40008FCF92 /* AdminViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3012202CE40008FCF92 /* AdminViewState.swift */; };
 		9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3032202CF24008FCF92 /* PartialAdminViewState.swift */; };
 		9078A3062202D0F1008FCF92 /* AdminContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3052202D0F1008FCF92 /* AdminContract.swift */; };
@@ -288,6 +291,9 @@
 		9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersServiceImpl.swift; sourceTree = "<group>"; };
 		9067C73522049F2500DC2675 /* ChatServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceImpl.swift; sourceTree = "<group>"; };
+		9067C7372204A98800DC2675 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		9067C7392204A9CB00DC2675 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9067C73B2204A9DF00DC2675 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		9078A3012202CE40008FCF92 /* AdminViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewState.swift; sourceTree = "<group>"; };
 		9078A3032202CF24008FCF92 /* PartialAdminViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialAdminViewState.swift; sourceTree = "<group>"; };
 		9078A3052202D0F1008FCF92 /* AdminContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminContract.swift; sourceTree = "<group>"; };
@@ -1165,6 +1171,7 @@
 				9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */,
 				9078A3092202D4C7008FCF92 /* AdminPresenter.swift */,
 				9092F84A22041CEE000A7BC5 /* AdminServiceImpl.swift */,
+				9067C73B2204A9DF00DC2675 /* AdminViewController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -1179,6 +1186,7 @@
 				90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */,
 				90E0030922019A5B00F48E75 /* ChatPresenter.swift */,
 				9067C73522049F2500DC2675 /* ChatServiceImpl.swift */,
+				9067C7392204A9CB00DC2675 /* ChatViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1192,6 +1200,7 @@
 				909164AB22021114002CF718 /* PlayersContract.swift */,
 				909164B7220218BB002CF718 /* PlayersPresenter.swift */,
 				9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */,
+				9067C7372204A98800DC2675 /* PlayersViewController.swift */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -1523,6 +1532,7 @@
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
 				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
 				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
+				9067C73A2204A9CB00DC2675 /* ChatViewController.swift in Sources */,
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
 				903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
@@ -1548,6 +1558,7 @@
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
 				9092F84922041486000A7BC5 /* EventDetailsServiceImpl.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
+				9067C73C2204A9DF00DC2675 /* AdminViewController.swift in Sources */,
 				909164A622020AC5002CF718 /* Player.swift in Sources */,
 				9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */,
 				90857DDB21D8B983000A7BFC /* FilterInteractorImpl.swift in Sources */,
@@ -1568,6 +1579,7 @@
 				909A8BA221CAD07800166C93 /* ColorConstants.swift in Sources */,
 				90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */,
 				9025497B21DF94D5006CE583 /* EventPresenter.swift in Sources */,
+				9067C7382204A98800DC2675 /* PlayersViewController.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90E00306220190FC00F48E75 /* ChatInteractorImpl.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
