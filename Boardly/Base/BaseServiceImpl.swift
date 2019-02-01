@@ -66,6 +66,14 @@ class BaseServiceImpl {
         return database.reference(withPath: "\(PLAYERS_NODE)/\(eventId)/\(PENDING_EVENTS_NODE)")
     }
     
+    func getUserRatingHashesRef(userId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(RATING_HASHES)")
+    }
+    
+    func getAcceptedPlayersNode(eventId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(PLAYERS_NODE)/\(eventId)/\(ACCEPTED_EVENTS_NODE)")
+    }
+    
     func acceptedEventIdsList() -> Observable<[String]> {
         return idsList(idsDatabaseReference: getUserAcceptedEventsNodeRef(userId: getCurrentUserId()))
     }

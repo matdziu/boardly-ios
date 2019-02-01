@@ -132,6 +132,7 @@
 		909164C422022746002CF718 /* PlayersPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C322022746002CF718 /* PlayersPresenterTest.swift */; };
 		909164C622022751002CF718 /* PlayersInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C522022751002CF718 /* PlayersInteractorTest.swift */; };
 		909164C822022767002CF718 /* PlayersViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C722022767002CF718 /* PlayersViewRobot.swift */; };
+		9092F84922041486000A7BC5 /* EventDetailsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */; };
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
@@ -359,6 +360,7 @@
 		909164C322022746002CF718 /* PlayersPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersPresenterTest.swift; sourceTree = "<group>"; };
 		909164C522022751002CF718 /* PlayersInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorTest.swift; sourceTree = "<group>"; };
 		909164C722022767002CF718 /* PlayersViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewRobot.swift; sourceTree = "<group>"; };
+		9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsServiceImpl.swift; sourceTree = "<group>"; };
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 			children = (
 				909164B4220212E5002CF718 /* Models */,
 				909164B2220212AD002CF718 /* EventDetailsContract.swift */,
+				9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */,
 			);
 			path = "Event Details";
 			sourceTree = "<group>";
@@ -1531,6 +1534,7 @@
 				9084A22E21DD28130087B5C3 /* FilteredFetchData.swift in Sources */,
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
 				909A8BAE21CAD11100166C93 /* HomeViewController.swift in Sources */,
+				9092F84922041486000A7BC5 /* EventDetailsServiceImpl.swift in Sources */,
 				90857DC421D819C2000A7BFC /* UserLocation.swift in Sources */,
 				909164A622020AC5002CF718 /* Player.swift in Sources */,
 				9025497921DF94CD006CE583 /* EventInteractorImpl.swift in Sources */,
