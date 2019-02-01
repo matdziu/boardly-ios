@@ -158,4 +158,86 @@ class BaseServiceImpl {
         }
         return resultSubject
     }
+    
+    private func completePlayerProfile(partialPlayer: Player) -> Single<Player> {
+        let resultSubject = PublishSubject<Player>()
+        
+        getUserNodeRef(userId: partialPlayer.id)
+            .observeSingleEvent(of: .value) { snapshot in
+                var player = Player(snapshot: snapshot)
+                player.id = partialPlayer.id
+                player.helloText = partialPlayer.helloText
+                resultSubject.onNext(player)
+        }
+        
+        return resultSubject.asSingle()
+    }
+    
+    func completePlayerProfiles(partialPlayersList: [Player]) -> Observable<[Player]> {
+        return Observable
+            .from(partialPlayersList)
+            .flatMap { self.completePlayerProfile(partialPlayer: $0) }
+            .toArray()
+    }
+    
+    func getPartialPlayersProfiles(databaseReference: DatabaseReference) -> Observable<[Player]> {
+        let resultSubject = PublishSubject<[Player]>()
+        
+        databaseReference.observeSingleEvent(of: .value) { snapshot in
+            var partialPlayersList: [Player] = []
+            for case let childSnapshot as DataSnapshot in snapshot.children {
+                let id = childSnapshot.key
+                let helloText = childSnapshot.value as? String ?? ""
+                partialPlayersList.append(Player(id: id, helloText: helloText))
+            }
+            resultSubject.onNext(partialPlayersList)
+        }
+        
+        return resultSubject
+    }
+    
+    private func checkIfRatedOrSelf(player: Player, currentRatingHash: String) -> Single<Player> {
+        var modifiedPlayer = player
+        let resultSubject = PublishSubject<Player>()
+        
+        if modifiedPlayer.id == getCurrentUserId() {
+            modifiedPlayer.ratedOrSelf = true
+            resultSubject.onNext(modifiedPlayer)
+            return resultSubject.asSingle()
+        }
+        
+        getUserRatingHashesRef(userId: player.id)
+            .child(currentRatingHash)
+            .observeSingleEvent(of: .value) { snapshot in
+                let ratedOrSelf = snapshot.value as? Bool
+                modifiedPlayer.ratedOrSelf = ratedOrSelf != nil
+                resultSubject.onNext(modifiedPlayer)
+        }
+        
+        return resultSubject.asSingle()
+    }
+    
+    func completePlayerProfilesWithRating(partialPlayersList: [Player],
+                                          eventId: String) -> Observable<[Player]> {
+        let currentRatingHash = eventId + getCurrentUserId()
+        return Observable
+            .from(partialPlayersList)
+            .flatMap { self.completeSinglePlayerWithRating(
+                player: $0,
+                currentRatingHash: currentRatingHash,
+                eventId: eventId) }
+            .toArray()
+    }
+    
+    private func completeSinglePlayerWithRating(player: Player,
+                                                currentRatingHash: String,
+                                                eventId: String) -> Single<Player> {
+        return completePlayerProfile(partialPlayer: player)
+            .flatMap { self.checkIfRatedOrSelf(player: $0, currentRatingHash: currentRatingHash) }
+            .map { player -> Player in
+                var modifiedPlayer = player
+                modifiedPlayer.eventId = eventId
+                return modifiedPlayer
+        }
+    }
 }

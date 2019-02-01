@@ -133,6 +133,7 @@
 		909164C622022751002CF718 /* PlayersInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C522022751002CF718 /* PlayersInteractorTest.swift */; };
 		909164C822022767002CF718 /* PlayersViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909164C722022767002CF718 /* PlayersViewRobot.swift */; };
 		9092F84922041486000A7BC5 /* EventDetailsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */; };
+		9092F84B22041CEE000A7BC5 /* AdminServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092F84A22041CEE000A7BC5 /* AdminServiceImpl.swift */; };
 		909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8B7421CACDA800166C93 /* AppDelegate.swift */; };
 		909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7821CACDA800166C93 /* Main.storyboard */; };
 		909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909A8B7B21CACDAA00166C93 /* Assets.xcassets */; };
@@ -361,6 +362,7 @@
 		909164C522022751002CF718 /* PlayersInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersInteractorTest.swift; sourceTree = "<group>"; };
 		909164C722022767002CF718 /* PlayersViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewRobot.swift; sourceTree = "<group>"; };
 		9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsServiceImpl.swift; sourceTree = "<group>"; };
+		9092F84A22041CEE000A7BC5 /* AdminServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminServiceImpl.swift; sourceTree = "<group>"; };
 		909A8B7121CACDA800166C93 /* Boardly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boardly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909A8B7421CACDA800166C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909A8B7921CACDA800166C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1158,6 +1160,7 @@
 				9078A3052202D0F1008FCF92 /* AdminContract.swift */,
 				9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */,
 				9078A3092202D4C7008FCF92 /* AdminPresenter.swift */,
+				9092F84A22041CEE000A7BC5 /* AdminServiceImpl.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -1517,6 +1520,7 @@
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
 				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
 				90FFFFDC21FE146800D4C684 /* MyEventsInteractorImpl.swift in Sources */,
+				9092F84B22041CEE000A7BC5 /* AdminServiceImpl.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,

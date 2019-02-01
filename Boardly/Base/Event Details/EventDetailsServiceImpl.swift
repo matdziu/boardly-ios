@@ -42,16 +42,17 @@ class EventDetailsServiceImpl: BaseServiceImpl, EventDetailsService {
                                eventUsersNode: getAcceptedPlayersNode(eventId: eventId),
                                eventId: eventId,
                                userId: playerId)
+            .map { _ in true }
     }
     
     func deleteNodesTask(userEventsNode: DatabaseReference,
                          eventUsersNode: DatabaseReference,
                          eventId: String,
-                         userId: String) -> Observable<Bool> {
+                         userId: String) -> Observable<String> {
         return Observable.zip(
             deleteEventFromUsersNodeTask(userEventsNode: userEventsNode, eventId: eventId),
             deleteUserFromEventsNodeTask(eventUsersNode: eventUsersNode, userId: userId)) {
-                _, _ in return true
+                _, helloText in return helloText
         }
     }
     
