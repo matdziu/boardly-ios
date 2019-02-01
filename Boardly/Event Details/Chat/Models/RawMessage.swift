@@ -59,4 +59,13 @@ struct RawMessage: Equatable {
             return MessageType.received
         }
     }
+    
+    func toDict() -> [String: Any] {
+        return ["id" : id,
+            "text"  : text,
+            "senderId" : senderId,
+            "timestamp" : timestamp,
+            "senderName" : senderName,
+            "senderImageUrl" : senderImageUrl]
+    }
 }

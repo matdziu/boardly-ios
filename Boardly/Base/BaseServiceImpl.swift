@@ -74,6 +74,10 @@ class BaseServiceImpl {
         return database.reference(withPath: "\(PLAYERS_NODE)/\(eventId)/\(ACCEPTED_EVENTS_NODE)")
     }
     
+    func getChatNodeReference(eventId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(CHATS_NODE)/\(eventId)")
+    }
+    
     func acceptedEventIdsList() -> Observable<[String]> {
         return idsList(idsDatabaseReference: getUserAcceptedEventsNodeRef(userId: getCurrentUserId()))
     }
