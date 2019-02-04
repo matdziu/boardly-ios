@@ -14,6 +14,7 @@ class ChatViewController: UIViewController, ChatView {
     
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageTextView: BoardlyTextView!
+    @IBOutlet weak var messagesTableView: UITableView!
     
     private let chatPresenter = ChatPresenter(chatInteractor: ChatInteractorImpl(chatService: ChatServiceImpl(), initialMessagesList: []))
     private var newMessagesListenerToggleSubject: PublishSubject<Bool>!
@@ -23,8 +24,14 @@ class ChatViewController: UIViewController, ChatView {
     
     private var messages: [Message] = [] {
         didSet {
-            
+            messagesTableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        messagesTableView.tableFooterView = UIView()
+        messagesTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +67,7 @@ class ChatViewController: UIViewController, ChatView {
         showProgress(show: chatViewState.progress)
         showIncentiveText(show: chatViewState.messagesList.isEmpty && !chatViewState.progress)
         messages = chatViewState.messagesList
+        messages = [Message(type: .sent), Message(type: .sent)]
     }
     
     private func showProgress(show: Bool) {
@@ -68,5 +76,18 @@ class ChatViewController: UIViewController, ChatView {
     
     private func showIncentiveText(show: Bool) {
         
+    }
+}
+
+extension ChatViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let messageCell = tableView.dequeueReusableCell(withIdentifier: RECEIVED_MESSAGE_CELL, for: indexPath) as! ReceivedMessageCell
+        messageCell.messageLabel.text = "aoidahodiahoisdajojoasidjaaoidahodi"
+        return messageCell
     }
 }

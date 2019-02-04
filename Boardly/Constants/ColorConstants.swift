@@ -10,5 +10,6 @@ enum Color: String {
     case primaryBlue = "PrimaryBlue"
     case errorRed = "ErrorRed"
     case grey = "Grey"
+    case primaryBlueDim = "PrimaryBlueDim"
 }
 

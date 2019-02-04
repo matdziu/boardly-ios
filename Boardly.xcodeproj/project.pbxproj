@@ -55,6 +55,9 @@
 		9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */; };
 		9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */; };
 		9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D09022080224004EF46B /* EventDetailsViewController.swift */; };
+		9054D09422085422004EF46B /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D09322085422004EF46B /* SentMessageCell.swift */; };
+		9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D0952208542E004EF46B /* ReceivedMessageCell.swift */; };
+		9054D098220858D4004EF46B /* RoundEdgesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D097220858D4004EF46B /* RoundEdgesLabel.swift */; };
 		9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */; };
 		9067C73422049DAD00DC2675 /* PlayersServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */; };
 		9067C73622049F2500DC2675 /* ChatServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73522049F2500DC2675 /* ChatServiceImpl.swift */; };
@@ -290,6 +293,9 @@
 		9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenterTest.swift; sourceTree = "<group>"; };
 		9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorTest.swift; sourceTree = "<group>"; };
 		9054D09022080224004EF46B /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		9054D09322085422004EF46B /* SentMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
+		9054D0952208542E004EF46B /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
+		9054D097220858D4004EF46B /* RoundEdgesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundEdgesLabel.swift; sourceTree = "<group>"; };
 		9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersServiceImpl.swift; sourceTree = "<group>"; };
 		9067C73522049F2500DC2675 /* ChatServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceImpl.swift; sourceTree = "<group>"; };
@@ -641,6 +647,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		9054D0922208540F004EF46B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9054D09322085422004EF46B /* SentMessageCell.swift */,
+				9054D0952208542E004EF46B /* ReceivedMessageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9084A22C21DD28020087B5C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +967,7 @@
 				909A8BA921CAD0CE00166C93 /* BoardlyButton.swift */,
 				90A690B921F3079F00365E32 /* BoardlyTextView.swift */,
 				90A690BB21F3088200365E32 /* JoinEventViewController.swift */,
+				9054D097220858D4004EF46B /* RoundEdgesLabel.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -1182,6 +1198,7 @@
 		90E002F8220188FD00F48E75 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9054D0922208540F004EF46B /* Cells */,
 				90E002FC22018A7B00F48E75 /* Models */,
 				90E002FA22018A4100F48E75 /* ChatViewState.swift */,
 				90E002FF22018B7300F48E75 /* PartialChatViewState.swift */,
@@ -1530,6 +1547,7 @@
 				9084A22921DD25C40087B5C3 /* PartialHomeViewState.swift in Sources */,
 				909A8BA621CAD0A500166C93 /* ViewControllerConstants.swift in Sources */,
 				909A8BAC21CAD0EE00166C93 /* BaseNavViewController.swift in Sources */,
+				9054D09422085422004EF46B /* SentMessageCell.swift in Sources */,
 				9067C73622049F2500DC2675 /* ChatServiceImpl.swift in Sources */,
 				909164AC22021114002CF718 /* PlayersContract.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
@@ -1602,6 +1620,7 @@
 				90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */,
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
+				9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
 				903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */,
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
@@ -1651,6 +1670,7 @@
 				90907F7B21D24AEB0054300C /* EditProfileInteractorImpl.swift in Sources */,
 				9025497521DF9243006CE583 /* GamePickEvent.swift in Sources */,
 				90E0030222018C6100F48E75 /* ChatContract.swift in Sources */,
+				9054D098220858D4004EF46B /* RoundEdgesLabel.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
 				9084A23121DD29770087B5C3 /* BaseJoinEventView.swift in Sources */,
 				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,

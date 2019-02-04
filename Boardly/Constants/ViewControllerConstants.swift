@@ -17,3 +17,5 @@ let SAVED_FILTER = "savedFilter"
 
 let GAME_CELL_ID = "gameCell"
 let EVENT_CELL_ID = "eventCell"
+let SENT_MESSAGE_CELL = "sentMessageCell"
+let RECEIVED_MESSAGE_CELL = "receivedMessageCell"
