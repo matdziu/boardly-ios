@@ -546,16 +546,55 @@
                                     <segment title="" image="PlayersIcon"/>
                                 </segments>
                                 <color key="tintColor" name="PrimaryBlue"/>
+                                <connections>
+                                    <action selector="containerSwitched:" destination="SKf-ej-ypA" eventType="valueChanged" id="146-f8-fbk"/>
+                                </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5u-Cl-KOq">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <connections>
+                                    <segue destination="n5q-AO-2mp" kind="embed" id="SWe-xP-qEV"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bep-g4-1iM">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <connections>
+                                    <segue destination="Jtm-Ks-27x" kind="embed" id="zNW-NW-RrA"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u9-4y-oyE">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <connections>
+                                    <segue destination="YAL-wv-1F3" kind="embed" id="k8G-Ur-dja"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Bep-g4-1iM" firstAttribute="leading" secondItem="Axx-0N-ZKl" secondAttribute="leading" id="0vP-mC-8Tk"/>
+                            <constraint firstItem="b5u-Cl-KOq" firstAttribute="leading" secondItem="Axx-0N-ZKl" secondAttribute="leading" id="C6Y-qX-EOr"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="trailing" secondItem="b5u-Cl-KOq" secondAttribute="trailing" id="DJc-T7-vRQ"/>
                             <constraint firstItem="Axx-0N-ZKl" firstAttribute="trailing" secondItem="k02-uY-kyn" secondAttribute="trailing" constant="4" id="DkT-Oe-gDg"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="bottom" secondItem="Bep-g4-1iM" secondAttribute="bottom" id="FyK-UC-dqW"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="bottom" secondItem="6u9-4y-oyE" secondAttribute="bottom" id="LQ2-sd-6D0"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="trailing" secondItem="Bep-g4-1iM" secondAttribute="trailing" id="Oao-JE-odz"/>
+                            <constraint firstItem="6u9-4y-oyE" firstAttribute="top" secondItem="k02-uY-kyn" secondAttribute="bottom" constant="4" id="Yhd-k0-Cdj"/>
                             <constraint firstItem="k02-uY-kyn" firstAttribute="leading" secondItem="Axx-0N-ZKl" secondAttribute="leading" constant="4" id="coB-o8-ao8"/>
                             <constraint firstItem="k02-uY-kyn" firstAttribute="top" secondItem="Axx-0N-ZKl" secondAttribute="top" constant="4" id="exR-mb-vsN"/>
+                            <constraint firstItem="b5u-Cl-KOq" firstAttribute="top" secondItem="k02-uY-kyn" secondAttribute="bottom" constant="4" id="ix4-sm-wt5"/>
+                            <constraint firstItem="6u9-4y-oyE" firstAttribute="leading" secondItem="Axx-0N-ZKl" secondAttribute="leading" id="nXk-kS-YKv"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="bottom" secondItem="b5u-Cl-KOq" secondAttribute="bottom" id="ofB-nc-f5C"/>
+                            <constraint firstItem="Bep-g4-1iM" firstAttribute="top" secondItem="k02-uY-kyn" secondAttribute="bottom" constant="4" id="qHC-Rm-qMz"/>
+                            <constraint firstItem="Axx-0N-ZKl" firstAttribute="trailing" secondItem="6u9-4y-oyE" secondAttribute="trailing" id="uYI-cW-JEw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Axx-0N-ZKl"/>
                     </view>
+                    <connections>
+                        <outlet property="adminView" destination="6u9-4y-oyE" id="uKx-oU-aYR"/>
+                        <outlet property="chatView" destination="b5u-Cl-KOq" id="EyD-mU-HtN"/>
+                        <outlet property="playersView" destination="Bep-g4-1iM" id="AZK-WE-4Qv"/>
+                        <outlet property="segmentedControl" destination="k02-uY-kyn" id="cav-ao-HeM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVR-BT-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2043,6 +2082,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EJ-wh-d81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-543" y="-765"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="UvU-GJ-Fac">
+            <objects>
+                <viewController id="n5q-AO-2mp" customClass="ChatViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oro-Ou-mlH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-xp-UPx">
+                                <rect key="frame" x="156" y="229" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erP-XB-Wjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-634" y="-2499"/>
+        </scene>
+        <!--Players View Controller-->
+        <scene sceneID="BwN-i7-sog">
+            <objects>
+                <viewController id="Jtm-Ks-27x" customClass="PlayersViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNM-74-bJa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLAYERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqz-GF-4DQ">
+                                <rect key="frame" x="152" y="208" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-Ba-r2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="-2524"/>
+        </scene>
+        <!--Admin View Controller-->
+        <scene sceneID="DP6-s7-57X">
+            <objects>
+                <viewController id="YAL-wv-1F3" customClass="AdminViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nJF-2u-cZf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADMIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-Xo-b7a">
+                                <rect key="frame" x="177" y="250" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w3-hD-5XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="-3143"/>
         </scene>
     </scenes>
     <resources>

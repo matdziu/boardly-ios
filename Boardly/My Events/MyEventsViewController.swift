@@ -20,13 +20,11 @@ class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
     private var fetchEventsTriggerSubject = PublishSubject<Bool>()
     private let myEventsPresenter = MyEventsPresenter(myEventsInteractor: MyEventsInteractorImpl(myEventsService: MyEventsServiceImpl()))
     private var refreshWithProgress = true
+    private var currentlySelectedIndex = 0
     
     private var renderedEvents: [BoardlyEvent] = [] {
         didSet {
             eventsTableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.eventsTableView.scrollToTop()
-            }
         }
     }
     
@@ -66,6 +64,12 @@ class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
     }
     
     @IBAction func containerSwitched(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex != currentlySelectedIndex {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.eventsTableView.scrollToTop()
+            }
+        }
+        currentlySelectedIndex = sender.selectedSegmentIndex
         switch sender.selectedSegmentIndex {
         case 0:
             renderedEvents = acceptedEvents
