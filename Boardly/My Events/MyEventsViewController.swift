@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-class MyEventsViewController: UIViewController, MyEventsView {
+class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var eventsTableView: UITableView!
@@ -18,9 +18,8 @@ class MyEventsViewController: UIViewController, MyEventsView {
     @IBOutlet weak var noEventsLabel: UILabel!
     
     private var fetchEventsTriggerSubject = PublishSubject<Bool>()
-    private var joinEventSubject = PublishSubject<JoinEventData>()
     private let myEventsPresenter = MyEventsPresenter(myEventsInteractor: MyEventsInteractorImpl(myEventsService: MyEventsServiceImpl()))
-    private var refreshWhenReturns = true
+    private var refreshWithProgress = true
     
     private var renderedEvents: [BoardlyEvent] = [] {
         didSet {
@@ -48,7 +47,8 @@ class MyEventsViewController: UIViewController, MyEventsView {
         super.viewWillAppear(animated)
         initEmitters()
         myEventsPresenter.bind(myEventsView: self)
-        fetchEventsTriggerSubject.onNext(refreshWhenReturns)
+        fetchEventsTriggerSubject.onNext(refreshWithProgress)
+        refreshWithProgress = true
     }
     
     private func initEmitters() {
@@ -63,10 +63,6 @@ class MyEventsViewController: UIViewController, MyEventsView {
     
     func fetchEventsTriggerEmitter() -> Observable<Bool> {
         return fetchEventsTriggerSubject
-    }
-    
-    func joinEventEmitter() -> Observable<JoinEventData> {
-        return joinEventSubject
     }
     
     @IBAction func containerSwitched(_ sender: UISegmentedControl) {
@@ -115,11 +111,10 @@ class MyEventsViewController: UIViewController, MyEventsView {
     }
     
     private func enterEvent(event: BoardlyEvent) {
-        
-    }
-    
-    private func joinEvent(eventId: String) {
-        
+        refreshWithProgress = false
+        guard let eventDetailsViewController = storyboard?.instantiateViewController(withIdentifier: EVENT_DETAILS_VIEW_CONTROLLER_ID) as? EventDetailsViewController else { return }
+        eventDetailsViewController.isAdmin = event.type == .CREATED
+        self.navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
 }
 

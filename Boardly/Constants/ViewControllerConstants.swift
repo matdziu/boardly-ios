@@ -11,6 +11,7 @@ let MAIN_TAB_VIEW_CONTROLLER_ID = "mainTabViewController"
 let LOGIN_VIEW_CONTROLLER_ID = "loginViewController"
 let PICK_GAME_VIEW_CONTROLLER_ID = "pickGameViewController"
 let JOIN_EVENT_VIEW_CONTROLLER_ID = "joinEventViewController"
+let EVENT_DETAILS_VIEW_CONTROLLER_ID = "eventDetailsViewController"
 
 let SAVED_FILTER = "savedFilter"
 

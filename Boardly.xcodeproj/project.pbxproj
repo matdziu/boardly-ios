@@ -54,6 +54,7 @@
 		9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */; };
 		9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */; };
 		9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */; };
+		9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D09022080224004EF46B /* EventDetailsViewController.swift */; };
 		9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */; };
 		9067C73422049DAD00DC2675 /* PlayersServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */; };
 		9067C73622049F2500DC2675 /* ChatServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9067C73522049F2500DC2675 /* ChatServiceImpl.swift */; };
@@ -288,6 +289,7 @@
 		9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewRobot.swift; sourceTree = "<group>"; };
 		9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenterTest.swift; sourceTree = "<group>"; };
 		9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorTest.swift; sourceTree = "<group>"; };
+		9054D09022080224004EF46B /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		9058C2F721E92C9B0032FDCF /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		9067C73322049DAD00DC2675 /* PlayersServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersServiceImpl.swift; sourceTree = "<group>"; };
 		9067C73522049F2500DC2675 /* ChatServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServiceImpl.swift; sourceTree = "<group>"; };
@@ -1158,6 +1160,7 @@
 				90E002F92201890100F48E75 /* Players */,
 				90E002F8220188FD00F48E75 /* Chat */,
 				90E002F7220188F800F48E75 /* Admin */,
+				9054D09022080224004EF46B /* EventDetailsViewController.swift */,
 			);
 			path = "Event Details";
 			sourceTree = "<group>";
@@ -1552,6 +1555,7 @@
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
+				9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				9084A22E21DD28130087B5C3 /* FilteredFetchData.swift in Sources */,
 				903788F921DA56120092FE84 /* PickGameInteractorImpl.swift in Sources */,
