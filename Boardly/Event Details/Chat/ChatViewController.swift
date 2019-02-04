@@ -40,6 +40,8 @@ class ChatViewController: UIViewController, ChatView {
         super.viewDidLoad()
         messagesTableView.tableFooterView = UIView()
         messagesTableView.dataSource = self
+        messagesTableView.delegate = self
+        messagesTableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,7 +97,7 @@ class ChatViewController: UIViewController, ChatView {
     }
 }
 
-extension ChatViewController: UITableViewDataSource {
+extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
@@ -107,11 +109,22 @@ extension ChatViewController: UITableViewDataSource {
         case .sent:
             let sentMessageCell = getSentMessageCell(tableView: tableView, indexPath: indexPath)
             sentMessageCell.bind(message: message.text, isSent: message.isSent)
+            sentMessageCell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
             return sentMessageCell
         case .received:
             let receivedMessageCell = getReceivedMessageCell(tableView: tableView, indexPath: indexPath)
             receivedMessageCell.bind(message: message.text, name: message.senderName, profilePictureUrl: message.senderImageUrl)
+            receivedMessageCell.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
             return receivedMessageCell
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let actualPosition = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height - messagesTableView.frame.size.height
+        if actualPosition >= contentHeight {
+            guard let lastTimestamp = messages.last?.timestamp else { return }
+            batchFetchTriggerSubject.onNext(lastTimestamp)
         }
     }
     

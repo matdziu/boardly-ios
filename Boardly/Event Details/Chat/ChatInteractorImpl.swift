@@ -24,7 +24,7 @@ class ChatInteractorImpl: ChatInteractor {
         return chatService.listenForNewMessages(eventId: eventId)
             .map { $0.toMessage(currentUserId: self.chatService.userId) }
             .do(onNext: { newMessage in
-                self.currentMessagesList = self.currentMessagesList.filter { $0.id != newMessage.id } + [newMessage]
+                self.currentMessagesList = [newMessage] + self.currentMessagesList.filter { $0.id != newMessage.id }
             })
             .map { _ in PartialChatViewState.messagesListChanged(newMessagesList: self.currentMessagesList) }
     }
@@ -38,7 +38,7 @@ class ChatInteractorImpl: ChatInteractor {
         return chatService.fetchMessagesBatch(eventId: eventId, fromTimestamp: fromTimestamp)
             .map { $0.map { $0.toMessage(currentUserId: self.chatService.userId) } }
             .do(onNext: { messagesBatchList in
-                self.currentMessagesList = (messagesBatchList.sorted(by: { $0.timestamp < $1.timestamp }) + self.currentMessagesList)
+                self.currentMessagesList = (self.currentMessagesList + (messagesBatchList.sorted(by: { $0.timestamp > $1.timestamp })))
                     .distinct { $0.id }
             })
             .map { _ in PartialChatViewState.messagesListChanged(newMessagesList: self.currentMessagesList) }
@@ -49,7 +49,7 @@ class ChatInteractorImpl: ChatInteractor {
                                     text: message,
                                     senderId: chatService.userId)
         chatService.sendMessage(rawMessage: rawMessage, eventId: eventId)
-        currentMessagesList = currentMessagesList + [rawMessage.toMessage(currentUserId: chatService.userId, isSent: false)]
+        currentMessagesList = [rawMessage.toMessage(currentUserId: chatService.userId, isSent: false)] + currentMessagesList
         return Observable.just(PartialChatViewState.messagesListChanged(newMessagesList: currentMessagesList))
     }
     

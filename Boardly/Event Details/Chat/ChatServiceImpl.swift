@@ -12,7 +12,9 @@ import FirebaseDatabase
 
 class ChatServiceImpl: BaseServiceImpl, ChatService {
     
-    private let batchSize: UInt = 10
+    private let regularBatchSize: UInt = 10
+    private let firstBatchSize: UInt = 25
+    private var firstFetch = true
     
     var userId: String {
         get {
@@ -74,7 +76,7 @@ class ChatServiceImpl: BaseServiceImpl, ChatService {
         getChatNodeReference(eventId: eventId)
             .queryOrdered(byChild: TIMESTAMP_CHILD)
             .queryEnding(atValue: fromTimestamp)
-            .queryLimited(toLast: batchSize)
+            .queryLimited(toLast: getBatchSize())
             .observeSingleEvent(of: .value) { snapshot in
                 var messagesBatchList: [RawMessage] = []
                 for case let messageSnapshot as DataSnapshot in snapshot.children {
@@ -85,6 +87,15 @@ class ChatServiceImpl: BaseServiceImpl, ChatService {
         }
         
         return resultSubject
+    }
+    
+    private func getBatchSize() -> UInt {
+        if firstFetch {
+            firstFetch = false
+            return firstBatchSize
+        } else {
+            return regularBatchSize
+        }
     }
     
     func sendMessage(rawMessage: RawMessage, eventId: String) {
