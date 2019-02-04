@@ -28,7 +28,7 @@ class ChatServiceImpl: BaseServiceImpl, ChatService {
     private func newMessageAdded(eventId: String) -> Observable<RawMessage> {
         let resultSubject = PublishSubject<RawMessage>()
         
-        getChatNodeReference(eventId: eventId).observe(.childAdded) { snapshot in
+        getChatNodeReference(eventId: eventId).observe(.childChanged) { snapshot in
             let rawMessage = RawMessage(snapshot: snapshot)
             resultSubject.onNext(rawMessage)
         }
