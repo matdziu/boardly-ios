@@ -102,8 +102,24 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let messageCell = tableView.dequeueReusableCell(withIdentifier: RECEIVED_MESSAGE_CELL, for: indexPath) as! ReceivedMessageCell
-        messageCell.messageLabel.text = "aoidahodiahoisdajojoasidjaaoidahodi"
-        return messageCell
+        let message = messages[indexPath.row]
+        switch message.type {
+        case .sent:
+            let sentMessageCell = getSentMessageCell(tableView: tableView, indexPath: indexPath)
+            sentMessageCell.bind(message: message.text, isSent: message.isSent)
+            return sentMessageCell
+        case .received:
+            let receivedMessageCell = getReceivedMessageCell(tableView: tableView, indexPath: indexPath)
+            receivedMessageCell.bind(message: message.text, name: message.senderName, profilePictureUrl: message.senderImageUrl)
+            return receivedMessageCell
+        }
+    }
+    
+    private func getSentMessageCell(tableView: UITableView, indexPath: IndexPath) -> SentMessageCell {
+        return tableView.dequeueReusableCell(withIdentifier: SENT_MESSAGE_CELL, for: indexPath) as! SentMessageCell
+    }
+    
+    private func getReceivedMessageCell(tableView: UITableView, indexPath: IndexPath) -> ReceivedMessageCell {
+        return tableView.dequeueReusableCell(withIdentifier: RECEIVED_MESSAGE_CELL, for: indexPath) as! ReceivedMessageCell
     }
 }
