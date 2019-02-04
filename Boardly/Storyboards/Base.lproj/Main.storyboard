@@ -1304,9 +1304,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wh7-uj-lhy" customClass="BoardlyTextView" customModule="Boardly" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="155" width="343" height="33"/>
+                                        <rect key="frame" x="0.0" y="155" width="343" height="36.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
@@ -1318,7 +1318,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="MTD-yC-uCc">
-                                        <rect key="frame" x="0.0" y="204" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="207.5" width="343" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZY-7v-ZmZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
@@ -2111,7 +2111,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xna-Jk-hIG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
@@ -2174,8 +2174,8 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mateusz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-9r-oLL">
-                                                            <rect key="frame" x="7.5" y="58" width="65.5" height="22"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="5" y="58" width="70.5" height="22"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" name="Grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
