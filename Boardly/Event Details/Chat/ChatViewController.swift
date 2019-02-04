@@ -42,6 +42,7 @@ class ChatViewController: UIViewController, ChatView {
         messagesTableView.dataSource = self
         messagesTableView.delegate = self
         messagesTableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi))
+        messageTextView.isScrollEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,7 +76,9 @@ class ChatViewController: UIViewController, ChatView {
     
     func messageEmitter() -> Observable<String> {
         return sendButton.rx.tap.map { return self.messageTextView.text }
-            .do(onNext: { _ in self.messageTextView.text = "" })
+            .do(onNext: { _ in
+                self.messageTextView.isScrollEnabled = false
+                self.messageTextView.text = "" })
     }
     
     func render(chatViewState: ChatViewState) {
