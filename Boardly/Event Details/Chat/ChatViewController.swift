@@ -12,11 +12,20 @@ import RxSwift
 
 class ChatViewController: UIViewController, ChatView {
     
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var messageTextView: BoardlyTextView!
+    
     private let chatPresenter = ChatPresenter(chatInteractor: ChatInteractorImpl(chatService: ChatServiceImpl(), initialMessagesList: []))
     private var newMessagesListenerToggleSubject: PublishSubject<Bool>!
     private var batchFetchTriggerSubject: PublishSubject<String>!
     
     var eventId = ""
+    
+    private var messages: [Message] = [] {
+        didSet {
+            
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,10 +52,21 @@ class ChatViewController: UIViewController, ChatView {
     }
     
     func messageEmitter() -> Observable<String> {
-        return Observable.empty()
+        return sendButton.rx.tap.map { return self.messageTextView.text }
+            .do(onNext: { _ in self.messageTextView.text = "" })
     }
     
     func render(chatViewState: ChatViewState) {
+        showProgress(show: chatViewState.progress)
+        showIncentiveText(show: chatViewState.messagesList.isEmpty && !chatViewState.progress)
+        messages = chatViewState.messagesList
+    }
+    
+    private func showProgress(show: Bool) {
+        
+    }
+    
+    private func showIncentiveText(show: Bool) {
         
     }
 }

@@ -2091,20 +2091,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-xp-UPx">
-                                <rect key="frame" x="156" y="229" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-8N-1JH">
+                                <rect key="frame" x="331" y="567" width="40" height="40"/>
+                                <color key="backgroundColor" name="AccentRed"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ngZ-8k-2yX"/>
+                                    <constraint firstAttribute="height" constant="40" id="xPW-xT-JHw"/>
+                                </constraints>
+                                <state key="normal" image="SendIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rEj-Le-xar" customClass="BoardlyTextView" customModule="Boardly" customModuleProvider="target">
+                                <rect key="frame" x="4" y="567" width="319" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Xna-Jk-hIG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MUH-6H-CVZ" firstAttribute="bottom" secondItem="rEj-Le-xar" secondAttribute="bottom" constant="4" id="A7f-gi-mB3"/>
+                            <constraint firstItem="rEj-Le-xar" firstAttribute="leading" secondItem="MUH-6H-CVZ" secondAttribute="leading" constant="4" id="ABR-7a-Nei"/>
+                            <constraint firstItem="xEM-8N-1JH" firstAttribute="leading" secondItem="rEj-Le-xar" secondAttribute="trailing" constant="8" id="IFz-Lz-psF"/>
+                            <constraint firstItem="MUH-6H-CVZ" firstAttribute="trailing" secondItem="xEM-8N-1JH" secondAttribute="trailing" constant="4" id="KXN-Vf-gk1"/>
+                            <constraint firstItem="MUH-6H-CVZ" firstAttribute="bottom" secondItem="xEM-8N-1JH" secondAttribute="bottom" constant="4" id="lVe-RZ-2jU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MUH-6H-CVZ"/>
                     </view>
+                    <connections>
+                        <outlet property="messageTextView" destination="rEj-Le-xar" id="jLW-GD-GPF"/>
+                        <outlet property="sendButton" destination="xEM-8N-1JH" id="oXJ-Kj-nwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erP-XB-Wjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634" y="-2499"/>
+            <point key="canvasLocation" x="-634.39999999999998" y="-2499.400299850075"/>
         </scene>
         <!--Players View Controller-->
         <scene sceneID="BwN-i7-sog">
@@ -2123,6 +2156,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ziR-tY-jmY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-Ba-r2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2146,6 +2180,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NT7-IN-7V7"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w3-hD-5XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2170,6 +2205,7 @@
         <image name="PendingIcon" width="72" height="72"/>
         <image name="PlayersIcon" width="72" height="72"/>
         <image name="ProfilePictureShape" width="108" height="108"/>
+        <image name="SendIcon" width="72" height="72"/>
         <image name="TimeIcon" width="36" height="36"/>
         <namedColor name="AccentRed">
             <color red="0.95686274509803926" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
