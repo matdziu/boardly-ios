@@ -19,11 +19,23 @@ class EventDetailsViewController: BaseNavViewController {
     private var childViewsContainer: [UIView] = []
     
     var isAdmin: Bool = false
+    var eventId: String = ""
+    
+    func prepare(isAdmin: Bool, eventId: String) {
+        self.isAdmin = isAdmin
+        self.eventId = eventId
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         childViewsContainer = [chatView, playersView, adminView]
         containerSwitched(segmentedControl)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let chatViewController = segue.destination as? ChatViewController {
+            chatViewController.prepare(eventId: eventId)
+        }
     }
     
     @IBAction func containerSwitched(_ sender: UISegmentedControl) {

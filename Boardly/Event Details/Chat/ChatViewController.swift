@@ -15,6 +15,8 @@ class ChatViewController: UIViewController, ChatView {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageTextView: BoardlyTextView!
     @IBOutlet weak var messagesTableView: UITableView!
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var hintLabel: UILabel!
     
     private let chatPresenter = ChatPresenter(chatInteractor: ChatInteractorImpl(chatService: ChatServiceImpl(), initialMessagesList: []))
     private var newMessagesListenerToggleSubject: PublishSubject<Bool>!
@@ -22,10 +24,16 @@ class ChatViewController: UIViewController, ChatView {
     
     var eventId = ""
     
+    private var initialize = true
+    
     private var messages: [Message] = [] {
         didSet {
             messagesTableView.reloadData()
         }
+    }
+    
+    func prepare(eventId: String) {
+        self.eventId = eventId
     }
     
     override func viewDidLoad() {
@@ -38,6 +46,11 @@ class ChatViewController: UIViewController, ChatView {
         super.viewWillAppear(animated)
         initEmitters()
         chatPresenter.bind(chatView: self, eventId: eventId)
+        if initialize {
+            newMessagesListenerToggleSubject.onNext(true)
+            batchFetchTriggerSubject.onNext(getCurrentISODate())
+            initialize = false
+        }
     }
     
     private func initEmitters() {
@@ -67,15 +80,18 @@ class ChatViewController: UIViewController, ChatView {
         showProgress(show: chatViewState.progress)
         showIncentiveText(show: chatViewState.messagesList.isEmpty && !chatViewState.progress)
         messages = chatViewState.messagesList
-        messages = [Message(type: .sent), Message(type: .sent)]
     }
     
     private func showProgress(show: Bool) {
-        
+        if show {
+            progressView.startAnimating()
+        } else {
+            progressView.stopAnimating()
+        }
     }
     
     private func showIncentiveText(show: Bool) {
-        
+        hintLabel.isHidden = !show
     }
 }
 

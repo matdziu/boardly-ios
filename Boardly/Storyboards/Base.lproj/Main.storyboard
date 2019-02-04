@@ -2204,24 +2204,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be the first one to write a chat message. Say hello and start meeting other board game players!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG6-fX-OrX">
+                                <rect key="frame" x="32" y="273.5" width="311" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-Gu-NTt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" name="AccentRed"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MUH-6H-CVZ" firstAttribute="trailing" secondItem="avg-F5-I0Q" secondAttribute="trailing" id="1Xt-31-LBd"/>
+                            <constraint firstItem="MUH-6H-CVZ" firstAttribute="bottom" secondItem="gBZ-Gu-NTt" secondAttribute="bottom" id="3zx-Tz-36X"/>
+                            <constraint firstItem="MUH-6H-CVZ" firstAttribute="trailing" secondItem="gBZ-Gu-NTt" secondAttribute="trailing" id="7Lc-CY-7UQ"/>
                             <constraint firstItem="MUH-6H-CVZ" firstAttribute="bottom" secondItem="rEj-Le-xar" secondAttribute="bottom" constant="4" id="A7f-gi-mB3"/>
                             <constraint firstItem="rEj-Le-xar" firstAttribute="leading" secondItem="MUH-6H-CVZ" secondAttribute="leading" constant="8" id="ABR-7a-Nei"/>
                             <constraint firstItem="xEM-8N-1JH" firstAttribute="leading" secondItem="rEj-Le-xar" secondAttribute="trailing" constant="8" id="IFz-Lz-psF"/>
                             <constraint firstItem="xEM-8N-1JH" firstAttribute="top" secondItem="avg-F5-I0Q" secondAttribute="bottom" constant="8" id="IY1-Hk-ld1"/>
                             <constraint firstItem="MUH-6H-CVZ" firstAttribute="trailing" secondItem="xEM-8N-1JH" secondAttribute="trailing" constant="8" id="KXN-Vf-gk1"/>
+                            <constraint firstItem="gBZ-Gu-NTt" firstAttribute="leading" secondItem="MUH-6H-CVZ" secondAttribute="leading" id="O6t-ho-pKR"/>
+                            <constraint firstItem="gBZ-Gu-NTt" firstAttribute="top" secondItem="MUH-6H-CVZ" secondAttribute="top" id="PVE-co-nMk"/>
+                            <constraint firstItem="iG6-fX-OrX" firstAttribute="centerY" secondItem="oro-Ou-mlH" secondAttribute="centerY" id="aBi-nM-HTt"/>
+                            <constraint firstItem="iG6-fX-OrX" firstAttribute="leading" secondItem="MUH-6H-CVZ" secondAttribute="leading" constant="32" id="eHh-5R-kkP"/>
                             <constraint firstItem="avg-F5-I0Q" firstAttribute="leading" secondItem="MUH-6H-CVZ" secondAttribute="leading" id="gXx-Fm-gxR"/>
                             <constraint firstItem="MUH-6H-CVZ" firstAttribute="bottom" secondItem="xEM-8N-1JH" secondAttribute="bottom" constant="4" id="lVe-RZ-2jU"/>
+                            <constraint firstAttribute="trailing" secondItem="iG6-fX-OrX" secondAttribute="trailing" constant="32" id="rwG-vc-Wc2"/>
                             <constraint firstItem="avg-F5-I0Q" firstAttribute="top" secondItem="MUH-6H-CVZ" secondAttribute="top" id="w5N-ph-nHG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MUH-6H-CVZ"/>
                     </view>
                     <connections>
+                        <outlet property="hintLabel" destination="iG6-fX-OrX" id="IYr-yT-fzc"/>
                         <outlet property="messageTextView" destination="rEj-Le-xar" id="jLW-GD-GPF"/>
                         <outlet property="messagesTableView" destination="avg-F5-I0Q" id="nVb-dJ-cGC"/>
+                        <outlet property="progressView" destination="gBZ-Gu-NTt" id="YlO-8l-tSJ"/>
                         <outlet property="sendButton" destination="xEM-8N-1JH" id="oXJ-Kj-nwl"/>
                     </connections>
                 </viewController>

@@ -99,7 +99,7 @@ class HomeViewController: BaseJoinEventViewController, HomeView {
     
     private func enterEvent(event: BoardlyEvent) {
         guard let eventDetailsViewController = storyboard?.instantiateViewController(withIdentifier: EVENT_DETAILS_VIEW_CONTROLLER_ID) as? EventDetailsViewController else { return }
-        eventDetailsViewController.isAdmin = event.type == .CREATED
+        eventDetailsViewController.prepare(isAdmin: event.type == .CREATED, eventId: event.eventId)
         self.navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     
