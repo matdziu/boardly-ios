@@ -172,6 +172,7 @@ class BaseServiceImpl {
                 player.id = partialPlayer.id
                 player.helloText = partialPlayer.helloText
                 resultSubject.onNext(player)
+                resultSubject.onCompleted()
         }
         
         return resultSubject.asSingle()
@@ -206,8 +207,7 @@ class BaseServiceImpl {
         
         if modifiedPlayer.id == getCurrentUserId() {
             modifiedPlayer.ratedOrSelf = true
-            resultSubject.onNext(modifiedPlayer)
-            return resultSubject.asSingle()
+            return Single.just(modifiedPlayer)
         }
         
         getUserRatingHashesRef(userId: player.id)
@@ -216,6 +216,7 @@ class BaseServiceImpl {
                 let ratedOrSelf = snapshot.value as? Bool
                 modifiedPlayer.ratedOrSelf = ratedOrSelf != nil
                 resultSubject.onNext(modifiedPlayer)
+                resultSubject.onCompleted()
         }
         
         return resultSubject.asSingle()

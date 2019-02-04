@@ -53,6 +53,7 @@ class ChatServiceImpl: BaseServiceImpl, ChatService {
             modifiedMessage.senderName = name
             modifiedMessage.senderImageUrl = profilePictureUrl
             resultSubject.onNext(modifiedMessage)
+            resultSubject.onCompleted()
         }
         return resultSubject.asSingle()
     }
