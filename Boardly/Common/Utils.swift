@@ -27,3 +27,11 @@ func mapToRatedAllWhere(_ predicate: (Player) -> Bool, in playersList: [Player])
         }
     }
 }
+
+func getCurrentISODate() -> String {
+    let dateFormatter = DateFormatter()
+    let enUSPosixLocale = Locale(identifier: "en_US_POSIX")
+    dateFormatter.locale = enUSPosixLocale
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    return dateFormatter.string(from: Date())
+}
