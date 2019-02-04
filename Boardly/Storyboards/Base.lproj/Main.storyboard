@@ -2132,7 +2132,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-e8-FkI" customClass="RoundEdgesLabel" customModule="Boardly" customModuleProvider="target">
                                                     <rect key="frame" x="321" y="83.5" width="42" height="20.5"/>
-                                                    <color key="backgroundColor" name="PrimaryBlueDim"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -2337,9 +2336,6 @@
         </namedColor>
         <namedColor name="PrimaryBlue">
             <color red="0.29019607843137257" green="0.33333333333333331" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryBlueDim">
-            <color red="0.63137254901960782" green="0.65490196078431373" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TransparentWhite">
             <color red="1" green="1" blue="1" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
