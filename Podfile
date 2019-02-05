@@ -21,6 +21,7 @@ target 'Boardly' do
   pod 'SWXMLHash', '~> 4.7.0'
   pod 'IQKeyboardManager'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'Cosmos'
 
   target 'BoardlyTests' do
     inherit! :search_paths
