@@ -15,6 +15,8 @@
 		9009770C22033E6600979752 /* AdminViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770B22033E6600979752 /* AdminViewRobot.swift */; };
 		90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */; };
 		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
+		9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F1682209B5B8004B78EB /* PlayerControlCell.swift */; };
+		9023F16B2209B5CF004B78EB /* AcceptedPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */; };
 		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
 		9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496D21DF8C96006CE583 /* PartialEventViewState.swift */; };
 		9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497021DF8CF5006CE583 /* GamePickType.swift */; };
@@ -253,6 +255,8 @@
 		9009770B22033E6600979752 /* AdminViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewRobot.swift; sourceTree = "<group>"; };
 		90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyDatePicker.swift; sourceTree = "<group>"; };
 		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
+		9023F1682209B5B8004B78EB /* PlayerControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCell.swift; sourceTree = "<group>"; };
+		9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedPlayerCell.swift; sourceTree = "<group>"; };
 		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
 		9025496D21DF8C96006CE583 /* PartialEventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEventViewState.swift; sourceTree = "<group>"; };
 		9025497021DF8CF5006CE583 /* GamePickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickType.swift; sourceTree = "<group>"; };
@@ -521,6 +525,15 @@
 				90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */,
 			);
 			path = "Date Picker";
+			sourceTree = "<group>";
+		};
+		9023F1672209B544004B78EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9023F1682209B5B8004B78EB /* PlayerControlCell.swift */,
+				9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9025496A21DF8885006CE583 /* Event */ = {
@@ -1214,6 +1227,7 @@
 		90E002F92201890100F48E75 /* Players */ = {
 			isa = PBXGroup;
 			children = (
+				9023F1672209B544004B78EB /* Cells */,
 				909164A322020A5F002CF718 /* PlayersViewState.swift */,
 				909164A722020B48002CF718 /* PartialPlayersViewState.swift */,
 				909164A9220210F8002CF718 /* PlayersInteractorImpl.swift */,
@@ -1554,6 +1568,7 @@
 				909164AC22021114002CF718 /* PlayersContract.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
 				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
+				9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */,
 				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
 				9067C73A2204A9CB00DC2675 /* ChatViewController.swift in Sources */,
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
@@ -1573,6 +1588,7 @@
 				90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
+				9023F16B2209B5CF004B78EB /* AcceptedPlayerCell.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
 				9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */,
@@ -1920,7 +1936,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1938,7 +1957,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1954,7 +1976,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1972,7 +1998,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

@@ -2418,7 +2418,7 @@
                                             <outlet property="timeImageView" destination="9ER-ol-9CJ" id="n6U-6d-DgD"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="VR8-bg-W8N">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerControlCell" rowHeight="100" id="VR8-bg-W8N" customClass="PlayerControlCell" customModule="Boardly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="386" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VR8-bg-W8N" id="riB-G5-2BW">
@@ -2457,8 +2457,12 @@
                                                 <constraint firstItem="MQi-LV-xuY" firstAttribute="top" secondItem="PWN-bQ-mtY" secondAttribute="bottom" constant="16" id="QuT-Xi-OrO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chatNotificationsSwitch" destination="PVm-b2-jU3" id="4pg-HJ-c6H"/>
+                                            <outlet property="leaveEventButton" destination="MQi-LV-xuY" id="FJK-Dr-Iun"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="192" id="ZWd-FK-JhV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="acceptedPlayerCell" rowHeight="192" id="ZWd-FK-JhV" customClass="AcceptedPlayerCell" customModule="Boardly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="486" width="375" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZWd-FK-JhV" id="Qff-yC-gE6">
@@ -2530,6 +2534,13 @@
                                                 <constraint firstItem="1cZ-j0-juu" firstAttribute="top" secondItem="Qff-yC-gE6" secondAttribute="topMargin" constant="8" id="wiL-mw-C0j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="helloTextLabel" destination="ARs-c4-Pdc" id="6La-Hd-mAV"/>
+                                            <outlet property="playerNameLabel" destination="8Jw-ro-GHm" id="IAQ-WS-hs3"/>
+                                            <outlet property="playerPicture" destination="wgK-Xe-PCH" id="bKk-HR-evV"/>
+                                            <outlet property="playerRatingLabel" destination="337-JR-vcH" id="jlt-FE-aao"/>
+                                            <outlet property="rateButton" destination="CVO-Io-z9X" id="ldL-c1-JnE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
