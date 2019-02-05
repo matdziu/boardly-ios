@@ -125,7 +125,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let actualPosition = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height - messagesTableView.frame.size.height
-        if actualPosition >= contentHeight {
+        if actualPosition >= contentHeight && contentHeight > 0 {
             guard let lastTimestamp = messages.last?.timestamp else { return }
             batchFetchTriggerSubject.onNext(lastTimestamp)
         }
