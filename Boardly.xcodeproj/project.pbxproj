@@ -73,6 +73,8 @@
 		9078A3082202D227008FCF92 /* AdminInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */; };
 		9078A30A2202D4C7008FCF92 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3092202D4C7008FCF92 /* AdminPresenter.swift */; };
 		907B48E6220A105200EC7590 /* RatingPlayerUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */; };
+		907B48E8220A190600EC7590 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B48E7220A190600EC7590 /* RateViewController.swift */; };
+		907B48EA220A1FC400EC7590 /* ChildEventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B48E9220A1FC400EC7590 /* ChildEventDetailsViewController.swift */; };
 		9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */; };
 		9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22421DD22600087B5C3 /* HomeViewState.swift */; };
 		9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */; };
@@ -315,6 +317,8 @@
 		9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractorImpl.swift; sourceTree = "<group>"; };
 		9078A3092202D4C7008FCF92 /* AdminPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
 		907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPlayerUIRenderer.swift; sourceTree = "<group>"; };
+		907B48E7220A190600EC7590 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		907B48E9220A1FC400EC7590 /* ChildEventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEventDetailsViewController.swift; sourceTree = "<group>"; };
 		9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotifyService.swift; sourceTree = "<group>"; };
 		9084A22421DD22600087B5C3 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEvent.swift; sourceTree = "<group>"; };
@@ -851,6 +855,7 @@
 				909164B4220212E5002CF718 /* Models */,
 				909164B2220212AD002CF718 /* EventDetailsContract.swift */,
 				9092F84822041486000A7BC5 /* EventDetailsServiceImpl.swift */,
+				907B48E9220A1FC400EC7590 /* ChildEventDetailsViewController.swift */,
 			);
 			path = "Event Details";
 			sourceTree = "<group>";
@@ -961,6 +966,7 @@
 				9086CCF021F459CC00EE6857 /* EventUIRenderer.swift */,
 				9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */,
 				907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */,
+				907B48E7220A190600EC7590 /* RateViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1580,6 +1586,7 @@
 				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
 				9067C73A2204A9CB00DC2675 /* ChatViewController.swift in Sources */,
 				903788F321DA51BB0092FE84 /* PickGameViewState.swift in Sources */,
+				907B48EA220A1FC400EC7590 /* ChildEventDetailsViewController.swift in Sources */,
 				903366DB21FA4C040059A601 /* PartialNotifyViewState.swift in Sources */,
 				909A8BC221CAE0E700166C93 /* PartialSignUpViewState.swift in Sources */,
 				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
@@ -1614,6 +1621,7 @@
 				9084A23321DD29B40087B5C3 /* JoinEventData.swift in Sources */,
 				90907F6F21D23F8F0054300C /* EditProfileInputData.swift in Sources */,
 				90E0030422018DE500F48E75 /* RawMessage.swift in Sources */,
+				907B48E8220A190600EC7590 /* RateViewController.swift in Sources */,
 				90907F7721D248C30054300C /* EditProfileContract.swift in Sources */,
 				909A8B7521CACDA800166C93 /* AppDelegate.swift in Sources */,
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
@@ -1946,7 +1954,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1964,7 +1975,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1980,7 +1994,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1998,7 +2016,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

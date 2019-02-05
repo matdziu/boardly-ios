@@ -32,6 +32,21 @@ class RatingPlayerUIRenderer: PlayerUIRenderer {
     
     @objc private func launchRateDialog(_ sender: UIButton) {
         let pickedRatingHandler = sender.userInfo[PICKED_RATING_HANDLER_USER_INFO] as? (Int) -> () ?? { _ in }
+        guard let rootViewController = UIApplication
+            .shared
+            .keyWindow?
+            .rootViewController?
+            .navigationController?
+            .topViewController else { return }
+        guard let rateViewController = rootViewController
+            .storyboard?
+            .instantiateViewController(withIdentifier: RATE_VIEW_CONTROLLER_ID)
+            as? RateViewController else { return }
+        rateViewController.providesPresentationContextTransitionStyle = true
+        rateViewController.definesPresentationContext = true
+        rateViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        rateViewController.prepare(rateButtonClickedHandler: pickedRatingHandler)
+        rootViewController.present(rateViewController, animated: true, completion: nil)
     }
     
     private func displayRateButton(ratedOrSelf: Bool, rateButton: UIButton) {

@@ -1282,6 +1282,86 @@
             </objects>
             <point key="canvasLocation" x="1224.8" y="-1811.2443778110946"/>
         </scene>
+        <!--Rate View Controller-->
+        <scene sceneID="eWQ-7e-9uH">
+            <objects>
+                <viewController storyboardIdentifier="rateViewController" id="gkv-jL-ziL" customClass="RateViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCc-QQ-m52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-bp-Lm5">
+                                <rect key="frame" x="32" y="266" width="311" height="155.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate this player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-8y-8CU">
+                                        <rect key="frame" x="88.5" y="0.0" width="134.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="Grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-gG-qBc" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="39.5" y="53.5" width="232" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-hT-Ec2">
+                                        <rect key="frame" x="0.0" y="125.5" width="311" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-hL-SCv">
+                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" name="AccentRed"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelButtonClicked:" destination="gkv-jL-ziL" eventType="touchUpInside" id="9hU-lC-0jj"/>
+                                                    <action selector="cancelButtonClicked:" destination="btO-aM-nFm" eventType="touchUpInside" id="IPh-eu-bFZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRU-TE-GOj">
+                                                <rect key="frame" x="171.5" y="0.0" width="139.5" height="30"/>
+                                                <state key="normal" title="RATE">
+                                                    <color key="titleColor" name="PrimaryBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinButtonClicked:" destination="btO-aM-nFm" eventType="touchUpInside" id="a5H-4X-coD"/>
+                                                    <action selector="rateButtonClicked:" destination="gkv-jL-ziL" eventType="touchUpInside" id="617-vu-MJX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8Rg-hT-Ec2" firstAttribute="leading" secondItem="FdP-bp-Lm5" secondAttribute="leading" id="YIQ-en-Kmd"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Rg-hT-Ec2" secondAttribute="trailing" id="exS-BH-53t"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FdP-bp-Lm5" firstAttribute="leading" secondItem="Fd0-zR-L2q" secondAttribute="leading" constant="32" id="4kd-yf-2An"/>
+                            <constraint firstItem="FdP-bp-Lm5" firstAttribute="centerY" secondItem="Fd0-zR-L2q" secondAttribute="centerY" id="TIw-bU-H1D"/>
+                            <constraint firstItem="Fd0-zR-L2q" firstAttribute="trailing" secondItem="FdP-bp-Lm5" secondAttribute="trailing" constant="32" id="hWw-yy-iD8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fd0-zR-L2q"/>
+                    </view>
+                    <connections>
+                        <outlet property="ratingView" destination="tLm-gG-qBc" id="EcB-OW-QyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYT-c1-qYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121" y="-1883"/>
+        </scene>
         <!--Join Event View Controller-->
         <scene sceneID="XVg-uW-Taa">
             <objects>
