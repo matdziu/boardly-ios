@@ -39,8 +39,8 @@ class ChatInteractorTest: QuickSpec {
                     .toBlocking()
                     .toArray()
                 expect(output).to(equal([PartialChatViewState.messagesListChanged(newMessagesList: [
-                    Message(id: "initial", text: "initial text", isSent: true, type: .sent),
-                    Message(id: "testMessageId", text: "testMessage", isSent: true, type: .sent)])]))
+                    Message(id: "testMessageId", text: "testMessage", isSent: true, type: .sent),
+                    Message(id: "initial", text: "initial text", isSent: true, type: .sent),])]))
             }
             
             it("test removing new messages listener") {
@@ -56,8 +56,8 @@ class ChatInteractorTest: QuickSpec {
                     .toArray()
                 
                 expect(output).to(equal([PartialChatViewState.messagesListChanged(newMessagesList: [
-                    Message(id: "initial", text: "initial text", isSent: true, type: .sent),
-                    Message(id: "testMessageId", text: "this is a test message", isSent: false, type: .sent)])]))
+                    Message(id: "testMessageId", text: "this is a test message", isSent: false, type: .sent),
+                    Message(id: "initial", text: "initial text", isSent: true, type: .sent)])]))
             }
             
             it("test chat message batch arrival") {
@@ -66,9 +66,9 @@ class ChatInteractorTest: QuickSpec {
                     .toArray()
                 
                 expect(output).to(equal([PartialChatViewState.messagesListChanged(newMessagesList: [
-                    Message(id: "1", text: "one", isSent: true, senderName: "", senderImageUrl: "", timestamp: "2018-08-24T07:06:18.004Z", type: .received),
+                    Message(id: "initial", text: "initial text", isSent: true, type: .sent),
                     Message(id: "2", text: "two", isSent: true, senderName: "", senderImageUrl: "", timestamp: "2018-08-24T07:06:20.004Z", type: .received),
-                    Message(id: "initial", text: "initial text", isSent: true, type: .sent)])]))
+                    Message(id: "1", text: "one", isSent: true, senderName: "", senderImageUrl: "", timestamp: "2018-08-24T07:06:18.004Z", type: .received)])]))
             }
         }
     }
