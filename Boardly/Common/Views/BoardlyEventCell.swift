@@ -47,9 +47,15 @@ class BoardlyEventCell: UITableViewCell {
         self.cellClickAction = cellClickAction
         selectionStyle = .none
         renderer.displayEventInfo(event: event, eventNameLabel: nameLabel, gameLabel: game1NameLabel, placeButton: placeButton, locationImageView: placeImageView, boardGameImageView: game1ImageView, seeDescriptionButton: descriptionButton, dateButton: dateButton, timeImageView: timeImageView, gameLabel2: game2NameLabel, boardGameImageView2: game2ImageView, gameLabel3: game3NameLabel, boardGameImageView3: game3ImageView)
-        setType(type: event.type)
-        joinButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-        enterEventButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        if joinButton != nil &&
+            createdLabel != nil &&
+            acceptedLabel != nil &&
+            pendingLabel != nil &&
+            enterEventButton != nil {
+            setType(type: event.type)
+            joinButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+            enterEventButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        }
     }
     
     @objc private func buttonClicked() {

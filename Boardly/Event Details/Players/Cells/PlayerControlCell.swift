@@ -13,4 +13,8 @@ class PlayerControlCell: UITableViewCell {
     
     @IBOutlet weak var chatNotificationsSwitch: UISwitch!
     @IBOutlet weak var leaveEventButton: UIButton!
+    
+    func bind(leaveEventHandler: () -> ()) {
+        
+    }
 }

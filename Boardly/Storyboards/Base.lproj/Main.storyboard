@@ -2599,7 +2599,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test test test" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARs-c4-Pdc">
-                                                    <rect key="frame" x="111" y="19" width="249" height="154"/>
+                                                    <rect key="frame" x="111" y="19" width="249" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="Grey"/>
                                                     <nil key="highlightedColor"/>
@@ -2607,10 +2607,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ARs-c4-Pdc" firstAttribute="leading" secondItem="1cZ-j0-juu" secondAttribute="trailing" constant="16" id="ASl-uM-NJu"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ARs-c4-Pdc" secondAttribute="bottom" constant="8" id="CUJ-IP-6Xk"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ARs-c4-Pdc" secondAttribute="bottom" constant="8" id="CUJ-IP-6Xk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ARs-c4-Pdc" secondAttribute="trailing" id="Z1b-bQ-eYf"/>
                                                 <constraint firstItem="1cZ-j0-juu" firstAttribute="leading" secondItem="Qff-yC-gE6" secondAttribute="leadingMargin" id="aji-hy-lVb"/>
                                                 <constraint firstItem="ARs-c4-Pdc" firstAttribute="top" secondItem="Qff-yC-gE6" secondAttribute="topMargin" constant="8" id="eJf-vi-RQS"/>
+                                                <constraint firstAttribute="bottom" secondItem="1cZ-j0-juu" secondAttribute="bottom" constant="22.5" id="h23-UJ-EbI"/>
                                                 <constraint firstItem="1cZ-j0-juu" firstAttribute="top" secondItem="Qff-yC-gE6" secondAttribute="topMargin" constant="8" id="wiL-mw-C0j"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2620,21 +2621,35 @@
                                             <outlet property="playerPicture" destination="wgK-Xe-PCH" id="bKk-HR-evV"/>
                                             <outlet property="playerRatingLabel" destination="337-JR-vcH" id="jlt-FE-aao"/>
                                             <outlet property="rateButton" destination="CVO-Io-z9X" id="ldL-c1-JnE"/>
+                                            <outlet property="ratingImageView" destination="IKS-aJ-chN" id="7cu-Wk-y0e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="i4E-E6-xQP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="680"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" name="AccentRed"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ziR-tY-jmY" firstAttribute="bottom" secondItem="i4E-E6-xQP" secondAttribute="bottom" id="3qi-38-MQB"/>
+                            <constraint firstItem="ziR-tY-jmY" firstAttribute="trailing" secondItem="i4E-E6-xQP" secondAttribute="trailing" id="Ihh-G9-c1p"/>
                             <constraint firstItem="ziR-tY-jmY" firstAttribute="bottom" secondItem="lHY-ax-yAj" secondAttribute="bottom" id="J3W-HC-DGn"/>
                             <constraint firstItem="lHY-ax-yAj" firstAttribute="top" secondItem="ziR-tY-jmY" secondAttribute="top" id="Ula-jT-aII"/>
+                            <constraint firstItem="i4E-E6-xQP" firstAttribute="top" secondItem="ziR-tY-jmY" secondAttribute="top" id="VY3-Qi-Rce"/>
                             <constraint firstItem="lHY-ax-yAj" firstAttribute="leading" secondItem="ziR-tY-jmY" secondAttribute="leading" id="VkJ-az-Sdh"/>
+                            <constraint firstItem="i4E-E6-xQP" firstAttribute="leading" secondItem="ziR-tY-jmY" secondAttribute="leading" id="cyz-zM-Lv7"/>
                             <constraint firstItem="ziR-tY-jmY" firstAttribute="trailing" secondItem="lHY-ax-yAj" secondAttribute="trailing" id="m9g-Wp-WKV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ziR-tY-jmY"/>
                     </view>
                     <size key="freeformSize" width="375" height="700"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="lHY-ax-yAj" id="820-Se-a9x"/>
+                        <outlet property="progressView" destination="i4E-E6-xQP" id="SKw-59-f9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2V-Ba-r2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

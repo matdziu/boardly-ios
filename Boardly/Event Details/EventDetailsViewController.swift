@@ -36,6 +36,9 @@ class EventDetailsViewController: BaseNavViewController {
         if let chatViewController = segue.destination as? ChatViewController {
             chatViewController.prepare(eventId: eventId)
         }
+        if let childEventDetailsViewController = segue.destination as? ChildEventDetailsViewController {
+            childEventDetailsViewController.prepare(eventId: eventId)
+        }
     }
     
     @IBAction func containerSwitched(_ sender: UISegmentedControl) {
