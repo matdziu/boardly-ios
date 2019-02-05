@@ -17,6 +17,7 @@
 		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
 		9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F1682209B5B8004B78EB /* PlayerControlCell.swift */; };
 		9023F16B2209B5CF004B78EB /* AcceptedPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */; };
+		9023F16D2209B90E004B78EB /* PlayerUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */; };
 		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
 		9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496D21DF8C96006CE583 /* PartialEventViewState.swift */; };
 		9025497121DF8CF5006CE583 /* GamePickType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025497021DF8CF5006CE583 /* GamePickType.swift */; };
@@ -257,6 +258,7 @@
 		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
 		9023F1682209B5B8004B78EB /* PlayerControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCell.swift; sourceTree = "<group>"; };
 		9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedPlayerCell.swift; sourceTree = "<group>"; };
+		9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIRenderer.swift; sourceTree = "<group>"; };
 		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
 		9025496D21DF8C96006CE583 /* PartialEventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEventViewState.swift; sourceTree = "<group>"; };
 		9025497021DF8CF5006CE583 /* GamePickType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickType.swift; sourceTree = "<group>"; };
@@ -955,6 +957,7 @@
 				909A8B9E21CAD04F00166C93 /* Models */,
 				9084A23821DD3C530087B5C3 /* Utils.swift */,
 				9086CCF021F459CC00EE6857 /* EventUIRenderer.swift */,
+				9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1649,6 +1652,7 @@
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
 				9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */,
 				90E002FB22018A4100F48E75 /* ChatViewState.swift in Sources */,
+				9023F16D2209B90E004B78EB /* PlayerUIRenderer.swift in Sources */,
 				9078A3062202D0F1008FCF92 /* AdminContract.swift in Sources */,
 				9025497721DF92B7006CE583 /* EventContract.swift in Sources */,
 				902C94D72201AF500098AE0F /* SequenceExtensions.swift in Sources */,
