@@ -23,7 +23,6 @@ extension UIImageView {
             }
         }
         imageTasks[self] = task
-        task.resume()
     }
     
     func cancel() {

@@ -38,6 +38,9 @@ class BoardlyEventCell: UITableViewCell {
         game1ImageView.cancel()
         game2ImageView.cancel()
         game3ImageView.cancel()
+        game1ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
+        game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
     }
     
     func bind(event: BoardlyEvent, cellClickAction: @escaping () -> Void = {}) {
