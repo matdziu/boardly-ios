@@ -8,19 +8,16 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import AlamofireImage
 
-private var imageTasks = [UIImageView : URLSessionDataTask]()
+private var imageTasks = [UIImageView : DataRequest]()
 
 extension UIImageView {
     
     func downloaded(from url: URL) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
+        let task = Alamofire.request(url, method: .get).responseImage { response in
+            guard let image = response.result.value else { return }
             DispatchQueue.main.async() {
                 self.image = image
             }

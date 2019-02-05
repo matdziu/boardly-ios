@@ -20,6 +20,7 @@ target 'Boardly' do
   pod 'Alamofire', '~> 4.8.0'
   pod 'SWXMLHash', '~> 4.7.0'
   pod 'IQKeyboardManager'
+  pod 'AlamofireImage', '~> 3.5'
 
   target 'BoardlyTests' do
     inherit! :search_paths

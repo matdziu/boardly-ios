@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -141,6 +143,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
+  - AlamofireImage (~> 3.5)
   - Crashlytics
   - Fabric
   - FBSDKCoreKit (~> 4.36.0)
@@ -166,6 +169,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - Bolts
     - Crashlytics
     - Fabric
@@ -205,6 +209,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
@@ -242,6 +247,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: 491ab580284e65238fb04c78b0d85379f880a5a1
+PODFILE CHECKSUM: 97b4e6e495a72d053dc6228527c4b19007ab024d
 
 COCOAPODS: 1.5.3
