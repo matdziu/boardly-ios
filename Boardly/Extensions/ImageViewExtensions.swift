@@ -12,17 +12,27 @@ import Alamofire
 import AlamofireImage
 
 private var imageTasks = [UIImageView : DataRequest]()
+private let imageCache = AutoPurgingImageCache()
 
 extension UIImageView {
     
     func downloaded(from url: URL) {
-        let task = Alamofire.request(url, method: .get).responseImage { response in
-            guard let image = response.result.value else { return }
+        let identifier = url.absoluteString
+        let cachedImage = imageCache.image(withIdentifier: identifier)
+        if cachedImage == nil {
+            let task = Alamofire.request(url, method: .get).responseImage { response in
+                guard let image = response.result.value else { return }
+                imageCache.add(image, withIdentifier: identifier)
+                DispatchQueue.main.async() {
+                    self.image = image
+                }
+            }
+            imageTasks[self] = task
+        } else {
             DispatchQueue.main.async() {
-                self.image = image
+                self.image = cachedImage
             }
         }
-        imageTasks[self] = task
     }
     
     func cancel() {
