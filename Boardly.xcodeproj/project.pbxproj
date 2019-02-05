@@ -72,6 +72,7 @@
 		9078A3062202D0F1008FCF92 /* AdminContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3052202D0F1008FCF92 /* AdminContract.swift */; };
 		9078A3082202D227008FCF92 /* AdminInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */; };
 		9078A30A2202D4C7008FCF92 /* AdminPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9078A3092202D4C7008FCF92 /* AdminPresenter.swift */; };
+		907B48E6220A105200EC7590 /* RatingPlayerUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */; };
 		9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */; };
 		9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22421DD22600087B5C3 /* HomeViewState.swift */; };
 		9084A22721DD226B0087B5C3 /* BoardlyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */; };
@@ -313,6 +314,7 @@
 		9078A3052202D0F1008FCF92 /* AdminContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminContract.swift; sourceTree = "<group>"; };
 		9078A3072202D227008FCF92 /* AdminInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractorImpl.swift; sourceTree = "<group>"; };
 		9078A3092202D4C7008FCF92 /* AdminPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenter.swift; sourceTree = "<group>"; };
+		907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPlayerUIRenderer.swift; sourceTree = "<group>"; };
 		9082B72621FAEB9000A5D1EC /* MockNotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotifyService.swift; sourceTree = "<group>"; };
 		9084A22421DD22600087B5C3 /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		9084A22621DD226B0087B5C3 /* BoardlyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEvent.swift; sourceTree = "<group>"; };
@@ -958,6 +960,7 @@
 				9084A23821DD3C530087B5C3 /* Utils.swift */,
 				9086CCF021F459CC00EE6857 /* EventUIRenderer.swift */,
 				9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */,
+				907B48E5220A105200EC7590 /* RatingPlayerUIRenderer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1641,6 +1644,7 @@
 				90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */,
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
+				907B48E6220A105200EC7590 /* RatingPlayerUIRenderer.swift in Sources */,
 				9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
 				903366D921FA4BEF0059A601 /* NotifyViewState.swift in Sources */,
