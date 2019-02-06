@@ -2595,7 +2595,6 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="CVO-Io-z9X" secondAttribute="trailing" id="AW3-VO-5aN"/>
-                                                        <constraint firstAttribute="height" constant="150.5" id="cBs-Mz-sa3"/>
                                                         <constraint firstItem="CVO-Io-z9X" firstAttribute="leading" secondItem="1cZ-j0-juu" secondAttribute="leading" id="u9Y-uC-IYW"/>
                                                         <constraint firstAttribute="width" constant="80" id="y91-fn-u7Q"/>
                                                     </constraints>
@@ -2613,7 +2612,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="ARs-c4-Pdc" secondAttribute="trailing" id="Z1b-bQ-eYf"/>
                                                 <constraint firstItem="1cZ-j0-juu" firstAttribute="leading" secondItem="Qff-yC-gE6" secondAttribute="leadingMargin" id="aji-hy-lVb"/>
                                                 <constraint firstItem="ARs-c4-Pdc" firstAttribute="top" secondItem="Qff-yC-gE6" secondAttribute="topMargin" constant="8" id="eJf-vi-RQS"/>
-                                                <constraint firstAttribute="bottom" secondItem="1cZ-j0-juu" secondAttribute="bottom" constant="22.5" id="h23-UJ-EbI"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1cZ-j0-juu" secondAttribute="bottom" constant="8" id="h23-UJ-EbI"/>
                                                 <constraint firstItem="1cZ-j0-juu" firstAttribute="top" secondItem="Qff-yC-gE6" secondAttribute="topMargin" constant="8" id="wiL-mw-C0j"/>
                                             </constraints>
                                         </tableViewCellContentView>

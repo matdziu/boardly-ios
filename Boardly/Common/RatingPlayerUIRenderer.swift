@@ -35,9 +35,8 @@ class RatingPlayerUIRenderer: PlayerUIRenderer {
         guard let rootViewController = UIApplication
             .shared
             .keyWindow?
-            .rootViewController?
-            .navigationController?
-            .topViewController else { return }
+            .rootViewController
+            else { return }
         guard let rateViewController = rootViewController
             .storyboard?
             .instantiateViewController(withIdentifier: RATE_VIEW_CONTROLLER_ID)
