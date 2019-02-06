@@ -61,6 +61,15 @@ class PlayersViewController: ChildEventDetailsViewController, PlayersView {
         showProgressView(show: playersViewState.eventProgress || playersViewState.playersProgress)
         fetchedEvent = playersViewState.event
         acceptedPlayers = playersViewState.acceptedPlayersList
+        if playersViewState.kicked {
+            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.showAlert(message: "You were kicked from this event")
+        }
+        
+        if playersViewState.left {
+            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.showAlert(message: "You left this event")
+        }
     }
     
     private func showProgressView(show: Bool) {
@@ -125,7 +134,7 @@ extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             let playerControlCell = getPlayerControlCell(indexPath: indexPath)
             playerControlCell.bind {
-                
+                self.leaveEventSubject.onNext(true)
             }
             return playerControlCell
         case 2:

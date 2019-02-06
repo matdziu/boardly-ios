@@ -1290,8 +1290,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-bp-Lm5">
-                                <rect key="frame" x="32" y="266" width="311" height="155.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-bp-Lm5">
+                                <rect key="frame" x="32" y="266" width="311" height="165.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate this player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-8y-8CU">
                                         <rect key="frame" x="88.5" y="0.0" width="134.5" height="21.5"/>
@@ -1299,8 +1299,8 @@
                                         <color key="textColor" name="Grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-gG-qBc" customClass="CosmosView" customModule="Cosmos">
-                                        <rect key="frame" x="39.5" y="53.5" width="232" height="40"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-gG-qBc" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="39.5" y="53.5" width="232" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
@@ -1314,8 +1314,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-hT-Ec2">
-                                        <rect key="frame" x="0.0" y="125.5" width="311" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="8Rg-hT-Ec2">
+                                        <rect key="frame" x="0.0" y="135.5" width="311" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4t-hL-SCv">
                                                 <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
@@ -2519,6 +2519,9 @@
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PVm-b2-jU3">
                                                             <rect key="frame" x="289" y="0.0" width="40" height="31"/>
                                                             <color key="onTintColor" name="PrimaryBlue"/>
+                                                            <connections>
+                                                                <action selector="switchChanged:" destination="VR8-bg-W8N" eventType="valueChanged" id="HOP-5T-y0W"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                 </stackView>
@@ -2540,7 +2543,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatNotificationsSwitch" destination="PVm-b2-jU3" id="4pg-HJ-c6H"/>
                                             <outlet property="leaveEventButton" destination="MQi-LV-xuY" id="FJK-Dr-Iun"/>
                                         </connections>
                                     </tableViewCell>
