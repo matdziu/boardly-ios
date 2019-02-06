@@ -217,6 +217,7 @@
 		90E00306220190FC00F48E75 /* ChatInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */; };
 		90E0030A22019A5B00F48E75 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E0030922019A5B00F48E75 /* ChatPresenter.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
+		90FB2417220AB273004CD142 /* SimpleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB2416220AB273004CD142 /* SimpleHeader.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
 		90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */; };
 		90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FFFFD521FE144200D4C684 /* MyEventsContract.swift */; };
@@ -466,6 +467,7 @@
 		90E00305220190FC00F48E75 /* ChatInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractorImpl.swift; sourceTree = "<group>"; };
 		90E0030922019A5B00F48E75 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		90FB2416220AB273004CD142 /* SimpleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHeader.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
 		90FBFFB821F06E5600B2E325 /* HomeServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceImpl.swift; sourceTree = "<group>"; };
 		90FFFFD521FE144200D4C684 /* MyEventsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsContract.swift; sourceTree = "<group>"; };
@@ -993,6 +995,7 @@
 				90A690B921F3079F00365E32 /* BoardlyTextView.swift */,
 				90A690BB21F3088200365E32 /* JoinEventViewController.swift */,
 				9054D097220858D4004EF46B /* RoundEdgesLabel.swift */,
+				90FB2416220AB273004CD142 /* SimpleHeader.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -1654,6 +1657,7 @@
 				90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */,
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
+				90FB2417220AB273004CD142 /* SimpleHeader.swift in Sources */,
 				907B48E6220A105200EC7590 /* RatingPlayerUIRenderer.swift in Sources */,
 				9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
@@ -1954,7 +1958,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1972,7 +1979,10 @@
 				DEVELOPMENT_TEAM = Z9389TM6BT;
 				INFOPLIST_FILE = Boardly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1988,7 +1998,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2006,7 +2020,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BoardlyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.BoardlyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

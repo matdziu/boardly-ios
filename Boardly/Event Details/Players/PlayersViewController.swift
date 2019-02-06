@@ -87,22 +87,18 @@ extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.text = "Accepted players:"
-        label.backgroundColor = UIColor.white
-        label.textColor = UIColor(named: Color.grey.rawValue)
-        label.font = UIFont.boldSystemFont(ofSize: 17)
+        let header = SimpleHeader()
         switch section {
         case 0:
-            label.text = "Event info:"
+            header.text = "Event info:"
         case 1:
-            label.text = "Controls:"
+            header.text = "Controls:"
         case 2:
-            label.text = "Accepted players:"
+            header.text = "Accepted players:"
         default:
             return UIView()
         }
-        return label
+        return header
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

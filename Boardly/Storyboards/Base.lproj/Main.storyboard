@@ -1349,8 +1349,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FdP-bp-Lm5" firstAttribute="leading" secondItem="Fd0-zR-L2q" secondAttribute="leading" constant="32" id="4kd-yf-2An"/>
+                            <constraint firstItem="FdP-bp-Lm5" firstAttribute="centerX" secondItem="Fd0-zR-L2q" secondAttribute="centerX" id="GKG-34-z75"/>
                             <constraint firstItem="FdP-bp-Lm5" firstAttribute="centerY" secondItem="Fd0-zR-L2q" secondAttribute="centerY" id="TIw-bU-H1D"/>
                             <constraint firstItem="Fd0-zR-L2q" firstAttribute="trailing" secondItem="FdP-bp-Lm5" secondAttribute="trailing" constant="32" id="hWw-yy-iD8"/>
+                            <constraint firstItem="FdP-bp-Lm5" firstAttribute="leading" secondItem="Fd0-zR-L2q" secondAttribute="trailing" constant="-343" id="zqX-mt-jgK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fd0-zR-L2q"/>
                     </view>
