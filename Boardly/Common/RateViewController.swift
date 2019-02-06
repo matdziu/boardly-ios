@@ -16,6 +16,11 @@ class RateViewController: UIViewController {
     
     @IBOutlet weak var ratingView: CosmosView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ratingView.rating = 3.0
+    }
+    
     func prepare(rateButtonClickedHandler: @escaping (Int) -> ()) {
         self.rateButtonClickedHandler = rateButtonClickedHandler
     }

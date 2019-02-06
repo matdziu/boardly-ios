@@ -213,8 +213,7 @@ class BaseServiceImpl {
         getUserRatingHashesRef(userId: player.id)
             .child(currentRatingHash)
             .observeSingleEvent(of: .value) { snapshot in
-                let ratedOrSelf = snapshot.value as? Bool
-                modifiedPlayer.ratedOrSelf = ratedOrSelf != nil
+                modifiedPlayer.ratedOrSelf = snapshot.exists()
                 resultSubject.onNext(modifiedPlayer)
                 resultSubject.onCompleted()
         }

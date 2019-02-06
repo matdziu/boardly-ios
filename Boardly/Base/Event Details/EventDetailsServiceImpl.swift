@@ -16,7 +16,7 @@ class EventDetailsServiceImpl: BaseServiceImpl, EventDetailsService {
         let resultSubject = PublishSubject<Bool>()
         
         getUserRatingHashesRef(userId: rateInput.playerId)
-            .child("\(rateInput.eventId)\(getCurrentUserId()))")
+            .child("\(rateInput.eventId)\(getCurrentUserId())")
             .setValue(rateInput.rating) { (error, _) in
                 if error == nil {
                     resultSubject.onNext(true)
