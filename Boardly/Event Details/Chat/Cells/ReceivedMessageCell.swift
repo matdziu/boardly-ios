@@ -25,6 +25,6 @@ class ReceivedMessageCell: UITableViewCell {
               profilePictureUrl: String) {
         messageLabel.text = message
         nameLabel.text = name
-        profilePicture.downloaded(from: profilePictureUrl)
+        profilePicture.downloaded(from: profilePictureUrl, placeHolder: UIImage(named: Image.profilePicturePlaceHolder.rawValue))
     }
 }

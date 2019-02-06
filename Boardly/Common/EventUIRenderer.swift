@@ -119,7 +119,7 @@ class EventUIRenderer {
             gameLabel.isHidden = false
             gameImageView.isHidden = false
             gameLabel.text = gameName
-            gameImageView.downloaded(from: gameImageUrl)
+            gameImageView.downloaded(from: gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         } else {
             gameLabel.isHidden = true
             gameImageView.isHidden = true

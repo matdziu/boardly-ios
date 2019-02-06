@@ -106,7 +106,7 @@ class EventViewController: UIViewController, EventView {
     
     private func loadGameSection(gameImageView: UIImageView, gameImageUrl: String,
                                  gameNameLabel: UILabel, gameName: String) {
-        gameImageView.downloaded(from: gameImageUrl)
+        gameImageView.downloaded(from: gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         if !gameName.isEmpty {
             gameNameLabel.text = gameName
         } else {
@@ -303,7 +303,7 @@ class EventViewController: UIViewController, EventView {
     private func loadAndSaveGameImage(game: Game, boardGameImageView: UIImageView, inputDataSetter: (String) -> Void) {
         if game.id != "-1" {
             inputDataSetter(game.image)
-            boardGameImageView.downloaded(from: game.image)
+            boardGameImageView.downloaded(from: game.image, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         }
     }
 }

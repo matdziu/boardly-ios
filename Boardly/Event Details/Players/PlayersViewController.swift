@@ -35,6 +35,7 @@ class PlayersViewController: ChildEventDetailsViewController, PlayersView {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentTableView.dataSource = self
+        contentTableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,10 +80,29 @@ class PlayersViewController: ChildEventDetailsViewController, PlayersView {
     }
 }
 
-extension PlayersViewController: UITableViewDataSource {
+extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Accepted players:"
+        label.backgroundColor = UIColor.white
+        label.textColor = UIColor(named: Color.grey.rawValue)
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        switch section {
+        case 0:
+            label.text = "Event info:"
+        case 1:
+            label.text = "Controls:"
+        case 2:
+            label.text = "Accepted players:"
+        default:
+            return UIView()
+        }
+        return label
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

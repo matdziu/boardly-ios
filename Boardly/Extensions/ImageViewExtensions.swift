@@ -8,40 +8,23 @@
 
 import Foundation
 import UIKit
-import Alamofire
-import AlamofireImage
-
-private var imageTasks = [UIImageView : DataRequest]()
-private let imageCache = AutoPurgingImageCache()
+import Kingfisher
 
 extension UIImageView {
     
-    func downloaded(from url: URL) {
-        let identifier = url.absoluteString
-        let cachedImage = imageCache.image(withIdentifier: identifier)
-        if cachedImage == nil {
-            let task = Alamofire.request(url, method: .get).responseImage { response in
-                guard let image = response.result.value else { return }
-                imageCache.add(image, withIdentifier: identifier)
-                DispatchQueue.main.async() {
-                    self.image = image
-                }
-            }
-            imageTasks[self] = task
-        } else {
-            DispatchQueue.main.async() {
-                self.image = cachedImage
-            }
-        }
+    func downloaded(from url: URL, placeHolder: UIImage?) {
+        self.kf.setImage(with: url,
+                         placeholder: placeHolder,
+                         options: [KingfisherOptionsInfoItem.cacheOriginalImage])
     }
     
     func cancel() {
-        imageTasks[self]?.cancel()
+        self.kf.cancelDownloadTask()
     }
     
-    func downloaded(from link: String) {
+    func downloaded(from link: String, placeHolder: UIImage?) {
         guard let url = URL(string: link) else { return }
-        downloaded(from: url)
+        downloaded(from: url, placeHolder: placeHolder)
     }
     
     func roundBorderCorners() {

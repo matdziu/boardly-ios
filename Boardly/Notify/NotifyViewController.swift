@@ -151,7 +151,7 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     func render(notifyViewState: NotifyViewState) {
-        boardGameImageView.downloaded(from: notifyViewState.gameImageUrl)
+        boardGameImageView.downloaded(from: notifyViewState.gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         showProgressBar(show: notifyViewState.progress)
         showPlacePickedError(show: !notifyViewState.selectedPlaceValid)
         if notifyViewState.successSaved {

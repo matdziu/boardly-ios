@@ -141,7 +141,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     func render(filterViewState: FilterViewState) {
-        gameImageView.downloaded(from: filterViewState.gameImageUrl)
+        gameImageView.downloaded(from: filterViewState.gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         if filterViewState.locationProcessing {
             placeNameLabel.text = "Setting your location..."
             useCurrentLocationButton.isUserInteractionEnabled = false

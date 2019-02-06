@@ -1,7 +1,5 @@
 PODS:
   - Alamofire (4.8.0)
-  - AlamofireImage (3.5.0):
-    - Alamofire (~> 4.8)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -120,6 +118,7 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
   - IQKeyboardManager (6.2.0)
+  - Kingfisher (5.0.1)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -144,7 +143,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
-  - AlamofireImage (~> 3.5)
   - Cosmos
   - Crashlytics
   - Fabric
@@ -160,6 +158,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GoogleSignIn
   - IQKeyboardManager
+  - Kingfisher (~> 5.0)
   - Nimble
   - Quick
   - RxBlocking (~> 4.0)
@@ -171,7 +170,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - AlamofireImage
     - Bolts
     - Cosmos
     - Crashlytics
@@ -198,6 +196,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManager
+    - Kingfisher
     - leveldb-library
     - nanopb
     - Nimble
@@ -212,7 +211,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -239,6 +237,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
@@ -251,6 +250,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: 41cbd3323f37a187de870cce3fbc8a2d36e9458f
+PODFILE CHECKSUM: 1fbc70925c06ecad5e67d3914d643bf0ff136270
 
 COCOAPODS: 1.5.3

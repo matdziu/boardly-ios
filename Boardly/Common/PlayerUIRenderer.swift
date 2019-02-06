@@ -17,7 +17,7 @@ class PlayerUIRenderer {
                            helloTextLabel: UILabel,
                            ratingLabel: UILabel,
                            ratingImageView: UIImageView) {
-        playerImageView.downloaded(from: player.profilePicture)
+        playerImageView.downloaded(from: player.profilePicture, placeHolder: UIImage(named: Image.profilePicturePlaceHolder.rawValue))
         nameLabel.text = player.name
         helloTextLabel.text = player.helloText
         displayRating(rating: player.rating, ratingLabel: ratingLabel, ratingImageView: ratingImageView)
