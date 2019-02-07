@@ -14,9 +14,11 @@ class ChildEventDetailsViewController: UIViewController, EventDetailsView {
     
     private var ratingEventSubject: PublishSubject<RateInput>!
     var eventId: String = ""
+    var isAdmin = false
     
-    func prepare(eventId: String) {
+    func prepare(eventId: String, isAdmin: Bool) {
         self.eventId = eventId
+        self.isAdmin = isAdmin
     }
     
     func initEmitters() {

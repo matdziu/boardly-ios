@@ -37,7 +37,7 @@ class EventDetailsViewController: BaseNavViewController {
             chatViewController.prepare(eventId: eventId)
         }
         if let childEventDetailsViewController = segue.destination as? ChildEventDetailsViewController {
-            childEventDetailsViewController.prepare(eventId: eventId)
+            childEventDetailsViewController.prepare(eventId: eventId, isAdmin: isAdmin)
         }
     }
     
