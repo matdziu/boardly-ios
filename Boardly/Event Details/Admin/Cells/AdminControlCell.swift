@@ -11,4 +11,9 @@ import UIKit
 
 class AdminControlCell: UITableViewCell {
     
+    @IBOutlet weak var editEventButton: UIButton!
+    
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        
+    }
 }

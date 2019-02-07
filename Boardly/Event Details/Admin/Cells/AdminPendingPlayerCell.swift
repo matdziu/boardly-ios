@@ -11,4 +11,9 @@ import UIKit
 
 class AdminPendingPlayerCell: UITableViewCell {
     
+    @IBOutlet weak var playerNameLabel: UILabel!
+    @IBOutlet weak var playerPicture: UIImageView!
+    @IBOutlet weak var playerRatingLabel: UILabel!
+    @IBOutlet weak var helloTextLabel: UILabel!
+    @IBOutlet weak var acceptButton: UIButton!
 }

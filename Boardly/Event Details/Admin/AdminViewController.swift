@@ -11,5 +11,8 @@ import UIKit
 
 class AdminViewController: UIViewController {
     
+    @IBOutlet weak var progressView: UIActivityIndicatorView!
+    @IBOutlet weak var contentTableView: UITableView!
+    
     private let adminPresenter = AdminPresenter(adminInteractor: AdminInteractorImpl(adminService: AdminServiceImpl()))
 }
