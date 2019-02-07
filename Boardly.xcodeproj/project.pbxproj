@@ -16,7 +16,7 @@
 		90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */; };
 		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
 		9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F1682209B5B8004B78EB /* PlayerControlCell.swift */; };
-		9023F16B2209B5CF004B78EB /* AcceptedPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */; };
+		9023F16B2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16A2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift */; };
 		9023F16D2209B90E004B78EB /* PlayerUIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */; };
 		9025496C21DF889F006CE583 /* EventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496B21DF889F006CE583 /* EventViewState.swift */; };
 		9025496E21DF8C96006CE583 /* PartialEventViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025496D21DF8C96006CE583 /* PartialEventViewState.swift */; };
@@ -261,7 +261,7 @@
 		90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyDatePicker.swift; sourceTree = "<group>"; };
 		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
 		9023F1682209B5B8004B78EB /* PlayerControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCell.swift; sourceTree = "<group>"; };
-		9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedPlayerCell.swift; sourceTree = "<group>"; };
+		9023F16A2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAcceptedPlayerCell.swift; sourceTree = "<group>"; };
 		9023F16C2209B90E004B78EB /* PlayerUIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUIRenderer.swift; sourceTree = "<group>"; };
 		9025496B21DF889F006CE583 /* EventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewState.swift; sourceTree = "<group>"; };
 		9025496D21DF8C96006CE583 /* PartialEventViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialEventViewState.swift; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				9023F1682209B5B8004B78EB /* PlayerControlCell.swift */,
-				9023F16A2209B5CF004B78EB /* AcceptedPlayerCell.swift */,
+				9023F16A2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1606,7 +1606,7 @@
 				90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
-				9023F16B2209B5CF004B78EB /* AcceptedPlayerCell.swift in Sources */,
+				9023F16B2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
 				9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */,

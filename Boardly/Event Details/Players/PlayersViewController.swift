@@ -159,7 +159,7 @@ extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
         return contentTableView.dequeueReusableCell(withIdentifier: PLAYER_CONTROL_CELL, for: indexPath) as! PlayerControlCell
     }
     
-    private func getAcceptedPlayerCell(indexPath: IndexPath) -> AcceptedPlayerCell {
-        return contentTableView.dequeueReusableCell(withIdentifier: ACCEPTED_PLAYER_CELL, for: indexPath) as! AcceptedPlayerCell
+    private func getAcceptedPlayerCell(indexPath: IndexPath) -> PlayersAcceptedPlayerCell {
+        return contentTableView.dequeueReusableCell(withIdentifier: PLAYERS_ACCEPTED_PLAYER_CELL, for: indexPath) as! PlayersAcceptedPlayerCell
     }
 }

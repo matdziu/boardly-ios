@@ -2546,7 +2546,7 @@
                                             <outlet property="leaveEventButton" destination="MQi-LV-xuY" id="FJK-Dr-Iun"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="acceptedPlayerCell" rowHeight="192" id="ZWd-FK-JhV" customClass="AcceptedPlayerCell" customModule="Boardly" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playersAcceptedPlayerCell" rowHeight="192" id="ZWd-FK-JhV" customClass="PlayersAcceptedPlayerCell" customModule="Boardly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="486" width="375" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZWd-FK-JhV" id="Qff-yC-gE6">

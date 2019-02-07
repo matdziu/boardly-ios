@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AcceptedPlayerCell: UITableViewCell {
+class PlayersAcceptedPlayerCell: UITableViewCell {
     
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var playerPicture: UIImageView!
