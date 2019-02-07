@@ -158,6 +158,7 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
             return eventViewCell
         case 1:
             let adminControlCell = getAdminControlCell(indexPath: indexPath)
+            adminControlCell.bind { self.launchEditEventViewController() }
             return adminControlCell
         case 2:
             let acceptedPlayerCell = getAcceptedPlayerCell(indexPath: indexPath)
@@ -176,6 +177,17 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return getEventViewCell(indexPath: indexPath)
         }
+    }
+    
+    private func launchEditEventViewController() {
+        guard let eventViewController = storyboard?.instantiateViewController(withIdentifier: EVENT_VIEW_CONTROLLER_ID) as? EventViewController else { return }
+        eventViewController.prepare(mode: .edit(event: fetchedEvent), successHandler: {
+            self.navigationController?.popViewController(animated: true)
+        }, deleteEventHandler: {
+            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
+        })
+        self.navigationController?.pushViewController(eventViewController, animated: true)
     }
     
     private func getEventViewCell(indexPath: IndexPath) -> BoardlyEventCell {

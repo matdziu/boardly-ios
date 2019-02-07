@@ -17,7 +17,7 @@ enum Mode {
     case edit(event: BoardlyEvent)
 }
 
-class EventViewController: UIViewController, EventView {
+class EventViewController: BaseNavViewController, EventView {
     
     private var eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
     private var inputData = EventInputData()
@@ -47,12 +47,29 @@ class EventViewController: UIViewController, EventView {
     private var recentGamePickEvent = GamePickEvent()
     
     private var emitPlacePickEvent = false
+    private var mode: Mode = .add
+    private var successHandler: () -> () = {}
+    private var deleteEventHandler: () -> () = {}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.doneAction = { [unowned self] in
             self.inputData.timestamp = $0.toMillis()
             self.dateLabel.text = $0.formatForDisplay()
+        }
+        switch mode {
+        case .add:
+            saveChangesButton.isHidden = true
+            deleteEventButton.isHidden = true
+            addEventButton.isHidden = false
+            clearButton.isHidden = false
+        case .edit(let event):
+            saveChangesButton.isHidden = false
+            deleteEventButton.isHidden = false
+            addEventButton.isHidden = true
+            clearButton.isHidden = true
+            renderEventData(event: event)
+            updateInputData(event: event)
         }
     }
     
@@ -75,21 +92,10 @@ class EventViewController: UIViewController, EventView {
         contentScrollView.scrollToTop()
     }
     
-    func prepare(mode: Mode) {
-        switch mode {
-        case .add:
-            saveChangesButton.isHidden = true
-            deleteEventButton.isHidden = true
-            addEventButton.isHidden = false
-            clearButton.isHidden = false
-        case .edit(let event):
-            saveChangesButton.isHidden = false
-            deleteEventButton.isHidden = false
-            addEventButton.isHidden = true
-            clearButton.isHidden = true
-            renderEventData(event: event)
-            updateInputData(event: event)
-        }
+    func prepare(mode: Mode, successHandler: @escaping () -> (), deleteEventHandler: @escaping () -> () = {}) {
+        self.mode = mode
+        self.successHandler = successHandler
+        self.deleteEventHandler = deleteEventHandler
     }
     
     private func renderEventData(event: BoardlyEvent) {
@@ -268,11 +274,12 @@ class EventViewController: UIViewController, EventView {
                              inputDataSetter: { inputData.gameImageUrl3 = $0 })
         if eventViewState.success {
             showAlert(message: "Everything went well!")
-            self.tabBarController?.selectedIndex = 0
+            successHandler()
             reloadView()
         }
         if eventViewState.removed {
             showAlert(message: "Everything went well!")
+            deleteEventHandler()
         }
     }
     

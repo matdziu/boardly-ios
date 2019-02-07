@@ -29,7 +29,9 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let eventViewController = viewController as? EventViewController {
-            eventViewController.prepare(mode: .add)
+            eventViewController.prepare(mode: .add, successHandler: {
+                tabBarController.selectedIndex = 0
+            })
         }
     }
 }
