@@ -190,11 +190,11 @@
 		909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE421CAE79F00166C93 /* LoginViewRobot.swift */; };
 		909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE621CAE7B700166C93 /* LoginPresenterTest.swift */; };
 		909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */; };
-		909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */; };
 		90A07A2721CE315600EE5349 /* DefaultAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2621CE315600EE5349 /* DefaultAuthError.swift */; };
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690B921F3079F00365E32 /* BoardlyTextView.swift */; };
 		90A690BC21F3088200365E32 /* JoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690BB21F3088200365E32 /* JoinEventViewController.swift */; };
+		90BDED02220C90E600D4574B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED01220C90E600D4574B /* GoogleService-Info.plist */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
 		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
@@ -442,12 +442,12 @@
 		909A8BE421CAE79F00166C93 /* LoginViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewRobot.swift; sourceTree = "<group>"; };
 		909A8BE621CAE7B700166C93 /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		909A8BE821CAE7CE00166C93 /* LoginInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
-		909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90A07A2621CE315600EE5349 /* DefaultAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthError.swift; sourceTree = "<group>"; };
 		90A07A2821CE568900EE5349 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		90A690B921F3079F00365E32 /* BoardlyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyTextView.swift; sourceTree = "<group>"; };
 		90A690BB21F3088200365E32 /* JoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEventViewController.swift; sourceTree = "<group>"; };
+		90BDED01220C90E600D4574B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
@@ -1083,7 +1083,7 @@
 		909A8B9D21CACEA600166C93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				909A8BEA21CAEB8E00166C93 /* GoogleService-Info.plist */,
+				90BDED01220C90E600D4574B /* GoogleService-Info.plist */,
 				909A8B8021CACDAA00166C93 /* Info.plist */,
 				909A8B7B21CACDAA00166C93 /* Assets.xcassets */,
 			);
@@ -1427,8 +1427,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BDED02220C90E600D4574B /* GoogleService-Info.plist in Resources */,
 				909A8B7F21CACDAA00166C93 /* LaunchScreen.storyboard in Resources */,
-				909A8BEB21CAEB8E00166C93 /* GoogleService-Info.plist in Resources */,
 				909A8B7C21CACDAA00166C93 /* Assets.xcassets in Resources */,
 				909A8B7A21CACDA800166C93 /* Main.storyboard in Resources */,
 				90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */,
@@ -1984,7 +1984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boardly.Boardly.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
