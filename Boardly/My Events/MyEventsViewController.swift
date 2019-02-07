@@ -73,16 +73,16 @@ class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
         switch sender.selectedSegmentIndex {
         case 0:
             renderedEvents = acceptedEvents
-            toggleNoEventsLabel(eventsListSize: acceptedEvents.count, text: "No accepted events yet")
+            toggleNoEventsLabel(eventsListSize: acceptedEvents.count, text: NSLocalizedString("No accepted events yet", comment: ""))
         case 1:
             renderedEvents = createdEvents
-            toggleNoEventsLabel(eventsListSize: createdEvents.count, text: "No created events yet")
+            toggleNoEventsLabel(eventsListSize: createdEvents.count, text: NSLocalizedString("No created events yet", comment: ""))
         case 2:
             renderedEvents = pendingEvents
-            toggleNoEventsLabel(eventsListSize: pendingEvents.count, text: "No pending events yet")
+            toggleNoEventsLabel(eventsListSize: pendingEvents.count, text: NSLocalizedString("No pending events yet", comment: ""))
         case 3:
             renderedEvents = interestingEvents
-            toggleNoEventsLabel(eventsListSize: interestingEvents.count, text: "No events that interest you yet")
+            toggleNoEventsLabel(eventsListSize: interestingEvents.count, text: NSLocalizedString("No events that interest you yet", comment: ""))
         default:
             renderedEvents = []
         }

@@ -35,17 +35,17 @@ enum PartialSignUpViewState: Equatable {
         if let errorCode = AuthErrorCode(rawValue: error.code) {
             switch errorCode {
             case .invalidEmail:
-                return "This email is incorrect"
+                return NSLocalizedString("This email is incorrect", comment: "")
             case .emailAlreadyInUse:
-                return "This email is already used"
+                return NSLocalizedString("This email is already used", comment: "")
             case .networkError:
-                return "You are not connected to the internet"
+                return NSLocalizedString("You are not connected to the internet", comment: "")
             default:
-                return "Something went wrong :("
+                return NSLocalizedString("Something went wrong :(", comment: "")
             }
         }
         else {
-            return "Something went wrong :("
+            return NSLocalizedString("Something went wrong :(", comment: "")
         }
     }
 }

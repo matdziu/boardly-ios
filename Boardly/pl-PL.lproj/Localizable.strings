@@ -1,0 +1,49 @@
+/* 
+ Localizable.strings
+ Boardly
+ 
+ Created by Mateusz Dziubek on 07/02/2019.
+ Copyright © 2019 Mateusz Dziubek. All rights reserved.
+ */
+"No accepted events yet" = "Nie masz jeszcze nadchodzących wydarzeń";
+"No created events yet" = "Nie masz jeszcze utworzonych wydarzeń";
+"No pending events yet" = "Nie masz jeszcze wydarzeń, które oczekują na akceptację organizatora";
+"No events that interest you yet" = "Nie masz jeszcze wydarzeń, które Cię interesują";
+"Event info:" = "O wydarzeniu:";
+"Controls:" = "Zarządzaj:";
+"Accepted players:" = "Zaakceptowani gracze:";
+"No accepted players yet" = "Na razie nie ma tutaj nikogo";
+"No pending players yet" = "Na razie nie ma tutaj nikogo";
+"Pending players:" = "Oczekujący gracze:";
+"No game picked" = "Nie wybrano gry";
+"Setting your location..." = "Trwa ustalanie Twojej lokalizacji...";
+"Current location" = "Obecna lokalizacja";
+"No place picked" = "Nie wybrano miejsca";
+"No date picked" = "Nie wybrano daty";
+"Maximum event distance:" = "Maksymalna odległość wydarzenia:";
+"Something went wrong :(" = "Coś poszło nie tak :(";
+"event" = "wydarzenie";
+"Together you'll be playing in" = "Zagracie razem w";
+"The event will take place in" = "Wydarzenie odbędzie się w";
+"To be added" = "Do ustalenia";
+"Event added to calendar" = "Dodano do kalendarza";
+"Everything went well!" = "Wszystko przebiegło pomyślnie!";
+"You must be connected to the internet" = "Musisz mieć połączenie z internetem";
+"Join request sent" = "Prośba o dołączenie została wysłana";
+"Are you sure you want to leave this event?" = "Na pewno chcesz opuścić to wydarzenie?";
+"Leave now" = "Opuść teraz";
+"Cancel" = "Anuluj";
+"You were kicked from this event" = "Zostałeś wyrzucony z tego wydarzenia";
+"You left this event" = "Opuściłeś to wydarzenie";
+"Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby." = "Włącz lokalizację. Dzięki niej możemy znaleźć odpowiednie wydarzenia";
+"This email is incorrect" = "Ten email jest nieprawidłowy";
+"This email is already used" = "Ten email jest już używany";
+"You are not connected to the internet" = "Nie masz połączenia z internetem";
+"This password is incorrect" = "Nieprawidłowe hasło";
+"This user does not exist" = "Ten użytkownik nie istenieje";
+"You current rating:" = "Twoja obecna ocena:";
+"Delete the event" = "Usuń wydarzenie";
+"Are you sure you want to delete this event?" = "Czy na pewno chcesz usunąć to wydarzenie?";
+"Delete" = "Usuń";
+"Saved successfully!" = "Pomyślnie zapisano!";
+"Done" = "Zrobione";

@@ -45,19 +45,19 @@ enum PartialLoginViewState: Equatable {
         if let errorCode = AuthErrorCode(rawValue: error.code) {
             switch errorCode {
             case .invalidEmail:
-                return "This email is incorrect"
+                return NSLocalizedString("This email is incorrect", comment: "")
             case .wrongPassword:
-                return "This password is incorrect"
+                return NSLocalizedString("This password is incorrect", comment: "")
             case .userNotFound:
-                return "This user does not exist"
+                return NSLocalizedString("This user does not exist", comment: "")
             case .networkError:
-                return "You are not connected to the internet"
+                return NSLocalizedString("You are not connected to the internet", comment: "")
             default:
-                return "Something went wrong :("
+                return NSLocalizedString("Something went wrong :(", comment: "")
             }
         }
         else {
-            return "Something went wrong :("
+            return NSLocalizedString("Something went wrong :(", comment: "")
         }
     }
 }

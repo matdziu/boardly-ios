@@ -22,7 +22,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView, UIImage
     
     private var initialize = true
     private var selectedProfilePicture: UIImage? = nil
-    private var defaultRatingText = "You current rating: "
+    private var defaultRatingText = "\(NSLocalizedString("You current rating:", comment: "")) "
     private let editProfilePresenter = EditProfilePresenter(
         editProfileInteractor: EditProfileInteractorImpl(editProfileService: EditProfileServiceImpl()))
     private let imagePicker = UIImagePickerController()

@@ -31,7 +31,7 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
         if let eventViewController = viewController as? EventViewController {
             eventViewController.prepare(mode: .add, successHandler: {
                 tabBarController.selectedIndex = 0
-                self.showAlert(message: "Everything went well!")
+                self.showAlert(message: NSLocalizedString("Everything went well!", comment: ""))
             })
         }
     }

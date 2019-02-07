@@ -84,11 +84,11 @@ class EventViewController: BaseNavViewController, EventView {
             self.game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
             self.game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
         }
-        gameLabel1.text = "No game picked"
-        gameLabel2.text = "No game picked"
-        gameLabel3.text = "No game picked"
-        placeLabel.text = "No place picked"
-        dateLabel.text = "No date picked"
+        gameLabel1.text = NSLocalizedString("No game picked", comment: "")
+        gameLabel2.text = NSLocalizedString("No game picked", comment: "")
+        gameLabel3.text = NSLocalizedString("No game picked", comment: "")
+        placeLabel.text = NSLocalizedString("No place picked", comment: "")
+        dateLabel.text = NSLocalizedString("No date picked", comment: "")
         contentScrollView.scrollToTop()
     }
     
@@ -116,7 +116,7 @@ class EventViewController: BaseNavViewController, EventView {
         if !gameName.isEmpty {
             gameNameLabel.text = gameName
         } else {
-            gameNameLabel.text = "No game picked"
+            gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
         }
     }
     
@@ -329,7 +329,7 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         dismiss(animated: true, completion: nil)
-        showAlert(message: "Something went wrong :(")
+        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
@@ -349,12 +349,12 @@ extension EventViewController: GMSAutocompleteViewControllerDelegate {
     }
     
     private func launchDeleteEventDialog() {
-        let alert = UIAlertController(title: "Delete the event", message: "Are you sure you want to delete this event?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action: UIAlertAction!) in
+        let alert = UIAlertController(title: NSLocalizedString("Delete the event", comment: ""), message: NSLocalizedString("Are you sure you want to delete this event?", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive, handler: { (action: UIAlertAction!) in
             self.deleteEventSubject.onNext(self.inputData.eventId)
             alert.dismiss(animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true)
         }))
         self.present(alert, animated: true)

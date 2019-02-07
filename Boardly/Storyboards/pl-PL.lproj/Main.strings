@@ -1,0 +1,393 @@
+
+/* Class = "UILabel"; text = "Welcome everyone"; ObjectID = "0dj-tz-cVG"; */
+"0dj-tz-cVG.text" = "Witam wszystkich";
+
+/* Class = "UIButton"; normalTitle = "12:00"; ObjectID = "29x-e0-Cuv"; */
+"29x-e0-Cuv.normalTitle" = "12:00";
+
+/* Class = "UILabel"; text = "5.0"; ObjectID = "337-JR-vcH"; */
+"337-JR-vcH.text" = "5.0";
+
+/* Class = "UIButton"; normalTitle = "Log in using Facebook"; ObjectID = "3Ba-DA-Xt7"; */
+"3Ba-DA-Xt7.normalTitle" = "Zaloguj przez Facebook";
+
+/* Class = "UIButton"; normalTitle = "JOIN"; ObjectID = "3cD-NQ-BCc"; */
+"3cD-NQ-BCc.normalTitle" = "DOŁĄCZ";
+
+/* Class = "UILabel"; text = "Monopoly"; ObjectID = "3im-03-iKG"; */
+"3im-03-iKG.text" = "Monopoly";
+
+/* Class = "UILabel"; text = "Something went wrong :("; ObjectID = "4Gq-ki-rr5"; */
+"4Gq-ki-rr5.text" = "Coś poszło nie tak :(";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "4Uj-Nw-cCg"; */
+"4Uj-Nw-cCg.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "DELETE NOTIFICATIONS"; ObjectID = "4kW-p5-sta"; */
+"4kW-p5-sta.normalTitle" = "Usuń powiadomienia";
+
+/* Class = "UILabel"; text = "Test test test"; ObjectID = "5Cb-21-V59"; */
+"5Cb-21-V59.text" = "Test test test";
+
+/* Class = "UIButton"; normalTitle = "KICK"; ObjectID = "5vc-ui-a4p"; */
+"5vc-ui-a4p.normalTitle" = "WYRZUĆ";
+
+/* Class = "UILabel"; text = "Monopoly"; ObjectID = "6Wr-Ve-kT5"; */
+"6Wr-Ve-kT5.text" = "Monopoly";
+
+/* Class = "UILabel"; text = "Eurobusiness"; ObjectID = "6eD-ho-Ej2"; */
+"6eD-ho-Ej2.text" = "Eurobusiness";
+
+/* Class = "UITabBarItem"; title = "Add"; ObjectID = "6jS-fn-uLi"; */
+"6jS-fn-uLi.title" = "Dodaj";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "7Wj-Cg-7Lc"; */
+"7Wj-Cg-7Lc.normalTitle" = "Zastosuj";
+
+/* Class = "UILabel"; text = "Mateusz"; ObjectID = "8Jw-ro-GHm"; */
+"8Jw-ro-GHm.text" = "Mateusz";
+
+/* Class = "UILabel"; text = "No events found. Try changing your filter criteria."; ObjectID = "9fK-5C-E7c"; */
+"9fK-5C-E7c.text" = "Nie znaleziono wydarzeń. Spróbuj zmienić kryteria wyszukiwania.";
+
+/* Class = "UILabel"; text = "CREATED"; ObjectID = "ABN-t2-YFt"; */
+"ABN-t2-YFt.text" = "STWORZONE";
+
+/* Class = "UILabel"; text = "Test test test"; ObjectID = "ARs-c4-Pdc"; */
+"ARs-c4-Pdc.text" = "Test test test";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "BZY-7v-ZmZ"; */
+"BZY-7v-ZmZ.normalTitle" = "ANULUJ";
+
+/* Class = "UIButton"; normalTitle = "RATE"; ObjectID = "CVO-Io-z9X"; */
+"CVO-Io-z9X.normalTitle" = "OCEŃ";
+
+/* Class = "UIButton"; normalTitle = "DESCRIPTION"; ObjectID = "DGK-08-uYC"; */
+"DGK-08-uYC.normalTitle" = "OPIS";
+
+/* Class = "UILabel"; text = "Welcome everyone"; ObjectID = "DUo-Ph-3Ug"; */
+"DUo-Ph-3Ug.text" = "Zapraszam wszystkich";
+
+/* Class = "UISearchBar"; placeholder = "Search for games"; ObjectID = "Elr-am-jQi"; */
+"Elr-am-jQi.placeholder" = "Szukaj gier";
+
+/* Class = "UIButton"; normalTitle = "Domówka"; ObjectID = "F9m-8T-7Ek"; */
+"F9m-8T-7Ek.normalTitle" = "Domówka";
+
+/* Class = "UILabel"; text = "No place picked"; ObjectID = "FKs-Ww-lhF"; */
+"FKs-Ww-lhF.text" = "Nie wybrano miejsca";
+
+/* Class = "UIButton"; normalTitle = "DELETE EVENT"; ObjectID = "FMK-Uc-X76"; */
+"FMK-Uc-X76.normalTitle" = "USUŃ WYDARZENIE";
+
+/* Class = "UILabel"; text = "Maximum event distance: 50km"; ObjectID = "GN2-xO-jKP"; */
+"GN2-xO-jKP.text" = "Maksymalna odległość wydarzenia: 50km";
+
+/* Class = "UIButton"; normalTitle = "ENTER EVENT"; ObjectID = "GUd-Vk-gtD"; */
+"GUd-Vk-gtD.normalTitle" = "PRZEJDŹ DO WYDARZENIA";
+
+/* Class = "UILabel"; text = "5.0"; ObjectID = "Gsa-zf-mbg"; */
+"Gsa-zf-mbg.text" = "5.0";
+
+/* Class = "UIButton"; normalTitle = "Save changes"; ObjectID = "HLp-CJ-Hvv"; */
+"HLp-CJ-Hvv.normalTitle" = "Zapisz zmiany";
+
+/* Class = "UIButton"; normalTitle = "JOIN"; ObjectID = "Hgv-ZG-5K3"; */
+"Hgv-ZG-5K3.normalTitle" = "DOŁĄCZ";
+
+/* Class = "UILabel"; text = "New chat message notifications"; ObjectID = "Hiu-2y-4AI"; */
+"Hiu-2y-4AI.text" = "Powiadomienia o nowej wiadomości na czacie";
+
+/* Class = "UILabel"; text = "Chinese"; ObjectID = "I2m-sK-2tJ"; */
+"I2m-sK-2tJ.text" = "Chińczyk";
+
+/* Class = "UILabel"; text = "Welcome everyone"; ObjectID = "I4M-jP-cK6"; */
+"I4M-jP-cK6.text" = "Witam wszystkich";
+
+/* Class = "UILabel"; text = "Eurobusiness"; ObjectID = "IvF-Ph-Ly9"; */
+"IvF-Ph-Ly9.text" = "Eurobusiness";
+
+/* Class = "UILabel"; text = "Rate this player"; ObjectID = "K9m-8y-8CU"; */
+"K9m-8y-8CU.text" = "Oceń tego gracza";
+
+/* Class = "UIButton"; normalTitle = "Delete game"; ObjectID = "KyL-0z-GH6"; */
+"KyL-0z-GH6.normalTitle" = "Usuń grę";
+
+/* Class = "UIButton"; normalTitle = "EDIT EVENT"; ObjectID = "LAl-wf-KvB"; */
+"LAl-wf-KvB.normalTitle" = "EDYTUJ WYDARZENIE";
+
+/* Class = "UIButton"; normalTitle = "Save changes"; ObjectID = "LOT-W7-aab"; */
+"LOT-W7-aab.normalTitle" = "Zapisz zmiany";
+
+/* Class = "UIButton"; normalTitle = "LEAVE THE EVENT"; ObjectID = "MQi-LV-xuY"; */
+"MQi-LV-xuY.normalTitle" = "OPUŚĆ WYDARZENIE";
+
+/* Class = "UILabel"; text = "Chinese"; ObjectID = "Mq7-us-qMr"; */
+"Mq7-us-qMr.text" = "Chińczyk";
+
+/* Class = "UILabel"; text = "No game picked"; ObjectID = "NE4-6h-a2F"; */
+"NE4-6h-a2F.text" = "Nie wybrano gry";
+
+/* Class = "UILabel"; text = "No place picked"; ObjectID = "NNU-yz-dKW"; */
+"NNU-yz-dKW.text" = "No wybrano miejsca";
+
+/* Class = "UILabel"; text = "Your profile"; ObjectID = "NiS-2e-zWi"; */
+"NiS-2e-zWi.text" = "Twój profil";
+
+/* Class = "UILabel"; text = "Your name"; ObjectID = "O5u-s7-hWc"; */
+"O5u-s7-hWc.text" = "Twoje imię";
+
+/* Class = "UILabel"; text = "5.0"; ObjectID = "O6L-ZL-iI7"; */
+"O6L-ZL-iI7.text" = "5.0";
+
+/* Class = "UIButton"; normalTitle = "CLEAR"; ObjectID = "OYJ-Zt-DNn"; */
+"OYJ-Zt-DNn.normalTitle" = "WYCZYŚĆ";
+
+/* Class = "UIButton"; normalTitle = "Pick a place"; ObjectID = "OZr-EI-MvE"; */
+"OZr-EI-MvE.normalTitle" = "Wybierz miejsce";
+
+/* Class = "UILabel"; text = "Welcome everyone"; ObjectID = "QB3-9T-3re"; */
+"QB3-9T-3re.text" = "Zapraszam wszystkich";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "QQb-Xw-jMZ"; */
+"QQb-Xw-jMZ.text" = "Hasło";
+
+/* Class = "UIButton"; normalTitle = "ACCEPT"; ObjectID = "Qom-aD-AEy"; */
+"Qom-aD-AEy.normalTitle" = "AKCEPTUJ";
+
+/* Class = "UIButton"; normalTitle = "DESCRIPTION"; ObjectID = "R6B-sY-Zq7"; */
+"R6B-sY-Zq7.normalTitle" = "OPIS";
+
+/* Class = "UILabel"; text = "No results"; ObjectID = "RAi-Fo-cEC"; */
+"RAi-Fo-cEC.text" = "Brak wyników";
+
+/* Class = "UILabel"; text = "Event name"; ObjectID = "RS1-Bl-aJT"; */
+"RS1-Bl-aJT.text" = "Nazwa wydarzenia";
+
+/* Class = "UILabel"; text = "Setting your location..."; ObjectID = "Rot-va-6Lz"; */
+"Rot-va-6Lz.text" = "Trwa ustalanie Twojej lokalizacji...";
+
+/* Class = "UILabel"; text = "No game picked"; ObjectID = "Sp2-4I-s6h"; */
+"Sp2-4I-s6h.text" = "Nie wybrano gry";
+
+/* Class = "UITabBarItem"; title = "My events"; ObjectID = "Tkm-eW-YCN"; */
+"Tkm-eW-YCN.title" = "Moje wydarzenia";
+
+/* Class = "UILabel"; text = "PENDING"; ObjectID = "U1n-em-2zE"; */
+"U1n-em-2zE.text" = "OCZEKUJĄCE";
+
+/* Class = "UILabel"; text = "Eurobusiness"; ObjectID = "Umy-Vd-YpY"; */
+"Umy-Vd-YpY.text" = "Eurobusiness";
+
+/* Class = "UILabel"; text = "We'll notify you whenever new event with criteria below will be added nearby"; ObjectID = "Utc-Q4-18l"; */
+"Utc-Q4-18l.text" = "Powiadomimy Cię kiedy nowe wydarzenie spełniające poniższe kryteria pojawi się w pobliżu";
+
+/* Class = "UIButton"; normalTitle = "Pick a game"; ObjectID = "Uts-bl-TGn"; */
+"Uts-bl-TGn.normalTitle" = "Wybierz grę";
+
+/* Class = "UIButton"; normalTitle = "12:00"; ObjectID = "Vu5-JC-9EC"; */
+"Vu5-JC-9EC.normalTitle" = "12:00";
+
+/* Class = "UIButton"; normalTitle = "CANCEL"; ObjectID = "X4t-hL-SCv"; */
+"X4t-hL-SCv.normalTitle" = "ANULUJ";
+
+/* Class = "UIButton"; normalTitle = "Pick a game (optional)"; ObjectID = "XGE-Qv-kqk"; */
+"XGE-Qv-kqk.normalTitle" = "Wybierz grę (opcjonalnie)";
+
+/* Class = "UIButton"; normalTitle = "Apply"; ObjectID = "XHK-7z-l5c"; */
+"XHK-7z-l5c.normalTitle" = "Zastosuj";
+
+/* Class = "UIButton"; normalTitle = "Pick a game (optional)"; ObjectID = "XZz-AI-W87"; */
+"XZz-AI-W87.normalTitle" = "Wybierz grę (opcjonalnie)";
+
+/* Class = "UILabel"; text = "Filter events nearby using criteria below"; ObjectID = "Y2V-NC-LS7"; */
+"Y2V-NC-LS7.text" = "Filtruj wydarzenia w pobliżu używając poniższych kryteriów";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "Yai-Ie-1qJ"; */
+"Yai-Ie-1qJ.title" = "Więcej";
+
+/* Class = "UILabel"; text = "No game picked"; ObjectID = "YbO-1l-6z2"; */
+"YbO-1l-6z2.text" = "Nie wybrano gry";
+
+/* Class = "UILabel"; text = "Looking for events..."; ObjectID = "ZCp-Q7-9Tj"; */
+"ZCp-Q7-9Tj.text" = "Szukam dla Ciebie wydarzeń...";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "a37-Bn-6Yd"; */
+"a37-Bn-6Yd.text" = "Polityka Prywatności";
+
+/* Class = "UILabel"; text = "Chinese"; ObjectID = "a8Q-v9-Nln"; */
+"a8Q-v9-Nln.text" = "Chińczyk";
+
+/* Class = "UIButton"; normalTitle = "DESCRIPTION"; ObjectID = "aLT-FI-Wf4"; */
+"aLT-FI-Wf4.normalTitle" = "OPIS";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "arC-JA-lXR"; */
+"arC-JA-lXR.normalTitle" = "Stwórz konto";
+
+/* Class = "UILabel"; text = "Mateusz"; ObjectID = "bgE-cf-JmK"; */
+"bgE-cf-JmK.text" = "Mateusz";
+
+/* Class = "UILabel"; text = "Maximum event distance: 50km"; ObjectID = "bvy-gp-n5A"; */
+"bvy-gp-n5A.text" = "Maksymalna odległość wydarzenia: 50km";
+
+/* Class = "UIButton"; normalTitle = "Domówka"; ObjectID = "cbA-eC-DWQ"; */
+"cbA-eC-DWQ.normalTitle" = "Domówka";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "dfP-y4-FbA"; */
+"dfP-y4-FbA.text" = "Email";
+
+/* Class = "UILabel"; text = "2015"; ObjectID = "eoj-eD-Ych"; */
+"eoj-eD-Ych.text" = "2015";
+
+/* Class = "UILabel"; text = "Eurobusiness"; ObjectID = "etR-Ue-UNy"; */
+"etR-Ue-UNy.text" = "Eurobusiness";
+
+/* Class = "UILabel"; text = "Monopoly"; ObjectID = "fFG-FV-8Wh"; */
+"fFG-FV-8Wh.text" = "Monopoly";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "fIO-Ag-PZ4"; */
+"fIO-Ag-PZ4.normalTitle" = "Stwórz konto";
+
+/* Class = "UIButton"; normalTitle = "Pick a game"; ObjectID = "fOT-9k-fDk"; */
+"fOT-9k-fDk.normalTitle" = "Wybierz grę";
+
+/* Class = "UIButton"; normalTitle = "Add event"; ObjectID = "fng-dT-XPe"; */
+"fng-dT-XPe.normalTitle" = "Dodaj wydarzenie";
+
+/* Class = "UIButton"; normalTitle = "Domówka"; ObjectID = "frp-Ya-4mo"; */
+"frp-Ya-4mo.normalTitle" = "Domówka";
+
+/* Class = "UILabel"; text = "No place picked"; ObjectID = "fwx-cw-yMI"; */
+"fwx-cw-yMI.text" = "Nie wybrano miejsca";
+
+/* Class = "UIButton"; normalTitle = "Pick a place"; ObjectID = "g76-4E-ByK"; */
+"g76-4E-ByK.normalTitle" = "Wybierz miejsce";
+
+/* Class = "UILabel"; text = "Mateusz"; ObjectID = "gJl-Iz-1d5"; */
+"gJl-Iz-1d5.text" = "Mateusz";
+
+/* Class = "UILabel"; text = "Your current rating:"; ObjectID = "hDP-fR-1IT"; */
+"hDP-fR-1IT.text" = "Twoja obecna ocena:";
+
+/* Class = "UIButton"; normalTitle = "Domówka"; ObjectID = "hrt-xq-puf"; */
+"hrt-xq-puf.normalTitle" = "Domówka";
+
+/* Class = "UILabel"; text = "ACCEPTED"; ObjectID = "hy3-et-lTq"; */
+"hy3-et-lTq.text" = "ZAAKCEPTOWANE";
+
+/* Class = "UILabel"; text = "Be the first one to write a chat message. Say hello and start meeting other board game players!"; ObjectID = "iG6-fX-OrX"; */
+"iG6-fX-OrX.text" = "Bądź pierwszą osobą, która napisze wiadomość. Przywitaj się i zacznij poznawać innych fanów planszówek!";
+
+/* Class = "UILabel"; text = "Mateusz"; ObjectID = "iGg-9r-oLL"; */
+"iGg-9r-oLL.text" = "Mateusz";
+
+/* Class = "UILabel"; text = "ACCEPTED"; ObjectID = "j4M-VP-NTL"; */
+"j4M-VP-NTL.text" = "ZAAKCEPTOWANE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jwc-8d-4WE"; */
+"jwc-8d-4WE.text" = "Label";
+
+/* Class = "UILabel"; text = "Inis"; ObjectID = "k9U-Qn-xS1"; */
+"k9U-Qn-xS1.text" = "Inis";
+
+/* Class = "UILabel"; text = "Write a short note about yourself (e. g. what's your level of experience with the game or what do you expect from the event). It'll encourage organizer to pick you!"; ObjectID = "kX4-3v-K7G"; */
+"kX4-3v-K7G.text" = "Napisz krótko coś o sobie (np. jaki jest Twój poziom doświadczenia wybranej planszówki albo czego się spodziewasz podczas gry). Pomoże to organizatorowi wybrać właśnie Ciebie!";
+
+/* Class = "UILabel"; text = "PENDING"; ObjectID = "lHF-Kx-2i9"; */
+"lHF-Kx-2i9.text" = "OCZEKUJĄCE";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "lPy-cg-CEF"; */
+"lPy-cg-CEF.normalTitle" = "Zaloguj";
+
+/* Class = "UIButton"; normalTitle = "Pick a date (optional)"; ObjectID = "lck-2C-pJ2"; */
+"lck-2C-pJ2.normalTitle" = "Wybierz datę (opcjonalnie)";
+
+/* Class = "UIButton"; normalTitle = "Pick a game"; ObjectID = "ll3-Kn-08e"; */
+"ll3-Kn-08e.normalTitle" = "Wybierz grę";
+
+/* Class = "UIButton"; normalTitle = "JOIN"; ObjectID = "m83-8G-6UV"; */
+"m83-8G-6UV.normalTitle" = "DOŁĄCZ";
+
+/* Class = "UILabel"; text = "CREATED"; ObjectID = "n9n-Yh-LTi"; */
+"n9n-Yh-LTi.text" = "STWORZONE";
+
+/* Class = "UIButton"; normalTitle = "RATE"; ObjectID = "nRU-TE-GOj"; */
+"nRU-TE-GOj.normalTitle" = "OCEŃ";
+
+/* Class = "UIButton"; normalTitle = "Use your current location"; ObjectID = "ncl-8A-F8D"; */
+"ncl-8A-F8D.normalTitle" = "Użyj obecnej lokalizacji";
+
+/* Class = "UILabel"; text = "New chat message notifications"; ObjectID = "o1q-mb-fQ1"; */
+"o1q-mb-fQ1.text" = "Powiadomienia o nowej wiadomości na czacie";
+
+/* Class = "UILabel"; text = "Test test test"; ObjectID = "pK6-JF-uzU"; */
+"pK6-JF-uzU.text" = "Test test test";
+
+/* Class = "UIButton"; normalTitle = "12:00"; ObjectID = "pyk-RC-PpE"; */
+"pyk-RC-PpE.normalTitle" = "12:00";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qEs-e8-FkI"; */
+"qEs-e8-FkI.text" = "Label";
+
+/* Class = "UILabel"; text = "Password (must be more than 6 characters)"; ObjectID = "qkp-5D-YVL"; */
+"qkp-5D-YVL.text" = "Hasło (przynajmniej 6 znaków)";
+
+/* Class = "UITabBarItem"; title = "Notify"; ObjectID = "r4k-dX-FJy"; */
+"r4k-dX-FJy.title" = "Powiadomienia";
+
+/* Class = "UILabel"; text = "Event description (optional)"; ObjectID = "s2Z-Fk-MrB"; */
+"s2Z-Fk-MrB.text" = "Opis wydarzenia (opcjonalnie)";
+
+/* Class = "UIButton"; normalTitle = "RATE"; ObjectID = "s6P-LI-Ldu"; */
+"s6P-LI-Ldu.normalTitle" = "OCEŃ";
+
+/* Class = "UILabel"; text = "No game picked"; ObjectID = "sGH-DR-dOA"; */
+"sGH-DR-dOA.text" = "Nie wybrano gry";
+
+/* Class = "UITabBarItem"; title = "Events"; ObjectID = "scT-9n-IS1"; */
+"scT-9n-IS1.title" = "Wydarzenia";
+
+/* Class = "UILabel"; text = "No date picked"; ObjectID = "scp-A3-kp0"; */
+"scp-A3-kp0.text" = "Nie wybrano daty";
+
+/* Class = "UIButton"; normalTitle = "Delete game"; ObjectID = "snN-rY-IhG"; */
+"snN-rY-IhG.normalTitle" = "Usuń grę";
+
+/* Class = "UIButton"; normalTitle = "ENTER EVENT"; ObjectID = "txl-Jz-QxT"; */
+"txl-Jz-QxT.normalTitle" = "PRZEJDŹ DO WYDARZENIA";
+
+/* Class = "UIButton"; normalTitle = "Log in using Gmail"; ObjectID = "ubt-pG-5bq"; */
+"ubt-pG-5bq.normalTitle" = "Zaloguj przez Gmail";
+
+/* Class = "UILabel"; text = "Monopoly"; ObjectID = "uoS-CQ-jna"; */
+"uoS-CQ-jna.text" = "Monopoly";
+
+/* Class = "UILabel"; text = "No game picked"; ObjectID = "uwn-2L-uiV"; */
+"uwn-2L-uiV.text" = "Nie wybrano gry";
+
+/* Class = "UILabel"; text = "No events found"; ObjectID = "wRN-IW-4nZ"; */
+"wRN-IW-4nZ.text" = "Nie znaleziono wydarzeń";
+
+/* Class = "UIButton"; normalTitle = "Pick a place"; ObjectID = "wbP-iL-u0N"; */
+"wbP-iL-u0N.normalTitle" = "Wybierz miejsce";
+
+/* Class = "UILabel"; text = "Log out"; ObjectID = "ww1-ai-1lc"; */
+"ww1-ai-1lc.text" = "Wyloguj";
+
+/* Class = "UILabel"; text = "No events found. Turn on location in settings of your phone and allow Boardly to access it or use filtering to see events nearby."; ObjectID = "x7L-35-FOy"; */
+"x7L-35-FOy.text" = "Nie znaleziono wydarzeń. Włącz lokalizację i zezwól Boardly na dostęp do niej lub użyj filtrowania żeby wyświetlić wydarzenia w okolicy.";
+
+/* Class = "UILabel"; text = "Join event"; ObjectID = "xQV-FB-cCs"; */
+"xQV-FB-cCs.text" = "Dołącz do wydarzenia";
+
+/* Class = "UIButton"; normalTitle = "DESCRIPTION"; ObjectID = "yXg-VV-hZZ"; */
+"yXg-VV-hZZ.normalTitle" = "OPIS";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "yfd-Ww-ECo"; */
+"yfd-Ww-ECo.text" = "Filtruj";
+
+/* Class = "UIButton"; normalTitle = "12:00"; ObjectID = "z8w-w5-xBQ"; */
+"z8w-w5-xBQ.normalTitle" = "12:00";
+
+/* Class = "UILabel"; text = "Chinese"; ObjectID = "zaO-ha-4KA"; */
+"zaO-ha-4KA.text" = "Chińczyk";

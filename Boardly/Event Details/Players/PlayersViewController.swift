@@ -64,12 +64,12 @@ class PlayersViewController: ChildEventDetailsViewController, PlayersView {
             acceptedPlayers = playersViewState.acceptedPlayersList
             if playersViewState.kicked {
                 self.navigationController?.popViewController(animated: true)
-                self.navigationController?.showAlert(message: "You were kicked from this event")
+                self.navigationController?.showAlert(message: NSLocalizedString("You were kicked from this event", comment: ""))
             }
             
             if playersViewState.left {
                 self.navigationController?.popViewController(animated: true)
-                self.navigationController?.showAlert(message: "You left this event")
+                self.navigationController?.showAlert(message: NSLocalizedString("You left this event", comment: ""))
             }
         }
     }
@@ -101,11 +101,11 @@ extension PlayersViewController: UITableViewDataSource, UITableViewDelegate {
         let header = SimpleHeader()
         switch section {
         case 0:
-            header.text = "Event info:"
+            header.text = NSLocalizedString("Event info:", comment: "")
         case 1:
-            header.text = "Controls:"
+            header.text = NSLocalizedString("Controls:", comment: "")
         case 2:
-            header.text = "Accepted players:"
+            header.text = NSLocalizedString("Accepted players:", comment: "")
         default:
             return UIView()
         }

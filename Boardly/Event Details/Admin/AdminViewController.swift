@@ -22,9 +22,9 @@ class AdminViewController: ChildEventDetailsViewController, AdminView {
         didSet {
             contentTableView.reloadData()
             if acceptedPlayers.isEmpty {
-                acceptedPlayersHeader.text = "No accepted players yet"
+                acceptedPlayersHeader.text = NSLocalizedString("No accepted players yet", comment: "")
             } else {
-                acceptedPlayersHeader.text = "Accepted players:"
+                acceptedPlayersHeader.text = NSLocalizedString("Accepted players:", comment: "")
             }
         }
     }
@@ -33,9 +33,9 @@ class AdminViewController: ChildEventDetailsViewController, AdminView {
         didSet {
             contentTableView.reloadData()
             if pendingPlayers.isEmpty {
-                pendingPlayersHeader.text = "No pending players yet"
+                pendingPlayersHeader.text = NSLocalizedString("No pending players yet", comment: "")
             } else {
-                pendingPlayersHeader.text = "Pending players:"
+                pendingPlayersHeader.text = NSLocalizedString("Pending players:", comment: "")
             }
         }
     }
@@ -120,9 +120,9 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
         let header = SimpleHeader()
         switch section {
         case 0:
-            header.text = "Event info:"
+            header.text = NSLocalizedString("Event info:", comment: "")
         case 1:
-            header.text = "Controls:"
+            header.text = NSLocalizedString("Controls:", comment: "")
         case 2:
             return acceptedPlayersHeader
         case 3:
@@ -184,11 +184,11 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
         eventViewController.prepare(mode: .edit(event: fetchedEvent), successHandler: {
             self.initialize = true
             eventViewController.navigationController?.popViewController(animated: true)
-            self.showAlert(message: "Everything went well!")
+            self.showAlert(message: NSLocalizedString("Everything went well!", comment: ""))
         }, deleteEventHandler: {
             eventViewController.navigationController?.popViewController(animated: true)
             self.navigationController?.popViewController(animated: true)
-            self.showAlert(message: "Everything went well!")
+            self.showAlert(message: NSLocalizedString("Everything went well!", comment: ""))
         })
         self.navigationController?.pushViewController(eventViewController, animated: true)
     }

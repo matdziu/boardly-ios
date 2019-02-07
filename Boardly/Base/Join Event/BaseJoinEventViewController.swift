@@ -41,7 +41,7 @@ class BaseJoinEventViewController: UIViewController, BaseJoinEventView {
         showJoinEventViewController { helloText in
             let joinEventData = JoinEventData(eventId: eventId, helloText: helloText)
             self.emitJoinEventData(joinEventData: joinEventData)
-            self.showAlert(message: "Join request sent")
+            self.showAlert(message: NSLocalizedString("Join request sent", comment: ""))
         }
     }
 }

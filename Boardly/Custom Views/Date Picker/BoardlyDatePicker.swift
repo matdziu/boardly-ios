@@ -13,6 +13,8 @@ class BoardlyDatePicker: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     var doneAction: (Date) -> Void = {_ in }
     
     override init(frame: CGRect) {
@@ -32,6 +34,8 @@ class BoardlyDatePicker: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         datePicker.backgroundColor = UIColor.white
         datePicker.minimumDate = Date()
+        doneButton.setTitle(NSLocalizedString("Done", comment: "").uppercased(), for: .normal)
+        cancelButton.setTitle(NSLocalizedString("Cancel", comment: "").uppercased(), for: .normal)
     }
     
     func show(show: Bool) {

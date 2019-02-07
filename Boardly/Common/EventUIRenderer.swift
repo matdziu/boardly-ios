@@ -84,8 +84,8 @@ class EventUIRenderer {
         let startTime = sender.userInfo[START_TIME_USER_INFO] as? Int64 ?? 0
         let placeName = sender.userInfo[PLACE_NAME_USER_INFO] as? String ?? ""
         
-        let title = "Boardly: event \(eventName)"
-        let description = "Together you'll be playing in \(gameName)\(appendWithComma(gameName: gameName2))\(appendWithComma(gameName: gameName3)). The event will take place in \(placeName)."
+        let title = "Boardly: \(NSLocalizedString("event", comment: "")) \(eventName)"
+        let description = "\(NSLocalizedString("Together you'll be playing in", comment: "")) \(gameName)\(appendWithComma(gameName: gameName2))\(appendWithComma(gameName: gameName3)). \(NSLocalizedString("The event will take place in", comment: "")) \(placeName)."
         let startDate = Date(timeIntervalSince1970: TimeInterval(startTime / 1000))
         
         addEventToCalendar(title: title, description: description, startDate: startDate)
@@ -158,7 +158,7 @@ class EventUIRenderer {
         if (timestamp > 0) {
             dateButton.setTitle(Date(timeIntervalSince1970: TimeInterval(timestamp / 1000)).formatForDisplay(), for: .normal)
         } else {
-            dateButton.setTitle("To be added", for: .normal)
+            dateButton.setTitle(NSLocalizedString("To be added", comment: ""), for: .normal)
         }
     }
     
@@ -179,7 +179,7 @@ class EventUIRenderer {
                     return
                 }
                 DispatchQueue.main.async {
-                    UIApplication.shared.keyWindow?.rootViewController?.showAlertWithOkButton(message: "Event added to calendar")
+                    UIApplication.shared.keyWindow?.rootViewController?.showAlertWithOkButton(message: NSLocalizedString("Event added to calendar", comment: ""))
                 }
             }
         })

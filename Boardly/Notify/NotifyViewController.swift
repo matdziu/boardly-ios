@@ -26,7 +26,7 @@ class NotifyViewController: UIViewController, NotifyView {
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var distanceSlider: UISlider!
     
-    private let distanceLabelDefaultText = "Maximum event distance:"
+    private let distanceLabelDefaultText = NSLocalizedString("Maximum event distance:", comment: "")
     private var initializeSettings = true
     private var resetSettings = true
     
@@ -138,7 +138,7 @@ class NotifyViewController: UIViewController, NotifyView {
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
         boardGameImageView.cancel()
         showPlaceholderBoardGameImage()
-        gameNameLabel.text = "No game picked"
+        gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
         newSettings.gameId = ""
         newSettings.gameName = ""
         gameIdSubject.onNext("")
@@ -174,7 +174,7 @@ class NotifyViewController: UIViewController, NotifyView {
     
     private func finish() {
         reloadView()
-        showAlert(message: "Saved successfully!")
+        showAlert(message: NSLocalizedString("Saved successfully!", comment: ""))
         self.tabBarController?.selectedIndex = 0
     }
     
@@ -224,7 +224,7 @@ class NotifyViewController: UIViewController, NotifyView {
         if !gameName.isEmpty {
             gameNameLabel.text = gameName
         } else {
-            gameNameLabel.text = "No game picked"
+            gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
             showPlaceholderBoardGameImage()
         }
     }
@@ -233,7 +233,7 @@ class NotifyViewController: UIViewController, NotifyView {
         if !locationName.isEmpty {
             placeNameLabel.text = locationName
         } else {
-            placeNameLabel.text = "No place picked"
+            placeNameLabel.text = NSLocalizedString("No place picked", comment: "")
         }
     }
 }
@@ -252,7 +252,7 @@ extension NotifyViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         dismiss(animated: true, completion: nil)
-        showAlert(message: "Something went wrong :(")
+        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {

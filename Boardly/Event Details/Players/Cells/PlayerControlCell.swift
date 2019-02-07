@@ -25,12 +25,12 @@ class PlayerControlCell: UITableViewCell {
             .keyWindow?
             .rootViewController
             else { return }
-        let alert = UIAlertController(title: nil, message: "Are you sure you want to leave this event?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Leave now", style: .default, handler: { (action: UIAlertAction!) in
+        let alert = UIAlertController(title: nil, message: NSLocalizedString("Are you sure you want to leave this event?", comment: ""), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Leave now", comment: ""), style: .default, handler: { (action: UIAlertAction!) in
             leaveHandler()
             alert.dismiss(animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: { (action: UIAlertAction!) in
             alert.dismiss(animated: true)
         }))
         rootViewController.present(alert, animated: true)

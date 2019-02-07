@@ -15,7 +15,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     
     private var gameIdSubject: PublishSubject<String>!
     private var locationProcessingSubject: PublishSubject<Bool>!
-    private let distanceLabelDefaultText = "Maximum event distance:"
+    private let distanceLabelDefaultText = NSLocalizedString("Maximum event distance:", comment: "")
     private var currentFilter = Filter()
     private var fetchDetails = true
     
@@ -73,7 +73,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
         gameImageView.cancel()
-        gameNameLabel.text = "No game picked"
+        gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
         currentFilter.gameId = ""
         currentFilter.gameName = ""
         gameImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
@@ -102,7 +102,7 @@ class FilterViewController: BaseNavViewController, FilterView {
             break
             
         case .restricted, .denied:
-            showAlertWithOkButton(message: "Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby.")
+            showAlertWithOkButton(message: NSLocalizedString("Enable location for Boardly in settings of your phone. This allows us to show you board game events nearby.", comment: ""))
             break
             
         case .authorizedWhenInUse, .authorizedAlways:
@@ -143,7 +143,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     func render(filterViewState: FilterViewState) {
         gameImageView.downloaded(from: filterViewState.gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         if filterViewState.locationProcessing {
-            placeNameLabel.text = "Setting your location..."
+            placeNameLabel.text = NSLocalizedString("Setting your location...", comment: "")
             useCurrentLocationButton.isUserInteractionEnabled = false
         } else {
             useCurrentLocationButton.isUserInteractionEnabled = true
@@ -190,7 +190,7 @@ extension FilterViewController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         dismiss(animated: true, completion: nil)
-        showAlert(message: "Something went wrong :(")
+        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
@@ -212,9 +212,9 @@ extension FilterViewController: CLLocationManagerDelegate {
         guard let rawLocation = locations.last else { return }
         let userLocation = UserLocation(latitude: rawLocation.coordinate.latitude, longitude: rawLocation.coordinate.longitude)
         currentFilter.userLocation = userLocation
-        currentFilter.locationName = "Current location"
+        currentFilter.locationName = NSLocalizedString("Current location", comment: "")
         currentFilter.isCurrentLocation = true
-        placeNameLabel.text = "Current location"
+        placeNameLabel.text = NSLocalizedString("Current location", comment: "")
         locationProcessingSubject.onNext(false)
     }
     
@@ -228,6 +228,6 @@ extension FilterViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        showAlert(message: "Something went wrong :(")
+        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
     }
 }

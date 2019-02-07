@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             if (error! as NSError).code == GOOGLE_SIGN_IN_CANCELLED_CODE {
                 return
             } else {
-                loginViewController.showAlert(message: "Something went wrong :(")
+                loginViewController.showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
                 return
             }
         }

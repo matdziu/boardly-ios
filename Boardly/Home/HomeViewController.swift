@@ -174,7 +174,7 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let rawLocation = locations.last else { return }
         selectedFilter.userLocation = UserLocation(latitude: rawLocation.coordinate.latitude, longitude: rawLocation.coordinate.longitude)
-        selectedFilter.locationName = "Current location"
+        selectedFilter.locationName = NSLocalizedString("Current location", comment: "")
         selectedFilter.isCurrentLocation = true
         saveFilterToDefaults(filter: selectedFilter)
         filteredFetchTriggerSubject.onNext(FilteredFetchData(filter: selectedFilter, initialize: initialize))
