@@ -60,6 +60,9 @@
 		9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */; };
 		9037890521DA5F5F0092FE84 /* PickGamePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */; };
 		9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */; };
+		90535F11220CA9A800F048D0 /* BoardlyAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90535F10220CA9A800F048D0 /* BoardlyAnalytics.swift */; };
+		90535F13220CA9B800F048D0 /* BoardlyAnalyticsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90535F12220CA9B800F048D0 /* BoardlyAnalyticsImpl.swift */; };
+		90535F15220CAA3100F048D0 /* AnalyticsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90535F14220CAA3100F048D0 /* AnalyticsConstants.swift */; };
 		9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D09022080224004EF46B /* EventDetailsViewController.swift */; };
 		9054D09422085422004EF46B /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D09322085422004EF46B /* SentMessageCell.swift */; };
 		9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054D0952208542E004EF46B /* ReceivedMessageCell.swift */; };
@@ -310,6 +313,9 @@
 		9037890221DA5F4E0092FE84 /* PickGameViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewRobot.swift; sourceTree = "<group>"; };
 		9037890421DA5F5F0092FE84 /* PickGamePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGamePresenterTest.swift; sourceTree = "<group>"; };
 		9037890621DA5F6E0092FE84 /* PickGameInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameInteractorTest.swift; sourceTree = "<group>"; };
+		90535F10220CA9A800F048D0 /* BoardlyAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyAnalytics.swift; sourceTree = "<group>"; };
+		90535F12220CA9B800F048D0 /* BoardlyAnalyticsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyAnalyticsImpl.swift; sourceTree = "<group>"; };
+		90535F14220CAA3100F048D0 /* AnalyticsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsConstants.swift; sourceTree = "<group>"; };
 		9054D09022080224004EF46B /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		9054D09322085422004EF46B /* SentMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
 		9054D0952208542E004EF46B /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
@@ -690,6 +696,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		90535F0F220CA99A00F048D0 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				90535F10220CA9A800F048D0 /* BoardlyAnalytics.swift */,
+				90535F12220CA9B800F048D0 /* BoardlyAnalyticsImpl.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		9054D0922208540F004EF46B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -936,6 +951,7 @@
 			children = (
 				90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */,
 				909A8B7421CACDA800166C93 /* AppDelegate.swift */,
+				90535F0F220CA99A00F048D0 /* Analytics */,
 				909A8B9521CACE6A00166C93 /* Common */,
 				908D920021D615BA00C12ECD /* Navigation */,
 				909A8B9821CACE8400166C93 /* Base */,
@@ -1002,6 +1018,7 @@
 				90A07A2821CE568900EE5349 /* FirebaseConstants.swift */,
 				90D223A321E5C6A10000C5EF /* BGGConstants.swift */,
 				90D2F96721F70BA00046944F /* ViewConstants.swift */,
+				90535F14220CAA3100F048D0 /* AnalyticsConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1656,6 +1673,7 @@
 				908CA43221F5C16500492B9F /* ScrollViewExtensions.swift in Sources */,
 				90E002FE22018A8500F48E75 /* Message.swift in Sources */,
 				909A8BCA21CAE14A00166C93 /* SignUpPresenter.swift in Sources */,
+				90535F13220CA9B800F048D0 /* BoardlyAnalyticsImpl.swift in Sources */,
 				909A8BC021CAE0C400166C93 /* SignUpViewState.swift in Sources */,
 				9067C73422049DAD00DC2675 /* PlayersServiceImpl.swift in Sources */,
 				90857DCF21D81EC3000A7BFC /* FilterContract.swift in Sources */,
@@ -1744,6 +1762,7 @@
 				9084A23921DD3C530087B5C3 /* Utils.swift in Sources */,
 				90907F7921D24ADC0054300C /* EditProfilePresenter.swift in Sources */,
 				90FB2417220AB273004CD142 /* SimpleHeader.swift in Sources */,
+				90535F11220CA9A800F048D0 /* BoardlyAnalytics.swift in Sources */,
 				907B48E6220A105200EC7590 /* RatingPlayerUIRenderer.swift in Sources */,
 				9054D0962208542E004EF46B /* ReceivedMessageCell.swift in Sources */,
 				908D920621D6388300C12ECD /* MoreTableViewController.swift in Sources */,
@@ -1798,6 +1817,7 @@
 				90E0030222018C6100F48E75 /* ChatContract.swift in Sources */,
 				9054D098220858D4004EF46B /* RoundEdgesLabel.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
+				90535F15220CAA3100F048D0 /* AnalyticsConstants.swift in Sources */,
 				9084A23121DD29770087B5C3 /* BaseJoinEventView.swift in Sources */,
 				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,
 				9025496C21DF889F006CE583 /* EventViewState.swift in Sources */,

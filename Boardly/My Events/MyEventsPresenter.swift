@@ -14,6 +14,7 @@ class MyEventsPresenter {
     private let myEventsInteractor: MyEventsInteractor
     private var disposeBag = DisposeBag()
     private let stateSubject:BehaviorSubject<MyEventsViewState>
+    private let analytics = BoardlyAnalyticsImpl()
     
     init(myEventsInteractor: MyEventsInteractor,
          initialViewState: MyEventsViewState = MyEventsViewState()) {
@@ -31,8 +32,9 @@ class MyEventsPresenter {
             }
         }
         
-        let joinEventObservable = myEventsView.joinEventEmitter().flatMap {
-            return self.myEventsInteractor.joinEvent(joinEventData: $0)
+        let joinEventObservable = myEventsView.joinEventEmitter().flatMap { joinEventData -> Observable<PartialMyEventsViewState> in
+            self.analytics.logJoinRequestSentEvent()
+            return self.myEventsInteractor.joinEvent(joinEventData: joinEventData)
         }
         
         let updateEventListObservable = myEventsView.joinEventEmitter().map { joinEventData -> PartialMyEventsViewState in

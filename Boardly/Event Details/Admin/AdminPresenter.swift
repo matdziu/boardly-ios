@@ -14,6 +14,7 @@ class AdminPresenter {
     private let adminInteractor: AdminInteractor
     private var disposeBag = DisposeBag()
     private let stateSubject: BehaviorSubject<AdminViewState>
+    private let analytics = BoardlyAnalyticsImpl()
     
     init(adminInteractor: AdminInteractor,
          initialViewState: AdminViewState = AdminViewState()) {
@@ -35,7 +36,10 @@ class AdminPresenter {
             .flatMap { _ in self.adminInteractor.fetchAcceptedPlayers(eventId: eventId).startWith(PartialAdminViewState.acceptedProgress) }
         
         let acceptPlayerObservable = adminView.acceptPlayerEmitter()
-            .flatMap { self.adminInteractor.acceptPlayer(eventId: eventId, playerId: $0) }
+            .flatMap { playerId -> Observable<PartialAdminViewState> in
+                self.analytics.logJoinRequestAcceptedEvent()
+                return self.adminInteractor.acceptPlayer(eventId: eventId, playerId: playerId)
+        }
         
         let updatePendingListObservable = adminView.acceptPlayerEmitter()
             .map { playerId -> PartialAdminViewState in

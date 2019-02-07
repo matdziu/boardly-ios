@@ -14,6 +14,7 @@ class EventPresenter {
     private let eventInteractor: EventInteractor
     private var disposeBag = DisposeBag()
     private let stateSubject: BehaviorSubject<EventViewState>
+    private let analytics = BoardlyAnalyticsImpl()
     
     init(eventInteractor: EventInteractor, initialViewState: EventViewState = EventViewState()) {
         self.eventInteractor = eventInteractor
@@ -36,7 +37,14 @@ class EventPresenter {
         
         let addEventObservable = eventView.addEventEmitter()
             .flatMap { eventInputData in
-                return self.validateInputData(inputData: eventInputData, actionWhenValid: { self.eventInteractor.addEvent(inputData: $0) })
+                return self.validateInputData(inputData: eventInputData, actionWhenValid: {
+                    self.analytics.logEventAddedEvent(gameId: $0.gameId,
+                                                 gameId2: $0.gameId2,
+                                                 gameId3: $0.gameId3,
+                                                 placeLatitude: $0.placeLatitude,
+                                                 placeLongitude: $0.placeLongitude)
+                    return self.eventInteractor.addEvent(inputData: $0)
+                })
         }
         
         let editEventObservable = eventView.editEventEmitter()

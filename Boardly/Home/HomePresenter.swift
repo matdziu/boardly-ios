@@ -14,6 +14,7 @@ class HomePresenter {
     private let homeInteractor: HomeInteractor
     private var disposeBag = DisposeBag()
     private let stateSubject: BehaviorSubject<HomeViewState>
+    private let analytics = BoardlyAnalyticsImpl()
     
     init(homeInteractor: HomeInteractor,
          initialViewState: HomeViewState = HomeViewState()) {
@@ -35,6 +36,7 @@ class HomePresenter {
         }
         
         let joinEventObservable = homeView.joinEventEmitter().flatMap { joinEventData -> Observable<PartialHomeViewState> in
+            self.analytics.logJoinRequestSentEvent()
             return self.homeInteractor.joinEvent(joinEventData: joinEventData)
         }
         
