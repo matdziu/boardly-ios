@@ -9,11 +9,16 @@
 import Foundation
 import RxSwift
 import CoreLocation
+import Firebase
 
 class HomeServiceImpl: BaseServiceImpl, HomeService {
     
     func sendClientNotificationToken() {
-        
+        InstanceID.instanceID().instanceID { (result, error) in
+            if error == nil && result != nil {
+                self.getUserNodeRef(userId: self.getCurrentUserId()).child(NOTIFICATION_TOKEN_CHILD).setValue(result!.token)
+            }
+        }
     }
     
     func fetchAllEvents(userLocation: UserLocation, radius: Double, gameId: String) -> Observable<[BoardlyEvent]> {

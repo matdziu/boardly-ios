@@ -13,6 +13,10 @@ import FBSDKCoreKit
 import FirebaseDatabase
 import GooglePlaces
 import IQKeyboardManager
+import FirebaseMessaging
+import UserNotifications
+import FirebaseDatabase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -26,12 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Messaging.messaging().delegate = self
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         initInternetConnectionListener()
         GMSPlacesClient.provideAPIKey(placesAPIKey)
         IQKeyboardManager.shared().isEnabled = true
+        setupRemoteNotifications(application: application)
         return true
     }
     
@@ -96,6 +102,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
         loginViewController.googleSignInCredentialSubject.onNext(credential)
+    }
+    
+    private func setupRemoteNotifications(application: UIApplication) {
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        guard let currentUserId = Auth.auth().currentUser?.uid else { return }
+        Database.database().reference(withPath: "\(USERS_NODE)/\(currentUserId)/\(NOTIFICATION_TOKEN_CHILD)").setValue(fcmToken)
     }
 }
 
