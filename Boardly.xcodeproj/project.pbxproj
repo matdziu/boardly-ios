@@ -1461,7 +1461,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
@@ -1480,7 +1480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoardlyTests/Pods-BoardlyTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		835C9EB8C82DFEA122EBFCBE /* [CP] Embed Pods Frameworks */ = {
@@ -1489,7 +1489,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
@@ -1530,7 +1530,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boardly/Pods-Boardly-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		90BDED06220C962300D4574B /* Select GoogleService-Info.plist */ = {
@@ -1575,7 +1575,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
@@ -1586,7 +1586,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CD74FF8E8973436E09987E06 /* [CP] Check Pods Manifest.lock */ = {
