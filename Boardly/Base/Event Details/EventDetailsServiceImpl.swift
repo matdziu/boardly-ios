@@ -29,7 +29,7 @@ class EventDetailsServiceImpl: BaseServiceImpl, EventDetailsService {
     func fetchEventDetails(eventId: String) -> Observable<BoardlyEvent> {
         let resultSubject = PublishSubject<BoardlyEvent>()
         
-        getSingleEventNodeRef(eventId: eventId).observeSingleEvent(of: .value) { snapshot in
+        getSingleEventNodeRef(eventId: eventId).observe(.value) { snapshot in
             let event = BoardlyEvent(snapshot: snapshot)
             resultSubject.onNext(event)
         }

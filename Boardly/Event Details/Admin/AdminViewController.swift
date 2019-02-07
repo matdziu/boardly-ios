@@ -182,10 +182,13 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
     private func launchEditEventViewController() {
         guard let eventViewController = storyboard?.instantiateViewController(withIdentifier: EVENT_VIEW_CONTROLLER_ID) as? EventViewController else { return }
         eventViewController.prepare(mode: .edit(event: fetchedEvent), successHandler: {
-            self.navigationController?.popViewController(animated: true)
+            self.initialize = true
+            eventViewController.navigationController?.popViewController(animated: true)
+            self.showAlert(message: "Everything went well!")
         }, deleteEventHandler: {
+            eventViewController.navigationController?.popViewController(animated: true)
             self.navigationController?.popViewController(animated: true)
-            self.navigationController?.popViewController(animated: true)
+            self.showAlert(message: "Everything went well!")
         })
         self.navigationController?.pushViewController(eventViewController, animated: true)
     }

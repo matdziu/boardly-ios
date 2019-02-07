@@ -273,12 +273,10 @@ class EventViewController: BaseNavViewController, EventView {
                              boardGameImageView: game3ImageView,
                              inputDataSetter: { inputData.gameImageUrl3 = $0 })
         if eventViewState.success {
-            showAlert(message: "Everything went well!")
             successHandler()
             reloadView()
         }
         if eventViewState.removed {
-            showAlert(message: "Everything went well!")
             deleteEventHandler()
         }
     }
