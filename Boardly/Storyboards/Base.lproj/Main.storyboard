@@ -3038,6 +3038,7 @@
                                             <outlet property="helloTextLabel" destination="5Cb-21-V59" id="vh7-a6-4Y3"/>
                                             <outlet property="playerNameLabel" destination="bgE-cf-JmK" id="umi-hh-sbn"/>
                                             <outlet property="playerPicture" destination="glD-Tu-P8N" id="fk6-gr-rMb"/>
+                                            <outlet property="playerRatingImage" destination="76b-JO-Mb7" id="0RR-ZL-yf3"/>
                                             <outlet property="playerRatingLabel" destination="O6L-ZL-iI7" id="dnc-Kn-Eca"/>
                                         </connections>
                                     </tableViewCell>

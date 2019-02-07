@@ -15,15 +15,28 @@ class AdminViewController: ChildEventDetailsViewController, AdminView {
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var contentTableView: UITableView!
     
+    private let acceptedPlayersHeader = SimpleHeader()
+    private let pendingPlayersHeader = SimpleHeader()
+    
     private var acceptedPlayers: [Player] = [] {
         didSet {
             contentTableView.reloadData()
+            if acceptedPlayers.isEmpty {
+                acceptedPlayersHeader.text = "No accepted players yet"
+            } else {
+                acceptedPlayersHeader.text = "Accepted players:"
+            }
         }
     }
     
     private var pendingPlayers: [Player] = [] {
         didSet {
             contentTableView.reloadData()
+            if pendingPlayers.isEmpty {
+                pendingPlayersHeader.text = "No pending players yet"
+            } else {
+                pendingPlayersHeader.text = "Pending players:"
+            }
         }
     }
     
@@ -111,9 +124,9 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             header.text = "Controls:"
         case 2:
-            header.text = "Accepted players:"
+            return acceptedPlayersHeader
         case 3:
-            header.text = "Pending players:"
+            return pendingPlayersHeader
         default:
             return UIView()
         }
@@ -149,10 +162,16 @@ extension AdminViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             let acceptedPlayerCell = getAcceptedPlayerCell(indexPath: indexPath)
             let player = acceptedPlayers[row]
+            acceptedPlayerCell.bind(player: player,
+                                    pickRatingHandler: { rating in
+                                        self.emitRating(rateInput: RateInput(rating: rating, playerId: player.id, eventId: player.eventId)) },
+                                    kickPlayerHandler: { playerId in self.kickPlayerSubject.onNext(playerId) })
             return acceptedPlayerCell
         case 3:
             let pendingPlayerCell = getPendingPlayerCell(indexPath: indexPath)
             let player = pendingPlayers[row]
+            pendingPlayerCell.bind(player: player,
+                                   acceptButtonHandler: { playerId in self.acceptPlayerSubject.onNext(playerId) })
             return pendingPlayerCell
         default:
             return getEventViewCell(indexPath: indexPath)

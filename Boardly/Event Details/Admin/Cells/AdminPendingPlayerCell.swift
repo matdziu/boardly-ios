@@ -16,4 +16,25 @@ class AdminPendingPlayerCell: UITableViewCell {
     @IBOutlet weak var playerRatingLabel: UILabel!
     @IBOutlet weak var helloTextLabel: UILabel!
     @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var playerRatingImage: UIImageView!
+    
+    private var playerUIRenderer = PlayerUIRenderer()
+    
+    func bind(player: Player, acceptButtonHandler: @escaping (String) -> ()) {
+        playerUIRenderer.displayPlayerInfo(player: player,
+                                           playerImageView: playerPicture,
+                                           nameLabel: playerNameLabel,
+                                           helloTextLabel: helloTextLabel,
+                                           ratingLabel: playerRatingLabel,
+                                           ratingImageView: playerRatingImage)
+        acceptButton.userInfo[ACCEPT_BUTTON_HANDLER_USER_INFO] = acceptButtonHandler
+        acceptButton.userInfo[ACCEPTED_PLAYER_ID_USER_INFO] = player.id
+        acceptButton.addTarget(self, action: #selector(acceptButtonClicked(_:)), for: .touchUpInside)
+    }
+    
+    @objc private func acceptButtonClicked(_ sender: UIButton) {
+        let acceptButtonHandler = sender.userInfo[ACCEPT_BUTTON_HANDLER_USER_INFO] as? (String) -> () ?? { _ in }
+        let acceptedPlayerId = sender.userInfo[ACCEPTED_PLAYER_ID_USER_INFO] as? String ?? ""
+        acceptButtonHandler(acceptedPlayerId)
+    }
 }

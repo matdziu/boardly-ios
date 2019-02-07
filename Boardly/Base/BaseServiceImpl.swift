@@ -188,7 +188,7 @@ class BaseServiceImpl {
     func getPartialPlayersProfiles(databaseReference: DatabaseReference) -> Observable<[Player]> {
         let resultSubject = PublishSubject<[Player]>()
         
-        databaseReference.observeSingleEvent(of: .value) { snapshot in
+        databaseReference.observe(.value) { snapshot in
             var partialPlayersList: [Player] = []
             for case let childSnapshot as DataSnapshot in snapshot.children {
                 let id = childSnapshot.key
