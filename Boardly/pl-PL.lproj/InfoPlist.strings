@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Boardly
+
+  Created by Mateusz Dziubek on 07/02/2019.
+  Copyright © 2019 Mateusz Dziubek. All rights reserved.
+*/
+
+NSCalendarsUsageDescription = "Zezwól Boardly na dostęp do kalendarza aby zapisywać nadchodzące wydarzenia.";
+NSLocationWhenInUseUsageDescription = "Włączenie lokalizacji pozwoli Boardly na znalezienie wydarzeń w pobliżu.";

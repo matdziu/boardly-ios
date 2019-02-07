@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Boardly
+
+  Created by Mateusz Dziubek on 07/02/2019.
+  Copyright © 2019 Mateusz Dziubek. All rights reserved.
+*/
+
+NSCalendarsUsageDescription = "Enable calendar access for Boardly to save event.";
+NSLocationWhenInUseUsageDescription = "Enabling location for Boardly allows to show you board game events nearby.";
