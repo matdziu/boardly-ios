@@ -29,6 +29,7 @@ target 'Boardly' do
     pod 'RxTest',     '~> 4.0'
     pod 'Quick'
     pod 'Nimble'
+    pod 'Firebase'
   end
 
 end

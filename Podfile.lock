@@ -14,6 +14,8 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.36.0):
     - FBSDKCoreKit
+  - Firebase (5.15.0):
+    - Firebase/Core (= 5.15.0)
   - Firebase/Auth (5.15.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.2.0)
@@ -148,6 +150,7 @@ DEPENDENCIES:
   - Fabric
   - FBSDKCoreKit (~> 4.36.0)
   - FBSDKLoginKit (~> 4.36.0)
+  - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -250,6 +253,6 @@ SPEC CHECKSUMS:
   RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   SWXMLHash: f6e0933ce74f2626669dc544851bc9fc1941670d
 
-PODFILE CHECKSUM: 1fbc70925c06ecad5e67d3914d643bf0ff136270
+PODFILE CHECKSUM: eeccdb15ae4cf98e3cf6d98079934837ce1fe893
 
 COCOAPODS: 1.6.0
