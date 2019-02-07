@@ -1972,6 +1972,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A3F139836BC7C0AD53049AD /* Pods-Boardly.debug.xcconfig */;
 			buildSettings = {
+				APP_DISPLAY_NAME = "";
+				"APP_DISPLAY_NAME[arch=*]" = "Boardly DEBUG";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Boardly/Boardly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1993,6 +1995,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11463FBCF98EDD6910D16713 /* Pods-Boardly.release.xcconfig */;
 			buildSettings = {
+				APP_DISPLAY_NAME = "";
+				"APP_DISPLAY_NAME[arch=*]" = Boardly;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Boardly/Boardly.entitlements;
 				CODE_SIGN_STYLE = Automatic;

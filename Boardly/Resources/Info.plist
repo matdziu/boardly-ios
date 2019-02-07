@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDisplayName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Enable calendar access for Boardly to save event.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -42,7 +44,7 @@
 	<key>FacebookAppID</key>
 	<string>272690140134523</string>
 	<key>FacebookDisplayName</key>
-	<string>Boardly-debug</string>
+	<string>$(APP_DISPLAY_NAME)</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
