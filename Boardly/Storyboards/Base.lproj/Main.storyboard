@@ -308,11 +308,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vvl-Yc-Yj1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="37"/>
                                 <color key="color" name="AccentRed"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-HJ-y5E">
-                                <rect key="frame" x="32" y="322.5" width="311" height="22"/>
+                                <rect key="frame" x="32" y="108" width="311" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
@@ -322,9 +322,8 @@
                                 <color key="barTintColor" name="PrimaryBlue"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-yy-A1V">
-                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-yy-A1V">
+                                <rect key="frame" x="32" y="108" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
@@ -363,19 +362,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2lZ-41-Mgr" firstAttribute="bottom" secondItem="vvl-Yc-Yj1" secondAttribute="bottom" id="0xB-eL-NsP"/>
                             <constraint firstItem="rnj-k8-xU7" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="DFZ-hc-45q"/>
-                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="top" secondItem="2lZ-41-Mgr" secondAttribute="top" id="FW8-lc-lZE"/>
-                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="Ivz-Lb-0sh"/>
-                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="NL9-O9-I7Q"/>
                             <constraint firstItem="X93-KM-dKA" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="Nwj-PU-yRp"/>
-                            <constraint firstItem="aZk-HJ-y5E" firstAttribute="centerY" secondItem="Iyp-iX-nza" secondAttribute="centerY" id="VOO-yh-Mbq"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="S12-DP-XLZ"/>
+                            <constraint firstItem="2lZ-41-Mgr" firstAttribute="trailing" secondItem="Nz7-yy-A1V" secondAttribute="trailing" constant="32" id="XXQ-rD-fuk"/>
                             <constraint firstItem="X93-KM-dKA" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="e6L-du-pq1"/>
                             <constraint firstItem="2lZ-41-Mgr" firstAttribute="trailing" secondItem="aZk-HJ-y5E" secondAttribute="trailing" constant="32" id="fsb-0K-Fzw"/>
+                            <constraint firstItem="Nz7-yy-A1V" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" constant="32" id="gvc-Vo-pXI"/>
+                            <constraint firstItem="aZk-HJ-y5E" firstAttribute="top" secondItem="rnj-k8-xU7" secondAttribute="bottom" constant="32" id="hfq-ls-tn4"/>
                             <constraint firstItem="2lZ-41-Mgr" firstAttribute="bottom" secondItem="X93-KM-dKA" secondAttribute="bottom" id="ihL-f2-to1"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="kAn-hD-KCN"/>
                             <constraint firstItem="X93-KM-dKA" firstAttribute="top" secondItem="rnj-k8-xU7" secondAttribute="bottom" id="ll8-QK-dsl"/>
                             <constraint firstItem="rnj-k8-xU7" firstAttribute="top" secondItem="2lZ-41-Mgr" secondAttribute="top" id="mw2-ed-jFS"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="top" secondItem="rnj-k8-xU7" secondAttribute="bottom" constant="32" id="t9M-r8-PYX"/>
                             <constraint firstItem="aZk-HJ-y5E" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" constant="32" id="vp0-dv-2FN"/>
+                            <constraint firstItem="Nz7-yy-A1V" firstAttribute="top" secondItem="rnj-k8-xU7" secondAttribute="bottom" constant="32" id="w3w-Xp-VWk"/>
                             <constraint firstItem="rnj-k8-xU7" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="yPz-G7-cw3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2lZ-41-Mgr"/>
