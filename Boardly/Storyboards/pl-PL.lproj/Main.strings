@@ -129,7 +129,7 @@
 "NE4-6h-a2F.text" = "Nie wybrano gry";
 
 /* Class = "UILabel"; text = "No place picked"; ObjectID = "NNU-yz-dKW"; */
-"NNU-yz-dKW.text" = "No wybrano miejsca";
+"NNU-yz-dKW.text" = "Nie wybrano miejsca";
 
 /* Class = "UILabel"; text = "Your profile"; ObjectID = "NiS-2e-zWi"; */
 "NiS-2e-zWi.text" = "Twój profil";
