@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import RxSwift
-import GooglePlaces
 import RxCocoa
 
 enum Mode {
@@ -221,9 +220,18 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
+        guard let pickPlaceViewController = storyboard?.instantiateViewController(withIdentifier: PICK_PLACE_VIEW_CONTROLLER_ID) as? PickPlaceViewController else { return }
+        pickPlaceViewController.finishAction = { searchPlaceResult in
+            let latitude = searchPlaceResult.latitude
+            let longitude = searchPlaceResult.longitude
+            let locationName = searchPlaceResult.name
+            self.inputData.placeLatitude = latitude
+            self.inputData.placeLongitude = longitude
+            self.inputData.placeName = locationName
+            self.placeLabel.text = locationName
+            self.emitPlacePickEvent = true
+        }
+        self.navigationController?.pushViewController(pickPlaceViewController, animated: true)
     }
     
     @IBAction func pickDateButtonClicked(_ sender: Any) {
@@ -310,38 +318,6 @@ class EventViewController: BaseNavViewController, EventView {
             inputDataSetter(game.image)
             boardGameImageView.downloaded(from: game.image, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         }
-    }
-}
-
-extension EventViewController: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        let latitude = place.coordinate.latitude
-        let longitude = place.coordinate.longitude
-        let locationName = place.formattedAddress ?? place.name
-        inputData.placeLatitude = latitude
-        inputData.placeLongitude = longitude
-        inputData.placeName = locationName
-        placeLabel.text = locationName
-        emitPlacePickEvent = true
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        dismiss(animated: true, completion: nil)
-        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
     private func getPickGameViewController() -> PickGameViewController {

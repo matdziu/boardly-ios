@@ -16,7 +16,6 @@ target 'Boardly' do
   pod 'FBSDKCoreKit',  '~> 4.36.0'
   pod 'FBSDKLoginKit',  '~> 4.36.0'
   pod 'GeoFire'
-  pod 'GooglePlaces'
   pod 'Alamofire', '~> 4.8.0'
   pod 'SWXMLHash', '~> 4.7.0'
   pod 'IQKeyboardManager'

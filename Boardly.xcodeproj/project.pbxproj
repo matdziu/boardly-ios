@@ -212,6 +212,12 @@
 		90C6B8A3220D71E300C04EA9 /* PickPlaceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A2220D71E300C04EA9 /* PickPlaceInteractorImpl.swift */; };
 		90C6B8A5220D71F000C04EA9 /* PickPlaceServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A4220D71F000C04EA9 /* PickPlaceServiceImpl.swift */; };
 		90C6B8A7220D73DE00C04EA9 /* PickPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A6220D73DE00C04EA9 /* PickPlaceViewController.swift */; };
+		90C6B8AB220D81BA00C04EA9 /* MockPickPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8AA220D81BA00C04EA9 /* MockPickPlaceView.swift */; };
+		90C6B8AD220D81C400C04EA9 /* MockPickPlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8AC220D81C400C04EA9 /* MockPickPlaceInteractor.swift */; };
+		90C6B8AF220D81E100C04EA9 /* MockPickPlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8AE220D81E100C04EA9 /* MockPickPlaceService.swift */; };
+		90C6B8B1220D81EA00C04EA9 /* PickPlaceViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8B0220D81EA00C04EA9 /* PickPlaceViewRobot.swift */; };
+		90C6B8B3220D81F300C04EA9 /* PickPlacePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8B2220D81F300C04EA9 /* PickPlacePresenterTest.swift */; };
+		90C6B8B5220D81FF00C04EA9 /* PickPlaceInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8B4220D81FF00C04EA9 /* PickPlaceInteractorTest.swift */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
 		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
@@ -486,6 +492,12 @@
 		90C6B8A2220D71E300C04EA9 /* PickPlaceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceInteractorImpl.swift; sourceTree = "<group>"; };
 		90C6B8A4220D71F000C04EA9 /* PickPlaceServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceServiceImpl.swift; sourceTree = "<group>"; };
 		90C6B8A6220D73DE00C04EA9 /* PickPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceViewController.swift; sourceTree = "<group>"; };
+		90C6B8AA220D81BA00C04EA9 /* MockPickPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPickPlaceView.swift; sourceTree = "<group>"; };
+		90C6B8AC220D81C400C04EA9 /* MockPickPlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPickPlaceInteractor.swift; sourceTree = "<group>"; };
+		90C6B8AE220D81E100C04EA9 /* MockPickPlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPickPlaceService.swift; sourceTree = "<group>"; };
+		90C6B8B0220D81EA00C04EA9 /* PickPlaceViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceViewRobot.swift; sourceTree = "<group>"; };
+		90C6B8B2220D81F300C04EA9 /* PickPlacePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlacePresenterTest.swift; sourceTree = "<group>"; };
+		90C6B8B4220D81FF00C04EA9 /* PickPlaceInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceInteractorTest.swift; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
@@ -1012,6 +1024,7 @@
 				9084A23C21DD50900087B5C3 /* Home */,
 				90FFFFE321FE25BD00D4C684 /* My Events */,
 				903788FC21DA5F0D0092FE84 /* Pick Game */,
+				90C6B8A8220D818D00C04EA9 /* Pick Place */,
 				90857DE221D8BA5A000A7BFC /* Game Service */,
 				903366E621FA62AB0059A601 /* Notify */,
 				90857DDC21D8BA1A000A7BFC /* Filter */,
@@ -1237,6 +1250,27 @@
 				90C6B89C220D6FED00C04EA9 /* PlaceSearchResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		90C6B8A8220D818D00C04EA9 /* Pick Place */ = {
+			isa = PBXGroup;
+			children = (
+				90C6B8A9220D81A100C04EA9 /* Mocks */,
+				90C6B8B0220D81EA00C04EA9 /* PickPlaceViewRobot.swift */,
+				90C6B8B2220D81F300C04EA9 /* PickPlacePresenterTest.swift */,
+				90C6B8B4220D81FF00C04EA9 /* PickPlaceInteractorTest.swift */,
+			);
+			path = "Pick Place";
+			sourceTree = "<group>";
+		};
+		90C6B8A9220D81A100C04EA9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90C6B8AA220D81BA00C04EA9 /* MockPickPlaceView.swift */,
+				90C6B8AC220D81C400C04EA9 /* MockPickPlaceInteractor.swift */,
+				90C6B8AE220D81E100C04EA9 /* MockPickPlaceService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		90D01CDC21D0F1B2000F710D /* Models */ = {
@@ -1676,12 +1710,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Boardly/Pods-Boardly-resources.sh",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1908,6 +1940,7 @@
 				9009770822033E5300979752 /* AdminPresenterTest.swift in Sources */,
 				908D91F521D3CB5400C12ECD /* MockEditProfileView.swift in Sources */,
 				903366EB21FA62DB0059A601 /* NotifyPresenterTest.swift in Sources */,
+				90C6B8B1220D81EA00C04EA9 /* PickPlaceViewRobot.swift in Sources */,
 				9037890121DA5F3A0092FE84 /* MockPickGameInteractor.swift in Sources */,
 				909164C022022725002CF718 /* MockPlayersService.swift in Sources */,
 				909164C422022746002CF718 /* PlayersPresenterTest.swift in Sources */,
@@ -1939,21 +1972,25 @@
 				9025498921DF9D4B006CE583 /* EventInteractorTest.swift in Sources */,
 				9009770622033E0800979752 /* MockAdminInteractor.swift in Sources */,
 				90857DE421D8BA68000A7BFC /* MockGameService.swift in Sources */,
+				90C6B8B3220D81F300C04EA9 /* PickPlacePresenterTest.swift in Sources */,
 				9025498321DF9D2B006CE583 /* MockEventService.swift in Sources */,
 				908D91F721D3CB6300C12ECD /* MockEditProfileInteractor.swift in Sources */,
 				909A8BE921CAE7CE00166C93 /* LoginInteractorTest.swift in Sources */,
 				909A8BE121CAE76900166C93 /* MockLoginInteractor.swift in Sources */,
 				9037890721DA5F6E0092FE84 /* PickGameInteractorTest.swift in Sources */,
+				90C6B8AB220D81BA00C04EA9 /* MockPickPlaceView.swift in Sources */,
 				90857DE621D8BA89000A7BFC /* FilterViewRobot.swift in Sources */,
 				90FFFFF021FE262200D4C684 /* MockMyEventsService.swift in Sources */,
 				90D057E92201E04D005BA7CD /* ChatInteractorTest.swift in Sources */,
 				909164C222022731002CF718 /* MockPlayersInteractor.swift in Sources */,
 				90FFFFEC21FE260300D4C684 /* MockMyEventsInteractor.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
+				90C6B8AF220D81E100C04EA9 /* MockPickPlaceService.swift in Sources */,
 				9084A24321DD50D10087B5C3 /* MockHomeService.swift in Sources */,
 				909164BE220226F8002CF718 /* MockPlayersView.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
 				90D057E72201E040005BA7CD /* ChatPresenterTest.swift in Sources */,
+				90C6B8AD220D81C400C04EA9 /* MockPickPlaceInteractor.swift in Sources */,
 				908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */,
 				90D057EF2201E070005BA7CD /* MockChatService.swift in Sources */,
 				90D057EB2201E055005BA7CD /* ChatViewRobot.swift in Sources */,
@@ -1972,6 +2009,7 @@
 				909A8BD221CAE69800166C93 /* MockSignUpView.swift in Sources */,
 				908D91F921D3CB7700C12ECD /* MockEditProfileService.swift in Sources */,
 				9084A24121DD50C60087B5C3 /* MockHomeInteractor.swift in Sources */,
+				90C6B8B5220D81FF00C04EA9 /* PickPlaceInteractorTest.swift in Sources */,
 				9025497F21DF9D15006CE583 /* MockEventView.swift in Sources */,
 				9009770422033E0000979752 /* MockAdminService.swift in Sources */,
 				909A8BDF21CAE74400166C93 /* MockLoginView.swift in Sources */,

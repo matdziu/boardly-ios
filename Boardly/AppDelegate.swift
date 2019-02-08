@@ -11,7 +11,6 @@ import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
 import FirebaseDatabase
-import GooglePlaces
 import IQKeyboardManager
 import FirebaseMessaging
 import UserNotifications
@@ -23,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
     var online: Bool = false
-    private let debugPlacesAPIKey = "AIzaSyAMKVkV8p9aYbRz2AXtQ8f7VlwkapiXT9Q"
-    private let productionPlacesAPIKey = "AIzaSyCPThGZ35N158zg4FraT9gkIyOYA7_Uo2I"
     
     override init() {
         FirebaseApp.configure()
@@ -37,11 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         initInternetConnectionListener()
-        #if DEBUG
-        GMSPlacesClient.provideAPIKey(debugPlacesAPIKey)
-        #else
-        GMSPlacesClient.provideAPIKey(productionPlacesAPIKey)
-        #endif
         IQKeyboardManager.shared().isEnabled = true
         setupRemoteNotifications(application: application)
         return true

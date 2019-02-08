@@ -317,7 +317,7 @@
                                 <color key="textColor" name="Grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" placeholder="Search for games" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-k8-xU7">
+                            <searchBar contentMode="redraw" placeholder="Search for places" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-k8-xU7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <color key="barTintColor" name="PrimaryBlue"/>
                                 <textInputTraits key="textInputTraits"/>

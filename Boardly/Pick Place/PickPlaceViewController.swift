@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import RxSwift
 
-class PickPlaceViewController: UIViewController, PickPlaceView {
+class PickPlaceViewController: BaseNavViewController, PickPlaceView {
+    
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!

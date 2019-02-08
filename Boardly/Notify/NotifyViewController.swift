@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
-import GooglePlaces
 
 class NotifyViewController: UIViewController, NotifyView {
     
@@ -130,9 +129,16 @@ class NotifyViewController: UIViewController, NotifyView {
     
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
         resetSettings = false
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
+        guard let pickPlaceViewController = storyboard?.instantiateViewController(withIdentifier: PICK_PLACE_VIEW_CONTROLLER_ID) as? PickPlaceViewController else { return }
+        pickPlaceViewController.finishAction = { searchPlaceResult in
+            self.newSettings.userLatitude = searchPlaceResult.latitude
+            self.newSettings.userLongitude = searchPlaceResult.longitude
+            let locationName = searchPlaceResult.name
+            self.newSettings.locationName = locationName
+            self.placeNameLabel.text = locationName
+            self.emitPlacePickEvent = true
+        }
+        self.navigationController?.pushViewController(pickPlaceViewController, animated: true)
     }
     
     @IBAction func deleteGameButtonClicked(_ sender: Any) {
@@ -235,35 +241,5 @@ class NotifyViewController: UIViewController, NotifyView {
         } else {
             placeNameLabel.text = NSLocalizedString("No place picked", comment: "")
         }
-    }
-}
-
-extension NotifyViewController: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        newSettings.userLatitude = place.coordinate.latitude
-        newSettings.userLongitude = place.coordinate.longitude
-        let locationName = place.formattedAddress ?? place.name
-        newSettings.locationName = locationName
-        placeNameLabel.text = locationName
-        emitPlacePickEvent = true
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        dismiss(animated: true, completion: nil)
-        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
-import GooglePlaces
+import CoreLocation
 
 class FilterViewController: BaseNavViewController, FilterView {
     
@@ -89,9 +89,16 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     @IBAction func pickPlaceButtonClicked(_ sender: Any) {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        present(autocompleteController, animated: true, completion: nil)
+        guard let pickPlaceViewController = storyboard?.instantiateViewController(withIdentifier: PICK_PLACE_VIEW_CONTROLLER_ID) as? PickPlaceViewController else { return }
+        pickPlaceViewController.finishAction = { placeSearchResult in
+            let userLocation = UserLocation(latitude: placeSearchResult.latitude, longitude: placeSearchResult.longitude)
+            let locationName = placeSearchResult.name
+            self.currentFilter.userLocation = userLocation
+            self.currentFilter.locationName = locationName
+            self.currentFilter.isCurrentLocation = false
+            self.placeNameLabel.text = locationName
+        }
+        self.navigationController?.pushViewController(pickPlaceViewController, animated: true)
     }
     
     @IBAction func useCurrentLocationButtonClicked(_ sender: Any) {
@@ -173,36 +180,6 @@ class FilterViewController: BaseNavViewController, FilterView {
                 currentFilter = savedFilter
             }
         }
-    }
-}
-
-extension FilterViewController: GMSAutocompleteViewControllerDelegate {
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        let userLocation = UserLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-        let locationName = place.formattedAddress ?? place.name
-        currentFilter.userLocation = userLocation
-        currentFilter.locationName = locationName
-        currentFilter.isCurrentLocation = false
-        placeNameLabel.text = locationName
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        dismiss(animated: true, completion: nil)
-        showAlert(message: NSLocalizedString("Something went wrong :(", comment: ""))
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
 
