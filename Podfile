@@ -21,6 +21,7 @@ target 'Boardly' do
   pod 'IQKeyboardManager'
   pod 'Kingfisher', '~> 5.0'
   pod 'Cosmos'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'BoardlyTests' do
     inherit! :search_paths

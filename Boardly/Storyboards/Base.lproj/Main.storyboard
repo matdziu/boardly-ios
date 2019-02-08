@@ -170,7 +170,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-q0-1Sa">
                                         <rect key="frame" x="165" y="0.0" width="140" height="111.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKs-Ww-lhF">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="bJE-9Q-WNg"/>
@@ -340,7 +340,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Kraków" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYL-UA-W65">
-                                                    <rect key="frame" x="23" y="19" width="329" height="50"/>
+                                                    <rect key="frame" x="15" y="19" width="345" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" name="Grey"/>
                                                     <nil key="highlightedColor"/>
@@ -349,8 +349,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="eYL-UA-W65" secondAttribute="bottom" constant="8" id="0rI-Lx-opA"/>
                                                 <constraint firstItem="eYL-UA-W65" firstAttribute="top" secondItem="zq5-VH-nV6" secondAttribute="topMargin" constant="8" id="MtJ-p1-cyd"/>
-                                                <constraint firstItem="eYL-UA-W65" firstAttribute="leading" secondItem="zq5-VH-nV6" secondAttribute="leadingMargin" constant="8" id="b7q-HZ-YnJ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eYL-UA-W65" secondAttribute="trailing" constant="8" id="xhB-Ou-eUu"/>
+                                                <constraint firstItem="eYL-UA-W65" firstAttribute="leading" secondItem="zq5-VH-nV6" secondAttribute="leadingMargin" id="b7q-HZ-YnJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eYL-UA-W65" secondAttribute="trailing" id="xhB-Ou-eUu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1614,7 +1614,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dHL-Qt-BkP">
                                         <rect key="frame" x="165" y="0.0" width="140" height="111.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-cw-yMI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No place picked" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-cw-yMI">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="hQX-no-0gI"/>
