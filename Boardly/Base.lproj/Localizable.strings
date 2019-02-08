@@ -47,3 +47,12 @@
 "Delete" = "Delete";
 "Saved successfully!" = "Saved successfully!";
 "Done" = "Done";
+
+"chat_message_notification_title" = "Event %1$@";
+"chat_message_notification_body" = "New message from %1$@.";
+"join_request_notification_title" = "Event %1$@";
+"join_request_notification_body" = "New join request.";
+"accepted_request_notification_title" = "Event %1$@";
+"accepted_request_notification_body" = "You were accepted. Say hello to other players.";
+"new_event_notification_title" = "New event nearby";
+"new_event_notification_body" = "Place: %1$@. Games: %2$@.";

@@ -47,3 +47,12 @@
 "Delete" = "Usuń";
 "Saved successfully!" = "Pomyślnie zapisano!";
 "Done" = "Zrobione";
+
+"chat_message_notification_title" = "Wydarzenie %1$@";
+"chat_message_notification_body" = "Nowa wiadomość od %1$@.";
+"join_request_notification_title" = "Wydarzenie %1$@";
+"join_request_notification_body" = "Nowa prośba o dołączenie.";
+"accepted_request_notification_title" = "Wydarzenie %1$@";
+"accepted_request_notification_body" = "Zostałeś zaakceptowany. Przywitaj się z innymi graczami.";
+"new_event_notification_title" = "Nowe wydarzenie w pobliżu";
+"new_event_notification_body" = "Miejsce: %1$@. Gry: %2$@.";
