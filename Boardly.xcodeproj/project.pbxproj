@@ -203,6 +203,15 @@
 		90BDED02220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED01220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist */; };
 		90BDED04220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED03220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist */; };
 		90BDED09220C994500D4574B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED08220C994500D4574B /* GoogleService-Info.plist */; };
+		90C6B896220D6F9400C04EA9 /* PickPlaceViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B895220D6F9400C04EA9 /* PickPlaceViewState.swift */; };
+		90C6B898220D6F9F00C04EA9 /* PartialPickPlaceViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B897220D6F9F00C04EA9 /* PartialPickPlaceViewState.swift */; };
+		90C6B89A220D6FB100C04EA9 /* PlaceSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B899220D6FB100C04EA9 /* PlaceSearchResultCell.swift */; };
+		90C6B89D220D6FED00C04EA9 /* PlaceSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B89C220D6FED00C04EA9 /* PlaceSearchResult.swift */; };
+		90C6B89F220D713000C04EA9 /* PickPlaceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B89E220D713000C04EA9 /* PickPlaceContract.swift */; };
+		90C6B8A1220D71D900C04EA9 /* PickPlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A0220D71D900C04EA9 /* PickPlacePresenter.swift */; };
+		90C6B8A3220D71E300C04EA9 /* PickPlaceInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A2220D71E300C04EA9 /* PickPlaceInteractorImpl.swift */; };
+		90C6B8A5220D71F000C04EA9 /* PickPlaceServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A4220D71F000C04EA9 /* PickPlaceServiceImpl.swift */; };
+		90C6B8A7220D73DE00C04EA9 /* PickPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6B8A6220D73DE00C04EA9 /* PickPlaceViewController.swift */; };
 		90CB0E0C21E9C1A10088FCF9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */; };
 		90CB0E0E21E9CF6B0088FCF9 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */; };
 		90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */; };
@@ -468,6 +477,15 @@
 		90BDED01220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.com.boardly.Boardly.debug.plist"; sourceTree = "<group>"; };
 		90BDED03220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.com.boardly.Boardly.plist"; sourceTree = "<group>"; };
 		90BDED08220C994500D4574B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90C6B895220D6F9400C04EA9 /* PickPlaceViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceViewState.swift; sourceTree = "<group>"; };
+		90C6B897220D6F9F00C04EA9 /* PartialPickPlaceViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialPickPlaceViewState.swift; sourceTree = "<group>"; };
+		90C6B899220D6FB100C04EA9 /* PlaceSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchResultCell.swift; sourceTree = "<group>"; };
+		90C6B89C220D6FED00C04EA9 /* PlaceSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchResult.swift; sourceTree = "<group>"; };
+		90C6B89E220D713000C04EA9 /* PickPlaceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceContract.swift; sourceTree = "<group>"; };
+		90C6B8A0220D71D900C04EA9 /* PickPlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlacePresenter.swift; sourceTree = "<group>"; };
+		90C6B8A2220D71E300C04EA9 /* PickPlaceInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceInteractorImpl.swift; sourceTree = "<group>"; };
+		90C6B8A4220D71F000C04EA9 /* PickPlaceServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceServiceImpl.swift; sourceTree = "<group>"; };
+		90C6B8A6220D73DE00C04EA9 /* PickPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPlaceViewController.swift; sourceTree = "<group>"; };
 		90CB0E0B21E9C1A10088FCF9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		90CB0E0D21E9CF6B0088FCF9 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		90CB0E0F21E9D0B20088FCF9 /* EventServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceImpl.swift; sourceTree = "<group>"; };
@@ -977,6 +995,7 @@
 				90D01CDF21D0FF10000F710D /* Edit Profile */,
 				9025496A21DF8885006CE583 /* Event */,
 				903788F121DA51910092FE84 /* Pick Game */,
+				90C6B894220D6F7D00C04EA9 /* Pick Place */,
 				903366D421FA4B2C0059A601 /* Notify */,
 				90857DC921D81C5A000A7BFC /* Network */,
 				909A8B9C21CACE9F00166C93 /* Storyboards */,
@@ -1194,6 +1213,30 @@
 				90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90C6B894220D6F7D00C04EA9 /* Pick Place */ = {
+			isa = PBXGroup;
+			children = (
+				90C6B89B220D6FE300C04EA9 /* Models */,
+				90C6B895220D6F9400C04EA9 /* PickPlaceViewState.swift */,
+				90C6B897220D6F9F00C04EA9 /* PartialPickPlaceViewState.swift */,
+				90C6B899220D6FB100C04EA9 /* PlaceSearchResultCell.swift */,
+				90C6B89E220D713000C04EA9 /* PickPlaceContract.swift */,
+				90C6B8A0220D71D900C04EA9 /* PickPlacePresenter.swift */,
+				90C6B8A2220D71E300C04EA9 /* PickPlaceInteractorImpl.swift */,
+				90C6B8A4220D71F000C04EA9 /* PickPlaceServiceImpl.swift */,
+				90C6B8A6220D73DE00C04EA9 /* PickPlaceViewController.swift */,
+			);
+			path = "Pick Place";
+			sourceTree = "<group>";
+		};
+		90C6B89B220D6FE300C04EA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90C6B89C220D6FED00C04EA9 /* PlaceSearchResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		90D01CDC21D0F1B2000F710D /* Models */ = {
@@ -1705,6 +1748,7 @@
 				9067C73622049F2500DC2675 /* ChatServiceImpl.swift in Sources */,
 				909164AC22021114002CF718 /* PlayersContract.swift in Sources */,
 				909A8BA021CAD05C00166C93 /* InputData.swift in Sources */,
+				90C6B89A220D6FB100C04EA9 /* PlaceSearchResultCell.swift in Sources */,
 				903366E121FA4C3F0059A601 /* NotifyServiceImpl.swift in Sources */,
 				9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */,
 				90FFFFDE21FE147C00D4C684 /* MyEventsServiceImpl.swift in Sources */,
@@ -1731,6 +1775,7 @@
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				90B7CC0E220D496F009359BB /* NotificationConstants.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
+				90C6B8A5220D71F000C04EA9 /* PickPlaceServiceImpl.swift in Sources */,
 				9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,
 				9084A22E21DD28130087B5C3 /* FilteredFetchData.swift in Sources */,
@@ -1753,6 +1798,7 @@
 				90857DD121D81FE2000A7BFC /* GameService.swift in Sources */,
 				908D920221D615CD00C12ECD /* MainTabViewController.swift in Sources */,
 				90CB0E1021E9D0B20088FCF9 /* EventServiceImpl.swift in Sources */,
+				90C6B8A3220D71E300C04EA9 /* PickPlaceInteractorImpl.swift in Sources */,
 				90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */,
 				9084A22521DD22600087B5C3 /* HomeViewState.swift in Sources */,
 				90857DD721D820B4000A7BFC /* DetailsResponse.swift in Sources */,
@@ -1775,6 +1821,7 @@
 				90907F7521D246A60054300C /* PartialEditProfileViewState.swift in Sources */,
 				909A8BB621CADFED00166C93 /* PartialLoginViewState.swift in Sources */,
 				9024E3F4220BF99500881135 /* AdminPendingPlayerCell.swift in Sources */,
+				90C6B89D220D6FED00C04EA9 /* PlaceSearchResult.swift in Sources */,
 				90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */,
 				9078A3082202D227008FCF92 /* AdminInteractorImpl.swift in Sources */,
 				909A8BA821CAD0BB00166C93 /* BoardlyTextField.swift in Sources */,
@@ -1791,6 +1838,7 @@
 				9058C2F821E92C9B0032FDCF /* SearchResultCell.swift in Sources */,
 				90907F7D21D24AF70054300C /* EditProfileServiceImpl.swift in Sources */,
 				90FFFFD621FE144200D4C684 /* MyEventsContract.swift in Sources */,
+				90C6B8A1220D71D900C04EA9 /* PickPlacePresenter.swift in Sources */,
 				9078A30A2202D4C7008FCF92 /* AdminPresenter.swift in Sources */,
 				90FBFFB921F06E5600B2E325 /* HomeServiceImpl.swift in Sources */,
 				9084A23721DD2CB20087B5C3 /* HomePresenter.swift in Sources */,
@@ -1807,6 +1855,7 @@
 				903366E321FA4C520059A601 /* NotifyViewController.swift in Sources */,
 				90FFFFE021FE148900D4C684 /* MyEventsPresenter.swift in Sources */,
 				903366D721FA4BDD0059A601 /* NotifySettings.swift in Sources */,
+				90C6B898220D6F9F00C04EA9 /* PartialPickPlaceViewState.swift in Sources */,
 				90D01CE121D0FF2B000F710D /* EditProfileViewController.swift in Sources */,
 				909A8BC621CAE11500166C93 /* SignUpServiceImpl.swift in Sources */,
 				908D920B21D640D000C12ECD /* LogOutViewController.swift in Sources */,
@@ -1838,10 +1887,13 @@
 				90E0030222018C6100F48E75 /* ChatContract.swift in Sources */,
 				9054D098220858D4004EF46B /* RoundEdgesLabel.swift in Sources */,
 				908D91FC21D504E500C12ECD /* ImageViewExtensions.swift in Sources */,
+				90C6B896220D6F9400C04EA9 /* PickPlaceViewState.swift in Sources */,
 				90535F15220CAA3100F048D0 /* AnalyticsConstants.swift in Sources */,
+				90C6B89F220D713000C04EA9 /* PickPlaceContract.swift in Sources */,
 				9084A23121DD29770087B5C3 /* BaseJoinEventView.swift in Sources */,
 				903788F721DA554B0092FE84 /* PickGameContract.swift in Sources */,
 				9025496C21DF889F006CE583 /* EventViewState.swift in Sources */,
+				90C6B8A7220D73DE00C04EA9 /* PickPlaceViewController.swift in Sources */,
 				909A8BB821CAE00300166C93 /* LoginContract.swift in Sources */,
 				903788FB21DA5A180092FE84 /* PickGamePresenter.swift in Sources */,
 				90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */,

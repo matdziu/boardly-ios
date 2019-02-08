@@ -14,6 +14,7 @@ let JOIN_EVENT_VIEW_CONTROLLER_ID = "joinEventViewController"
 let EVENT_DETAILS_VIEW_CONTROLLER_ID = "eventDetailsViewController"
 let RATE_VIEW_CONTROLLER_ID = "rateViewController"
 let EVENT_VIEW_CONTROLLER_ID = "eventViewController"
+let PICK_PLACE_VIEW_CONTROLLER_ID = "pickPlaceViewController"
 
 let SAVED_FILTER = "savedFilter"
 
@@ -26,3 +27,4 @@ let PLAYERS_ACCEPTED_PLAYER_CELL = "playersAcceptedPlayerCell"
 let ADMIN_ACCEPTED_PLAYER_CELL = "adminAcceptedPlayerCell"
 let ADMIN_PENDING_PLAYER_CELL = "adminPendingPlayerCell"
 let ADMIN_CONTROL_CELL = "adminControlCell"
+let PLACE_CELL_ID = "placeCell"

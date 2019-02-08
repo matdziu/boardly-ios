@@ -299,6 +299,99 @@
             </objects>
             <point key="canvasLocation" x="-2187" y="-1167"/>
         </scene>
+        <!--Pick Place View Controller-->
+        <scene sceneID="cgC-gw-y7s">
+            <objects>
+                <viewController storyboardIdentifier="pickPlaceViewController" id="dik-3k-fJL" customClass="PickPlaceViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iyp-iX-nza">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vvl-Yc-Yj1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="color" name="AccentRed"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-HJ-y5E">
+                                <rect key="frame" x="32" y="322.5" width="311" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Search for games" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-k8-xU7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <color key="barTintColor" name="PrimaryBlue"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-yy-A1V">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X93-KM-dKA">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" rowHeight="88" id="6M0-Qf-D7i" customClass="PlaceSearchResultCell" customModule="Boardly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6M0-Qf-D7i" id="zq5-VH-nV6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Kraków" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYL-UA-W65">
+                                                    <rect key="frame" x="23" y="19" width="329" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" name="Grey"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eYL-UA-W65" secondAttribute="bottom" constant="8" id="0rI-Lx-opA"/>
+                                                <constraint firstItem="eYL-UA-W65" firstAttribute="top" secondItem="zq5-VH-nV6" secondAttribute="topMargin" constant="8" id="MtJ-p1-cyd"/>
+                                                <constraint firstItem="eYL-UA-W65" firstAttribute="leading" secondItem="zq5-VH-nV6" secondAttribute="leadingMargin" constant="8" id="b7q-HZ-YnJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eYL-UA-W65" secondAttribute="trailing" constant="8" id="xhB-Ou-eUu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="placeNameLabel" destination="eYL-UA-W65" id="h93-2L-l4N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2lZ-41-Mgr" firstAttribute="bottom" secondItem="vvl-Yc-Yj1" secondAttribute="bottom" id="0xB-eL-NsP"/>
+                            <constraint firstItem="rnj-k8-xU7" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="DFZ-hc-45q"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="top" secondItem="2lZ-41-Mgr" secondAttribute="top" id="FW8-lc-lZE"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="Ivz-Lb-0sh"/>
+                            <constraint firstItem="vvl-Yc-Yj1" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="NL9-O9-I7Q"/>
+                            <constraint firstItem="X93-KM-dKA" firstAttribute="trailing" secondItem="2lZ-41-Mgr" secondAttribute="trailing" id="Nwj-PU-yRp"/>
+                            <constraint firstItem="aZk-HJ-y5E" firstAttribute="centerY" secondItem="Iyp-iX-nza" secondAttribute="centerY" id="VOO-yh-Mbq"/>
+                            <constraint firstItem="X93-KM-dKA" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="e6L-du-pq1"/>
+                            <constraint firstItem="2lZ-41-Mgr" firstAttribute="trailing" secondItem="aZk-HJ-y5E" secondAttribute="trailing" constant="32" id="fsb-0K-Fzw"/>
+                            <constraint firstItem="2lZ-41-Mgr" firstAttribute="bottom" secondItem="X93-KM-dKA" secondAttribute="bottom" id="ihL-f2-to1"/>
+                            <constraint firstItem="X93-KM-dKA" firstAttribute="top" secondItem="rnj-k8-xU7" secondAttribute="bottom" id="ll8-QK-dsl"/>
+                            <constraint firstItem="rnj-k8-xU7" firstAttribute="top" secondItem="2lZ-41-Mgr" secondAttribute="top" id="mw2-ed-jFS"/>
+                            <constraint firstItem="aZk-HJ-y5E" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" constant="32" id="vp0-dv-2FN"/>
+                            <constraint firstItem="rnj-k8-xU7" firstAttribute="leading" secondItem="2lZ-41-Mgr" secondAttribute="leading" id="yPz-G7-cw3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2lZ-41-Mgr"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="aZk-HJ-y5E" id="CVl-Lo-bln"/>
+                        <outlet property="noResultsLabel" destination="Nz7-yy-A1V" id="v5K-xU-DXo"/>
+                        <outlet property="progressView" destination="vvl-Yc-Yj1" id="RVv-YV-MWT"/>
+                        <outlet property="resultsTableView" destination="X93-KM-dKA" id="jNb-YW-rM8"/>
+                        <outlet property="searchBar" destination="rnj-k8-xU7" id="ZWF-0c-Meo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGJ-A6-1R8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3471.1999999999998" y="-2643.3283358320841"/>
+        </scene>
         <!--Pick Game View Controller-->
         <scene sceneID="Zjg-2m-Lxc">
             <objects>
