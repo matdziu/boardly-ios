@@ -199,6 +199,7 @@
 		90A07A2921CE568900EE5349 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A07A2821CE568900EE5349 /* FirebaseConstants.swift */; };
 		90A690BA21F3079F00365E32 /* BoardlyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690B921F3079F00365E32 /* BoardlyTextView.swift */; };
 		90A690BC21F3088200365E32 /* JoinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A690BB21F3088200365E32 /* JoinEventViewController.swift */; };
+		90B7CC0E220D496F009359BB /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7CC0D220D496F009359BB /* NotificationConstants.swift */; };
 		90BDED02220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED01220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist */; };
 		90BDED04220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED03220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist */; };
 		90BDED09220C994500D4574B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90BDED08220C994500D4574B /* GoogleService-Info.plist */; };
@@ -463,6 +464,7 @@
 		90A07A2A21CE6D0E00EE5349 /* Boardly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boardly.entitlements; sourceTree = "<group>"; };
 		90A690B921F3079F00365E32 /* BoardlyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyTextView.swift; sourceTree = "<group>"; };
 		90A690BB21F3088200365E32 /* JoinEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinEventViewController.swift; sourceTree = "<group>"; };
+		90B7CC0D220D496F009359BB /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		90BDED01220C90E600D4574B /* GoogleService-Info.com.boardly.Boardly.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.com.boardly.Boardly.debug.plist"; sourceTree = "<group>"; };
 		90BDED03220C93EE00D4574B /* GoogleService-Info.com.boardly.Boardly.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.com.boardly.Boardly.plist"; sourceTree = "<group>"; };
 		90BDED08220C994500D4574B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -1028,6 +1030,7 @@
 				90D223A321E5C6A10000C5EF /* BGGConstants.swift */,
 				90D2F96721F70BA00046944F /* ViewConstants.swift */,
 				90535F14220CAA3100F048D0 /* AnalyticsConstants.swift */,
+				90B7CC0D220D496F009359BB /* NotificationConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1726,6 +1729,7 @@
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
 				9023F16B2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
+				90B7CC0E220D496F009359BB /* NotificationConstants.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
 				9054D09122080224004EF46B /* EventDetailsViewController.swift in Sources */,
 				909A8BBA21CAE02500166C93 /* LoginInteractorImpl.swift in Sources */,

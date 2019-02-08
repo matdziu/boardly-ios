@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Messaging.messaging().delegate = self
+        Messaging.messaging().useMessagingDelegateForDirectChannel = true
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -128,6 +129,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         guard let currentUserId = Auth.auth().currentUser?.uid else { return }
         Database.database().reference(withPath: "\(USERS_NODE)/\(currentUserId)/\(NOTIFICATION_TOKEN_CHILD)").setValue(fcmToken)
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        
     }
 }
 
