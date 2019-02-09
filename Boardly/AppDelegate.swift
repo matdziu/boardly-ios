@@ -130,5 +130,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
         guard let currentUserId = Auth.auth().currentUser?.uid else { return }
         Database.database().reference(withPath: "\(USERS_NODE)/\(currentUserId)/\(NOTIFICATION_TOKEN_CHILD)").setValue(fcmToken)
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let eventDetailsViewController = (window?.rootViewController as? UINavigationController)?.viewControllers.last as? EventDetailsViewController
+        let eventId = ((notification.request.content.userInfo["extras"] as? [AnyHashable: Any]) ?? [:])["eventId"] as? String
+        if eventDetailsViewController == nil || eventDetailsViewController!.eventId != eventId {
+            completionHandler([.alert, .sound])
+        }
+    }
 }
 
