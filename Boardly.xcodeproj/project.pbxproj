@@ -1457,7 +1457,6 @@
 				909A8B6E21CACDA800166C93 /* Frameworks */,
 				90BDED06220C962300D4574B /* Select GoogleService-Info.plist */,
 				909A8B6F21CACDA800166C93 /* Resources */,
-				90BDED07220C966800D4574B /* Clean GoogleService-Info.plist */,
 				835C9EB8C82DFEA122EBFCBE /* [CP] Embed Pods Frameworks */,
 				9EE5DAB3E2BF774FE61C6FEB /* [CP] Copy Pods Resources */,
 				90BDED0A220CA44000D4574B /* Crashlytics */,
@@ -1667,24 +1666,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cp \"Boardly/Resources/GoogleService-Info.\"$PRODUCT_BUNDLE_IDENTIFIER\".plist\" \"Boardly/Resources/GoogleService-Info.plist\"\n";
-		};
-		90BDED07220C966800D4574B /* Clean GoogleService-Info.plist */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Clean GoogleService-Info.plist";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm \"Boardly/Resources/GoogleService-Info.plist\"\n";
 		};
 		90BDED0A220CA44000D4574B /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
