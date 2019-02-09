@@ -27,7 +27,7 @@ class SignUpPresenter {
                 let trimmedPassword = inputData.password.trimmingCharacters(in: .whitespacesAndNewlines)
                 
                 let emailValid = !trimmedEmail.isEmpty
-                let passwordValid = !trimmedPassword.isEmpty && trimmedPassword.count > 6
+                let passwordValid = !trimmedPassword.isEmpty && trimmedPassword.count >= 6
                 
                 if !emailValid || !passwordValid {
                     return Observable.just(.localValidation(emailValid: emailValid, passwordValid: passwordValid))
