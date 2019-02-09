@@ -167,6 +167,7 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     @IBAction func clearButtonClicked(_ sender: Any) {
+        self.view.endEditing(true)
         reloadView()
         eventPresenter.bind(eventView: self)
     }
@@ -239,7 +240,9 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     func addEventEmitter() -> Observable<EventInputData> {
-        return addEventButton.rx.tap.map { [unowned self] in
+        return addEventButton.rx.tap
+            .do(onNext: { self.view.endEditing(true) })
+            .map { [unowned self] in
             self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             return self.inputData
@@ -247,7 +250,9 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     func editEventEmitter() -> Observable<EventInputData> {
-        return saveChangesButton.rx.tap.map { [unowned self] in
+        return saveChangesButton.rx.tap
+            .do(onNext: { self.view.endEditing(true) })
+            .map { [unowned self] in
             self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
             return self.inputData

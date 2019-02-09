@@ -36,6 +36,7 @@ class SignUpViewController: BaseNavViewController, SignUpView {
         return signUpButton
             .rx
             .controlEvent(UIControl.Event.touchUpInside)
+            .do(onNext: { self.view.endEditing(true) })
             .map({ InputData(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "") })
     }
     

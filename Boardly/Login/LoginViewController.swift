@@ -83,6 +83,7 @@ class LoginViewController: BaseNavViewController, LoginView, GIDSignInUIDelegate
         return loginButton
             .rx
             .controlEvent(UIControl.Event.touchUpInside)
+            .do(onNext: { self.view.endEditing(true) })
             .map({ InputData(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "") })
     }
     

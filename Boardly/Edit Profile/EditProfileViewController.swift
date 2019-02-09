@@ -105,6 +105,7 @@ class EditProfileViewController: BaseNavViewController, EditProfileView, UIImage
         return saveChangesButton
             .rx
             .controlEvent(UIControlEvents.touchUpInside)
+            .do(onNext: { self.view.endEditing(true) })
             .map({ [unowned self] in return EditProfileInputData(
                 name: self.nameInputField?.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "",
                 profilePicture: self.selectedProfilePicture) })
