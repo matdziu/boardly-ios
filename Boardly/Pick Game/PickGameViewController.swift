@@ -90,6 +90,10 @@ extension PickGameViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         querySubject.onNext(searchText)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
 }
 
 extension PickGameViewController: UITableViewDataSource, UITableViewDelegate {
