@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class LogOutViewController: BaseNavViewController {
     
@@ -25,6 +26,7 @@ class LogOutViewController: BaseNavViewController {
             if appDelegate.online {
                 do {
                     try Auth.auth().signOut()
+                    InstanceID.instanceID().deleteID { _ in }
                     goToLoginScreen()
                 } catch {
                     navigationController?.popViewController(animated: true)
