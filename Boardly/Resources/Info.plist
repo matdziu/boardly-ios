@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -24,7 +26,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb272690140134523</string>
-                <string>fb2102145790001665</string>
+				<string>fb2102145790001665</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,7 +49,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-    <string>$(FB_APP_ID)</string>
+	<string>$(FB_APP_ID)</string>
 	<key>FacebookDisplayName</key>
 	<string>$(APP_DISPLAY_NAME)</string>
 	<key>LSApplicationQueriesSchemes</key>
