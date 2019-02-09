@@ -12,15 +12,19 @@ import RxSwift
 class PickPlaceInteractorImpl: PickPlaceInteractor {
     
     private let pickPlaceService: PickPlaceService
+    private var latestQuery = ""
     
     init(pickPlaceService: PickPlaceService) {
         self.pickPlaceService = pickPlaceService
     }
     
     func fetchSearchResults(query: String) -> Observable<PartialPickPlaceViewState> {
-        return pickPlaceService.search(query: query).map { PartialPickPlaceViewState.resultsFetched(searchResults: $0) }
+        latestQuery = query
+        return pickPlaceService.search(query: query)
+            .map { PartialPickPlaceViewState.resultsFetched(searchResults: $0) }
             .catchError({ error -> Observable<PartialPickPlaceViewState> in
                 return Observable.just(PartialPickPlaceViewState.errorState(error: error as NSError))
             })
+            .filter({ [unowned self] _ in query == self.latestQuery })
     }
 }

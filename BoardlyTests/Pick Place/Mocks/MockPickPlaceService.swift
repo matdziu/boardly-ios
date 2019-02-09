@@ -12,13 +12,13 @@ import RxSwift
 
 class MockPickPlaceService: PickPlaceService {
     
-    private var searchResult: Observable<[PlaceSearchResult]> = Observable.empty()
+    private var searchResult = { (query: String) in return Observable<[PlaceSearchResult]>.empty() }
     
-    init(search: Observable<[PlaceSearchResult]> = Observable.empty()) {
+    init(search: @escaping (_ query: String) -> Observable<[PlaceSearchResult]> = { _ in return Observable<[PlaceSearchResult]>.empty() }) {
         self.searchResult = search
     }
     
     func search(query: String) -> Observable<[PlaceSearchResult]> {
-        return searchResult
+        return searchResult(query)
     }
 }
