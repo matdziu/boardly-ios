@@ -264,6 +264,12 @@
 		90E926CD2221CB77005FA33E /* GamesCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926CC2221CB77005FA33E /* GamesCollectionPresenter.swift */; };
 		90E926CF2221CB85005FA33E /* GamesCollectionServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926CE2221CB85005FA33E /* GamesCollectionServiceImpl.swift */; };
 		90E926D22221CBBE005FA33E /* CollectionGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926D12221CBBE005FA33E /* CollectionGame.swift */; };
+		90E926D62221D80E005FA33E /* GamesCollectionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926D52221D80E005FA33E /* GamesCollectionPresenterTest.swift */; };
+		90E926D82221D819005FA33E /* GamesCollectionInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926D72221D819005FA33E /* GamesCollectionInteractorTest.swift */; };
+		90E926DA2221D827005FA33E /* GamesCollectionViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926D92221D827005FA33E /* GamesCollectionViewRobot.swift */; };
+		90E926DC2221D837005FA33E /* MockGamesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926DB2221D837005FA33E /* MockGamesCollectionView.swift */; };
+		90E926DE2221D844005FA33E /* MockGamesCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926DD2221D844005FA33E /* MockGamesCollectionInteractor.swift */; };
+		90E926E02221D851005FA33E /* MockGamesCollectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926DF2221D851005FA33E /* MockGamesCollectionService.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FB2417220AB273004CD142 /* SimpleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB2416220AB273004CD142 /* SimpleHeader.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
@@ -566,6 +572,12 @@
 		90E926CC2221CB77005FA33E /* GamesCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionPresenter.swift; sourceTree = "<group>"; };
 		90E926CE2221CB85005FA33E /* GamesCollectionServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionServiceImpl.swift; sourceTree = "<group>"; };
 		90E926D12221CBBE005FA33E /* CollectionGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGame.swift; sourceTree = "<group>"; };
+		90E926D52221D80E005FA33E /* GamesCollectionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionPresenterTest.swift; sourceTree = "<group>"; };
+		90E926D72221D819005FA33E /* GamesCollectionInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionInteractorTest.swift; sourceTree = "<group>"; };
+		90E926D92221D827005FA33E /* GamesCollectionViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewRobot.swift; sourceTree = "<group>"; };
+		90E926DB2221D837005FA33E /* MockGamesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGamesCollectionView.swift; sourceTree = "<group>"; };
+		90E926DD2221D844005FA33E /* MockGamesCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGamesCollectionInteractor.swift; sourceTree = "<group>"; };
+		90E926DF2221D851005FA33E /* MockGamesCollectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGamesCollectionService.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FB2416220AB273004CD142 /* SimpleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHeader.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
@@ -1066,6 +1078,7 @@
 		909A8B8821CACDAA00166C93 /* BoardlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				90E926D32221D7F2005FA33E /* Games Collection */,
 				90E926B32221C3DC005FA33E /* Discover */,
 				90D057E32201DFCC005BA7CD /* Event Details */,
 				9084A23C21DD50900087B5C3 /* Home */,
@@ -1505,6 +1518,27 @@
 				90E926D12221CBBE005FA33E /* CollectionGame.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		90E926D32221D7F2005FA33E /* Games Collection */ = {
+			isa = PBXGroup;
+			children = (
+				90E926D42221D7FF005FA33E /* Mocks */,
+				90E926D52221D80E005FA33E /* GamesCollectionPresenterTest.swift */,
+				90E926D72221D819005FA33E /* GamesCollectionInteractorTest.swift */,
+				90E926D92221D827005FA33E /* GamesCollectionViewRobot.swift */,
+			);
+			path = "Games Collection";
+			sourceTree = "<group>";
+		};
+		90E926D42221D7FF005FA33E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90E926DB2221D837005FA33E /* MockGamesCollectionView.swift */,
+				90E926DD2221D844005FA33E /* MockGamesCollectionInteractor.swift */,
+				90E926DF2221D851005FA33E /* MockGamesCollectionService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		90FFFFD421FE142C00D4C684 /* My Events */ = {
@@ -2073,16 +2107,20 @@
 				9084A24921DD51010087B5C3 /* HomeInteractorTest.swift in Sources */,
 				90FFFFE621FE25DC00D4C684 /* MyEventsPresenterTest.swift in Sources */,
 				90E926B62221C3FE005FA33E /* DiscoverViewRobot.swift in Sources */,
+				90E926DE2221D844005FA33E /* MockGamesCollectionInteractor.swift in Sources */,
 				9025498521DF9D34006CE583 /* EventViewRobot.swift in Sources */,
 				903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */,
+				90E926E02221D851005FA33E /* MockGamesCollectionService.swift in Sources */,
 				9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */,
 				9084A24721DD50F70087B5C3 /* HomePresenterTest.swift in Sources */,
 				909164C622022751002CF718 /* PlayersInteractorTest.swift in Sources */,
 				909A8BE521CAE79F00166C93 /* LoginViewRobot.swift in Sources */,
 				90857DE121D8BA3A000A7BFC /* MockFilterInteractor.swift in Sources */,
 				90857DEA21D8BAA0000A7BFC /* FilterInteractorTest.swift in Sources */,
+				90E926DC2221D837005FA33E /* MockGamesCollectionView.swift in Sources */,
 				9025498721DF9D40006CE583 /* EventPresenterTest.swift in Sources */,
 				909A8BE321CAE78300166C93 /* MockLoginService.swift in Sources */,
+				90E926D62221D80E005FA33E /* GamesCollectionPresenterTest.swift in Sources */,
 				9084A23F21DD50B70087B5C3 /* MockHomeView.swift in Sources */,
 				90FFFFE821FE25E600D4C684 /* MyEventsInteractorTest.swift in Sources */,
 				90D057F12201E0EA005BA7CD /* MockChatInteractor.swift in Sources */,
@@ -2117,6 +2155,7 @@
 				90E926BC2221C421005FA33E /* MockDiscoverView.swift in Sources */,
 				90D057EB2201E055005BA7CD /* ChatViewRobot.swift in Sources */,
 				909A8BD621CAE6C500166C93 /* MockSignUpService.swift in Sources */,
+				90E926D82221D819005FA33E /* GamesCollectionInteractorTest.swift in Sources */,
 				909A8BDC21CAE72200166C93 /* SignUpInteractorTest.swift in Sources */,
 				903366F121FA63000059A601 /* MockNotifyInteractor.swift in Sources */,
 				908D91F121D3C0B700C12ECD /* EditProfilePresenterTest.swift in Sources */,
@@ -2136,6 +2175,7 @@
 				9009770422033E0000979752 /* MockAdminService.swift in Sources */,
 				909A8BDF21CAE74400166C93 /* MockLoginView.swift in Sources */,
 				908D91EF21D3C0AB00C12ECD /* EditProfileViewRobot.swift in Sources */,
+				90E926DA2221D827005FA33E /* GamesCollectionViewRobot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

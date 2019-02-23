@@ -12,7 +12,7 @@ import RxSwift
 
 class MockDiscoverView: DiscoverView {
     
-    var renderedStates: [DiscoverViewState] = []
+    var renderedStates: [DiscoverViewState] = [] 
     let fetchPlacesListTriggerSubject = PublishSubject<PlaceFilteredFetchData>()
     
     func fetchPlacesListTrigger() -> Observable<PlaceFilteredFetchData> {
