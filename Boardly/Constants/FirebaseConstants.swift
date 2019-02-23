@@ -17,6 +17,8 @@ let CREATED_EVENTS_NODE = "created"
 let INTERESTING_EVENTS_NODE = "interesting"
 let CHATS_NODE = "chats"
 let EVENTS_WITH_INTEREST = "eventsWithInterest"
+let PLACES_NODE = "places"
+let COLLECTIONS_NODE = "collections"
 
 let NAME_CHILD = "name"
 let PROFILE_PICTURE_CHILD = "profilePicture"

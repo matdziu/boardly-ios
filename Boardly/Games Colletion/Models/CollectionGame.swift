@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 struct CollectionGame: Equatable {
     
@@ -23,5 +24,13 @@ struct CollectionGame: Equatable {
         self.name = name
         self.yearPublished = yearPublished
         self.imageUrl = imageUrl
+    }
+    
+    init(snapshot: DataSnapshot) {
+        let value = snapshot.value as? [String : Any] ?? [:]
+        self.id = snapshot.key
+        self.name = value["name"] as? String ?? ""
+        self.yearPublished = value["yearPublished"] as? String ?? ""
+        self.imageUrl = value["imageUrl"] as? String ?? ""
     }
 }

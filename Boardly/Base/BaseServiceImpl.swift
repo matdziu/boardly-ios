@@ -50,6 +50,14 @@ class BaseServiceImpl {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(PENDING_EVENTS_NODE)")
     }
     
+    func getSingleCollectionRef(collectionId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(COLLECTIONS_NODE)/\(collectionId)")
+    }
+    
+    func getSinglePlaceRef(placeId: String) -> DatabaseReference {
+        return database.reference(withPath: "\(PLACES_NODE)/\(placeId)")
+    }
+    
     func getUserAcceptedEventsNodeRef(userId: String) -> DatabaseReference {
         return database.reference(withPath: "\(USERS_NODE)/\(userId)/\(EVENTS_NODE)/\(ACCEPTED_EVENTS_NODE)")
     }
