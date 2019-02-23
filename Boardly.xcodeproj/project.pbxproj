@@ -250,6 +250,12 @@
 		90E926AE2221A62A005FA33E /* DiscoverServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926AD2221A62A005FA33E /* DiscoverServiceImpl.swift */; };
 		90E926B02221A64A005FA33E /* PlaceFilteredFetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926AF2221A64A005FA33E /* PlaceFilteredFetchData.swift */; };
 		90E926B22221A654005FA33E /* BoardlyPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926B12221A654005FA33E /* BoardlyPlace.swift */; };
+		90E926B62221C3FE005FA33E /* DiscoverViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926B52221C3FE005FA33E /* DiscoverViewRobot.swift */; };
+		90E926B82221C409005FA33E /* DiscoverPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926B72221C409005FA33E /* DiscoverPresenterTest.swift */; };
+		90E926BA2221C413005FA33E /* DiscoverInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926B92221C413005FA33E /* DiscoverInteractorTest.swift */; };
+		90E926BC2221C421005FA33E /* MockDiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926BB2221C421005FA33E /* MockDiscoverView.swift */; };
+		90E926BE2221C42F005FA33E /* MockDiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926BD2221C42F005FA33E /* MockDiscoverInteractor.swift */; };
+		90E926C02221C439005FA33E /* MockDiscoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E926BF2221C439005FA33E /* MockDiscoverService.swift */; };
 		90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */; };
 		90FB2417220AB273004CD142 /* SimpleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB2416220AB273004CD142 /* SimpleHeader.swift */; };
 		90FBFFB721F060E600B2E325 /* BoardlyEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */; };
@@ -538,6 +544,12 @@
 		90E926AD2221A62A005FA33E /* DiscoverServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverServiceImpl.swift; sourceTree = "<group>"; };
 		90E926AF2221A64A005FA33E /* PlaceFilteredFetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilteredFetchData.swift; sourceTree = "<group>"; };
 		90E926B12221A654005FA33E /* BoardlyPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyPlace.swift; sourceTree = "<group>"; };
+		90E926B52221C3FE005FA33E /* DiscoverViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewRobot.swift; sourceTree = "<group>"; };
+		90E926B72221C409005FA33E /* DiscoverPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenterTest.swift; sourceTree = "<group>"; };
+		90E926B92221C413005FA33E /* DiscoverInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInteractorTest.swift; sourceTree = "<group>"; };
+		90E926BB2221C421005FA33E /* MockDiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDiscoverView.swift; sourceTree = "<group>"; };
+		90E926BD2221C42F005FA33E /* MockDiscoverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDiscoverInteractor.swift; sourceTree = "<group>"; };
+		90E926BF2221C439005FA33E /* MockDiscoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDiscoverService.swift; sourceTree = "<group>"; };
 		90F6478A21D7720500C4BB20 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		90FB2416220AB273004CD142 /* SimpleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHeader.swift; sourceTree = "<group>"; };
 		90FBFFB621F060E600B2E325 /* BoardlyEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyEventCell.swift; sourceTree = "<group>"; };
@@ -1037,6 +1049,7 @@
 		909A8B8821CACDAA00166C93 /* BoardlyTests */ = {
 			isa = PBXGroup;
 			children = (
+				90E926B32221C3DC005FA33E /* Discover */,
 				90D057E32201DFCC005BA7CD /* Event Details */,
 				9084A23C21DD50900087B5C3 /* Home */,
 				90FFFFE321FE25BD00D4C684 /* My Events */,
@@ -1431,6 +1444,27 @@
 				90E926B12221A654005FA33E /* BoardlyPlace.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		90E926B32221C3DC005FA33E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				90E926B42221C3E8005FA33E /* Mocks */,
+				90E926B52221C3FE005FA33E /* DiscoverViewRobot.swift */,
+				90E926B72221C409005FA33E /* DiscoverPresenterTest.swift */,
+				90E926B92221C413005FA33E /* DiscoverInteractorTest.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		90E926B42221C3E8005FA33E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				90E926BB2221C421005FA33E /* MockDiscoverView.swift */,
+				90E926BD2221C42F005FA33E /* MockDiscoverInteractor.swift */,
+				90E926BF2221C439005FA33E /* MockDiscoverService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		90FFFFD421FE142C00D4C684 /* My Events */ = {
@@ -1986,9 +2020,11 @@
 				9082B72721FAEB9000A5D1EC /* MockNotifyService.swift in Sources */,
 				90857DDF21D8BA31000A7BFC /* MockFilterView.swift in Sources */,
 				90857DE821D8BA93000A7BFC /* FilterPresenterTest.swift in Sources */,
+				90E926BE2221C42F005FA33E /* MockDiscoverInteractor.swift in Sources */,
 				90FFFFEA21FE25F400D4C684 /* MyEventsViewRobot.swift in Sources */,
 				9084A24921DD51010087B5C3 /* HomeInteractorTest.swift in Sources */,
 				90FFFFE621FE25DC00D4C684 /* MyEventsPresenterTest.swift in Sources */,
+				90E926B62221C3FE005FA33E /* DiscoverViewRobot.swift in Sources */,
 				9025498521DF9D34006CE583 /* EventViewRobot.swift in Sources */,
 				903788FF21DA5F2C0092FE84 /* MockPickGameView.swift in Sources */,
 				9037890321DA5F4E0092FE84 /* PickGameViewRobot.swift in Sources */,
@@ -2019,7 +2055,10 @@
 				909164C222022731002CF718 /* MockPlayersInteractor.swift in Sources */,
 				90FFFFEC21FE260300D4C684 /* MockMyEventsInteractor.swift in Sources */,
 				909A8BE721CAE7B700166C93 /* LoginPresenterTest.swift in Sources */,
+				90E926BA2221C413005FA33E /* DiscoverInteractorTest.swift in Sources */,
 				90C6B8AF220D81E100C04EA9 /* MockPickPlaceService.swift in Sources */,
+				90E926B82221C409005FA33E /* DiscoverPresenterTest.swift in Sources */,
+				90E926C02221C439005FA33E /* MockDiscoverService.swift in Sources */,
 				9084A24321DD50D10087B5C3 /* MockHomeService.swift in Sources */,
 				909164BE220226F8002CF718 /* MockPlayersView.swift in Sources */,
 				909A8BDA21CAE70400166C93 /* SignUpPresenterTest.swift in Sources */,
@@ -2027,6 +2066,7 @@
 				90C6B8AD220D81C400C04EA9 /* MockPickPlaceInteractor.swift in Sources */,
 				908D91F321D3C0C100C12ECD /* EditProfileInteractorTest.swift in Sources */,
 				90D057EF2201E070005BA7CD /* MockChatService.swift in Sources */,
+				90E926BC2221C421005FA33E /* MockDiscoverView.swift in Sources */,
 				90D057EB2201E055005BA7CD /* ChatViewRobot.swift in Sources */,
 				909A8BD621CAE6C500166C93 /* MockSignUpService.swift in Sources */,
 				909A8BDC21CAE72200166C93 /* SignUpInteractorTest.swift in Sources */,
