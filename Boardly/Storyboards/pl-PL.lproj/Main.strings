@@ -201,7 +201,7 @@
 "XZz-AI-W87.normalTitle" = "Wybierz grę (opcjonalnie)";
 
 /* Class = "UILabel"; text = "Filter events nearby using criteria below"; ObjectID = "Y2V-NC-LS7"; */
-"Y2V-NC-LS7.text" = "Filtruj wydarzenia w pobliżu używając poniższych kryteriów";
+"Y2V-NC-LS7.text" = "Filtruj wydarzenia i miejca w pobliżu używając poniższych kryteriów";
 
 /* Class = "UITabBarItem"; title = "More"; ObjectID = "Yai-Ie-1qJ"; */
 "Yai-Ie-1qJ.title" = "Więcej";
