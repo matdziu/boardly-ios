@@ -232,6 +232,8 @@
 		90D223A421E5C6A10000C5EF /* BGGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A321E5C6A10000C5EF /* BGGConstants.swift */; };
 		90D223A621E5C7A00000C5EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A521E5C7A00000C5EF /* StringExtensions.swift */; };
 		90D223A821E5DFE00000C5EF /* PickGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D223A721E5DFE00000C5EF /* PickGameViewController.swift */; };
+		90D2BD3D2222735B00A7E212 /* BoardlyPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2BD3C2222735B00A7E212 /* BoardlyPlaceCell.swift */; };
+		90D2BD3F222277CD00A7E212 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2BD3E222277CD00A7E212 /* CollectionGameCell.swift */; };
 		90D2F96621F701730046944F /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96521F701730046944F /* ViewExtensions.swift */; };
 		90D2F96821F70BA00046944F /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2F96721F70BA00046944F /* ViewConstants.swift */; };
 		90E002FB22018A4100F48E75 /* ChatViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E002FA22018A4100F48E75 /* ChatViewState.swift */; };
@@ -540,6 +542,8 @@
 		90D223A321E5C6A10000C5EF /* BGGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGConstants.swift; sourceTree = "<group>"; };
 		90D223A521E5C7A00000C5EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		90D223A721E5DFE00000C5EF /* PickGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickGameViewController.swift; sourceTree = "<group>"; };
+		90D2BD3C2222735B00A7E212 /* BoardlyPlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyPlaceCell.swift; sourceTree = "<group>"; };
+		90D2BD3E222277CD00A7E212 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		90D2F96521F701730046944F /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		90D2F96721F70BA00046944F /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		90E002FA22018A4100F48E75 /* ChatViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewState.swift; sourceTree = "<group>"; };
@@ -1463,6 +1467,7 @@
 				90E926A92221A612005FA33E /* DiscoverInteractorImpl.swift */,
 				90E926AB2221A620005FA33E /* DiscoverPresenter.swift */,
 				90E926AD2221A62A005FA33E /* DiscoverServiceImpl.swift */,
+				90D2BD3C2222735B00A7E212 /* BoardlyPlaceCell.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -1508,6 +1513,7 @@
 				90E926CA2221CB6B005FA33E /* GamesCollectionInteractorImpl.swift */,
 				90E926CC2221CB77005FA33E /* GamesCollectionPresenter.swift */,
 				90E926CE2221CB85005FA33E /* GamesCollectionServiceImpl.swift */,
+				90D2BD3E222277CD00A7E212 /* CollectionGameCell.swift */,
 			);
 			path = "Games Colletion";
 			sourceTree = "<group>";
@@ -1939,6 +1945,7 @@
 				90F6478B21D7720500C4BB20 /* ViewControllerExtensions.swift in Sources */,
 				90D01CDE21D0F1BD000F710D /* LoginData.swift in Sources */,
 				90907F7321D244E50054300C /* EditProfileViewState.swift in Sources */,
+				90D2BD3F222277CD00A7E212 /* CollectionGameCell.swift in Sources */,
 				9023F16B2209B5CF004B78EB /* PlayersAcceptedPlayerCell.swift in Sources */,
 				909A8BB021CAD21600166C93 /* SignUpViewController.swift in Sources */,
 				9078A3042202CF24008FCF92 /* PartialAdminViewState.swift in Sources */,
@@ -1981,6 +1988,7 @@
 				9067C7382204A98800DC2675 /* PlayersViewController.swift in Sources */,
 				90857DC821D81C20000A7BFC /* PartialFilterViewState.swift in Sources */,
 				90E00306220190FC00F48E75 /* ChatInteractorImpl.swift in Sources */,
+				90D2BD3D2222735B00A7E212 /* BoardlyPlaceCell.swift in Sources */,
 				90857DD921D8220B000A7BFC /* FilterPresenter.swift in Sources */,
 				9024E3F6220BF9C700881135 /* AdminControlCell.swift in Sources */,
 				90FFFFE221FE14ED00D4C684 /* MyEventsViewController.swift in Sources */,

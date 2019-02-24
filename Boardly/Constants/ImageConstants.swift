@@ -12,4 +12,5 @@ enum Image: String {
     case searchIcon = "SearchIcon"
     case clearIcon = "ClearIcon"
     case profilePicturePlaceHolder = "ProfilePictureShape"
+    case placePlaceHolder = "PlacePlaceholder"
 }

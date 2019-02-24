@@ -422,7 +422,7 @@
                                 <rect key="frame" x="0.0" y="103.5" width="375" height="563.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="99" id="0yc-nh-ixj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="collectionGame" rowHeight="99" id="0yc-nh-ixj" customClass="CollectionGameCell" customModule="Boardly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0yc-nh-ixj" id="Rw1-6o-Piz">
@@ -465,6 +465,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Bnb-dw-gHb" secondAttribute="trailing" constant="8" id="zPJ-wk-ond"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="gameImageView" destination="3yB-Ix-gcH" id="d27-51-tv4"/>
+                                            <outlet property="gameNameLabel" destination="66b-sN-KJP" id="5WH-e0-WUe"/>
+                                            <outlet property="yearPublishedLabel" destination="lv1-iJ-764" id="GxN-qo-wKo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -525,7 +530,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="272" id="gXB-JX-Tbc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="boardlyPlaceCell" rowHeight="272" id="gXB-JX-Tbc" customClass="BoardlyPlaceCell" customModule="Boardly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="272"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXB-JX-Tbc" id="jO2-kE-gYC">
@@ -660,6 +665,15 @@
                                                 <constraint firstItem="LOM-on-HUB" firstAttribute="top" secondItem="gPr-cs-07n" secondAttribute="bottom" constant="8" id="uZ2-LD-Zs6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="browseBoardGamesButton" destination="trR-mF-9SI" id="4ea-Cj-eQ8"/>
+                                            <outlet property="callButton" destination="ncx-vj-wRT" id="Rit-F6-U1r"/>
+                                            <outlet property="createEventButton" destination="6c4-bw-HFq" id="g6C-1m-yDV"/>
+                                            <outlet property="locationNameLabel" destination="1D1-aB-Sgs" id="zbP-aj-Cmo"/>
+                                            <outlet property="placeDescription" destination="NdZ-Cd-TjE" id="inu-Zi-QzU"/>
+                                            <outlet property="placeImageView" destination="ZDF-cT-5xr" id="rWH-7F-UTg"/>
+                                            <outlet property="placeNameLabel" destination="hgq-u7-JCF" id="zy4-UU-UkN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
