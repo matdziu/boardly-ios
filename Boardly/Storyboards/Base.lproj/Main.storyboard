@@ -393,10 +393,10 @@
             </objects>
             <point key="canvasLocation" x="-3471.1999999999998" y="-2643.3283358320841"/>
         </scene>
-        <!--View Controller-->
+        <!--Games Collection View Controller-->
         <scene sceneID="Iex-fU-m5E">
             <objects>
-                <viewController id="0Ka-BA-E7B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gamesCollectionViewController" id="0Ka-BA-E7B" customClass="GamesCollectionViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5g8-q8-bNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,19 +406,7 @@
                                 <color key="barTintColor" name="PrimaryBlue"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll find more games on site" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-jk-U9Q">
-                                <rect key="frame" x="16" y="84" width="343" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" name="Grey"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, we found no games here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOb-I0-OVn">
-                                <rect key="frame" x="16" y="119.5" width="343" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" name="Grey"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-kc-In9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-kc-In9">
                                 <rect key="frame" x="0.0" y="103.5" width="375" height="563.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -462,6 +450,7 @@
                                             <constraints>
                                                 <constraint firstItem="Bnb-dw-gHb" firstAttribute="leading" secondItem="Rw1-6o-Piz" secondAttribute="leadingMargin" constant="8" id="6U1-rf-XYq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Bnb-dw-gHb" secondAttribute="bottom" constant="8" id="Yzo-mp-Tie"/>
+                                                <constraint firstItem="Bnb-dw-gHb" firstAttribute="top" secondItem="Rw1-6o-Piz" secondAttribute="topMargin" constant="9" id="kJ5-gR-TkV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Bnb-dw-gHb" secondAttribute="trailing" constant="8" id="zPJ-wk-ond"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -473,6 +462,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You'll find more games on site" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsy-jk-U9Q">
+                                <rect key="frame" x="16" y="84" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, we found no games here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOb-I0-OVn">
+                                <rect key="frame" x="16" y="119.5" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="Grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VFO-fh-dwO">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,6 +502,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yAv-gn-2rJ"/>
                     </view>
+                    <connections>
+                        <outlet property="gamesTableView" destination="1zm-kc-In9" id="q7w-1b-rqX"/>
+                        <outlet property="noGamesLabel" destination="JOb-I0-OVn" id="zx5-Wj-gQw"/>
+                        <outlet property="progressView" destination="VFO-fh-dwO" id="CA8-2I-itJ"/>
+                        <outlet property="searchBar" destination="c5N-CT-qhj" id="F1c-FY-rxQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWq-iq-eMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
