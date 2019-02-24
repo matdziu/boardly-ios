@@ -226,13 +226,17 @@ class EventViewController: BaseNavViewController, EventView {
             let latitude = searchPlaceResult.latitude
             let longitude = searchPlaceResult.longitude
             let locationName = searchPlaceResult.name
-            self.inputData.placeLatitude = latitude
-            self.inputData.placeLongitude = longitude
-            self.inputData.placeName = locationName
-            self.placeLabel.text = locationName
+            self.handlePickedPlace(latitude: latitude, longitude: longitude, locationName: locationName)
             self.emitPlacePickEvent = true
         }
         self.navigationController?.pushViewController(pickPlaceViewController, animated: true)
+    }
+    
+    func handlePickedPlace(latitude: Double, longitude: Double, locationName: String) {
+        self.inputData.placeLatitude = latitude
+        self.inputData.placeLongitude = longitude
+        self.inputData.placeName = locationName
+        self.placeLabel.text = locationName
     }
     
     @IBAction func pickDateButtonClicked(_ sender: Any) {

@@ -588,6 +588,9 @@
                                                             <state key="normal" title="CALL">
                                                                 <color key="titleColor" name="PrimaryBlue"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="call:" destination="gXB-JX-Tbc" eventType="touchUpInside" id="kNU-hu-Q0X"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -608,6 +611,9 @@
                                                             <state key="normal" title="BROWSE BOARD GAMES">
                                                                 <color key="titleColor" name="PrimaryBlue"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="browseGames:" destination="gXB-JX-Tbc" eventType="touchUpInside" id="FEF-ka-Z3k"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -628,6 +634,9 @@
                                                             <state key="normal" title="CREATE EVENT">
                                                                 <color key="titleColor" name="PrimaryBlue"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="createEvent:" destination="gXB-JX-Tbc" eventType="touchUpInside" id="jqF-Lz-62I"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
