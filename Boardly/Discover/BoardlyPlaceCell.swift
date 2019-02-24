@@ -36,7 +36,9 @@ class BoardlyPlaceCell: UITableViewCell {
     @IBAction func browseGames(_ sender: Any) {
         guard let navigationController = (UIApplication.shared.keyWindow?.rootViewController as? UINavigationController) else { return }
         guard let gamesCollectionViewController = navigationController.storyboard?.instantiateViewController(withIdentifier: GAMES_COLLECTION_VIEW_CONTROLLER_ID) as? GamesCollectionViewController else { return }
+        guard let discoverViewController = (navigationController.viewControllers[0] as? MainTabViewController)?.selectedViewController as? DiscoverViewController else { return }
         gamesCollectionViewController.prepare(collectionId: place.collectionId)
+        discoverViewController.initialize = false
         navigationController.pushViewController(gamesCollectionViewController, animated: true)
     }
     

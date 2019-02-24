@@ -25,7 +25,7 @@ class DiscoverViewController: UIViewController, DiscoverView {
         }
     }
     
-    private var initialize = true
+    var initialize = true
     
     private var fetchPlacesListTriggerSubject: PublishSubject<PlaceFilteredFetchData>!
     
@@ -56,6 +56,7 @@ class DiscoverViewController: UIViewController, DiscoverView {
         if initialize && currentPlaceFilteredFetchData != nil {
             fetchPlacesListTriggerSubject.onNext(currentPlaceFilteredFetchData!)
         }
+        initialize = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
