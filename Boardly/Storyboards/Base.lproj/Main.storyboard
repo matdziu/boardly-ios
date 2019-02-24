@@ -417,41 +417,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Bnb-dw-gHb">
-                                                    <rect key="frame" x="23" y="20" width="329" height="60"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoardGamePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-Ix-gcH">
+                                                    <rect key="frame" x="300" y="19.5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="HV6-ME-CEJ"/>
+                                                        <constraint firstAttribute="height" constant="60" id="bzt-RL-Gno"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zR6-hE-hDa">
+                                                    <rect key="frame" x="15" y="19" width="277" height="61"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zR6-hE-hDa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="60"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Inis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66b-sN-KJP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="34.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                                    <color key="textColor" name="Grey"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-iJ-764">
-                                                                    <rect key="frame" x="0.0" y="40.5" width="253" height="19.5"/>
-                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                                                    <color key="textColor" name="Grey"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoardGamePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-Ix-gcH">
-                                                            <rect key="frame" x="269" y="0.0" width="60" height="60"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="HV6-ME-CEJ"/>
-                                                                <constraint firstAttribute="height" constant="60" id="bzt-RL-Gno"/>
-                                                            </constraints>
-                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Inis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66b-sN-KJP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="277" height="35.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <color key="textColor" name="Grey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv1-iJ-764">
+                                                            <rect key="frame" x="0.0" y="41.5" width="277" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                                            <color key="textColor" name="Grey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Bnb-dw-gHb" firstAttribute="leading" secondItem="Rw1-6o-Piz" secondAttribute="leadingMargin" constant="8" id="6U1-rf-XYq"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Bnb-dw-gHb" secondAttribute="bottom" constant="8" id="Yzo-mp-Tie"/>
-                                                <constraint firstItem="Bnb-dw-gHb" firstAttribute="top" secondItem="Rw1-6o-Piz" secondAttribute="topMargin" constant="9" id="kJ5-gR-TkV"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Bnb-dw-gHb" secondAttribute="trailing" constant="8" id="zPJ-wk-ond"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3yB-Ix-gcH" secondAttribute="trailing" id="3aT-j9-4WT"/>
+                                                <constraint firstItem="zR6-hE-hDa" firstAttribute="top" secondItem="Rw1-6o-Piz" secondAttribute="topMargin" constant="8" id="8ad-kX-2A8"/>
+                                                <constraint firstItem="3yB-Ix-gcH" firstAttribute="centerY" secondItem="Rw1-6o-Piz" secondAttribute="centerY" id="JKz-ll-odL"/>
+                                                <constraint firstItem="3yB-Ix-gcH" firstAttribute="leading" secondItem="zR6-hE-hDa" secondAttribute="trailing" constant="8" id="hbl-ZU-Ia7"/>
+                                                <constraint firstItem="zR6-hE-hDa" firstAttribute="leading" secondItem="Rw1-6o-Piz" secondAttribute="leadingMargin" id="ldK-gH-Fsl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zR6-hE-hDa" secondAttribute="bottom" constant="8" id="qCG-qI-1Bc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
