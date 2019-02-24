@@ -506,10 +506,10 @@
             </objects>
             <point key="canvasLocation" x="-2476" y="-3339.5802098950526"/>
         </scene>
-        <!--View Controller-->
+        <!--Discover View Controller-->
         <scene sceneID="qQZ-an-0pj">
             <objects>
-                <viewController id="KMM-j5-C9o" sceneMemberID="viewController">
+                <viewController id="KMM-j5-C9o" customClass="DiscoverViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hoT-so-dTS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -702,6 +702,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kVh-0g-gin"/>
                     </view>
+                    <connections>
+                        <outlet property="noLocationLabel" destination="3a7-xL-bQD" id="XiT-4E-cHL"/>
+                        <outlet property="noPlacesFoundLabel" destination="LWf-WS-scc" id="5Qb-MQ-pPl"/>
+                        <outlet property="placesTableView" destination="Nxz-FD-rDt" id="jYL-42-GbD"/>
+                        <outlet property="progressView" destination="NKW-iQ-o2d" id="Oz1-JM-OPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6M-5V-15U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
