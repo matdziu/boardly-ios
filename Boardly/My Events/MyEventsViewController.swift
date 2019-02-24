@@ -21,6 +21,7 @@ class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
     private let myEventsPresenter = MyEventsPresenter(myEventsInteractor: MyEventsInteractorImpl(myEventsService: MyEventsServiceImpl()))
     private var refreshWithProgress = true
     private var currentlySelectedIndex = 0
+    private let logo = UIImage(named: Image.logo.rawValue)
     
     private var renderedEvents: [BoardlyEvent] = [] {
         didSet {
@@ -35,10 +36,19 @@ class MyEventsViewController: BaseJoinEventViewController, MyEventsView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigationBar()
         segmentedControl.selectedSegmentIndex = 0
         eventsTableView.dataSource = self
         eventsTableView.delegate = self
         eventsTableView.tableFooterView = UIView()
+    }
+    
+    private func setUpNavigationBar() {
+        navigationController?.navigationBar.barTintColor = UIColor(named: Color.primaryBlue.rawValue)
+        navigationController?.navigationBar.isTranslucent = false
+        navigationItem.titleView = UIImageView(image: logo)
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.topItem?.title = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {

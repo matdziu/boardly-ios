@@ -34,7 +34,6 @@ class DiscoverViewController: UIViewController, DiscoverView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        savePlaceFilteredFetchData()
         placesTableView.dataSource = self
         placesTableView.tableFooterView = UIView()
     }
@@ -51,6 +50,7 @@ class DiscoverViewController: UIViewController, DiscoverView {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        savePlaceFilteredFetchData()
         initEmitters()
         discoverPresenter.bind(discoverView: self)
         if initialize && currentPlaceFilteredFetchData != nil {
@@ -72,13 +72,13 @@ class DiscoverViewController: UIViewController, DiscoverView {
     }
     
     func render(discoverViewState: DiscoverViewState) {
+        placesList = discoverViewState.placesList
         if currentPlaceFilteredFetchData != nil {
             showProgressBar(show: discoverViewState.progress)
-            showNoPlacesLabel(show: placesList.isEmpty)
-            if !placesList.isEmpty {
+            showNoPlacesLabel(show: discoverViewState.placesList.isEmpty)
+            if !discoverViewState.placesList.isEmpty {
                 showNoPlacesLabel(show: false)
                 showNoLocationLabel(show: false)
-                placesList = discoverViewState.placesList
             }
         } else {
             showNoLocationLabel(show: true)
