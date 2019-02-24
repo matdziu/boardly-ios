@@ -33,6 +33,7 @@ class DiscoverPresenterTest: QuickSpec {
                 discoverViewRobot.triggerPlacesFetch(placeFilteredFetchData: PlaceFilteredFetchData(userLocation: UserLocation(latitude: 0.0, longitude: 0.0)))
                 discoverViewRobot.assert(expectedViewStates: [
                     DiscoverViewState(),
+                    DiscoverViewState(progress: true),
                     DiscoverViewState(
                         progress: false,
                         placesList: testPlaces)])

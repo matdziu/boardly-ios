@@ -9,10 +9,13 @@
 import Foundation
 
 enum PartialDiscoverViewState: Equatable {
+    case progress
     case placesListFetched(placesList: [BoardlyPlace])
     
     func reduce(previousState: DiscoverViewState) -> DiscoverViewState {
         switch self {
+        case .progress:
+            return DiscoverViewState(progress: true)
         case .placesListFetched(let placesList):
             return DiscoverViewState(
                 progress: false,

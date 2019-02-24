@@ -23,7 +23,7 @@ class DiscoverPresenter {
     
     func bind(discoverView: DiscoverView) {
         let placesListObservable = discoverView.fetchPlacesListTrigger()
-            .flatMap { self.discoverInteractor.fetchPlacesList(userLocation: $0.userLocation, radius: $0.radius) }
+            .flatMap { self.discoverInteractor.fetchPlacesList(userLocation: $0.userLocation, radius: $0.radius).startWith(.progress) }
         
         Observable.merge([
             placesListObservable])

@@ -9,7 +9,7 @@
 import Foundation
 
 struct DiscoverViewState: Equatable {
-    var progress: Bool = true
+    var progress: Bool = false
     var placesList: [BoardlyPlace] = []
     
     init(progress: Bool = true,
