@@ -15,7 +15,8 @@ extension UIImageView {
     func downloaded(from url: URL, placeHolder: UIImage?) {
         self.kf.setImage(with: url,
                          placeholder: placeHolder,
-                         options: [KingfisherOptionsInfoItem.cacheOriginalImage])
+                         options: [KingfisherOptionsInfoItem.cacheOriginalImage,
+                                   KingfisherOptionsInfoItem.backgroundDecode])
     }
     
     func cancel() {
