@@ -19,7 +19,9 @@ class GamesCollectionServiceImpl: BaseServiceImpl, GamesCollectionService {
             var gamesCollection: [CollectionGame] = []
             for childSnapshot in snapshot.children {
                 let game = CollectionGame(snapshot: childSnapshot as? DataSnapshot ?? DataSnapshot())
-                gamesCollection.append(game)
+                if game.name != "" {
+                    gamesCollection.append(game)
+                }
             }
             resultSubject.onNext(gamesCollection)
         }

@@ -445,7 +445,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3yB-Ix-gcH" secondAttribute="trailing" id="3aT-j9-4WT"/>
                                                 <constraint firstItem="zR6-hE-hDa" firstAttribute="top" secondItem="Rw1-6o-Piz" secondAttribute="topMargin" constant="8" id="8ad-kX-2A8"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="3yB-Ix-gcH" secondAttribute="bottom" constant="8" id="HbT-Pv-NeW"/>
                                                 <constraint firstItem="3yB-Ix-gcH" firstAttribute="centerY" secondItem="Rw1-6o-Piz" secondAttribute="centerY" id="JKz-ll-odL"/>
+                                                <constraint firstItem="3yB-Ix-gcH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Rw1-6o-Piz" secondAttribute="topMargin" constant="8" id="Ubr-YI-5Bz"/>
                                                 <constraint firstItem="3yB-Ix-gcH" firstAttribute="leading" secondItem="zR6-hE-hDa" secondAttribute="trailing" constant="8" id="hbl-ZU-Ia7"/>
                                                 <constraint firstItem="zR6-hE-hDa" firstAttribute="leading" secondItem="Rw1-6o-Piz" secondAttribute="leadingMargin" id="ldK-gH-Fsl"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zR6-hE-hDa" secondAttribute="bottom" constant="8" id="qCG-qI-1Bc"/>
