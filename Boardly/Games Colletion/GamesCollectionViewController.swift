@@ -39,7 +39,6 @@ class GamesCollectionViewController: BaseNavViewController, GamesCollectionView 
         super.viewDidLoad()
         searchBar.delegate = self
         gamesTableView.dataSource = self
-        gamesTableView.delegate = self
         gamesTableView.tableFooterView = UIView()
     }
     
@@ -101,7 +100,7 @@ extension GamesCollectionViewController: UISearchBarDelegate {
     }
 }
 
-extension GamesCollectionViewController: UITableViewDataSource, UITableViewDelegate {
+extension GamesCollectionViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gamesList.count
@@ -113,18 +112,5 @@ extension GamesCollectionViewController: UITableViewDataSource, UITableViewDeleg
         collectionGameCell.selectionStyle = UITableViewCell.SelectionStyle.none
         collectionGameCell.bind(game: collectionGame)
         return collectionGameCell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let gameId = gamesList[indexPath.row].id
-        var endpoint = ""
-        if gameId.isOfType(type: RPG_TYPE) {
-            endpoint = "rpg/\(gameId.clearFromType(type: RPG_TYPE))"
-        } else {
-            endpoint = "boardgame/\(gameId)"
-        }
-        if let link = URL(string: "https://boardgamegeek.com/\(endpoint)") {
-            UIApplication.shared.open(link)
-        }
     }
 }

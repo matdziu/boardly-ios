@@ -19,9 +19,7 @@ class FilterViewController: BaseNavViewController, FilterView {
     private var currentFilter = Filter()
     private var fetchDetails = true
     
-    @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var maxEventDistanceLabel: UILabel!
-    @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var placeNameLabel: UILabel!
     @IBOutlet weak var distanceSlider: UISlider!
     @IBOutlet weak var useCurrentLocationButton: UIButton!
@@ -36,21 +34,13 @@ class FilterViewController: BaseNavViewController, FilterView {
         super.viewDidLoad()
         locationManager.delegate = self
         getFilterFromDefaults()
-        gameImageView.roundBorderCorners()
         initDistanceFilter(radius: currentFilter.radius)
-        initGameFilter(gameName: currentFilter.gameName)
         initLocationFilter(locationName: currentFilter.locationName)
     }
     
     private func initDistanceFilter(radius: Double) {
         distanceSlider.value = Float(radius)
         maxEventDistanceLabel.text = "\(distanceLabelDefaultText) \(Int(radius))km"
-    }
-    
-    private func initGameFilter(gameName: String) {
-        if !gameName.isEmpty {
-            gameNameLabel.text = gameName
-        }
     }
     
     private func initLocationFilter(locationName: String) {
@@ -63,21 +53,6 @@ class FilterViewController: BaseNavViewController, FilterView {
         let value = sender.value
         maxEventDistanceLabel.text = "\(distanceLabelDefaultText) \(Int(value))km"
         currentFilter.radius = Double(value)
-    }
-    
-    @IBAction func pickGameButtonClicked(_ sender: Any) {
-        guard let pickGameViewController = storyboard?.instantiateViewController(withIdentifier: PICK_GAME_VIEW_CONTROLLER_ID) as? PickGameViewController else { return }
-        pickGameViewController.finishAction = { self.handlePickGameResult(pickedGame: $0) }
-        self.navigationController?.pushViewController(pickGameViewController, animated: true)
-    }
-    
-    @IBAction func deleteGameButtonClicked(_ sender: Any) {
-        gameImageView.cancel()
-        gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
-        currentFilter.gameId = ""
-        currentFilter.gameName = ""
-        gameImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-        gameIdSubject.onNext("")
     }
     
     @IBAction func applyButtonClicked(_ sender: Any) {
@@ -148,7 +123,6 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     func render(filterViewState: FilterViewState) {
-        gameImageView.downloaded(from: filterViewState.gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         if filterViewState.locationProcessing {
             placeNameLabel.text = NSLocalizedString("Setting your location...", comment: "")
             useCurrentLocationButton.isUserInteractionEnabled = false
@@ -158,7 +132,6 @@ class FilterViewController: BaseNavViewController, FilterView {
     }
     
     func handlePickGameResult(pickedGame: SearchResult) {
-        gameNameLabel.text = pickedGame.name
         currentFilter.gameName = pickedGame.name
         if pickedGame.type == RPG_TYPE {
             currentFilter.gameId = "\(pickedGame.id)\(RPG_TYPE)"

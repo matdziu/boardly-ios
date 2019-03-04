@@ -16,13 +16,7 @@ class EventUIRenderer {
     private var gameImageView1GestureRecognizer: UITapGestureRecognizer!
     private var gameImageView2GestureRecognizer: UITapGestureRecognizer!
     private var gameImageView3GestureRecognizer: UITapGestureRecognizer!
-    
-    init() {
-        gameImageView1GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
-        gameImageView2GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
-        gameImageView3GestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openBoardGameInfoPage(_:)))
-    }
-    
+
     func displayEventInfo(event: BoardlyEvent,
                           eventNameLabel: UILabel,
                           gameLabel: UILabel,
@@ -49,9 +43,6 @@ class EventUIRenderer {
         boardGameImageView.userInfo[GAME_ID_USER_INFO] = event.gameId
         boardGameImageView2.userInfo[GAME_ID_USER_INFO] = event.gameId2
         boardGameImageView3.userInfo[GAME_ID_USER_INFO] = event.gameId3
-        boardGameImageView.addGestureRecognizer(gameImageView1GestureRecognizer)
-        boardGameImageView2.addGestureRecognizer(gameImageView2GestureRecognizer)
-        boardGameImageView3.addGestureRecognizer(gameImageView3GestureRecognizer)
         
         placeButton.userInfo[LATITUDE_USER_INFO] = event.placeLatitude
         placeButton.userInfo[LONGITUDE_USER_INFO] = event.placeLongitude

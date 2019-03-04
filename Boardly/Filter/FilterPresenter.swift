@@ -21,18 +21,13 @@ class FilterPresenter {
     }
     
     func bind(filterView: FilterView) {
-        let gameDetailsObservable = filterView.gameIdEmitter()
-            .flatMap { [unowned self] gameId in
-                return self.filterInteractor.fetchGameDetails(gameId: gameId)
-        }
-        
         let locationProcessingObservable = filterView.locationProcessingEmitter()
             .map { processing -> PartialFilterViewState in
                 return PartialFilterViewState.locationProcessingState(processing: processing)
         }
         
         Observable
-            .merge([gameDetailsObservable, locationProcessingObservable])
+            .merge([locationProcessingObservable])
             .scan(try! stateSubject.value()) { (viewState: FilterViewState, partialState: PartialFilterViewState) -> FilterViewState in
                 return self.reduce(previousState: viewState, partialState: partialState)
             }
