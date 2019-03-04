@@ -401,7 +401,7 @@
 "ncx-vj-wRT.normalTitle" = "ZADZWOŃ";
 "trR-mF-9SI.normalTitle" = "PRZEGLĄDAJ PLANSZÓWKI";
 "6c4-bw-HFq.normalTitle" = "STWÓRZ WYDARZENIE";
-"Wsy-jk-U9Q.text" = "Na miejscu możesz znaleźć więcej gier";
+"Wsy-jk-U9Q.text" = "To tylko część kolekcji. Na miejscu możesz znaleźć więcej gier.";
 "c5N-CT-qhj.placeholder" = "Szukaj gier";
 "JOb-I0-OVn.text" = "Niestety nie znaleźliśmy tutaj żadnych gier";
 "3a7-xL-bQD.text" = "Aby odkrywać miejsca z Boardly przejdź do ekranu filtrowania i wybierz lokalizację";
@@ -409,3 +409,7 @@
 
 "DyG-8v-5on.title" = "Odkrywaj";
 "BTr-wm-8Hp.text" = "Moje wydarzenia";
+"XN2-o0-CUk.text" = "Dodaj grę";
+"Sb1-2Y-NQx.text" = "Wpisz nazwę gry. Pamiętaj, żeby być dokładnym!";
+"rFL-WI-P8Q.normalTitle" = "DODAJ";
+"S93-7U-i7a.normalTitle" = "ANULUJ";
