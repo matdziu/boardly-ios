@@ -70,7 +70,7 @@ class EventPresenter {
     
     private func validateInputData(inputData: EventInputData, actionWhenValid: (EventInputData) -> Observable<PartialEventViewState>) -> Observable<PartialEventViewState> {
         let eventNameValid = !inputData.eventName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        let selectedGameValid = !inputData.gameId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+        let selectedGameValid = !inputData.gameName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         let selectedPlaceValid = !inputData.placeName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         
         if eventNameValid && selectedGameValid && selectedPlaceValid {

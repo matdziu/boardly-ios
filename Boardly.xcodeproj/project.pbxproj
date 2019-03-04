@@ -13,6 +13,7 @@
 		9009770822033E5300979752 /* AdminPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770722033E5300979752 /* AdminPresenterTest.swift */; };
 		9009770A22033E5D00979752 /* AdminInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770922033E5D00979752 /* AdminInteractorTest.swift */; };
 		9009770C22033E6600979752 /* AdminViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009770B22033E6600979752 /* AdminViewRobot.swift */; };
+		9009B118222D40D500654EC8 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9009B117222D40D500654EC8 /* AddGameViewController.swift */; };
 		90186E8C21ED060300D8DFA9 /* BoardlyDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */; };
 		90186E8F21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */; };
 		9023F1692209B5B8004B78EB /* PlayerControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9023F1682209B5B8004B78EB /* PlayerControlCell.swift */; };
@@ -314,6 +315,7 @@
 		9009770722033E5300979752 /* AdminPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPresenterTest.swift; sourceTree = "<group>"; };
 		9009770922033E5D00979752 /* AdminInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminInteractorTest.swift; sourceTree = "<group>"; };
 		9009770B22033E6600979752 /* AdminViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewRobot.swift; sourceTree = "<group>"; };
+		9009B117222D40D500654EC8 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		90186E8B21ED060300D8DFA9 /* BoardlyDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardlyDatePicker.swift; sourceTree = "<group>"; };
 		90186E8E21ED0E9A00D8DFA9 /* BoardlyDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardlyDatePicker.xib; sourceTree = "<group>"; };
 		9023F1682209B5B8004B78EB /* PlayerControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlCell.swift; sourceTree = "<group>"; };
@@ -644,6 +646,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		9009B116222D40C600654EC8 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				9009B117222D40D500654EC8 /* AddGameViewController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 		90186E8D21ED0E8100D8DFA9 /* Date Picker */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +775,7 @@
 		903788F121DA51910092FE84 /* Pick Game */ = {
 			isa = PBXGroup;
 			children = (
+				9009B116222D40C600654EC8 /* Dialog */,
 				903788F221DA51BB0092FE84 /* PickGameViewState.swift */,
 				903788F421DA53430092FE84 /* PartialPickGameViewState.swift */,
 				903788F621DA554B0092FE84 /* PickGameContract.swift */,
@@ -1934,6 +1945,7 @@
 				903366E521FA4C5A0059A601 /* NotifyContract.swift in Sources */,
 				90FFFFDC21FE146800D4C684 /* MyEventsInteractorImpl.swift in Sources */,
 				9092F84B22041CEE000A7BC5 /* AdminServiceImpl.swift in Sources */,
+				9009B118222D40D500654EC8 /* AddGameViewController.swift in Sources */,
 				909A8BA421CAD08D00166C93 /* ImageConstants.swift in Sources */,
 				909A8BB421CADFD400166C93 /* LoginViewState.swift in Sources */,
 				909A8BC421CAE0FE00166C93 /* SignUpContract.swift in Sources */,

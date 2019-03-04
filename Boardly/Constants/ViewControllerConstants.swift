@@ -16,6 +16,7 @@ let RATE_VIEW_CONTROLLER_ID = "rateViewController"
 let EVENT_VIEW_CONTROLLER_ID = "eventViewController"
 let PICK_PLACE_VIEW_CONTROLLER_ID = "pickPlaceViewController"
 let GAMES_COLLECTION_VIEW_CONTROLLER_ID = "gamesCollectionViewController"
+let ADD_GAME_VIEW_CONTROLLER_ID = "addGameViewController"
 
 let SAVED_FILTER = "savedFilter"
 

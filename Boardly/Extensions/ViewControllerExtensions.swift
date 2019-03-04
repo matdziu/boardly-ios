@@ -28,4 +28,14 @@ extension UIViewController {
         }))
         self.present(alert, animated: true)
     }
+    
+    func showAddGameViewController(completionHandler: @escaping (String) -> Void) {
+        guard let addGameViewController = storyboard?.instantiateViewController(withIdentifier: ADD_GAME_VIEW_CONTROLLER_ID)
+            as? AddGameViewController else { return }
+        addGameViewController.providesPresentationContextTransitionStyle = true
+        addGameViewController.definesPresentationContext = true
+        addGameViewController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        addGameViewController.completionHandler = completionHandler
+        present(addGameViewController, animated: true, completion: nil)
+    }
 }

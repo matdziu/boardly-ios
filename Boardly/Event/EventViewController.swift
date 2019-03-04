@@ -39,7 +39,6 @@ class EventViewController: BaseNavViewController, EventView {
     private var placePickEventSubject: PublishSubject<Bool>!
     private var deleteEventSubject: PublishSubject<String>!
     
-    private var emitGamePickEvent = false
     private var recentGamePickEvent = GamePickEvent()
     
     private var emitPlacePickEvent = false
@@ -96,11 +95,12 @@ class EventViewController: BaseNavViewController, EventView {
         if event.timestamp > 0 {
             dateLabel.text = Date(timeIntervalSince1970: TimeInterval(event.timestamp / 1000)).formatForDisplay()
         }
+        loadGameSection(gameNameLabel: gameLabel1, gameName: event.gameName)
+        loadGameSection(gameNameLabel: gameLabel2, gameName: event.gameName2)
+        loadGameSection(gameNameLabel: gameLabel3, gameName: event.gameName3)
     }
     
-    private func loadGameSection(gameImageView: UIImageView, gameImageUrl: String,
-                                 gameNameLabel: UILabel, gameName: String) {
-        gameImageView.downloaded(from: gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
+    private func loadGameSection(gameNameLabel: UILabel, gameName: String) {
         if !gameName.isEmpty {
             gameNameLabel.text = gameName
         } else {
@@ -116,9 +116,9 @@ class EventViewController: BaseNavViewController, EventView {
         inputData.gameId2 = event.gameId2
         inputData.gameName3 = event.gameName3
         inputData.gameId3 = event.gameId3
-        inputData.gameImageUrl = event.gameImageUrl
-        inputData.gameImageUrl2 = event.gameImageUrl2
-        inputData.gameImageUrl3 = event.gameImageUrl3
+        inputData.gameImageUrl = ""
+        inputData.gameImageUrl2 = ""
+        inputData.gameImageUrl3 = ""
         inputData.placeName = event.placeName
         inputData.placeLatitude = event.placeLatitude
         inputData.placeLongitude = event.placeLongitude
@@ -134,10 +134,6 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     private func initView() {
-        if (emitGamePickEvent) {
-            gamePickEventSubject.onNext(recentGamePickEvent)
-            emitGamePickEvent = false
-        }
         if (emitPlacePickEvent) {
             placePickEventSubject.onNext(true)
             emitPlacePickEvent = false
@@ -162,39 +158,30 @@ class EventViewController: BaseNavViewController, EventView {
     }
     
     @IBAction func pickGame1ButtonClicked(_ sender: Any) {
-        let pickGameViewController = getPickGameViewController()
-        pickGameViewController.finishAction = {
-            self.gameLabel1.text = $0.name
-            self.inputData.gameId = self.formatId(id: $0.id, type: $0.type)
-            self.inputData.gameName = $0.name
-            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .first)
-            self.emitGamePickEvent = true
+        showAddGameViewController { gameName in
+            self.gameLabel1.text = gameName
+            self.inputData.gameName = gameName
+            self.recentGamePickEvent = GamePickEvent(gameId: "", type: .first)
+            self.gamePickEventSubject.onNext(self.recentGamePickEvent)
         }
-        self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
     
     @IBAction func pickGame2ButtonClicked(_ sender: Any) {
-        let pickGameViewController = getPickGameViewController()
-        pickGameViewController.finishAction = {
-            self.gameLabel2.text = $0.name
-            self.inputData.gameId2 = self.formatId(id: $0.id, type: $0.type)
-            self.inputData.gameName2 = $0.name
-            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .second)
-            self.emitGamePickEvent = true
+        showAddGameViewController { gameName in
+            self.gameLabel2.text = gameName
+            self.inputData.gameName2 = gameName
+            self.recentGamePickEvent = GamePickEvent(gameId: "", type: .second)
+            self.gamePickEventSubject.onNext(self.recentGamePickEvent)
         }
-        self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
     
     @IBAction func pickGame3ButtonClicked(_ sender: Any) {
-        let pickGameViewController = getPickGameViewController()
-        pickGameViewController.finishAction = {
-            self.gameLabel3.text = $0.name
-            self.inputData.gameId3 = self.formatId(id: $0.id, type: $0.type)
-            self.inputData.gameName3 = $0.name
-            self.recentGamePickEvent = GamePickEvent(gameId: self.formatId(id: $0.id, type: $0.type), type: .third)
-            self.emitGamePickEvent = true
+        showAddGameViewController { gameName in
+            self.gameLabel3.text = gameName
+            self.inputData.gameName3 = gameName
+            self.recentGamePickEvent = GamePickEvent(gameId: "", type: .third)
+            self.gamePickEventSubject.onNext(self.recentGamePickEvent)
         }
-        self.navigationController?.pushViewController(pickGameViewController, animated: true)
     }
     
     @IBAction func deleteEventButtonClicked(_ sender: Any) {
@@ -236,9 +223,9 @@ class EventViewController: BaseNavViewController, EventView {
         return addEventButton.rx.tap
             .do(onNext: { self.view.endEditing(true) })
             .map { [unowned self] in
-            self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            return self.inputData
+                self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                return self.inputData
         }
     }
     
@@ -246,9 +233,9 @@ class EventViewController: BaseNavViewController, EventView {
         return saveChangesButton.rx.tap
             .do(onNext: { self.view.endEditing(true) })
             .map { [unowned self] in
-            self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            return self.inputData
+                self.inputData.eventName = self.eventNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                self.inputData.description = self.descriptionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                return self.inputData
         }
     }
     

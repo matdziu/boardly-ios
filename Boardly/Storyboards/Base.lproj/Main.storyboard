@@ -1834,7 +1834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3y-3M-Obk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3018" y="-1792"/>
+            <point key="canvasLocation" x="2975" y="-1811"/>
         </scene>
         <!--Notify-->
         <scene sceneID="XDF-cM-VGD">
@@ -3352,6 +3352,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5w3-hD-5XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="-3342"/>
+        </scene>
+        <!--Add Game View Controller-->
+        <scene sceneID="I1b-ii-Ecy">
+            <objects>
+                <viewController storyboardIdentifier="addGameViewController" id="iKO-ub-Bon" customClass="AddGameViewController" customModule="Boardly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HmP-zj-UNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-jK-W8N">
+                                <rect key="frame" x="16" y="36" width="343" height="631"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN2-o0-CUk">
+                                        <rect key="frame" x="128" y="20" width="87.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" name="Grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type name of the game. Remember to be specific!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb1-2Y-NQx">
+                                        <rect key="frame" x="0.0" y="57.5" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="Grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G7B-KZ-zZk" customClass="BoardlyTextView" customModule="Boardly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114.5" width="343" height="36.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxCharacters">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                <real key="value" value="150"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="b0X-XF-gO7">
+                                        <rect key="frame" x="0.0" y="167" width="343" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S93-7U-i7a">
+                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" name="AccentRed"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelButtonClicked:" destination="iKO-ub-Bon" eventType="touchUpInside" id="1X5-zh-Vj2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFL-WI-P8Q">
+                                                <rect key="frame" x="203.5" y="0.0" width="139.5" height="30"/>
+                                                <state key="normal" title="ADD">
+                                                    <color key="titleColor" name="PrimaryBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addButtonClicked:" destination="iKO-ub-Bon" eventType="touchUpInside" id="lcT-TG-iGE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="b0X-XF-gO7" firstAttribute="leading" secondItem="6C7-jK-W8N" secondAttribute="leading" id="37k-IR-PM1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sb1-2Y-NQx" secondAttribute="trailing" id="9O1-9P-fWU"/>
+                                    <constraint firstItem="XN2-o0-CUk" firstAttribute="centerX" secondItem="6C7-jK-W8N" secondAttribute="centerX" id="ATC-HE-mgE"/>
+                                    <constraint firstAttribute="trailing" secondItem="b0X-XF-gO7" secondAttribute="trailing" id="HO1-ef-dDT"/>
+                                    <constraint firstItem="XN2-o0-CUk" firstAttribute="top" secondItem="6C7-jK-W8N" secondAttribute="top" constant="20" id="MBi-Op-8bG"/>
+                                    <constraint firstItem="G7B-KZ-zZk" firstAttribute="leading" secondItem="6C7-jK-W8N" secondAttribute="leading" id="Noa-mQ-hdt"/>
+                                    <constraint firstAttribute="trailing" secondItem="G7B-KZ-zZk" secondAttribute="trailing" id="Qgi-3d-yKl"/>
+                                    <constraint firstItem="Sb1-2Y-NQx" firstAttribute="top" secondItem="XN2-o0-CUk" secondAttribute="bottom" constant="16" id="dXK-9H-LuR"/>
+                                    <constraint firstItem="G7B-KZ-zZk" firstAttribute="top" secondItem="Sb1-2Y-NQx" secondAttribute="bottom" constant="16" id="pfS-Z0-sUg"/>
+                                    <constraint firstItem="b0X-XF-gO7" firstAttribute="top" secondItem="G7B-KZ-zZk" secondAttribute="bottom" constant="16" id="sdy-ut-7oQ"/>
+                                    <constraint firstItem="Sb1-2Y-NQx" firstAttribute="leading" secondItem="6C7-jK-W8N" secondAttribute="leading" id="z7f-CG-eam"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uJl-J1-gGw" firstAttribute="trailing" secondItem="6C7-jK-W8N" secondAttribute="trailing" constant="16" id="4vb-to-3iW"/>
+                            <constraint firstItem="6C7-jK-W8N" firstAttribute="centerX" secondItem="uJl-J1-gGw" secondAttribute="centerX" id="aeH-pH-XqB"/>
+                            <constraint firstItem="6C7-jK-W8N" firstAttribute="top" secondItem="uJl-J1-gGw" secondAttribute="top" constant="16" id="d2e-qs-RBm"/>
+                            <constraint firstItem="6C7-jK-W8N" firstAttribute="leading" secondItem="uJl-J1-gGw" secondAttribute="leading" constant="16" id="gFv-aw-2Qe"/>
+                            <constraint firstItem="uJl-J1-gGw" firstAttribute="bottom" secondItem="6C7-jK-W8N" secondAttribute="bottom" id="u1h-jb-kcg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uJl-J1-gGw"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameNameTextView" destination="G7B-KZ-zZk" id="YRe-jJ-qHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beQ-FA-UN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3674" y="-1811"/>
         </scene>
     </scenes>
     <resources>
