@@ -2124,7 +2124,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-Iv-ZPj">
                                                     <rect key="frame" x="15" y="53.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eurobusiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umy-Vd-YpY">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eurobusiness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umy-Vd-YpY">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -2142,7 +2142,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gB0-el-3VJ">
                                                     <rect key="frame" x="15" y="161.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq7-us-qMr">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq7-us-qMr">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -2254,7 +2254,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-73-7JF">
                                                     <rect key="frame" x="15" y="107.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monopoly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-Ve-kT5">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monopoly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-Ve-kT5">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -2818,7 +2818,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MCU-uR-rvk">
                                                     <rect key="frame" x="15" y="53.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eurobusiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etR-Ue-UNy">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eurobusiness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etR-Ue-UNy">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -2836,7 +2836,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-9y-sax">
                                                     <rect key="frame" x="15" y="161.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8Q-v9-Nln">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8Q-v9-Nln">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -2880,7 +2880,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vwW-tC-jTd">
                                                     <rect key="frame" x="15" y="107.5" width="345" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monopoly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3im-03-iKG">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monopoly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3im-03-iKG">
                                                             <rect key="frame" x="0.0" y="15.5" width="279" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                             <color key="textColor" name="Grey"/>
@@ -3497,7 +3497,7 @@
         <image name="AcceptedIcon" width="72" height="72"/>
         <image name="AccountIcon" width="72" height="72"/>
         <image name="AddIcon" width="72" height="72"/>
-        <image name="BoardGamePlaceholder" width="77" height="103"/>
+        <image name="BoardGamePlaceholder" width="250" height="250"/>
         <image name="ChatIcon" width="72" height="72"/>
         <image name="CheckedEventIcon" width="72" height="72"/>
         <image name="CreatedIcon" width="72" height="72"/>
