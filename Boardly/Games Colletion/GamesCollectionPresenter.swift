@@ -40,7 +40,7 @@ class GamesCollectionPresenter {
                 let filteredList = self.currentCollectionGames.filter({ game -> Bool in
                     game.name.lowercased()
                         .noSpecialChars()
-                        .contains(formattedQuery.noSpecialChars())
+                        .contains(formattedQuery.noSpecialChars()) || formattedQuery == ""
                 })
                 return PartialGamesCollectionViewState.collectionFetched(gamesList: filteredList)
         }
