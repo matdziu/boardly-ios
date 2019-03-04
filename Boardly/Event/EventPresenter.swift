@@ -23,14 +23,7 @@ class EventPresenter {
     
     func bind(eventView: EventView) {
         let gamePickEventObservable = eventView.gamePickEventEmitter()
-            .flatMap { gamePickEvent -> Observable<PartialEventViewState> in
-                let gameDetailsObservable = self.eventInteractor.fetchGameDetails(gamePickEvent: gamePickEvent)
-                if gamePickEvent.type == .first {
-                    return gameDetailsObservable.startWith(.gamePickedState)
-                } else {
-                    return gameDetailsObservable
-                }
-        }
+            .map { _ in PartialEventViewState.gamePickedState }
         
         let placePickEventObservable = eventView.placePickEventEmitter()
             .map { _ in return PartialEventViewState.placePickedState }
@@ -39,10 +32,10 @@ class EventPresenter {
             .flatMap { eventInputData in
                 return self.validateInputData(inputData: eventInputData, actionWhenValid: {
                     self.analytics.logEventAddedEvent(gameId: $0.gameId,
-                                                 gameId2: $0.gameId2,
-                                                 gameId3: $0.gameId3,
-                                                 placeLatitude: $0.placeLatitude,
-                                                 placeLongitude: $0.placeLongitude)
+                                                      gameId2: $0.gameId2,
+                                                      gameId3: $0.gameId3,
+                                                      placeLatitude: $0.placeLatitude,
+                                                      placeLongitude: $0.placeLongitude)
                     return self.eventInteractor.addEvent(inputData: $0)
                 })
         }

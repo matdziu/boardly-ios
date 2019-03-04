@@ -24,9 +24,6 @@ class EventViewController: BaseNavViewController, EventView {
     @IBOutlet weak var gameLabel2: UILabel!
     @IBOutlet weak var gameLabel3: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
-    @IBOutlet weak var game1ImageView: UIImageView!
-    @IBOutlet weak var game2ImageView: UIImageView!
-    @IBOutlet weak var game3ImageView: UIImageView!
     @IBOutlet weak var datePicker: BoardlyDatePicker!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var saveChangesButton: BoardlyButton!
@@ -78,11 +75,6 @@ class EventViewController: BaseNavViewController, EventView {
         eventPresenter = EventPresenter(eventInteractor: EventInteractorImpl(gameService: GameServiceImpl(), eventService: EventServiceImpl()))
         eventNameTextField.text = ""
         descriptionTextField.text = ""
-        DispatchQueue.main.async {
-            self.game1ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-            self.game2ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-            self.game3ImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-        }
         gameLabel1.text = NSLocalizedString("No game picked", comment: "")
         gameLabel2.text = NSLocalizedString("No game picked", comment: "")
         gameLabel3.text = NSLocalizedString("No game picked", comment: "")
@@ -104,9 +96,6 @@ class EventViewController: BaseNavViewController, EventView {
         if event.timestamp > 0 {
             dateLabel.text = Date(timeIntervalSince1970: TimeInterval(event.timestamp / 1000)).formatForDisplay()
         }
-        loadGameSection(gameImageView: game1ImageView, gameImageUrl: event.gameImageUrl, gameNameLabel: gameLabel1, gameName: event.gameName)
-        loadGameSection(gameImageView: game2ImageView, gameImageUrl: event.gameImageUrl2, gameNameLabel: gameLabel2, gameName: event.gameName2)
-        loadGameSection(gameImageView: game3ImageView, gameImageUrl: event.gameImageUrl3, gameNameLabel: gameLabel3, gameName: event.gameName3)
     }
     
     private func loadGameSection(gameImageView: UIImageView, gameImageUrl: String,
@@ -280,15 +269,6 @@ class EventViewController: BaseNavViewController, EventView {
         showProgress(show: eventViewState.progress)
         showPickedGameError(show: !eventViewState.selectedGameValid)
         showPickedPlaceError(show: !eventViewState.selectedPlaceValid)
-        loadAndSaveGameImage(game: eventViewState.selectedGame,
-                             boardGameImageView: game1ImageView,
-                             inputDataSetter: { inputData.gameImageUrl = $0 })
-        loadAndSaveGameImage(game: eventViewState.selectedGame2,
-                             boardGameImageView: game2ImageView,
-                             inputDataSetter: { inputData.gameImageUrl2 = $0 })
-        loadAndSaveGameImage(game: eventViewState.selectedGame3,
-                             boardGameImageView: game3ImageView,
-                             inputDataSetter: { inputData.gameImageUrl3 = $0 })
         if eventViewState.success {
             successHandler()
             reloadView()
