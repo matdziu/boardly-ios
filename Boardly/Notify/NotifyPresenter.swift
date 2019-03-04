@@ -22,10 +22,6 @@ class NotifyPresenter {
     }
     
     func bind(notifyView: NotifyView) {
-        let gameDetailsObservable = notifyView.gameIdEmitter().flatMap { gameId in
-            return self.notifyInteractor.fetchGameDetails(gameId: gameId)
-        }
-        
         let notifySettingsObservable = notifyView.notifySettingsEmitter().flatMap { notifySettings in
             return self.validateNotifySettings(notifySettings: notifySettings, actionWhenValid: { self.notifyInteractor.updateNotifySettings(notifySettings: $0) })
         }
@@ -41,8 +37,7 @@ class NotifyPresenter {
             .map { _ in return PartialNotifyViewState.placePicked }
         
         Observable
-            .merge([gameDetailsObservable,
-                    notifySettingsObservable,
+            .merge([notifySettingsObservable,
                     notifySettingsFetchObservable,
                     stopNotificationsObservable,
                     placePickEventObservable])

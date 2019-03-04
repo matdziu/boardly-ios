@@ -17,9 +17,7 @@ class NotifyViewController: UIViewController, NotifyView {
     private var notifySettingsFetchSubject: PublishSubject<Bool>!
     private var placePickEventSubject: PublishSubject<Bool>!
     @IBOutlet weak var eventDistanceLabel: UILabel!
-    @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var placeNameLabel: UILabel!
-    @IBOutlet weak var boardGameImageView: UIImageView!
     @IBOutlet weak var deleteNotificationsButton: UIButton!
     @IBOutlet weak var applyButton: BoardlyButton!
     @IBOutlet weak var progressView: UIActivityIndicatorView!
@@ -113,7 +111,6 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     private func handlePickGameResult(pickedGame: SearchResult) {
-        gameNameLabel.text = pickedGame.name
         newSettings.gameName = pickedGame.name
         newSettings.gameId = formatId(id: pickedGame.id, type: pickedGame.type)
         fetchGameDetails = true
@@ -141,15 +138,6 @@ class NotifyViewController: UIViewController, NotifyView {
         self.navigationController?.pushViewController(pickPlaceViewController, animated: true)
     }
     
-    @IBAction func deleteGameButtonClicked(_ sender: Any) {
-        boardGameImageView.cancel()
-        showPlaceholderBoardGameImage()
-        gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
-        newSettings.gameId = ""
-        newSettings.gameName = ""
-        gameIdSubject.onNext("")
-    }
-    
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let value = sender.value
         eventDistanceLabel.text = "\(distanceLabelDefaultText) \(Int(value))km"
@@ -157,7 +145,6 @@ class NotifyViewController: UIViewController, NotifyView {
     }
     
     func render(notifyViewState: NotifyViewState) {
-        boardGameImageView.downloaded(from: notifyViewState.gameImageUrl, placeHolder: UIImage(named: Image.boardGamePlaceholder.rawValue))
         showProgressBar(show: notifyViewState.progress)
         showPlacePickedError(show: !notifyViewState.selectedPlaceValid)
         if notifyViewState.successSaved {
@@ -192,13 +179,6 @@ class NotifyViewController: UIViewController, NotifyView {
         notifyPresenter.bind(notifyView: self)
     }
     
-    private func showPlaceholderBoardGameImage() {
-        boardGameImageView.cancel()
-        DispatchQueue.main.async {
-            self.boardGameImageView.image = UIImage(named: Image.boardGamePlaceholder.rawValue)
-        }
-    }
-    
     private func showProgressBar(show: Bool) {
         if show {
             progressView.startAnimating()
@@ -217,22 +197,12 @@ class NotifyViewController: UIViewController, NotifyView {
     
     private func setNotifySettings(notifySettings: NotifySettings) {
         setDistanceSetting(radius: Int(notifySettings.radius))
-        setGameSetting(gameName: notifySettings.gameName)
         setLocationSetting(locationName: notifySettings.locationName)
     }
     
     private func setDistanceSetting(radius: Int) {
         distanceSlider.value = Float(radius)
         eventDistanceLabel.text = "\(distanceLabelDefaultText) \(radius)km"
-    }
-    
-    private func setGameSetting(gameName: String) {
-        if !gameName.isEmpty {
-            gameNameLabel.text = gameName
-        } else {
-            gameNameLabel.text = NSLocalizedString("No game picked", comment: "")
-            showPlaceholderBoardGameImage()
-        }
     }
     
     private func setLocationSetting(locationName: String) {
