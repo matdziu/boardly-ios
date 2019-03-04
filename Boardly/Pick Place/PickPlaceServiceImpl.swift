@@ -19,15 +19,7 @@ class PickPlaceServiceImpl: PickPlaceService {
         let formattedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
             .lowercased()
             .replacingOccurrences(of: " ", with: "+")
-            .replacingOccurrences(of: "ą", with: "a")
-            .replacingOccurrences(of: "ę", with: "e")
-            .replacingOccurrences(of: "ć", with: "c")
-            .replacingOccurrences(of: "ł", with: "l")
-            .replacingOccurrences(of: "ń", with: "n")
-            .replacingOccurrences(of: "ó", with: "o")
-            .replacingOccurrences(of: "ś", with: "s")
-            .replacingOccurrences(of: "ź", with: "z")
-            .replacingOccurrences(of: "ż", with: "z")
+            .noSpecialChars()
         Alamofire.request("https://nominatim.openstreetmap.org/search?q=\(formattedQuery)&format=json", method: .get).responseJSON { response in
             if response.data != nil {
                 let json = try? JSON(data: response.data!)

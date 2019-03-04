@@ -38,7 +38,9 @@ class GamesCollectionPresenter {
             .map { query -> PartialGamesCollectionViewState in
                 let formattedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
                 let filteredList = self.currentCollectionGames.filter({ game -> Bool in
-                    game.name.lowercased().contains(formattedQuery)
+                    game.name.lowercased()
+                        .noSpecialChars()
+                        .contains(formattedQuery.noSpecialChars())
                 })
                 return PartialGamesCollectionViewState.collectionFetched(gamesList: filteredList)
         }
