@@ -32,13 +32,6 @@ class NotifyPresenterTest: QuickSpec {
         
         describe("NotifyPresenter") {
             
-            it("successful game fetching") {
-                notifyViewRobot.emitGameId(gameId: "testId")
-                notifyViewRobot.assert(expectedViewStates: [
-                    NotifyViewState(),
-                    NotifyViewState(gameImageUrl: "test/path/to/image")])
-            }
-            
             it("successful notify settings fetching") {
                 notifyViewRobot.triggerNotifySettingsFetch(initialize: false)
                 notifyViewRobot.triggerNotifySettingsFetch(initialize: true)

@@ -34,8 +34,7 @@ class EventPresenterTest: QuickSpec {
                 eventViewRobot.pickGame(gamePickEvent: GamePickEvent(gameId: "1", type: .first))
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
-                    EventViewState(selectedGameValid: true),
-                    EventViewState(selectedGame: testGame)])
+                    EventViewState(selectedGameValid: true)])
             }
             
             it("second game pick event") {
@@ -46,7 +45,7 @@ class EventPresenterTest: QuickSpec {
                 eventViewRobot.pickGame(gamePickEvent: GamePickEvent(gameId: "1", type: .second))
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
-                    EventViewState(selectedGame2: testGame)])
+                    EventViewState()])
             }
             
             it("third game pick event") {
@@ -57,11 +56,11 @@ class EventPresenterTest: QuickSpec {
                 eventViewRobot.pickGame(gamePickEvent: GamePickEvent(gameId: "1", type: .third))
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
-                    EventViewState(selectedGame3: testGame)])
+                    EventViewState()])
             }
             
             it("place pick event") {
-                let inputData = EventInputData(eventName: "Let's go", gameId: "1")
+                let inputData = EventInputData(eventName: "Let's go", gameName: "1")
                 eventViewRobot.addEvent(inputData: inputData)
                 eventViewRobot.pickPlace()
                 eventViewRobot.assert(expectedViewStates: [
@@ -71,7 +70,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("event name is blank during addition") {
-                let inputData = EventInputData(eventName: "  ", gameId: "1", placeName: "Domowka")
+                let inputData = EventInputData(eventName: "  ", gameName: "1", placeName: "Domowka")
                 eventViewRobot.addEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
@@ -87,7 +86,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("no place is selected during addition") {
-                let inputData = EventInputData(eventName: "Let's go", gameId: "1")
+                let inputData = EventInputData(eventName: "Let's go", gameName: "1")
                 eventViewRobot.addEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
@@ -95,7 +94,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("add event when all fields are valid") {
-                let inputData = EventInputData(eventName: "Let's go", gameId: "1", placeName: "Domowka")
+                let inputData = EventInputData(eventName: "Let's go", gameName: "1", placeName: "Domowka")
                 eventViewRobot.addEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
@@ -104,7 +103,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("event name is blank during editing") {
-                let inputData = EventInputData(eventName: "  ", gameId: "1", placeName: "Domowka")
+                let inputData = EventInputData(eventName: "  ", gameName: "1", placeName: "Domowka")
                 eventViewRobot.editEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
@@ -120,7 +119,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("no place is selected during editing") {
-                let inputData = EventInputData(eventName: "Let's go", gameId: "1")
+                let inputData = EventInputData(eventName: "Let's go", gameName: "1")
                 eventViewRobot.editEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),
@@ -128,7 +127,7 @@ class EventPresenterTest: QuickSpec {
             }
             
             it("edit event when all fields are valid") {
-                let inputData = EventInputData(eventName: "Let's go", gameId: "1", placeName: "Domowka")
+                let inputData = EventInputData(eventName: "Let's go", gameName: "1", placeName: "Domowka")
                 eventViewRobot.editEvent(inputData: inputData)
                 eventViewRobot.assert(expectedViewStates: [
                     EventViewState(),

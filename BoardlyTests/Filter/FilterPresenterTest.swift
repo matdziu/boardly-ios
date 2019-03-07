@@ -27,13 +27,6 @@ class FilterPresenterTest: QuickSpec {
         
         describe("FilterPresenter") {
             
-            it("successful game details fetching") {
-                filterViewRobot.emitGameId(gameId: "testGameId")
-                filterViewRobot.assert(expectedViewStates: [
-                    FilterViewState(),
-                    FilterViewState(gameImageUrl: mockFilterInteractor!.testGame.image)])
-            }
-            
             it("renders correct location processing state") {
                 filterViewRobot.emitLocationProcessing(processing: true)
                 filterViewRobot.emitLocationProcessing(processing: false)
