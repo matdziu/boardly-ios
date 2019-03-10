@@ -30,6 +30,7 @@ class DiscoverServiceImpl: BaseServiceImpl, DiscoverService {
                     let place = BoardlyPlace(snapshot: snapshot)
                     fetchedPlacesList.append(place)
                     if fetchedPlacesList.count == geoFetchedPlacesIds.count {
+                        fetchedPlacesList.shuffle()
                         resultSubject.onNext(fetchedPlacesList)
                     }
                 })
