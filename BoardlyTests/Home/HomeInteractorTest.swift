@@ -52,9 +52,9 @@ class HomeInteractorTest: QuickSpec {
                 let output = try! homeInteractor.fetchEvents(userLocation: UserLocation(latitude: 48.0, longitude: 50.0), radius: 1000, gameId: "test")
                     .toBlocking()
                     .toArray()
-                var createdEvent3 = event3
-                createdEvent3.type = EventType.CREATED
-                expect(output).to(equal([PartialHomeViewState.eventListState(eventList: [createdEvent3])]))
+                var createdEvent1 = event1
+                createdEvent1.type = EventType.CREATED
+                expect(output).to(equal([PartialHomeViewState.eventListState(eventList: [createdEvent1])]))
             }
             
             it("successful event fetching outside radius") {

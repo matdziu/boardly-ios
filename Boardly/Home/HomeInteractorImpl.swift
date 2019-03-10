@@ -25,27 +25,23 @@ class HomeInteractorImpl: HomeInteractor {
         } else {
             return Observable.zip(
                 homeService.fetchUserEvents(),
-                homeService.fetchCreatedEvents(),
                 homeService.fetchAllEvents(userLocation: userLocation!, radius: radius, gameId: gameId))
-            { userEventsIds, createdEvents, allEvents in
+            { userEventsIds, allEvents in
                 let filteredEventList = allEvents.filter({ event -> Bool in
-                    return !userEventsIds.contains(event.eventId) && !isOlderThanOneDay(timestamp: event.timestamp)
-                })
-                let createdEventsWithType = createdEvents
-                    .filter({ event -> Bool in
-                        !isOlderThanOneDay(timestamp: event.timestamp)
-                            && (gameId.isEmpty ||
-                                event.gameId == gameId ||
-                                event.gameId2 == gameId ||
-                                event.gameId3 == gameId)
-                            && self.isInsideRadius(userLocation: userLocation!, eventPlaceLatitude: event.placeLatitude, eventPlaceLongitude: event.placeLongitude, radius: radius)
-                    })
-                    .map({ event -> BoardlyEvent in
-                        var output = event
-                        output.type = EventType.CREATED
-                        return output
-                    })
-                return PartialHomeViewState.eventListState(eventList: filteredEventList + createdEventsWithType)
+                    let userEventPredicate = self.isInsideRadius(userLocation: userLocation!, eventPlaceLatitude: event.placeLatitude, eventPlaceLongitude: event.placeLongitude, radius: radius)
+                    if userEventsIds.contains(event.eventId) {
+                        return !isOlderThanOneDay(timestamp: event.timestamp) && userEventPredicate
+                    } else {
+                        return !isOlderThanOneDay(timestamp: event.timestamp)
+                    }
+                }).map { event -> BoardlyEvent in
+                    var modifiedEvent = event
+                    if userEventsIds.contains(event.eventId) {
+                        modifiedEvent.type = EventType.CREATED
+                    }
+                    return modifiedEvent
+                }
+                return PartialHomeViewState.eventListState(eventList: filteredEventList)
             }
         }
     }
